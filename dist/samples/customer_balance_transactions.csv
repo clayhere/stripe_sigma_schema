@@ -1,0 +1,5 @@
+id,amount,created,currency,customer_id,invoice_id,type
+cbt_dey8GQ27iV3u4Q,1999,2026-04-10 10:00:03,usd,cus_3zj3TuUU1qMIE0,in_uPWTSwweUQ2U4I,default
+cbt_cF52ZI22T0LiIa,1500,2026-03-26 14:38:03,usd,cus_JDPUPGvFODzRGE,in_EuLp4W6D3tFDxQ,standard
+cbt_rMcEUYuw25Y0cO,1500,2026-02-16 20:26:03,eur,cus_TMf2xjG0qPQZcO,in_CmdGN8KcQmZUTf,
+cbt_YJYjlxNhUKs8QA,500,2026-03-14 17:09:03,eur,cus_JDPUPGvFODzRGE,in_RFKNU8x3KU9feI,primary

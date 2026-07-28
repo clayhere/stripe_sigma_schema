@@ -1,0 +1,5 @@
+id,amount,created,currency,financial_account_id,status
+tt_OiOYo4ejUeK9S1,7500,2026-01-06 10:54:03,usd,fa_k7erB2sJLHwj3M,default
+tt_lGAsk78NGsLpL6,10000,2026-03-04 09:09:03,jpy,fa_P5y0itTOT3WZ7j,default
+tt_ZXIcUZ1YK4NVc0,2500,2026-03-28 08:52:03,usd,fa_P5y0itTOT3WZ7j,standard
+tt_B9IQnKEUwQqpxg,2500,2026-05-23 16:26:03,usd,fa_TQEFMLrOFFziSw,

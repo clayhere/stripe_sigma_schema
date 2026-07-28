@@ -1,0 +1,5 @@
+id,currency,customer_id,livemode,posted_at,source_id,source_type,tax_date,type
+tax_SnphOWOvpiukbW,usd,cus_CTcL0ZGej3Xukv,False,2026-04-01 02:09:03,src_ajGSlMjcoZSTEp,standard,2026-03-23 23:58:03,transaction
+tax_SRux7SJ47Mm5r6,jpy,cus_hep1polBQYSa1k,False,2026-06-16 05:07:03,src_xZAr2p5zuT8Iz2,primary,2026-05-05 00:53:03,reversal
+tax_Wizm7PyXtjCdjd,gbp,cus_67L3POWVeSiLJh,True,2026-03-16 05:56:03,src_JXa6jSN4zNAgxS,primary,2026-06-17 12:53:03,transaction
+tax_abs8S3it2JKaw3,usd,cus_X1mvwU4wwxjrcM,True,2026-03-25 08:45:03,src_Z5HFgdF9J8EK7b,standard,2026-05-05 02:51:03,transaction

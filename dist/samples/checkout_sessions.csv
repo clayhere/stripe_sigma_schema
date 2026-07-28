@@ -1,0 +1,5 @@
+id,amount_total,created,currency,customer_id,invoice_id,mode,payment_intent_id,payment_link_id,payment_status,status,subscription_id
+cs_rTQ0Aarg2cuPmo,1999,2026-02-18 00:05:03,jpy,cus_JDPUPGvFODzRGE,in_luSy26SxVcG7BN,payment,,plink_Y4OOGOlEOrl5Mf,no_payment_required,complete,sub_2OmaliMH47Lbyo
+cs_fKOfI3gGLtV6yr,999,2026-05-02 03:26:03,eur,cus_bqstt69lfehGN1,in_9upxK5nvh5Ytp6,setup,,plink_J8e3F3y1gYeOvR,paid,expired,sub_wztF9cp5ScBSPQ
+cs_0NfuNydXjIWURu,500,2026-06-08 17:04:03,usd,cus_xMvhB2vCLZMiPG,in_VP3cZirtI72bhH,subscription,,plink_a9s9LmJjFu2j6f,paid,complete,sub_o9aG9J0m7SlCn9
+cs_YscD35Pudfp2sx,7500,2026-02-25 06:28:03,eur,cus_xMvhB2vCLZMiPG,in_VzDagWDlafChaq,payment,,plink_a9s9LmJjFu2j6f,unpaid,expired,sub_Ij1zh2NqKmH1If

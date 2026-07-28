@@ -1,0 +1,56 @@
+stripe-sigma-schema
+===================
+
+This is an UNOFFICIAL, community-maintained reference for the Stripe Sigma data
+schema. It is not affiliated with, endorsed by, or supported by Stripe, Inc.
+
+"Stripe", "Stripe Sigma", "Stripe Radar", "Stripe Connect", "Stripe Treasury",
+"Stripe Terminal", "Stripe Capital" and related marks are trademarks of
+Stripe, Inc. They are used here nominatively, to identify the product this
+dataset describes. No trademark license is granted or implied.
+
+Sources and derivation
+----------------------
+The table inventory, freshness values, structural conventions and the SQL
+examples cited in this repository are derived from Stripe's public
+documentation at https://docs.stripe.com/data/. Table names, column names,
+freshness figures and schema relationships are factual observations about a
+published interface.
+
+Descriptions, notes, grain statements and caveats in this repository are
+original editorial content written by this project's contributors, except for
+short quotations that are attributed inline to the Stripe documentation page
+they came from (see the `source` and `quote` fields in
+sources/conventions.json and the `doc_sources` field on individual columns).
+
+Accuracy
+--------
+Stripe publishes the authoritative, complete column list only inside the
+Sigma schema browser in the Stripe Dashboard. It is not available in any
+machine-readable public form. This dataset therefore combines:
+
+  - what Stripe documents publicly (marked `documented`),
+  - what follows from conventions Stripe documents (marked `conventional`),
+  - curated knowledge that has not been proven against a live account
+    (marked `community`).
+
+Treat `community` columns as candidates to verify, not as facts. Run
+tools/verify_against_sigma.py against your own Stripe account to confirm them,
+and please contribute the results back.
+
+No warranty. Do not use this dataset as the sole basis for financial,
+accounting, tax or regulatory reporting without verifying against your own
+Stripe data.
+
+Sample data
+-----------
+All data under dist/samples/ and dist/sigma_sample.sqlite is synthetic, produced
+by tools/generate_samples.py. It contains no real Stripe data, no real customer
+information, and no real payment credentials. Names, emails and identifiers are
+fabricated.
+
+Licensing
+---------
+Code (tools/) is MIT licensed - see LICENSE.
+Data and documentation (sources/, dist/, docs/) are released under
+CC0 1.0 Universal (public domain dedication) - see LICENSE-DATA.

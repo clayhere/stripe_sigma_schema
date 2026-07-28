@@ -1,0 +1,40 @@
+# Stripe Sigma Schema Reference
+
+> Complete, machine-readable reference for the Stripe Sigma SQL data warehouse
+> schema: 164 tables, 945 columns, join keys, enums,
+> freshness SLAs and query gotchas. Built for AI agents writing Sigma SQL so they
+> do not have to rediscover the schema through exploratory queries each session.
+> Unofficial and not affiliated with Stripe, Inc.
+
+Keywords: Stripe Sigma, Stripe Sigma schema, Stripe Sigma SQL, Stripe data
+schema, Stripe Data Pipeline, Trino, Stripe reporting tables, balance_transactions,
+charges, invoices, subscriptions, MRR SQL.
+
+## Start here
+
+- [AGENTS.md](AGENTS.md): Full context pack — every rule, convention and core table. Read this first.
+- [llms-full.txt](llms-full.txt): The entire reference inlined in one file.
+
+## Machine-readable schema
+
+- [dist/sigma_schema.json](dist/sigma_schema.json): Canonical schema. Every table with dataset, freshness, primary key, foreign keys, columns, types, enums and per-column confidence.
+- [dist/sigma_schema.trino.sql](dist/sigma_schema.trino.sql): CREATE TABLE DDL in Trino types.
+- [dist/sigma_schema.sqlite.sql](dist/sigma_schema.sqlite.sql): Same shape in SQLite types.
+- [dataset.jsonld](dataset.jsonld): schema.org Dataset metadata.
+
+## Human-readable reference
+
+- [dist/SCHEMA.md](dist/SCHEMA.md): Per-table reference grouped by dataset, with full column tables.
+- [docs/RECIPES.md](docs/RECIPES.md): Working Sigma SQL for common questions - net revenue, MRR movement, payout reconciliation, dispute rate, tax liability, metadata pivots, multi-currency conversion.
+- [dist/erd.mmd](dist/erd.mmd): Mermaid ER diagram of the core join graph.
+- [README.md](README.md): Project overview, accuracy model and how to contribute.
+
+## Sample data
+
+- [dist/sigma_sample.sqlite](dist/sigma_sample.sqlite): Runnable sandbox with referentially-valid synthetic rows.
+- [dist/samples/](dist/samples/): One CSV per table, synthetic, showing realistic value shapes.
+
+## Optional
+
+- [CONTRIBUTING.md](CONTRIBUTING.md): How to verify columns against a real account and contribute fixes.
+- [NOTICE](NOTICE): Trademark, sourcing and accuracy disclosures.

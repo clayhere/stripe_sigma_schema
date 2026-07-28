@@ -1,0 +1,5 @@
+id,amount_off,created,currency,duration,duration_in_months,max_redemptions,name,percent_off,times_redeemed,valid
+c_Gheicz9Wiye5iY,7500,2026-03-11 13:41:03,usd,once,197,489,Blue Harbor Coffee,16.44,2,True
+c_JCM6WoZNkTMIGF,1999,2026-02-28 13:20:03,usd,repeating,1758,3985,Copper Kettle,14.56,2,True
+c_LJAC28bbiHTvVH,1999,2026-05-13 14:46:03,gbp,forever,52,4997,Blue Harbor Coffee,5.21,6,False
+c_H0uR0KVi8FuNHi,1500,2026-06-15 14:50:03,eur,forever,1960,3346,Blue Harbor Coffee,10.7,3,True

@@ -1,0 +1,5 @@
+id,account_id,amount,balance_transaction_id,charge_id,created,currency,refunded
+af_uFuI92vqu3q8Hn,acct_g8EGLDO8cNGtrI,999,txn_EHbiI9zRhL90Bl,,2026-04-29 23:24:03,jpy,True
+af_iQ4oZxXcfBz9cL,acct_vLawFfqHZKZwtC,1500,txn_EHbiI9zRhL90Bl,,2026-01-15 22:14:03,usd,True
+af_3wzaWSPQorNt3L,acct_SKsiU5gsoi0VNS,4200,txn_BPil3MDq0bEpLR,,2026-02-10 05:27:03,jpy,False
+af_iOfHvOJ9BaExMP,acct_Xdmzm6i6bGOYLg,500,txn_kUATRO3oknIILs,,2026-03-13 19:12:03,usd,False

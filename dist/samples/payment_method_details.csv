@@ -1,0 +1,5 @@
+card_3ds_authenticated,card_3ds_succeeded,card_network,card_wallet_type,charge_id,type
+False,False,,,ch_dQt4PEieQKVvU2,card
+False,True,standard,primary,ch_tnrCugXIQyBj2m,us_bank_account
+False,True,standard,primary,ch_Chsp6CFaVRh6GD,sepa_debit
+True,False,,primary,ch_2bqqxaqEKaJPQI,card

@@ -1,0 +1,5 @@
+id,business_name,charges_enabled,country,created,default_currency,email,payouts_enabled,type
+acct_4j9ECg1O2jL8QD,Lumen Analytics,False,FR,2026-04-01 12:38:03,jpy,ada.hopper@example.com,False,express
+acct_shm7paJ1VUgqsv,Acme Robotics,True,US,2026-01-15 18:48:03,usd,barbara.hopper@example.com,True,express
+acct_BLOAMiMq9c6OzP,Acme Robotics,False,US,2026-04-06 05:54:03,eur,grace.lovelace@example.com,False,none
+acct_WwvvS1mKdpGEF5,Lumen Analytics,False,AU,2026-06-22 17:20:03,jpy,linus.torvalds@example.com,False,express

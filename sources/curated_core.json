@@ -1,0 +1,386 @@
+{
+  "$comment": "Hand-curated column detail for the tables people actually query. Columns default to confidence 'community' (recalled/observed, not proven by a Stripe doc page); build_schema.py promotes any column that the doc extractor found in an official Stripe SQL example to 'documented'. Run tools/verify_against_sigma.py on a real account to promote the rest to 'verified'. Tables with columns_complete=false may have additional columns not listed here.",
+
+  "balance_transactions": {
+    "api_object": "balance_transaction",
+    "api_reference": "https://docs.stripe.com/api/balance_transactions/object",
+    "description": "Ledger-style record of every event that moves money into or out of your Stripe balance. The canonical starting point for accounting and reconciliation, because it covers charges, refunds, transfers, payouts, adjustments and fees in one immutable table.",
+    "grain": "One row per balance transaction. Rows are never mutated after creation.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed txn_."},
+      {"name": "created", "type": "timestamp", "description": "When the transaction was created (UTC)."},
+      {"name": "available_on", "type": "timestamp", "description": "When the funds become available in your balance."},
+      {"name": "amount", "type": "bigint", "description": "Gross amount in minor currency units. Negative for money leaving your balance."},
+      {"name": "fee", "type": "bigint", "description": "Total fee in minor units. Break it down via balance_transaction_fee_details."},
+      {"name": "net", "type": "bigint", "description": "amount minus fee, in minor units."},
+      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
+      {"name": "source_id", "type": "varchar", "key": "foreign", "description": "Polymorphic id of the object that caused this transaction. Resolve the target using the id prefix or the type column: ch_ -> charges, re_ -> refunds, po_/tr_ -> transfers."},
+      {"name": "type", "type": "varchar", "description": "Transaction type.", "enum": ["charge", "refund", "adjustment", "application_fee", "application_fee_refund", "transfer", "payment", "payout", "payout_cancel", "payout_failure", "stripe_fee", "network_cost"]},
+      {"name": "reporting_category", "type": "varchar", "description": "Coarser grouping of type, aligned with Stripe's financial reports. Prefer this over type for revenue reporting."},
+      {"name": "description", "type": "varchar", "description": "Free-text description of the transaction."},
+      {"name": "automatic_transfer_id", "type": "varchar", "key": "foreign", "description": "The automatic payout this transaction was included in. Joins to transfers.id."},
+      {"name": "exchange_rate", "type": "double", "description": "Rate applied when the presentment currency differs from the settlement currency."}
+    ],
+    "foreign_keys": [
+      {"columns": ["automatic_transfer_id"], "references": {"table": "transfers", "columns": ["id"]}, "confidence": "documented"}
+    ],
+    "notes": [
+      "Prefer this table over charges/refunds for anything accounting-related; it is the only table that nets out fees consistently.",
+      "source_id is polymorphic and has no single FK target. Join conditionally on type.",
+      "A charge and its refund are separate rows; refunding never mutates the original row."
+    ]
+  },
+
+  "balance_transaction_fee_details": {
+    "description": "Line-item breakdown of the fee column on balance_transactions.",
+    "grain": "One row per fee component of a balance transaction. A balance transaction can have several.",
+    "primary_key": [],
+    "columns_complete": false,
+    "columns": [
+      {"name": "balance_transaction_id", "type": "varchar", "key": "foreign", "description": "The balance transaction this fee component belongs to."},
+      {"name": "amount", "type": "bigint", "description": "Fee component amount in minor currency units."},
+      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
+      {"name": "type", "type": "varchar", "description": "Kind of fee.", "enum": ["stripe_fee", "application_fee", "tax"]},
+      {"name": "description", "type": "varchar", "description": "Human-readable description of the fee."}
+    ],
+    "foreign_keys": [
+      {"columns": ["balance_transaction_id"], "references": {"table": "balance_transactions", "columns": ["id"]}, "confidence": "documented"}
+    ],
+    "notes": ["Summing amount here reproduces balance_transactions.fee for the same balance transaction."]
+  },
+
+  "charges": {
+    "api_object": "charge",
+    "api_reference": "https://docs.stripe.com/api/charges/object",
+    "description": "One row per Charge object. Use for charge-level analysis such as card brand mix, decline reasons and fraud outcomes. For accounting totals use balance_transactions instead.",
+    "grain": "One row per charge, including failed charges.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed ch_."},
+      {"name": "created", "type": "timestamp", "description": "When the charge was created (UTC)."},
+      {"name": "captured_at", "type": "timestamp", "description": "When the charge was captured. Null if never captured. Note the API exposes this as a boolean `captured`."},
+      {"name": "amount", "type": "bigint", "description": "Charge amount in minor currency units."},
+      {"name": "amount_refunded", "type": "bigint", "description": "Amount refunded so far, in minor units."},
+      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
+      {"name": "status", "type": "varchar", "description": "Charge status.", "enum": ["succeeded", "pending", "failed"]},
+      {"name": "paid", "type": "boolean", "description": "Whether the charge was successfully paid."},
+      {"name": "refunded", "type": "boolean", "description": "Whether the charge was fully refunded."},
+      {"name": "description", "type": "varchar", "description": "Free-text description."},
+      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer the charge belongs to. Joins to customers.id."},
+      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice that generated this charge, if any."},
+      {"name": "payment_intent_id", "type": "varchar", "key": "foreign", "description": "PaymentIntent that created this charge, if any."},
+      {"name": "balance_transaction_id", "type": "varchar", "key": "foreign", "description": "Balance transaction recording this charge's effect on your balance."},
+      {"name": "dispute_id", "type": "varchar", "key": "foreign", "description": "Dispute against this charge, if any."},
+      {"name": "transfer_id", "type": "varchar", "key": "foreign", "description": "Connect transfer generated by this charge (destination charges). Joins to transfers.id."},
+      {"name": "destination_id", "type": "varchar", "key": "foreign", "description": "Connected account funds were routed to. Joins to accounts.id / connected_accounts.id."},
+      {"name": "transfer_group", "type": "varchar", "description": "String grouping this charge with related transfers."},
+      {"name": "application_fee_id", "type": "varchar", "key": "foreign", "description": "Application fee collected by the platform, if any."},
+      {"name": "failure_code", "type": "varchar", "description": "Machine-readable decline code when status is failed, e.g. card_declined."},
+      {"name": "failure_message", "type": "varchar", "description": "Human-readable decline reason when status is failed."},
+      {"name": "payment_method_id", "type": "varchar", "key": "foreign", "description": "PaymentMethod used. Joins to payment_methods.id."},
+      {"name": "payment_method_type", "type": "varchar", "description": "Payment method family used, e.g. card, us_bank_account, sepa_debit."},
+      {"name": "card_brand", "type": "varchar", "description": "Card brand as displayed, e.g. Visa, MasterCard, American Express. Note the capitalization differs from the API's lowercase values."},
+      {"name": "card_country", "type": "varchar", "description": "Two-letter ISO country of the issuing bank. Compare against your own country to measure cross-border volume."},
+      {"name": "card_funding", "type": "varchar", "description": "Funding type.", "enum": ["credit", "debit", "prepaid", "unknown"]},
+      {"name": "card_last4", "type": "varchar", "description": "Last four digits of the card."},
+      {"name": "card_cvc_check", "type": "varchar", "description": "CVC verification result.", "enum": ["pass", "fail", "unavailable", "unchecked"]},
+      {"name": "card_address_zip_check", "type": "varchar", "description": "Postal code verification result.", "enum": ["pass", "fail", "unavailable", "unchecked"]},
+      {"name": "outcome_type", "type": "varchar", "description": "Radar's verdict.", "enum": ["authorized", "manual_review", "issuer_declined", "blocked", "invalid"]},
+      {"name": "outcome_risk_score", "type": "bigint", "description": "Radar risk score from 0 to 100. Higher is riskier."},
+      {"name": "outcome_risk_level", "type": "varchar", "description": "Bucketed risk level.", "enum": ["normal", "elevated", "highest", "not_assessed", "unknown"]},
+      {"name": "outcome_rule_id", "type": "varchar", "key": "foreign", "description": "Radar rule that produced the outcome. Joins to radar_rules.id."},
+      {"name": "outcome_network_status", "type": "varchar", "description": "How the card network responded, e.g. approved_by_network, declined_by_network."},
+      {"name": "outcome_seller_message", "type": "varchar", "description": "Plain-language explanation of the outcome."},
+      {"name": "statement_descriptor", "type": "varchar", "description": "Text shown on the cardholder's statement."},
+      {"name": "receipt_email", "type": "varchar", "description": "Email the receipt was sent to."},
+      {"name": "livemode", "type": "boolean", "description": "False for sandbox/test data."}
+    ],
+    "foreign_keys": [
+      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}, "confidence": "documented"},
+      {"columns": ["invoice_id"], "references": {"table": "invoices", "columns": ["id"]}},
+      {"columns": ["payment_intent_id"], "references": {"table": "payment_intents", "columns": ["id"]}},
+      {"columns": ["balance_transaction_id"], "references": {"table": "balance_transactions", "columns": ["id"]}},
+      {"columns": ["transfer_id"], "references": {"table": "transfers", "columns": ["id"]}, "confidence": "documented"},
+      {"columns": ["destination_id"], "references": {"table": "connected_accounts", "columns": ["id"]}, "confidence": "documented"},
+      {"columns": ["payment_method_id"], "references": {"table": "payment_methods", "columns": ["id"]}}
+    ],
+    "notes": [
+      "card_brand values are display-cased (Visa, MasterCard), not the API's lowercase (visa, mastercard). Filter accordingly.",
+      "Extra card detail beyond the flattened card_* columns lives in payment_method_details, joined on charge_id.",
+      "A partial capture produces both a charge for the full authorized amount and a refund with reason 'partial_capture'. Exclude those refunds when measuring true refund rates."
+    ]
+  },
+
+  "payment_method_details": {
+    "description": "Per-charge payment method detail that does not fit in the flattened card_* columns on charges, including 3D Secure results and wallet information.",
+    "grain": "One row per charge.",
+    "primary_key": ["charge_id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "charge_id", "type": "varchar", "key": "foreign", "description": "The charge these details describe."},
+      {"name": "type", "type": "varchar", "description": "Payment method family, e.g. card, us_bank_account."},
+      {"name": "card_3ds_succeeded", "type": "boolean", "description": "Whether 3D Secure authentication succeeded for this charge."},
+      {"name": "card_3ds_authenticated", "type": "boolean", "description": "Whether the cardholder completed 3DS authentication."},
+      {"name": "card_wallet_type", "type": "varchar", "description": "Wallet used, e.g. apple_pay, google_pay. Null when not a wallet payment."},
+      {"name": "card_network", "type": "varchar", "description": "Network that processed the payment."}
+    ],
+    "foreign_keys": [
+      {"columns": ["charge_id"], "references": {"table": "charges", "columns": ["id"]}, "confidence": "documented"}
+    ],
+    "notes": ["Left join from charges — not every charge has a row here."]
+  },
+
+  "refunds": {
+    "api_object": "refund",
+    "api_reference": "https://docs.stripe.com/api/refunds/object",
+    "description": "One row per Refund object. Refunds are separate objects from charges; refunding a charge creates a row here and a matching balance transaction.",
+    "grain": "One row per refund. A charge may have many partial refunds.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed re_."},
+      {"name": "created", "type": "timestamp", "description": "When the refund was created (UTC)."},
+      {"name": "amount", "type": "bigint", "description": "Refunded amount in minor currency units (positive here; the balance transaction is negative)."},
+      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
+      {"name": "charge_id", "type": "varchar", "key": "foreign", "description": "Charge being refunded."},
+      {"name": "payment_intent_id", "type": "varchar", "key": "foreign", "description": "PaymentIntent being refunded, if applicable."},
+      {"name": "balance_transaction_id", "type": "varchar", "key": "foreign", "description": "Balance transaction recording this refund."},
+      {"name": "reason", "type": "varchar", "description": "Why the refund was issued.", "enum": ["duplicate", "fraudulent", "requested_by_customer", "partial_capture", "expired_uncaptured_charge"]},
+      {"name": "status", "type": "varchar", "description": "Refund status.", "enum": ["pending", "succeeded", "failed", "canceled", "requires_action"]},
+      {"name": "description", "type": "varchar", "description": "Free-text description."}
+    ],
+    "foreign_keys": [
+      {"columns": ["charge_id"], "references": {"table": "charges", "columns": ["id"]}, "confidence": "documented"},
+      {"columns": ["balance_transaction_id"], "references": {"table": "balance_transactions", "columns": ["id"]}, "confidence": "documented"}
+    ],
+    "notes": [
+      "reason = 'partial_capture' rows are an artifact of auth-and-capture, not customer refunds. Filter them out of refund-rate metrics."
+    ]
+  },
+
+  "disputes": {
+    "api_object": "dispute",
+    "api_reference": "https://docs.stripe.com/api/disputes/object",
+    "description": "One row per Dispute (chargeback), including any evidence you submitted.",
+    "grain": "One row per dispute. A single charge can have more than one dispute, so count distinct dispute ids.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed dp_."},
+      {"name": "created", "type": "timestamp", "description": "When the dispute was opened (UTC)."},
+      {"name": "amount", "type": "bigint", "description": "Disputed amount in minor currency units."},
+      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
+      {"name": "charge_id", "type": "varchar", "key": "foreign", "description": "Charge being disputed."},
+      {"name": "payment_intent_id", "type": "varchar", "key": "foreign", "description": "PaymentIntent being disputed, if applicable."},
+      {"name": "balance_transaction_id", "type": "varchar", "key": "foreign", "description": "Balance transaction for the disputed funds and dispute fee."},
+      {"name": "reason", "type": "varchar", "description": "Reason given by the card network.", "enum": ["fraudulent", "duplicate", "subscription_canceled", "product_unacceptable", "product_not_received", "unrecognized", "credit_not_processed", "general", "incorrect_account_details", "insufficient_funds", "bank_cannot_process", "debit_not_authorized", "customer_initiated", "check_returned", "noncompliant"]},
+      {"name": "status", "type": "varchar", "description": "Dispute status. 'prevented' means Rapid Dispute Resolution stopped it before it became a chargeback.", "enum": ["warning_needs_response", "warning_under_review", "warning_closed", "needs_response", "under_review", "won", "lost", "prevented"]},
+      {"name": "evidence_due_by", "type": "timestamp", "description": "Deadline for submitting evidence."},
+      {"name": "is_charge_refundable", "type": "boolean", "description": "Whether the underlying charge can still be refunded."}
+    ],
+    "foreign_keys": [
+      {"columns": ["charge_id"], "references": {"table": "charges", "columns": ["id"]}, "confidence": "documented"},
+      {"columns": ["balance_transaction_id"], "references": {"table": "balance_transactions", "columns": ["id"]}}
+    ],
+    "notes": [
+      "Exclude status = 'prevented' when computing chargeback ratios the way card networks measure them.",
+      "Dispute data lags: recent months undercount because disputes arrive weeks after the charge."
+    ]
+  },
+
+  "early_fraud_warnings": {
+    "api_object": "radar.early_fraud_warning",
+    "api_reference": "https://docs.stripe.com/api/radar/early_fraud_warnings/object",
+    "description": "Fraud reports issued by the card network before a formal dispute is filed. Leading indicator for card brand monitoring programs such as Visa VAMP.",
+    "grain": "One row per early fraud warning.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed issfr_."},
+      {"name": "created", "type": "timestamp", "description": "When the warning was received (UTC)."},
+      {"name": "charge_id", "type": "varchar", "key": "foreign", "description": "Charge the warning is about."},
+      {"name": "payment_intent_id", "type": "varchar", "key": "foreign", "description": "PaymentIntent the warning is about, if applicable."},
+      {"name": "fraud_type", "type": "varchar", "description": "Type of fraud reported by the network."},
+      {"name": "actionable", "type": "boolean", "description": "Whether you can still act (for example refund) to avoid a chargeback."}
+    ],
+    "foreign_keys": [
+      {"columns": ["charge_id"], "references": {"table": "charges", "columns": ["id"]}, "confidence": "documented"}
+    ]
+  },
+
+  "customers": {
+    "api_object": "customer",
+    "api_reference": "https://docs.stripe.com/api/customers/object",
+    "description": "One row per Customer object.",
+    "grain": "One row per customer, including deleted ones.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed cus_."},
+      {"name": "created", "type": "timestamp", "description": "When the customer was created (UTC)."},
+      {"name": "email", "type": "varchar", "description": "Customer email address."},
+      {"name": "name", "type": "varchar", "description": "Customer full name."},
+      {"name": "description", "type": "varchar", "description": "Free-text description."},
+      {"name": "currency", "type": "varchar", "description": "Customer's default currency."},
+      {"name": "delinquent", "type": "boolean", "description": "Whether the latest invoice attempt failed."},
+      {"name": "balance", "type": "bigint", "description": "Account credit balance in minor units. Negative means credit owed to the customer."},
+      {"name": "default_source_id", "type": "varchar", "key": "foreign", "description": "Default payment source."},
+      {"name": "address_country", "type": "varchar", "description": "Two-letter ISO country from the billing address."},
+      {"name": "address_city", "type": "varchar", "description": "City from the billing address."},
+      {"name": "address_postal_code", "type": "varchar", "description": "Postal code from the billing address."},
+      {"name": "is_deleted", "type": "boolean", "description": "Whether the customer has been deleted. Deleted customers remain in the table."},
+      {"name": "livemode", "type": "boolean", "description": "False for sandbox/test data."}
+    ],
+    "notes": ["Deleted customers are retained here, so filter on is_deleted for active-customer counts."]
+  },
+
+  "payment_intents": {
+    "api_object": "payment_intent",
+    "api_reference": "https://docs.stripe.com/api/payment_intents/object",
+    "description": "One row per PaymentIntent. Represents the full lifecycle of collecting a payment, including attempts that never produced a charge.",
+    "grain": "One row per PaymentIntent.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed pi_."},
+      {"name": "created", "type": "timestamp", "description": "When the intent was created (UTC)."},
+      {"name": "amount", "type": "bigint", "description": "Intended amount in minor currency units."},
+      {"name": "amount_received", "type": "bigint", "description": "Amount actually collected, in minor units."},
+      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
+      {"name": "status", "type": "varchar", "description": "Intent status.", "enum": ["requires_payment_method", "requires_confirmation", "requires_action", "processing", "requires_capture", "canceled", "succeeded"]},
+      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer the intent belongs to."},
+      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice that created this intent, if any."},
+      {"name": "payment_method_id", "type": "varchar", "key": "foreign", "description": "PaymentMethod attached to the intent."},
+      {"name": "capture_method", "type": "varchar", "description": "When to capture funds.", "enum": ["automatic", "automatic_async", "manual"]},
+      {"name": "cancellation_reason", "type": "varchar", "description": "Why the intent was canceled, if it was."},
+      {"name": "description", "type": "varchar", "description": "Free-text description."},
+      {"name": "livemode", "type": "boolean", "description": "False for sandbox/test data."}
+    ],
+    "foreign_keys": [
+      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}},
+      {"columns": ["invoice_id"], "references": {"table": "invoices", "columns": ["id"]}}
+    ],
+    "notes": ["Use this table to measure checkout conversion and drop-off; charges only contains attempts that reached the network."]
+  },
+
+  "transfers": {
+    "api_object": "payout / transfer",
+    "api_reference": "https://docs.stripe.com/api/payouts/object",
+    "description": "Payouts from your Stripe balance to your bank account, and — for Connect platforms — transfers of funds to connected accounts.",
+    "grain": "One row per payout or transfer.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier. Payouts on/after 2017-04-06 use po_; earlier payouts and Connect transfers use tr_."},
+      {"name": "created", "type": "timestamp", "description": "When the payout/transfer was created (UTC)."},
+      {"name": "date", "type": "timestamp", "description": "Scheduled arrival date of the payout in the destination account."},
+      {"name": "amount", "type": "bigint", "description": "Amount in minor currency units."},
+      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
+      {"name": "status", "type": "varchar", "description": "Payout status.", "enum": ["paid", "pending", "in_transit", "canceled", "failed"]},
+      {"name": "destination_id", "type": "varchar", "key": "foreign", "description": "Destination bank account, card, or connected account."},
+      {"name": "transfer_group", "type": "varchar", "description": "String grouping this transfer with the charges that funded it."},
+      {"name": "automatic", "type": "boolean", "description": "Whether this was an automatic payout. Only automatic payouts can be reconciled to specific balance transactions."},
+      {"name": "description", "type": "varchar", "description": "Free-text description."},
+      {"name": "failure_code", "type": "varchar", "description": "Reason the payout failed, if it did."}
+    ],
+    "notes": [
+      "Reconcile a payout to its components with: balance_transactions.automatic_transfer_id = transfers.id.",
+      "Manual payouts cannot be reconciled to specific balance transactions — the amount is arbitrary."
+    ]
+  },
+
+  "accounts": {
+    "api_object": "account",
+    "api_reference": "https://docs.stripe.com/api/accounts/object",
+    "description": "Your own account and, for Connect platforms, your connected accounts.",
+    "grain": "One row per account.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed acct_."},
+      {"name": "created", "type": "timestamp", "description": "When the account was created (UTC)."},
+      {"name": "country", "type": "varchar", "description": "Two-letter ISO country of the account."},
+      {"name": "default_currency", "type": "varchar", "description": "Account's default currency. Commonly used as the reporting currency when converting multi-currency figures."},
+      {"name": "email", "type": "varchar", "description": "Account email address."},
+      {"name": "business_name", "type": "varchar", "description": "Business name on the account."},
+      {"name": "type", "type": "varchar", "description": "Connect account type.", "enum": ["standard", "express", "custom", "none"]},
+      {"name": "charges_enabled", "type": "boolean", "description": "Whether the account can create charges."},
+      {"name": "payouts_enabled", "type": "boolean", "description": "Whether the account can receive payouts."}
+    ],
+    "notes": ["Connect platforms also have a connected_accounts table with richer onboarding and requirements detail."]
+  },
+
+  "connected_accounts": {
+    "api_object": "account",
+    "api_reference": "https://docs.stripe.com/api/accounts/object",
+    "description": "Connect platform view of connected accounts, including legal entity, onboarding requirements and terms-of-service acceptance.",
+    "grain": "One row per connected account.",
+    "primary_key": ["id"],
+    "columns_complete": false,
+    "columns": [
+      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed acct_."},
+      {"name": "email", "type": "varchar", "description": "Account email address."},
+      {"name": "country", "type": "varchar", "description": "Two-letter ISO country of the account."},
+      {"name": "business_name", "type": "varchar", "description": "Business name on the account."},
+      {"name": "payouts_enabled", "type": "boolean", "description": "Whether the account can receive payouts."},
+      {"name": "legal_entity_type", "type": "varchar", "description": "Legal entity type.", "enum": ["individual", "company"]},
+      {"name": "legal_entity_first_name", "type": "varchar", "description": "First name of the legal entity representative."},
+      {"name": "legal_entity_last_name", "type": "varchar", "description": "Last name of the legal entity representative."},
+      {"name": "legal_entity_address_line1", "type": "varchar", "description": "Street address of the legal entity."},
+      {"name": "legal_entity_address_city", "type": "varchar", "description": "City of the legal entity."},
+      {"name": "legal_entity_address_state", "type": "varchar", "description": "State/province of the legal entity."},
+      {"name": "legal_entity_address_postal_code", "type": "varchar", "description": "Postal code of the legal entity."},
+      {"name": "legal_entity_dob_day", "type": "bigint", "description": "Day of birth of the representative."},
+      {"name": "legal_entity_dob_month", "type": "bigint", "description": "Month of birth of the representative."},
+      {"name": "legal_entity_dob_year", "type": "bigint", "description": "Year of birth of the representative."},
+      {"name": "legal_entity_ssn_last_4_provided", "type": "boolean", "description": "Whether the last 4 SSN digits were provided."},
+      {"name": "legal_entity_personal_id_number_provided", "type": "boolean", "description": "Whether a personal ID number was provided."},
+      {"name": "legal_entity_verification_document_id", "type": "varchar", "description": "Identifier of the uploaded verification document."},
+      {"name": "tos_acceptance_date", "type": "timestamp", "description": "When the account accepted the Stripe terms of service."},
+      {"name": "tos_acceptance_ip", "type": "varchar", "description": "IP address recorded at terms-of-service acceptance."},
+      {"name": "requirements_currently_due", "type": "varchar", "description": "Comma-separated requirements due now. Empty string when nothing is due — test with != '' rather than IS NOT NULL."},
+      {"name": "requirements_past_due", "type": "varchar", "description": "Comma-separated requirements already overdue."},
+      {"name": "requirements_eventually_due", "type": "varchar", "description": "Comma-separated requirements that will eventually be due."},
+      {"name": "requirements_pending_verification", "type": "varchar", "description": "Comma-separated requirements awaiting verification."},
+      {"name": "future_requirements_currently_due", "type": "varchar", "description": "Comma-separated future requirements due now."},
+      {"name": "future_requirements_past_due", "type": "varchar", "description": "Comma-separated future requirements already overdue."},
+      {"name": "future_requirements_eventually_due", "type": "varchar", "description": "Comma-separated future requirements eventually due."},
+      {"name": "future_requirements_pending_verification", "type": "varchar", "description": "Comma-separated future requirements awaiting verification."}
+    ],
+    "notes": [
+      "Requirements columns are comma-separated strings, not arrays. Split them with split(col, ',') to unnest.",
+      "This table contains personal data. Handle exports according to your privacy obligations."
+    ]
+  },
+
+  "itemized_fees": {
+    "description": "Granular breakdown of every fee charged or deducted from your Stripe balance, one row per fee component.",
+    "grain": "One row per individual fee.",
+    "primary_key": [],
+    "columns_complete": true,
+    "columns": [
+      {"name": "balance_transaction_created", "type": "timestamp", "description": "Time (in UTC) at which the balance transaction affected your Stripe balance.", "confidence": "documented"},
+      {"name": "balance_transaction_id", "type": "varchar", "key": "foreign", "description": "The ID of the balance transaction that debited the fee from your balance.", "confidence": "documented"},
+      {"name": "balance_transaction_description", "type": "varchar", "description": "The description of the balance transaction containing the fee.", "confidence": "documented"},
+      {"name": "incurred_by", "type": "varchar", "description": "The ID of the object that incurred this fee, if any. Use incurred_by_type to determine the type of this object.", "confidence": "documented"},
+      {"name": "incurred_by_type", "type": "varchar", "description": "The object type which incurred_by references. Matches the object field in the API (Charge, Refund, Invoice, etc).", "confidence": "documented"},
+      {"name": "amount", "type": "double", "description": "Fee incurred for this activity, expressed in MAJOR units of the currency. Excludes the tax amount.", "confidence": "documented"},
+      {"name": "tax", "type": "double", "description": "Tax component of the fees paid, expressed in MAJOR units of the currency.", "confidence": "documented"},
+      {"name": "currency", "type": "varchar", "description": "Three-letter ISO code for the currency in which amount and tax are defined.", "confidence": "documented"},
+      {"name": "incurred_at", "type": "timestamp", "description": "Time (in UTC) at which the fee was incurred, by the date of its originating event.", "confidence": "documented"},
+      {"name": "activity_start_date", "type": "timestamp", "description": "For fees calculated from activity spanning a period of time, the activity's starting date (UTC).", "confidence": "documented"},
+      {"name": "activity_end_date", "type": "timestamp", "description": "For fees calculated from activity spanning a period of time, the activity's ending date (UTC).", "confidence": "documented"},
+      {"name": "product_feature_description", "type": "varchar", "description": "The product or feature associated with the fee.", "confidence": "documented"}
+    ],
+    "foreign_keys": [
+      {"columns": ["balance_transaction_id"], "references": {"table": "balance_transactions", "columns": ["id"]}, "confidence": "documented"}
+    ],
+    "notes": [
+      "amount and tax are in MAJOR currency units here, unlike almost every other Sigma table. Do not divide by 100.",
+      "Column list is complete as published by Stripe."
+    ]
+  }
+}

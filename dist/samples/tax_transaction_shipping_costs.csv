@@ -1,0 +1,5 @@
+id,amount,amount_tax,currency,tax_behavior,tax_code,tax_transaction_id
+ttsc_xC0qTDirM0golp,10000,87,usd,inclusive,txcd_yhaxwSCNySD7lt,tax_abs8S3it2JKaw3
+ttsc_0VOfWVwN54f2Wl,7500,450,usd,exclusive,txcd_yhaxwSCNySD7lt,tax_SRux7SJ47Mm5r6
+ttsc_gyiyodm8Ftv7x9,500,190,gbp,inclusive,txcd_17FwwhLjZ4yVh8,tax_Wizm7PyXtjCdjd
+ttsc_oHW2cPbedaKSBP,24900,120,usd,inclusive,txcd_RHxdRlsanIHIp9,tax_SRux7SJ47Mm5r6

@@ -1,0 +1,5 @@
+account,amount,created,currency,source_id,type,id,automatic_transfer_id,available_on,description,exchange_rate,fee,net,reporting_category
+acct_4j9ECg1O2jL8QD,1999,2026-06-10 03:35:03,usd,src_s1mCvXFcHTehv3,payout,cabt_w7e7kOZw83XJ9P,po_EpV714atQqs0ft,2026-03-01 22:15:03,Onboarding,298.11,450,10000,default
+acct_BLOAMiMq9c6OzP,1999,2026-04-01 12:28:03,gbp,src_FIHfLyxY5LTvVA,stripe_fee,cabt_hsO2Gy1pfWu0vb,po_PRtFfvUqJTNztB,2026-01-09 12:12:03,Monthly subscription,325.63,450,500,standard
+acct_WwvvS1mKdpGEF5,2500,2026-03-07 08:33:03,usd,src_uNlM10Ctx95xzh,payment,cabt_SRIGnZ1GVnZReD,po_PRtFfvUqJTNztB,2026-04-21 23:21:03,Seat overage,180.97,304,7500,primary
+acct_4j9ECg1O2jL8QD,24900,2026-02-04 18:06:03,usd,src_VYC1xemn3RCS2q,transfer,cabt_NB9THLwGA7df93,po_GvNlINIs5l2Umy,2026-06-18 10:01:03,Onboarding,392.57,59,24900,standard

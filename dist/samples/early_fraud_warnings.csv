@@ -1,0 +1,5 @@
+id,actionable,charge_id,created,fraud_type,payment_intent_id
+efw_6KY18yICs6aw3T,False,ch_JcBQ9YjE5oFKQ5,2026-06-22 19:27:03,default,pi_QdzjvQrdClYrsB
+efw_a3T1LtG5DIPGMn,False,ch_2jDVUeIZV6cCKz,2026-04-19 09:54:03,standard,pi_HlE4a31F0ESGxC
+efw_GgF6cbsqKxBYyA,True,ch_tnrCugXIQyBj2m,2026-05-25 00:35:03,standard,pi_m0wT6GkVxfcIA6
+efw_cmS0CRQ967kNUL,True,ch_2bqqxaqEKaJPQI,2026-03-02 06:43:03,standard,pi_U9SG11arBYSwX8

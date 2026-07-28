@@ -1,0 +1,5 @@
+id,created,customer_id,payment_method_id,status
+seti_XC0LyT7bhYr57l,2026-04-14 18:29:03,cus_JDPUPGvFODzRGE,pm_1EnkAUxRqfAuf4,requires_payment_method
+seti_h3r0JZ0jxF2epr,2026-05-09 07:42:03,cus_JDPUPGvFODzRGE,pm_cZbaKz4GK1wO6R,requires_payment_method
+seti_oHwkHUqx4kvF2B,2026-06-10 05:05:03,cus_h0AiUDqDAIJZip,pm_bOakV9Go58TKIi,succeeded
+seti_86ityBP1RxJLxS,2026-05-18 05:13:03,cus_h0AiUDqDAIJZip,pm_6bfxCt0zfnLFWv,succeeded

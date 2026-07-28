@@ -1,0 +1,5 @@
+id,amount,created,currency,customer_id,description,invoice_id,proration,subscription_id
+ii_JSKzmMjKnFFVqn,1999,2026-01-26 08:03:03,usd,cus_KanxdX8kJrtaIS,Monthly subscription,,False,sub_iCupqCRro8iSkd
+ii_Zu9j1Uir8Ns9rn,7500,2026-04-27 16:26:03,jpy,cus_JDPUPGvFODzRGE,Onboarding,,False,sub_HAG9Xks22f1Rjt
+ii_mwSLu8B8mOrDFv,4200,2026-05-30 13:26:03,jpy,cus_xMvhB2vCLZMiPG,Card payment processing,,True,sub_KQWD1GLVbsr4BO
+ii_LwWaxVadTtTR0O,4200,2026-02-14 07:05:03,usd,cus_3zj3TuUU1qMIE0,Card payment processing,,True,sub_6Hbmge58HsMzVC

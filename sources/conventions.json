@@ -1,0 +1,143 @@
+{
+  "$comment": "Structural rules Stripe documents about the Sigma schema. build_schema.py applies these to synthesize whole table families (metadata, Connect mirrors) so they don't have to be hand-listed. Each rule cites the doc page that states it.",
+  "dialect": {
+    "engine": "Trino",
+    "version": "414",
+    "previous_engine": "Presto v334",
+    "sql_flavor": "ANSI SQL (read-only; no DDL/DML)",
+    "identifier_quoting": "double quotes",
+    "string_literals": "single quotes",
+    "source": "https://docs.stripe.com/data/migrate-queries"
+  },
+  "metadata_tables": {
+    "rule": "Every object table with user-settable metadata has a sibling table named <table>_metadata. Each row is one key/value pair, joined back to the parent by a foreign key named <singular_object>_id.",
+    "columns": [
+      {
+        "name": "<parent>_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "References the id column of the parent object table."
+      },
+      {
+        "name": "key",
+        "type": "varchar",
+        "description": "The metadata key set on the object."
+      },
+      {
+        "name": "value",
+        "type": "varchar",
+        "description": "The metadata value for that key. Always a string, even when it holds a number or boolean."
+      }
+    ],
+    "grain": "One row per (object, metadata key) pair. Objects with no metadata have no rows.",
+    "confidence": "conventional",
+    "source": "https://docs.stripe.com/data/query-issuing-data",
+    "quote": "The metadata table contains a foreign key to the corresponding object in the primary table that you can use to join the two tables. For example, every row in the issuing_transactions_metadata table has the column issuing_transaction_id that references the id column of a row in the issuing_transactions table.",
+    "pivot_recipe": "select parent_id, map_agg(key, value) as md from <table>_metadata group by 1 -- then md['your_key']"
+  },
+  "connect_mirror_tables": {
+    "rule": "Connect platforms get a parallel table for connected-account data, named connected_account_<base table>. It carries the same columns as the base table plus an `account` column holding the connected account id.",
+    "extra_columns": [
+      {
+        "name": "account",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "The connected account (acct_...) this row belongs to.",
+        "references": {
+          "table": "accounts",
+          "column": "id"
+        }
+      }
+    ],
+    "confidence": "conventional",
+    "source": "https://docs.stripe.com/data/query-connect-data",
+    "quote": "Each Connect-specific table has an additional `account` column containing the identifier of a connected account.",
+    "caveat": "Which base tables have a connected_account_ mirror varies by account and by product enablement. Only mirrors that Stripe documents or that you have verified are listed as tables here."
+  },
+  "id_prefixes": {
+    "$comment": "Stripe object ids are prefixed by type. Useful for sanity-checking a join and for recognizing what a polymorphic source_id points at.",
+    "acct": "accounts",
+    "ch": "charges",
+    "cus": "customers",
+    "dp": "disputes",
+    "in": "invoices",
+    "ii": "invoice_items",
+    "il": "invoice_line_items",
+    "pi": "payment_intents",
+    "pm": "payment_methods",
+    "po": "transfers (payouts, on/after 2017-04-06)",
+    "tr": "transfers (payouts before 2017-04-06, and Connect transfers)",
+    "trr": "transfer_reversals",
+    "re": "refunds",
+    "sub": "subscriptions",
+    "si": "subscription_items",
+    "sub_sched": "subscription_schedules",
+    "price": "prices",
+    "plan": "plans (legacy)",
+    "prod": "products",
+    "txn": "balance_transactions",
+    "seti": "setup_intents",
+    "src": "sources",
+    "cn": "credit_notes",
+    "cs": "checkout_sessions",
+    "plink": "payment_links",
+    "promo": "promotion_codes",
+    "tax": "tax_transactions",
+    "tax_li": "tax_transaction_line_items",
+    "txcd": "tax_codes",
+    "iauth": "issuing_authorizations",
+    "ipi": "issuing_transactions",
+    "ic": "issuing_cards",
+    "ich": "issuing_cardholders",
+    "fa": "treasury_financial_accounts",
+    "qt": "quotes"
+  },
+  "api_to_sigma_divergence": {
+    "$comment": "Sigma column names follow API conventions but are NOT mechanically derivable from the API object. Measured against the documented `charges` columns, naive derivation from the OpenAPI spec missed 21 real columns and invented 17 that don't exist. These are the observed rules. Treat them as heuristics for guessing a name to verify, never as proof a column exists.",
+    "rules": [
+      {
+        "rule": "Reference fields gain an _id suffix.",
+        "example": "charge.customer -> charges.customer_id; charge.transfer -> charges.transfer_id"
+      },
+      {
+        "rule": "Nested objects are flattened with underscores.",
+        "example": "charge.outcome.risk_score -> charges.outcome_risk_score"
+      },
+      {
+        "rule": "Some nested prefixes are dropped entirely when unambiguous.",
+        "example": "charge.payment_method_details.card.brand -> charges.card_brand"
+      },
+      {
+        "rule": "Some booleans are exposed as timestamps instead.",
+        "example": "charge.captured (boolean) -> charges.captured_at (timestamp)"
+      },
+      {
+        "rule": "The API `object` discriminator field is not present in Sigma.",
+        "example": "charge.object -> (no column)"
+      },
+      {
+        "rule": "Deeply nested arrays become their own tables rather than columns.",
+        "example": "invoice.lines -> invoice_line_items table"
+      }
+    ]
+  },
+  "special_values": {
+    "data_load_time": {
+      "type": "timestamp",
+      "description": "Not a column — a query-scoped constant available in every Sigma query, holding the time through which your account's data is complete. Use it instead of current_date to make scheduled queries deterministic.",
+      "example": "where created >= data_load_time - interval '1' month and created < data_load_time",
+      "source": "https://docs.stripe.com/data/data-freshness"
+    }
+  },
+  "amount_units": {
+    "default": "Amounts are integers in the currency's smallest unit (cents for USD, yen for JPY). An amount of 1000 with currency usd is 10.00 USD.",
+    "source": "https://docs.stripe.com/data/write-queries",
+    "exceptions": [
+      {
+        "tables": ["itemized_fees", "connected_account_itemized_fees"],
+        "note": "amount and tax on these tables are in MAJOR currency units, not minor units. Do not divide by 100.",
+        "source": "https://docs.stripe.com/data/query-all-fees-data"
+      }
+    ]
+  }
+}

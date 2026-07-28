@@ -1,0 +1,5 @@
+id,amount_total,created,customer_id,invoice_id,status,subscription_id
+qt_HLNdfD8lbUk4hM,24900,2026-06-10 07:18:03,cus_3zj3TuUU1qMIE0,in_s4bs9HMk6xvMLf,canceled,sub_WVCVkPn1riA0qv
+qt_QwLlHII6oUwohQ,1500,2026-04-24 08:05:03,cus_bqstt69lfehGN1,in_CXJdqEscY61ML7,open,sub_8Brps2XUAyJeXU
+qt_qY75bYRJhxdZah,7500,2026-01-15 11:45:03,cus_xMvhB2vCLZMiPG,in_b96TU1XZ2aJD7b,open,sub_8m193r6nRRAPQF
+qt_bxkrcf9BBIqwoM,7500,2026-01-09 22:57:03,cus_bqstt69lfehGN1,in_KvoEHzl42H9L2Q,accepted,sub_qyeF0QwCtQ5uyb

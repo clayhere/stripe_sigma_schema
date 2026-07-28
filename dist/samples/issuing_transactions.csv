@@ -1,0 +1,5 @@
+id,amount,authorization_id,balance_transaction_id,card_id,cardholder_id,created,currency,merchant_name,type
+ipi_jQuOSqvfyKkamt,7500,iauth_9tSeJZOYeXAopr,txn_BPil3MDq0bEpLR,ic_lq8F5t2cW2I1Pl,ich_My3HZMeMZz7He3,2026-01-31 18:15:03,eur,standard,refund
+ipi_aN9OTgSAk193bz,1999,iauth_L0OC1K7Q3eSycv,txn_EHbiI9zRhL90Bl,ic_lq8F5t2cW2I1Pl,ich_My3HZMeMZz7He3,2026-04-08 00:48:03,usd,default,capture
+ipi_ZGxDUTcY0cmD93,10000,iauth_YtZmAykqz4Upni,txn_ttxIus1GwWpuXs,ic_lq8F5t2cW2I1Pl,ich_Bx3BBqC0ir702U,2026-02-27 16:35:03,jpy,default,capture
+ipi_6TOTjTLG01oGxO,10000,iauth_9tSeJZOYeXAopr,txn_EFk1RruNtQejC5,ic_lq8F5t2cW2I1Pl,ich_My3HZMeMZz7He3,2026-06-10 12:44:03,eur,default,refund

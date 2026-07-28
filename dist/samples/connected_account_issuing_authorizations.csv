@@ -1,0 +1,5 @@
+account,id,amount,approved,card_id,cardholder_id,created,currency,merchant_category_code,merchant_country,merchant_name,status
+acct_shm7paJ1VUgqsv,caia_tITQGfcHKHa7DP,2500,False,ic_W83RNsRStze26O,ich_My3HZMeMZz7He3,2026-06-09 10:50:03,gbp,default,FR,,closed
+acct_WwvvS1mKdpGEF5,caia_sRgA4LOOgNv0Ef,10000,False,ic_lq8F5t2cW2I1Pl,ich_My3HZMeMZz7He3,2026-05-28 03:55:03,gbp,,GB,primary,expired
+acct_4j9ECg1O2jL8QD,caia_JqZecbSpRdOu0h,1500,True,ic_W83RNsRStze26O,ich_rwmRl3gMluZqot,2026-05-14 13:02:03,gbp,default,CA,,pending
+acct_4j9ECg1O2jL8QD,caia_klmTKRTL0AGXuf,999,True,ic_y7ifIDrG1EKrWG,ich_My3HZMeMZz7He3,2026-01-31 20:26:03,eur,default,DE,primary,reversed

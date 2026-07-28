@@ -1,0 +1,5 @@
+id,active,amount,created,currency,interval,product_id
+plan_MhhD78qMZ6J77k,False,2500,2026-04-25 21:49:03,jpy,month,prod_8MHshmzkAje5fj
+plan_W99pslO8wIop0B,True,7500,2026-04-17 09:15:03,usd,week,prod_jWlhDdqVHa8khE
+plan_cjRoK2njUUe2cr,True,1500,2026-01-27 15:04:03,usd,day,prod_Uredro2XIYVknf
+plan_t1csOAUCMk8xhD,True,999,2026-02-11 00:28:03,gbp,week,prod_XsaT4fJU6x1VJ4

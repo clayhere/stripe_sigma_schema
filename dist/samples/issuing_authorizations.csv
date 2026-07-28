@@ -1,0 +1,5 @@
+id,amount,approved,card_id,cardholder_id,created,currency,merchant_category_code,merchant_country,merchant_name,status
+iauth_Jt0EMQkE4lSuwo,10000,True,ic_y7ifIDrG1EKrWG,ich_My3HZMeMZz7He3,2026-05-09 07:28:03,eur,primary,CA,primary,reversed
+iauth_L0OC1K7Q3eSycv,1500,False,ic_y7ifIDrG1EKrWG,ich_Bx3BBqC0ir702U,2026-02-02 17:03:03,gbp,standard,US,primary,expired
+iauth_YtZmAykqz4Upni,4200,True,ic_y7ifIDrG1EKrWG,ich_Bx3BBqC0ir702U,2026-02-25 18:57:03,usd,standard,CA,default,pending
+iauth_9tSeJZOYeXAopr,1500,True,ic_VnSiAfD38zkIhD,ich_cEglqqOhm5Mbe2,2026-03-08 01:15:03,usd,standard,GB,primary,reversed

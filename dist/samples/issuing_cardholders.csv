@@ -1,0 +1,5 @@
+id,created,email,name,phone_number,status,type
+ich_Bx3BBqC0ir702U,2026-03-15 19:07:03,linus.johnson@example.com,Blue Harbor Coffee,primary,active,individual
+ich_My3HZMeMZz7He3,2026-04-16 02:13:03,ada.torvalds@example.com,Northwind Supply,primary,active,company
+ich_rwmRl3gMluZqot,2026-04-13 19:41:03,radia.turing@example.com,Ironwood Gear,primary,active,company
+ich_cEglqqOhm5Mbe2,2026-06-03 21:45:03,grace.hopper@example.com,Blue Harbor Coffee,primary,active,company

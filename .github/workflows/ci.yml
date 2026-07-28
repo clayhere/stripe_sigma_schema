@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly, so upstream Stripe schema changes surface as a failing diff.
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Uses the committed build/*.json extracts, so CI needs no network access
+      # and cannot be broken by a docs.stripe.com hiccup. The upstream-drift job
+      # below is what watches for real upstream changes.
+      - name: Rebuild from committed sources
+        run: make build emit samples
+
+      - name: Validate schema integrity
+        run: make validate
+
+      - name: Smoke test
+        run: make test
+
+      - name: Check committed artifacts are up to date
+        run: |
+          if ! git diff --exit-code --stat; then
+            echo "::error::Generated artifacts are stale. Run 'make' and commit the result."
+            exit 1
+          fi
+
+  upstream-drift:
+    # Informational: tells us when Stripe publishes new tables. Never blocks a PR.
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch current Stripe docs
+        run: make fetch
+
+      - name: Compare against committed inventory
+        run: |
+          python3 tools/extract_table_inventory.py _docs_cache -o build/upstream_inventory.json
+          python3 - <<'PY'
+          import json
+          committed = {t["name"] for t in json.load(open("build/table_inventory.json"))}
+          upstream = {t["name"] for t in json.load(open("build/upstream_inventory.json"))}
+          added, removed = sorted(upstream - committed), sorted(committed - upstream)
+          if added:
+              print(f"::warning::Stripe added tables: {', '.join(added)}")
+          if removed:
+              print(f"::warning::Stripe removed tables: {', '.join(removed)}")
+          if not added and not removed:
+              print("Table inventory matches Stripe's published list.")
+          PY

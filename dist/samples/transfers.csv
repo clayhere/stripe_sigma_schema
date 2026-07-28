@@ -1,0 +1,5 @@
+id,amount,automatic,created,currency,date,description,destination_id,failure_code,status,transfer_group
+po_lD8lDrXwvS5fhl,24900,True,2026-04-21 17:53:03,usd,2026-02-12 21:04:03,Seat overage,d_MuAbF2fMCFZnMF,default,failed,
+po_GvNlINIs5l2Umy,10000,True,2026-03-13 02:02:03,usd,2026-06-07 04:06:03,Card payment processing,d_1v0S01et1WGCS5,primary,paid,
+po_EpV714atQqs0ft,4200,True,2026-02-04 11:01:03,usd,2026-01-05 13:00:03,Monthly subscription,d_zlqFVFiIXz7TrD,default,in_transit,default
+po_PRtFfvUqJTNztB,1999,True,2026-01-10 09:16:03,eur,2026-02-11 16:42:03,Card payment processing,d_LL3aMXgvBs9tsQ,,failed,primary

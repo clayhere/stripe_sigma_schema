@@ -1,0 +1,5 @@
+activity_end_date,activity_start_date,amount,balance_transaction_created,balance_transaction_description,balance_transaction_id,currency,incurred_at,incurred_by,incurred_by_type,product_feature_description,tax
+2026-02-19 20:37:03,2026-05-02 03:25:03,20.5,2026-05-17 07:18:03,default,txn_Uei8e4ja88nLYC,usd,2026-06-01 22:13:03,default,,Seat overage,35.52
+2026-05-11 03:56:03,2026-05-18 13:46:03,1.11,2026-06-18 12:38:03,standard,txn_Uvz6c2EgAQRyDk,usd,2026-06-21 19:44:03,standard,primary,Card payment processing,19.12
+2026-01-30 05:43:03,2026-01-06 10:50:03,32.28,2026-06-14 20:55:03,primary,txn_8iY6MJNQPvCGpt,jpy,2026-05-27 09:41:03,default,,Monthly subscription,19.43
+2026-05-02 19:37:03,2026-01-30 00:12:03,37.95,2026-05-23 14:04:03,primary,txn_EFk1RruNtQejC5,usd,2026-02-27 16:45:03,,primary,Onboarding,2.15

@@ -1,0 +1,9 @@
+id,address_city,address_country,address_postal_code,balance,created,currency,default_source_id,delinquent,description,email,is_deleted,livemode,name
+cus_KanxdX8kJrtaIS,standard,FR,standard,24900,2026-03-17 01:20:03,jpy,ds_ukhjMz8QOvFnTu,False,Onboarding,alan.turing@example.com,True,True,Ironwood Gear
+cus_xMvhB2vCLZMiPG,,FR,default,4200,2026-06-24 23:16:03,eur,ds_n1JQMuZ5JxfgcL,False,Card payment processing,grace.lovelace@example.com,False,True,Acme Robotics
+cus_3zj3TuUU1qMIE0,,GB,primary,2500,2026-05-08 20:41:03,usd,ds_U6rRmRPBj3Qjz7,False,Card payment processing,alan.hopper@example.com,False,True,Lumen Analytics
+cus_h0AiUDqDAIJZip,default,CA,default,7500,2026-05-26 19:03:03,usd,ds_okyg1uce3kPi8Y,True,Onboarding,ada.perlman@example.com,True,True,Acme Robotics
+cus_JDPUPGvFODzRGE,primary,GB,,7500,2026-06-18 17:38:03,usd,ds_62ORvKco9pchgk,True,Seat overage,katherine.hopper@example.com,True,False,Lumen Analytics
+cus_TMf2xjG0qPQZcO,standard,CA,primary,1500,2026-04-20 19:02:03,jpy,ds_Cnr9f7LNrDEDBH,False,Monthly subscription,alan.perlman@example.com,True,False,Vertex Labs
+cus_bqstt69lfehGN1,default,FR,,24900,2026-01-18 07:06:03,usd,ds_RBhFsdEYFNyi1u,True,Onboarding,linus.johnson@example.com,True,True,Ironwood Gear
+cus_ha9fMx9KQHy3T4,standard,DE,primary,1500,2026-05-14 00:07:03,usd,ds_e4XgFTN7Mc5jc7,False,Monthly subscription,radia.lovelace@example.com,True,False,Vertex Labs

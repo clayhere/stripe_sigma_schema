@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: Stripe Sigma Schema Reference
+message: >-
+  If you use this dataset, please cite it. Contributions of verified columns
+  are more valuable than citations.
+type: dataset
+abstract: >-
+  A complete, machine-readable reference for the Stripe Sigma SQL data warehouse
+  schema: 164 tables and 945 columns with types, primary and foreign keys, enum
+  values, data-freshness SLAs, Trino dialect notes and query pitfalls. Each
+  column carries a provenance-backed confidence level. Includes referentially
+  valid synthetic sample data, a runnable SQLite sandbox, and an MCP server.
+  Designed as a context source for AI agents writing Stripe Sigma SQL.
+  Unofficial and not affiliated with Stripe, Inc.
+authors:
+  - name: stripe-sigma-schema contributors
+repository-code: "https://github.com/claysones/stripe-sigma-schema"
+version: 1.0.0
+date-released: "2026-07-28"
+license: CC0-1.0
+license-url: "https://creativecommons.org/publicdomain/zero/1.0/"
+keywords:
+  - Stripe Sigma
+  - Stripe Sigma schema
+  - Stripe data schema
+  - Stripe Data Pipeline
+  - SQL schema
+  - Trino
+  - payments analytics
+  - text-to-SQL
+  - LLM context
+  - AI agent reference
+  - Model Context Protocol

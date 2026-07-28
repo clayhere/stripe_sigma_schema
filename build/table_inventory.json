@@ -1,0 +1,1080 @@
+[
+  {
+    "name": "acceptance_reporting_v3_itemized",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 68,
+    "preview": false
+  },
+  {
+    "name": "accounts",
+    "dataset": "connect",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "accounts_metadata",
+    "dataset": "connect",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "activity_report_itemized",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 80,
+    "preview": false
+  },
+  {
+    "name": "aggregate_optimization_details",
+    "dataset": "analytics",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "analytics_acceptance_itemized",
+    "dataset": "analytics",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "application_fee_refunds",
+    "dataset": "connect-fees",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "application_fee_refunds_metadata",
+    "dataset": "connect-fees",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "application_fees",
+    "dataset": "connect-fees",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "authentication_report_attempts",
+    "dataset": "analytics",
+    "source": "derived",
+    "freshness_hours": 100,
+    "preview": false
+  },
+  {
+    "name": "balance_transaction_fee_details",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "balance_transactions",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "card_testing",
+    "dataset": "radar",
+    "source": "derived",
+    "freshness_hours": 120,
+    "preview": false
+  },
+  {
+    "name": "cau_fees",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 72,
+    "preview": false
+  },
+  {
+    "name": "charge_groups",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 72,
+    "preview": false
+  },
+  {
+    "name": "charge_optimization_details",
+    "dataset": "analytics",
+    "source": "derived",
+    "freshness_hours": 72,
+    "preview": false
+  },
+  {
+    "name": "charges",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "charges_metadata",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "checkout_custom_fields",
+    "dataset": "checkout",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "checkout_line_items",
+    "dataset": "checkout",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "checkout_sessions",
+    "dataset": "checkout",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "connected_account_activity_report_itemized",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 80,
+    "preview": false
+  },
+  {
+    "name": "connected_account_itemized_fees",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 120,
+    "preview": false
+  },
+  {
+    "name": "connected_account_itemized_fees_beta",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 120,
+    "preview": false
+  },
+  {
+    "name": "connected_account_payment_records",
+    "dataset": "payments",
+    "source": "derived",
+    "freshness_hours": 6,
+    "preview": false
+  },
+  {
+    "name": "connected_account_payment_records_metadata",
+    "dataset": "payments",
+    "source": "derived",
+    "freshness_hours": 6,
+    "preview": false
+  },
+  {
+    "name": "connected_account_summarized_balance_transactions",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 12,
+    "preview": false
+  },
+  {
+    "name": "coupons",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "coupons_currency_options",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "coupons_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "credit_note_discount_amounts",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "credit_note_line_item_discount_amounts",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "credit_note_line_item_tax_amounts",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "credit_note_line_items",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "credit_note_tax_amounts",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "credit_notes",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "credit_notes_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "crypto_onramp_sessions",
+    "dataset": "crypto",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "customer_balance_transactions",
+    "dataset": "customers",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "customer_balance_transactions_metadata",
+    "dataset": "customers",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "customer_cash_balance_transactions",
+    "dataset": "customers",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "customer_tax_ids",
+    "dataset": "customers",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "customers",
+    "dataset": "customers",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "customers_metadata",
+    "dataset": "customers",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "discounts",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "disputes",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "disputes_enhanced_eligibility",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "disputes_metadata",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "exchange_rates_from_usd",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "financing_balances",
+    "dataset": "capital",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "financing_offers",
+    "dataset": "capital",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "financing_transactions",
+    "dataset": "capital",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "icplus_fees",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 72,
+    "preview": false
+  },
+  {
+    "name": "invoice_custom_fields",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoice_customer_tax_ids",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoice_items",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoice_items_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoice_line_item_discount_amounts",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoice_line_item_tax_amounts",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoice_line_items",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoice_payments",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoice_shipping_cost_taxes",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoices",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "invoices_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_authorizations",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_authorizations_metadata",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_cardholders",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_cardholders_metadata",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_cards",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_cards_metadata",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_disputes",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_network_tokens",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_transactions",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "issuing_transactions_metadata",
+    "dataset": "issuing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "itemized_fees",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 120,
+    "preview": false
+  },
+  {
+    "name": "itemized_fees_beta",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 120,
+    "preview": false
+  },
+  {
+    "name": "network_cost_insights_report",
+    "dataset": "cost",
+    "source": "derived",
+    "freshness_hours": 120,
+    "preview": false
+  },
+  {
+    "name": "payment_intents",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "payment_intents_metadata",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "payment_links",
+    "dataset": "checkout",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "payment_method_details",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "payment_methods",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "payment_methods_metadata",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "payment_records",
+    "dataset": "payments",
+    "source": "derived",
+    "freshness_hours": 6,
+    "preview": false
+  },
+  {
+    "name": "payment_records_metadata",
+    "dataset": "payments",
+    "source": "derived",
+    "freshness_hours": 6,
+    "preview": false
+  },
+  {
+    "name": "payment_reviews",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "plans",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "plans_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "price_tiers",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "prices",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "prices_currency_options",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "prices_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "products",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "products_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "promotion_codes",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "quotes",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "radar_data_integration",
+    "dataset": "radar",
+    "source": "derived",
+    "freshness_hours": 48,
+    "preview": false
+  },
+  {
+    "name": "radar_rule_attributes",
+    "dataset": "radar",
+    "source": "derived",
+    "freshness_hours": 48,
+    "preview": false
+  },
+  {
+    "name": "radar_rules",
+    "dataset": "radar",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "recoveries",
+    "dataset": "billing",
+    "source": "derived",
+    "freshness_hours": 48,
+    "preview": false
+  },
+  {
+    "name": "refunds",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "refunds_metadata",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "revenue_recognition_debits_and_credits",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "rule_decisions",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "setup_attempts",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "setup_intents",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "setup_intents_metadata",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "sources",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "sources_metadata",
+    "dataset": "payments",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscription_item_change_events",
+    "dataset": "billing",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "subscription_item_change_events_testmode",
+    "dataset": "billing",
+    "source": "derived",
+    "freshness_hours": 48,
+    "preview": false
+  },
+  {
+    "name": "subscription_item_change_events_v2_beta",
+    "dataset": "billing",
+    "source": "derived",
+    "freshness_hours": 3,
+    "preview": true
+  },
+  {
+    "name": "subscription_items",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscription_items_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscription_schedule_phase_add_invoice_items",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscription_schedule_phase_configuration_items",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscription_schedule_phases",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscription_schedule_phases_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscription_schedules",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscription_schedules_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscriptions",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "subscriptions_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "summarized_balance_transactions",
+    "dataset": "other",
+    "source": "derived",
+    "freshness_hours": 12,
+    "preview": false
+  },
+  {
+    "name": "tax_forms",
+    "dataset": "tax-reporting",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "tax_rates",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "tax_rates_metadata",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  },
+  {
+    "name": "tax_transaction_jurisdiction_details",
+    "dataset": "tax",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "tax_transaction_line_items",
+    "dataset": "tax",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "tax_transaction_line_items_metadata",
+    "dataset": "tax",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "tax_transaction_shipping_costs",
+    "dataset": "tax",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "tax_transactions",
+    "dataset": "tax",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "tax_transactions_metadata",
+    "dataset": "tax",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "terminal_hardware_order_items",
+    "dataset": "terminal",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "terminal_hardware_order_metadata",
+    "dataset": "terminal",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "terminal_hardware_order_shipment_tracking",
+    "dataset": "terminal",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "terminal_hardware_order_tax_amounts",
+    "dataset": "terminal",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "terminal_hardware_orders",
+    "dataset": "terminal",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "terminal_locations",
+    "dataset": "terminal",
+    "source": "derived",
+    "freshness_hours": 120,
+    "preview": false
+  },
+  {
+    "name": "terminal_readers",
+    "dataset": "terminal",
+    "source": "derived",
+    "freshness_hours": 120,
+    "preview": false
+  },
+  {
+    "name": "transfer_reversals",
+    "dataset": "transfers",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "transfer_reversals_metadata",
+    "dataset": "transfers",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "transfers",
+    "dataset": "transfers",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "transfers_metadata",
+    "dataset": "transfers",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_financial_accounts",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_financial_accounts_metadata",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_inbound_transfers",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_inbound_transfers_metadata",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_outbound_payments",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_outbound_payments_metadata",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_outbound_transfers",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_outbound_transfers_metadata",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_transaction_entries",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "treasury_transactions",
+    "dataset": "treasury",
+    "source": "derived",
+    "freshness_hours": 24,
+    "preview": false
+  },
+  {
+    "name": "usage_records",
+    "dataset": "billing",
+    "source": "api_backed",
+    "freshness_hours": 3,
+    "preview": false
+  }
+]

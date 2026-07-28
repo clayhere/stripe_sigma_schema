@@ -1,0 +1,7 @@
+id,active,created,description,livemode,name,statement_descriptor,unit_label
+prod_8xpw0VjRviQWX6,False,2026-06-21 23:54:03,Seat overage,False,Enterprise Plan,NORTHWIND,default
+prod_4v9ef23lIzxFl0,False,2026-02-04 10:12:03,Card payment processing,False,Extra Seat,NORTHWIND,default
+prod_FxVQ3ZBq7YBhvi,True,2026-03-27 13:25:03,Onboarding,False,Priority Support,BLUEHARBOR,standard
+prod_ee78uEf9bGLRDl,False,2026-04-28 21:45:03,Onboarding,False,Growth Plan,BLUEHARBOR,default
+prod_hDF2t9mHfG4FsB,True,2026-02-25 20:42:03,Monthly subscription,False,Starter Plan,NORTHWIND,primary
+prod_u0TzzNBuG74Nc1,True,2026-04-15 17:02:03,Card payment processing,True,Starter Plan,ACME ROBOTICS,primary

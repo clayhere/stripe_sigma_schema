@@ -1,0 +1,18 @@
+# Cached copies of Stripe's documentation, pulled by `make fetch`.
+# Deliberately NOT committed: those pages are Stripe's copyrighted content and
+# this repo is CC0. We commit the extracted facts (build/*.json) instead —
+# table names, column names and freshness figures — which is what we actually use.
+_docs_cache/
+
+# Local verification output. Share it on a PR, don't commit it.
+build/verification.json
+probe.sql
+*.export.csv
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,5 @@
+account,connected_account_payment_record_id,key,value
+acct_shm7paJ1VUgqsv,capr_2u8SCT81nOWn3t,internal_ref,enterprise
+acct_shm7paJ1VUgqsv,capr_REH3yRkA6Fcw9H,channel,enterprise
+acct_shm7paJ1VUgqsv,capr_REH3yRkA6Fcw9H,order_id,partner
+acct_shm7paJ1VUgqsv,capr_QM4KKKYBGfLSNy,order_id,partner

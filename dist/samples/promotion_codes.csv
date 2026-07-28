@@ -1,0 +1,5 @@
+id,active,code,coupon_id,created,customer_id,expires_at,max_redemptions,times_redeemed
+promo_nX9Ug7N7c3FHg6,True,default,c_H0uR0KVi8FuNHi,2026-05-22 16:39:03,cus_J6htqGHnOsJZHP,2026-06-23 23:37:03,4868,11
+promo_9OMsZitBDvTBTc,True,standard,c_H0uR0KVi8FuNHi,2026-03-06 23:41:03,cus_tNqG4iweMRPrJy,2026-06-16 19:08:03,308,2
+promo_KcX8T6HSQpIxpK,True,,c_LJAC28bbiHTvVH,2026-05-14 03:45:03,cus_FRcMpkICH1kJzK,2026-02-17 04:32:03,3461,12
+promo_rWgNvLxpwm2GpV,True,,c_H0uR0KVi8FuNHi,2026-06-13 17:00:03,cus_iyX42iOtqam436,2026-05-26 15:03:03,1081,12

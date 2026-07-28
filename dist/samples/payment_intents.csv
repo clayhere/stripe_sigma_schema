@@ -1,0 +1,13 @@
+id,amount,amount_received,cancellation_reason,capture_method,created,currency,customer_id,description,invoice_id,livemode,payment_method_id,status
+pi_PWDHnT3TDuytvB,24900,10000,primary,automatic,2026-04-11 00:15:03,jpy,cus_bqstt69lfehGN1,Monthly subscription,in_T2lshi0YsRXVbn,False,pm_dAgtrXEv2C1PIj,requires_action
+pi_u1xQT77hbuqIqS,24900,24900,standard,automatic,2026-01-17 23:20:03,eur,cus_TMf2xjG0qPQZcO,Monthly subscription,in_1LTKlSTqguzzzc,True,pm_HtnxNgnWMHCWH9,succeeded
+pi_avaYobFhppx8Li,24900,1500,,manual,2026-02-08 01:21:03,usd,cus_ha9fMx9KQHy3T4,Monthly subscription,in_vPm8hmaN5cIVgG,True,pm_WN4CYQLwujoGhK,processing
+pi_kUnzT6CWEhaxsW,2500,4200,,automatic,2026-02-10 14:13:03,gbp,cus_h0AiUDqDAIJZip,Card payment processing,in_vWiylOvxioR6SD,False,pm_ocINU5Ucgx0X3c,succeeded
+pi_eNH1W5xBj5D2Cq,999,10000,primary,automatic_async,2026-05-20 14:43:03,gbp,cus_ha9fMx9KQHy3T4,Card payment processing,in_lca7AMqkb4v8Tc,False,pm_W6EwgM3tCRH5Ei,succeeded
+pi_O6MkyiZsv1w7Zm,500,7500,default,automatic,2026-03-28 19:44:03,jpy,cus_h0AiUDqDAIJZip,Seat overage,in_fKgnsCv5mK6iFg,False,pm_PdC2ZMgSBWBKXV,succeeded
+pi_8otuoQ2S57mlxC,4200,1999,primary,manual,2026-05-08 14:17:03,usd,cus_xMvhB2vCLZMiPG,Onboarding,in_vWiylOvxioR6SD,False,pm_CoOa3t31kbhEkw,processing
+pi_u6FuNdaWVPxNPD,4200,500,standard,automatic_async,2026-03-03 02:06:03,usd,cus_JDPUPGvFODzRGE,Onboarding,in_1LTKlSTqguzzzc,False,pm_qnZVop1GlX3Y9O,succeeded
+pi_UBIGyD03iMGRcy,999,999,primary,automatic_async,2026-03-07 04:18:03,usd,cus_TMf2xjG0qPQZcO,Card payment processing,in_O9FrRrojEdS9E2,False,pm_DgRIZfoXYcJCbc,requires_payment_method
+pi_OxICXpazXaOB2D,7500,999,primary,automatic,2026-01-29 11:25:03,usd,cus_KanxdX8kJrtaIS,Seat overage,in_DHgjMhKVZI3sV6,True,pm_34RlQoYaivhdrR,requires_capture
+pi_0lQSIp7R3Jo3GF,24900,10000,standard,automatic_async,2026-02-26 23:01:03,jpy,cus_TMf2xjG0qPQZcO,Card payment processing,in_fKgnsCv5mK6iFg,True,pm_0cZL4faIXEtOqC,succeeded
+pi_zFNjFCLYVcABy2,999,24900,default,manual,2026-05-07 01:47:03,usd,cus_xMvhB2vCLZMiPG,Monthly subscription,in_lca7AMqkb4v8Tc,False,pm_QcG8u9WffCQ2R5,succeeded

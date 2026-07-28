@@ -1,0 +1,5 @@
+id,default_aggregation_formula,display_name,event_name,livemode,status
+bm_3n2xiLL7pFzHfk,primary,Acme Robotics,default,False,ACTIVE
+bm_6EF3ffIS7gmkNS,,Ironwood Gear,default,False,INACTIVE
+bm_JvGBFNCOxeskUk,standard,Ironwood Gear,,False,ACTIVE
+bm_UQuw37US96ghHt,default,Acme Robotics,standard,True,ACTIVE

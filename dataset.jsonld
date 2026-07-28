@@ -1,0 +1,82 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Stripe Sigma Schema Reference",
+  "alternateName": [
+    "Stripe Sigma schema",
+    "Stripe Sigma SQL table reference",
+    "Stripe data schema for Sigma and Data Pipeline"
+  ],
+  "description": "Complete machine-readable reference for the Stripe Sigma SQL data warehouse schema: 164 tables and 945 columns with types, primary and foreign keys, enum values, data-freshness SLAs, Trino dialect notes and query pitfalls. Includes referentially-valid synthetic sample data and a runnable SQLite sandbox. Designed as a context source for AI agents writing Stripe Sigma SQL. Unofficial; not affiliated with Stripe, Inc.",
+  "keywords": [
+    "Stripe Sigma",
+    "Stripe Sigma schema",
+    "Stripe Sigma SQL",
+    "Stripe data schema",
+    "Stripe Data Pipeline",
+    "Trino",
+    "Presto",
+    "SQL schema",
+    "data warehouse",
+    "payments analytics",
+    "MRR",
+    "balance_transactions",
+    "charges",
+    "invoices",
+    "subscriptions",
+    "LLM context",
+    "AI agent reference",
+    "text-to-SQL"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "version": "1.0.0",
+  "isAccessibleForFree": true,
+  "creativeWorkStatus": "Published",
+  "url": "https://github.com/claysones/stripe-sigma-schema",
+  "codeRepository": "https://github.com/claysones/stripe-sigma-schema",
+  "measurementTechnique": "Derived from Stripe's public documentation at docs.stripe.com/data, with per-column provenance and confidence levels; verifiable against a live Stripe Sigma account.",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "tables",
+      "value": 164
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "columns",
+      "value": 945
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "Canonical schema (JSON)",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://github.com/claysones/stripe-sigma-schema/blob/main/dist/sigma_schema.json"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Agent context pack (Markdown)",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "https://github.com/claysones/stripe-sigma-schema/blob/main/AGENTS.md"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Trino DDL",
+      "encodingFormat": "application/sql",
+      "contentUrl": "https://github.com/claysones/stripe-sigma-schema/blob/main/dist/sigma_schema.trino.sql"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Synthetic sample database (SQLite)",
+      "encodingFormat": "application/vnd.sqlite3",
+      "contentUrl": "https://github.com/claysones/stripe-sigma-schema/blob/main/dist/sigma_sample.sqlite"
+    }
+  ],
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Stripe Sigma",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://stripe.com/sigma"
+  }
+}

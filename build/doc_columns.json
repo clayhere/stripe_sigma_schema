@@ -1,0 +1,732 @@
+{
+  "balance_transaction_fee_details": {
+    "amount": [
+      "data_query-issuing-data.md"
+    ],
+    "balance_transaction_id": [
+      "data_query-issuing-data.md",
+      "data_query-transactions.md"
+    ],
+    "type": [
+      "data_query-issuing-data.md",
+      "data_query-transactions.md"
+    ]
+  },
+  "balance_transactions": {
+    "amount": [
+      "data_data-freshness.md",
+      "data_query-transactions.md",
+      "data_write-queries.md"
+    ],
+    "automatic_transfer_id": [
+      "data_query-transactions.md"
+    ],
+    "created": [
+      "data_data-freshness.md",
+      "data_query-transactions.md",
+      "data_write-queries.md"
+    ],
+    "currency": [
+      "data_data-freshness.md",
+      "data_query-transactions.md",
+      "data_write-queries.md"
+    ],
+    "data_load_time": [
+      "data_data-freshness.md"
+    ],
+    "fee": [
+      "data_data-freshness.md",
+      "data_query-transactions.md"
+    ],
+    "id": [
+      "data_data-freshness.md",
+      "data_query-all-fees-data.md",
+      "data_query-issuing-data.md",
+      "data_query-transactions.md"
+    ],
+    "net": [
+      "data_query-transactions.md"
+    ],
+    "reporting_category": [
+      "data_query-all-fees-data.md"
+    ],
+    "source_id": [
+      "data_query-transactions.md",
+      "data_write-queries.md"
+    ],
+    "type": [
+      "data_query-transactions.md",
+      "data_write-queries.md"
+    ]
+  },
+  "billing_meter_event_summaries": {
+    "aggregated_value": [
+      "data_query-billing-data.md"
+    ],
+    "billing_meters": [
+      "data_query-billing-data.md"
+    ],
+    "customer_id": [
+      "data_query-billing-data.md"
+    ],
+    "display_name": [
+      "data_query-billing-data.md"
+    ],
+    "end_time": [
+      "data_query-billing-data.md"
+    ],
+    "meter_id": [
+      "data_query-billing-data.md"
+    ],
+    "start_time": [
+      "data_query-billing-data.md"
+    ],
+    "value_grouping_window": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "billing_meter_invalid_events": {
+    "billing_meter_invalid_events_payload": [
+      "data_query-billing-data.md"
+    ],
+    "error_code": [
+      "data_query-billing-data.md"
+    ],
+    "error_message": [
+      "data_query-billing-data.md"
+    ],
+    "id": [
+      "data_query-billing-data.md"
+    ],
+    "key": [
+      "data_query-billing-data.md"
+    ],
+    "value": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "billing_meters": {
+    "default_aggregation_formula": [
+      "data_query-billing-data.md"
+    ],
+    "display_name": [
+      "data_query-billing-data.md"
+    ],
+    "livemode": [
+      "data_query-billing-data.md"
+    ],
+    "status": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "charges": {
+    "amount": [
+      "data_migrate-queries.md",
+      "data_query-connect-data.md",
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "card_address_zip_check": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "card_brand": [
+      "data_query-disputes-and-fraud-data.md",
+      "data_query-transactions.md"
+    ],
+    "card_country": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "card_cvc_check": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "created": [
+      "data_migrate-queries.md",
+      "data_query-connect-data.md",
+      "data_query-disputes-and-fraud-data.md",
+      "data_query-transactions.md"
+    ],
+    "currency": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "current_date": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "customer_id": [
+      "data_migrate-queries.md",
+      "data_query-transactions.md"
+    ],
+    "destination_id": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "failure_code": [
+      "data_query-transactions.md"
+    ],
+    "failure_message": [
+      "data_query-transactions.md"
+    ],
+    "id": [
+      "data_migrate-queries.md",
+      "data_query-connect-data.md",
+      "data_query-disputes-and-fraud-data.md",
+      "data_query-transactions.md"
+    ],
+    "outcome_risk_score": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "outcome_rule_id": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "outcome_type": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "paid": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "status": [
+      "data_query-transactions.md"
+    ],
+    "transfer_id": [
+      "data_query-connect-data.md"
+    ]
+  },
+  "charges_metadata": {
+    "charge_id": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "key": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "value": [
+      "data_query-disputes-and-fraud-data.md"
+    ]
+  },
+  "connected_account_balance_transactions": {
+    "account": [
+      "data_query-connect-data.md"
+    ],
+    "amount": [
+      "data_query-connect-data.md"
+    ],
+    "created": [
+      "data_query-connect-data.md"
+    ],
+    "currency": [
+      "data_query-connect-data.md"
+    ],
+    "source_id": [
+      "data_query-connect-data.md"
+    ],
+    "type": [
+      "data_query-connect-data.md"
+    ]
+  },
+  "connected_account_itemized_fees": {
+    "account": [
+      "data_query-all-fees-data.md"
+    ],
+    "amount": [
+      "data_query-all-fees-data.md"
+    ],
+    "incurred_at": [
+      "data_query-all-fees-data.md"
+    ]
+  },
+  "connected_accounts": {
+    "business_name": [
+      "data_query-connect-data.md",
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "country": [
+      "data_query-connect-data.md"
+    ],
+    "email": [
+      "data_query-connect-data.md"
+    ],
+    "future_requirements_currently_due": [
+      "data_query-connect-data.md"
+    ],
+    "id": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "legal_entity_address_city": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_address_line1": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_address_postal_code": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_address_state": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_dob_day": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_dob_month": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_dob_year": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_first_name": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_last_name": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_personal_id_number_provided": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_ssn_last_4_provided": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_type": [
+      "data_query-connect-data.md"
+    ],
+    "legal_entity_verification_document_id": [
+      "data_query-connect-data.md"
+    ],
+    "payouts_enabled": [
+      "data_query-connect-data.md"
+    ],
+    "requirements_currently_due": [
+      "data_query-connect-data.md"
+    ],
+    "tos_acceptance_date": [
+      "data_query-connect-data.md"
+    ],
+    "tos_acceptance_ip": [
+      "data_query-connect-data.md"
+    ]
+  },
+  "coupons": {
+    "amount_off": [
+      "data_query-billing-data.md"
+    ],
+    "id": [
+      "data_query-billing-data.md"
+    ],
+    "percent_off": [
+      "data_query-billing-data.md"
+    ],
+    "valid": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "customers": {
+    "email": [
+      "data_query-billing-data.md",
+      "data_query-transactions.md"
+    ],
+    "id": [
+      "data_query-billing-data.md",
+      "data_query-transactions.md"
+    ]
+  },
+  "discounts": {
+    "coupon_id": [
+      "data_query-billing-data.md"
+    ],
+    "id": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "disputes": {
+    "amount": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "charge_id": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "created": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "id": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "reason": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "status": [
+      "data_query-disputes-and-fraud-data.md"
+    ]
+  },
+  "icplus_fees": {
+    "balance_transaction_created_at": [
+      "data_data-freshness.md"
+    ],
+    "balance_transaction_id": [
+      "data_data-freshness.md"
+    ],
+    "billing_amount": [
+      "data_data-freshness.md"
+    ],
+    "billing_currency": [
+      "data_data-freshness.md"
+    ],
+    "charge_id": [
+      "data_data-freshness.md"
+    ]
+  },
+  "invoices": {
+    "amount_due": [
+      "data_query-billing-data.md"
+    ],
+    "charge_id": [
+      "data_query-billing-data.md"
+    ],
+    "currency": [
+      "data_query-billing-data.md"
+    ],
+    "id": [
+      "data_query-billing-data.md",
+      "data_query-tax-data.md"
+    ],
+    "period_end": [
+      "data_query-billing-data.md"
+    ],
+    "period_start": [
+      "data_query-billing-data.md"
+    ],
+    "subscription_id": [
+      "data_query-billing-data.md"
+    ],
+    "total": [
+      "data_query-tax-data.md"
+    ]
+  },
+  "issuing_authorizations": {
+    "amount": [
+      "data_query-issuing-data.md"
+    ],
+    "approved": [
+      "data_query-issuing-data.md"
+    ],
+    "created": [
+      "data_query-issuing-data.md"
+    ],
+    "data_load_time": [
+      "data_query-issuing-data.md"
+    ],
+    "id": [
+      "data_query-issuing-data.md"
+    ]
+  },
+  "issuing_cardholders": {
+    "created": [
+      "data_query-issuing-data.md"
+    ],
+    "email": [
+      "data_query-issuing-data.md"
+    ],
+    "status": [
+      "data_query-issuing-data.md"
+    ],
+    "type": [
+      "data_query-issuing-data.md"
+    ]
+  },
+  "issuing_transactions": {
+    "amount": [
+      "data_query-issuing-data.md"
+    ],
+    "authorization_id": [
+      "data_query-issuing-data.md"
+    ],
+    "balance_transaction_id": [
+      "data_query-issuing-data.md"
+    ],
+    "created": [
+      "data_query-issuing-data.md"
+    ],
+    "id": [
+      "data_query-issuing-data.md"
+    ],
+    "type": [
+      "data_query-issuing-data.md"
+    ]
+  },
+  "itemized_fees": {
+    "amount": [
+      "data_query-all-fees-data.md"
+    ],
+    "balance_transaction_created": [
+      "data_query-all-fees-data.md"
+    ],
+    "balance_transaction_id": [
+      "data_query-all-fees-data.md"
+    ],
+    "incurred_at": [
+      "data_query-all-fees-data.md"
+    ],
+    "product_feature_description": [
+      "data_query-all-fees-data.md"
+    ],
+    "tax": [
+      "data_query-all-fees-data.md"
+    ]
+  },
+  "payment_method_details": {
+    "card_3ds_succeeded": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "charge_id": [
+      "data_query-disputes-and-fraud-data.md"
+    ]
+  },
+  "price_tiers": {
+    "amount": [
+      "data_query-billing-data.md"
+    ],
+    "price_id": [
+      "data_query-billing-data.md"
+    ],
+    "upto": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "prices": {
+    "currency": [
+      "data_query-billing-data.md"
+    ],
+    "id": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "products": {
+    "id": [
+      "data_query-billing-data.md"
+    ],
+    "name": [
+      "data_query-billing-data.md"
+    ],
+    "statement_descriptor": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "promotion_codes": {
+    "code": [
+      "data_query-billing-data.md"
+    ],
+    "id": [
+      "data_query-billing-data.md"
+    ],
+    "times_redeemed": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "radar_rule_attributes": {
+    "transaction_id": [
+      "data_query-disputes-and-fraud-data.md"
+    ]
+  },
+  "refunds": {
+    "balance_transaction_id": [
+      "data_query-transactions.md"
+    ],
+    "charge_id": [
+      "data_query-transactions.md",
+      "data_write-queries.md"
+    ],
+    "id": [
+      "data_query-transactions.md",
+      "data_write-queries.md"
+    ]
+  },
+  "rule_decisions": {
+    "created": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "id": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "payment_intent_id": [
+      "data_query-disputes-and-fraud-data.md"
+    ],
+    "rule_id": [
+      "data_query-disputes-and-fraud-data.md"
+    ]
+  },
+  "subscription_items": {
+    "id": [
+      "data_query-billing-data.md"
+    ],
+    "price_id": [
+      "data_query-billing-data.md"
+    ],
+    "price_product_id": [
+      "data_query-billing-data.md"
+    ],
+    "subscription_id": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "subscriptions": {
+    "customer_id": [
+      "data_query-billing-data.md"
+    ],
+    "discounts": [
+      "data_query-billing-data.md"
+    ],
+    "id": [
+      "data_query-billing-data.md"
+    ],
+    "price_id": [
+      "data_query-billing-data.md"
+    ],
+    "status": [
+      "data_query-billing-data.md"
+    ]
+  },
+  "tax_codes": {
+    "id": [
+      "data_query-tax-data.md"
+    ],
+    "name": [
+      "data_query-tax-data.md"
+    ]
+  },
+  "tax_transaction_jurisdiction_details": {
+    "amount_non_taxable": [
+      "data_query-tax-data.md"
+    ],
+    "amount_tax": [
+      "data_query-tax-data.md"
+    ],
+    "amount_taxable": [
+      "data_query-tax-data.md"
+    ],
+    "filing_amount_non_taxable": [
+      "data_query-tax-data.md"
+    ],
+    "filing_amount_tax": [
+      "data_query-tax-data.md"
+    ],
+    "filing_amount_taxable": [
+      "data_query-tax-data.md"
+    ],
+    "filing_currency": [
+      "data_query-tax-data.md"
+    ],
+    "id": [
+      "data_query-tax-data.md"
+    ],
+    "jurisdiction_country": [
+      "data_query-tax-data.md"
+    ],
+    "jurisdiction_level": [
+      "data_query-tax-data.md"
+    ],
+    "jurisdiction_name": [
+      "data_query-tax-data.md"
+    ],
+    "jurisdiction_state": [
+      "data_query-tax-data.md"
+    ],
+    "tax_rate_percentage": [
+      "data_query-tax-data.md"
+    ],
+    "tax_transaction_id": [
+      "data_query-tax-data.md"
+    ],
+    "tax_transaction_item_id": [
+      "data_query-tax-data.md"
+    ],
+    "tax_transaction_item_type": [
+      "data_query-tax-data.md"
+    ],
+    "tax_type": [
+      "data_query-tax-data.md"
+    ],
+    "taxability": [
+      "data_query-tax-data.md"
+    ],
+    "taxability_reason": [
+      "data_query-tax-data.md"
+    ]
+  },
+  "tax_transaction_line_items": {
+    "amount": [
+      "data_query-tax-data.md"
+    ],
+    "amount_tax": [
+      "data_query-tax-data.md"
+    ],
+    "currency": [
+      "data_query-tax-data.md"
+    ],
+    "id": [
+      "data_query-tax-data.md"
+    ],
+    "quantity_decimal": [
+      "data_query-tax-data.md"
+    ],
+    "source_line_item_id": [
+      "data_query-tax-data.md"
+    ],
+    "tax_behavior": [
+      "data_query-tax-data.md"
+    ],
+    "tax_code": [
+      "data_query-tax-data.md"
+    ],
+    "tax_transaction_id": [
+      "data_query-tax-data.md"
+    ]
+  },
+  "tax_transaction_shipping_costs": {
+    "amount": [
+      "data_query-tax-data.md"
+    ],
+    "amount_tax": [
+      "data_query-tax-data.md"
+    ],
+    "currency": [
+      "data_query-tax-data.md"
+    ],
+    "id": [
+      "data_query-tax-data.md"
+    ],
+    "tax_behavior": [
+      "data_query-tax-data.md"
+    ],
+    "tax_code": [
+      "data_query-tax-data.md"
+    ],
+    "tax_transaction_id": [
+      "data_query-tax-data.md"
+    ]
+  },
+  "tax_transactions": {
+    "id": [
+      "data_query-tax-data.md"
+    ],
+    "posted_at": [
+      "data_query-tax-data.md"
+    ],
+    "source_id": [
+      "data_query-tax-data.md"
+    ],
+    "source_type": [
+      "data_query-tax-data.md"
+    ],
+    "tax_date": [
+      "data_query-tax-data.md"
+    ]
+  },
+  "transfers": {
+    "amount": [
+      "data_query-connect-data.md"
+    ],
+    "date": [
+      "data_query-transactions.md"
+    ],
+    "destination_id": [
+      "data_query-connect-data.md"
+    ],
+    "id": [
+      "data_query-connect-data.md",
+      "data_query-transactions.md"
+    ]
+  }
+}

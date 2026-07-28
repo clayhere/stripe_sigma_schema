@@ -1,0 +1,4 @@
+id,amount,balance_transaction_id,charge_id,created,currency,evidence_due_by,is_charge_refundable,payment_intent_id,reason,status
+dp_quwRveep83iTlm,500,txn_4mxvua2IIs2EnG,ch_2bqqxaqEKaJPQI,2026-01-13 02:12:03,usd,2026-02-26 11:26:03,True,pi_Is5X2wX2Z9eUjY,incorrect_account_details,needs_response
+dp_zU54cYqF1ffBkL,1500,txn_t0AdQwTW1aCbCB,ch_2bqqxaqEKaJPQI,2026-06-22 23:12:03,usd,2026-04-21 04:13:03,False,pi_fT4qKq9XAbNuyG,customer_initiated,warning_closed
+dp_SJfq5iJxJ0oxAZ,1999,txn_RKbdoGqY4CQYBs,ch_2jDVUeIZV6cCKz,2026-02-03 14:34:03,usd,2026-02-02 14:01:03,True,pi_iuoDEfrf15a6xU,fraudulent,under_review

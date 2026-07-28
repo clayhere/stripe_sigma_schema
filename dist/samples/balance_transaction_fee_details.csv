@@ -1,0 +1,21 @@
+amount,balance_transaction_id,currency,description,type
+29,txn_waMPgIuBXKEJvL,eur,Onboarding,stripe_fee
+120,txn_LMTDNP0xuLGd0S,gbp,Monthly subscription,stripe_fee
+304,txn_4mxvua2IIs2EnG,gbp,Card payment processing,stripe_fee
+190,txn_3SEB6BnPOs69jA,usd,Onboarding,stripe_fee
+29,txn_940OSrhdn2Nn3J,usd,Monthly subscription,tax
+152,txn_RKbdoGqY4CQYBs,usd,Monthly subscription,application_fee
+0,txn_Uei8e4ja88nLYC,gbp,Onboarding,application_fee
+152,txn_RKbdoGqY4CQYBs,usd,Monthly subscription,application_fee
+152,txn_vZ0QkxRd4BdX1E,usd,Card payment processing,application_fee
+0,txn_Uei8e4ja88nLYC,gbp,Monthly subscription,stripe_fee
+0,txn_8iY6MJNQPvCGpt,usd,Monthly subscription,application_fee
+30,txn_940OSrhdn2Nn3J,usd,Onboarding,application_fee
+120,txn_ItwXyyH6PwOali,usd,Card payment processing,application_fee
+30,txn_waMPgIuBXKEJvL,eur,Monthly subscription,application_fee
+29,txn_BPil3MDq0bEpLR,usd,Monthly subscription,stripe_fee
+95,txn_n45EoJcOOWNBtx,usd,Monthly subscription,application_fee
+59,txn_t0AdQwTW1aCbCB,usd,Onboarding,tax
+30,txn_BPil3MDq0bEpLR,usd,Card payment processing,stripe_fee
+152,txn_vZ0QkxRd4BdX1E,usd,Card payment processing,application_fee
+95,txn_n45EoJcOOWNBtx,usd,Onboarding,stripe_fee

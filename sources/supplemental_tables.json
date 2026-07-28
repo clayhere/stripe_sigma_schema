@@ -1,0 +1,16 @@
+[
+  {
+    "$comment": "Tables Stripe demonstrates in official Sigma SQL examples but does not list on the data-freshness page. The freshness page is not a complete table inventory. freshness_hours is null where Stripe has not published one.",
+    "name": "$meta"
+  },
+  {"name": "billing_meters", "dataset": "billing", "source": "api_backed", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-billing-data"},
+  {"name": "billing_meter_event_summaries", "dataset": "billing", "source": "derived", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-billing-data"},
+  {"name": "billing_meter_invalid_events", "dataset": "billing", "source": "api_backed", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-billing-data"},
+  {"name": "billing_meter_invalid_events_payload", "dataset": "billing", "source": "api_backed", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-billing-data"},
+  {"name": "tax_codes", "dataset": "tax", "source": "api_backed", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-tax-data"},
+  {"name": "early_fraud_warnings", "dataset": "radar", "source": "api_backed", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-disputes-and-fraud-data"},
+  {"name": "connected_accounts", "dataset": "connect", "source": "api_backed", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-connect-data"},
+  {"name": "connected_account_balance_transactions", "dataset": "connect-payments", "source": "api_backed", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-connect-data", "mirror_of": "balance_transactions"},
+  {"name": "connected_account_charges", "dataset": "connect-payments", "source": "api_backed", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-connect-data", "mirror_of": "charges"},
+  {"name": "connected_account_issuing_authorizations", "dataset": "connect-issuing", "source": "api_backed", "freshness_hours": null, "evidence": "https://docs.stripe.com/data/query-issuing-data", "mirror_of": "issuing_authorizations"}
+]

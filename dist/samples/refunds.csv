@@ -1,0 +1,6 @@
+id,amount,balance_transaction_id,charge_id,created,currency,description,payment_intent_id,reason,status
+re_kLCnHJZCHKeow6,10000,txn_VqGKxmUrDoZeM0,ch_xeNvb6WcOpfyUz,2026-04-29 22:15:03,jpy,Card payment processing,pi_KHtYA0B1wG8Ka1,fraudulent,failed
+re_Fa79eXpgKWmyUs,10000,txn_3SEB6BnPOs69jA,ch_tnrCugXIQyBj2m,2026-02-21 03:46:03,gbp,Seat overage,pi_po6JIaDtf620M9,duplicate,requires_action
+re_lBQ9r0Nqyi3bXi,1999,txn_t0AdQwTW1aCbCB,ch_dQt4PEieQKVvU2,2026-01-31 18:25:03,usd,Card payment processing,pi_ggy8RkgIy7NLVj,partial_capture,succeeded
+re_NBqGvZCmoIL0Vw,1999,txn_ttxIus1GwWpuXs,ch_dQt4PEieQKVvU2,2026-01-20 03:19:03,eur,Onboarding,pi_BHUnnFGzgy3tbZ,requested_by_customer,succeeded
+re_Gk0YIPYUcRY9Ma,24900,txn_n45EoJcOOWNBtx,ch_tnrCugXIQyBj2m,2026-06-02 07:31:03,usd,Monthly subscription,pi_WNRmYrAVhyxpPX,duplicate,pending

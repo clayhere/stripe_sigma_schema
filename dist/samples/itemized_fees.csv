@@ -1,0 +1,5 @@
+activity_end_date,activity_start_date,amount,balance_transaction_created,balance_transaction_description,balance_transaction_id,currency,incurred_at,incurred_by,incurred_by_type,product_feature_description,tax
+2026-04-05 13:25:03,2026-04-10 05:51:03,14.31,2026-06-17 11:37:03,,txn_EFk1RruNtQejC5,usd,2026-02-13 18:20:03,default,primary,Card payment processing,44.98
+2026-01-25 04:01:03,2026-01-07 19:26:03,7.27,2026-03-28 16:28:03,default,txn_BPil3MDq0bEpLR,gbp,2026-05-06 00:06:03,primary,,Card payment processing,39.82
+2026-01-21 22:24:03,2026-01-31 20:46:03,30.76,2026-02-17 10:06:03,standard,txn_8iY6MJNQPvCGpt,usd,2026-06-22 11:20:03,,standard,Onboarding,46.8
+2026-05-16 11:50:03,2026-03-25 17:01:03,3.07,2026-03-25 10:20:03,,txn_Uvz6c2EgAQRyDk,usd,2026-04-10 06:38:03,primary,default,Onboarding,42.83

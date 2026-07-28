@@ -1,0 +1,5 @@
+id,amount,amount_tax,currency,quantity_decimal,source_line_item_id,tax_behavior,tax_code,tax_transaction_id
+tax_li_GLhsAe3kZSZMdR,7500,0,gbp,default,sli_RMNKYVSQmsPmwK,exclusive,txcd_hfnAzcw52x5O8b,tax_SnphOWOvpiukbW
+tax_li_rME9rn8K7zj6vP,2500,0,usd,,sli_Xvr1EaHXciAJaR,inclusive,txcd_hfnAzcw52x5O8b,tax_SnphOWOvpiukbW
+tax_li_IAfcrsov6gcP03,7500,450,eur,standard,sli_ix9rb2JND0zgeG,inclusive,txcd_hfnAzcw52x5O8b,tax_SRux7SJ47Mm5r6
+tax_li_yLUl4aWONPB9Js,10000,120,jpy,default,sli_wHv92LiQvApIuV,inclusive,txcd_yhaxwSCNySD7lt,tax_SnphOWOvpiukbW

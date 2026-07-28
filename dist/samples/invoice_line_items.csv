@@ -1,0 +1,15 @@
+id,amount,currency,description,invoice_id,period_end,period_start,price_id,proration,quantity,source_id,source_type,subscription_id
+il_hYHzlDE6twXKdI,1500,gbp,Seat overage,,2026-03-21 11:31:03,2026-04-06 03:07:03,price_OksC7AEz2SsnU6,True,7,src_HzTCzVoIhn6AWN,subscription,sub_pHcvfGSDgxIyVQ
+il_w3iKAQAJ1QJtmX,999,jpy,Card payment processing,,2026-06-25 05:40:03,2026-03-28 21:50:03,price_KsWkQ4GvpOtAF6,False,6,src_bzrolvuozxjxrm,subscription,sub_Zu7Bl8LirvoCZ3
+il_pmQljhTpNufZKQ,7500,jpy,Seat overage,,2026-03-16 23:50:03,2026-03-22 17:27:03,price_Ktf5LTg2PXiOCo,True,3,src_Yu8vkM8U86z1Nn,invoice_item,sub_rUUnYYNA1htavc
+il_S4PX1KGioBbkmr,10000,usd,Seat overage,,2026-05-02 02:58:03,2026-06-14 08:29:03,price_XFG5WMnzawLCz3,False,5,src_UCvxfgqZFtJkSk,invoice_item,sub_a7yEkXUeb21EHu
+il_2HzCDRp8sUIcTv,4200,eur,Seat overage,,2026-01-30 11:03:03,2026-01-11 15:44:03,price_RN3JVXniiPzEpj,False,12,src_PPEImTYGGinrAm,invoice_item,sub_mTJyaRuIS4EGz2
+il_XHcxboMIP8JeGL,500,usd,Card payment processing,,2026-02-12 09:52:03,2026-05-04 11:07:03,price_A9q7bcU5RYn7ZL,False,8,src_p5bCNZ3lKrT1N7,invoice_item,sub_KQMy3cmdjIGKzV
+il_6h5h6y9kdqhOKj,24900,usd,Monthly subscription,,2026-05-02 02:10:03,2026-05-16 03:21:03,price_0LIPW3Jwl4OP2K,False,7,src_VOZdub2lCInduk,invoice_item,sub_Tw6pzOZy1p8iU9
+il_d8zwmW6hTTrxgc,4200,usd,Seat overage,,2026-06-24 11:52:03,2026-03-10 17:56:03,price_rq97lPKUmsvsB8,False,9,src_RxW7FxPp1b7hWy,subscription,sub_Kj7T8h0Ux39hdp
+il_ABp19wy1uS5lyH,7500,usd,Seat overage,,2026-06-12 04:34:03,2026-06-22 15:40:03,price_l8Fh3x9RRgnWkq,True,12,src_R4PoO9Pvc5XCVG,subscription,sub_CDFYknba2Syuk9
+il_q1vPjlRxn8dFUc,7500,usd,Card payment processing,,2026-01-09 19:50:03,2026-01-17 17:37:03,price_b2zanfHceFcS8k,False,4,src_CDRyKaqg0G8Pao,invoice_item,sub_DiCHFSxsJPXByR
+il_YSpAC5NUIjPBuw,24900,usd,Card payment processing,,2026-01-06 10:18:03,2026-01-27 21:48:03,price_2NG1IRLcg4CZQu,False,5,src_5FCdswFJzMsaGp,invoice_item,sub_IhAJLEJc7FM6eP
+il_LeIXy7Dhi8pp06,999,jpy,Seat overage,,2026-03-29 08:50:03,2026-05-02 02:45:03,price_QFWtW0Hxexd7ED,False,3,src_xnIjBLwlWNm0td,invoice_item,sub_4flWhBJA8dW27o
+il_3R2cJS4uGhYt5l,10000,usd,Card payment processing,,2026-04-27 17:04:03,2026-05-08 16:51:03,price_XZyrH85oEWiM4u,True,7,src_OhXlqjQ202jDFS,subscription,sub_09fAvvdY2D1h5O
+il_6o4MxojxDAcEtc,7500,usd,Card payment processing,,2026-05-04 00:03:03,2026-01-15 13:40:03,price_nUmgcWGloFRe9v,False,12,src_tYJSBgGnkiyPE0,invoice_item,sub_SOsTbYwZqqXK3R

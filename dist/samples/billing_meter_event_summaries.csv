@@ -1,0 +1,5 @@
+aggregated_value,customer_id,end_time,meter_id,start_time,value_grouping_window
+291.04,cus_3zj3TuUU1qMIE0,2026-05-18 18:43:03,bm_UQuw37US96ghHt,2026-02-15 06:15:03,
+411.67,cus_TMf2xjG0qPQZcO,2026-05-20 05:44:03,bm_UQuw37US96ghHt,2026-03-06 20:37:03,standard
+153.12,cus_ha9fMx9KQHy3T4,2026-05-06 18:21:03,bm_UQuw37US96ghHt,2026-06-18 12:35:03,default
+216.78,cus_h0AiUDqDAIJZip,2026-04-15 22:32:03,bm_6EF3ffIS7gmkNS,2026-01-17 05:59:03,default

@@ -1,0 +1,5 @@
+id,brand,cardholder_id,created,currency,exp_month,exp_year,last4,status,type
+ic_y7ifIDrG1EKrWG,Visa,ich_My3HZMeMZz7He3,2026-03-09 14:03:03,gbp,608,4438,4717,active,virtual
+ic_lq8F5t2cW2I1Pl,MasterCard,ich_rwmRl3gMluZqot,2026-03-22 22:26:03,gbp,854,4759,8315,active,virtual
+ic_W83RNsRStze26O,Visa,ich_My3HZMeMZz7He3,2026-04-04 03:37:03,eur,2858,2892,2816,active,physical
+ic_VnSiAfD38zkIhD,Visa,ich_rwmRl3gMluZqot,2026-05-20 13:17:03,usd,3788,2234,3124,active,virtual

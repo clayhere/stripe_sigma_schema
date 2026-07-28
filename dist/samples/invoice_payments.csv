@@ -1,0 +1,5 @@
+amount_paid,charge_id,invoice_id,payment_intent_id,status
+500,ch_HnltdkTEvW0ZRC,,pi_t1a20Xn77LVRHD,primary
+1500,ch_WQTcZPHQYYRkOx,,pi_u2LG0Jgba4GbGc,standard
+10000,ch_ElO8Y75JKBNJxp,,pi_IybrJBMci915Ux,
+500,ch_uXahpePsowDFNN,,pi_d8s6HzC5bQMHry,
