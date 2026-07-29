@@ -158,6 +158,86 @@ def merge_doc_columns(table: dict, doc_cols: dict[str, list[str]], all_tables: s
             )
 
 
+def apply_verified_overlay(tables: list[dict], verified: dict) -> dict:
+    """Replace curated column lists with ground truth from a live Sigma account.
+
+    Verified data wins outright: the column list, order and types come from
+    information_schema. Curated descriptions, enums and key roles are carried
+    over for columns that actually exist, and dropped for ones that don't.
+    """
+    by_name = {t["name"]: t for t in tables}
+    stats = {"tables_verified": 0, "columns_verified": 0,
+             "columns_dropped": 0, "columns_gained": 0, "tables_added": 0}
+
+    for table_name, live_columns in verified["tables"].items():
+        table = by_name.get(table_name)
+        if table is None:
+            table = {
+                "name": table_name,
+                "dataset": "unclassified",
+                "source": "api_backed",
+                "freshness_hours": None,
+                "preview": False,
+                "listed_in_stripe_freshness_table": False,
+                "description": "",
+                "grain": "",
+                "primary_key": [],
+                "foreign_keys": [],
+                "notes": [],
+            }
+            tables.append(table)
+            by_name[table_name] = table
+            stats["tables_added"] += 1
+
+        curated = {c["name"]: c for c in table.get("columns", [])}
+        previously_known = set(curated)
+        rebuilt = []
+        for live in live_columns:
+            col = dict(curated.pop(live["name"], {}))
+            col.update({
+                "name": live["name"],
+                "type": live["type"],
+                "confidence": "verified",
+            })
+            if live.get("raw_type"):
+                col["raw_type"] = live["raw_type"]
+            if live.get("nullable") is not None:
+                col["nullable"] = live["nullable"]
+            # Stripe's own wording beats ours when the warehouse exposes it.
+            if live.get("comment"):
+                col["description"] = live["comment"]
+            col.setdefault("description", "")
+            rebuilt.append(col)
+
+        stats["columns_verified"] += len(rebuilt)
+        stats["columns_gained"] += sum(
+            1 for c in live_columns if c["name"] not in previously_known
+        )
+        # Whatever is left in `curated` was never reported by the account.
+        stats["columns_dropped"] += len(curated)
+        stats["tables_verified"] += 1
+
+        table["columns"] = rebuilt
+        table["columns_complete"] = True
+        table["verified_against_account"] = True
+
+        # Drop keys and joins that referenced columns which don't exist.
+        live_names = {c["name"] for c in rebuilt}
+        table["primary_key"] = [c for c in table["primary_key"] if c in live_names]
+        table["foreign_keys"] = [
+            fk for fk in table["foreign_keys"]
+            if all(c in live_names for c in fk["columns"])
+        ]
+
+    # A table we listed but the account never reported may still exist for
+    # other accounts (product not enabled), so flag rather than delete.
+    for table in tables:
+        if table["name"] not in verified["tables"]:
+            table["verified_against_account"] = False
+
+    return stats
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("."))
@@ -282,6 +362,14 @@ def main() -> int:
         table.setdefault("primary_key", source["primary_key"])
         table.setdefault("grain", source.get("grain", ""))
 
+    # ---- ground truth from a live account (highest priority) ---------------
+    verified_path = root / "sources/verified_schema.json"
+    verification_stats = None
+    if verified_path.exists():
+        verification_stats = apply_verified_overlay(tables, load(verified_path))
+        tables.sort(key=lambda t: t["name"])
+        print(f"  verified overlay: {verification_stats}")
+
     # ---- stats --------------------------------------------------------------
     conf_counts: dict[str, int] = {}
     for table in tables:
@@ -300,6 +388,11 @@ def main() -> int:
             "verified": "Confirmed to exist by querying a real Sigma account.",
         },
         "conventions": conventions,
+        "verification": {
+            "verified_against_live_account": verification_stats is not None,
+            "details": verification_stats,
+            "how_to_verify": "See verification/README.md",
+        },
         "stats": {
             "tables": len(tables),
             "columns": sum(len(t["columns"]) for t in tables),

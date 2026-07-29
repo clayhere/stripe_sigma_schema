@@ -155,6 +155,11 @@
       ]
     }
   },
+  "verification": {
+    "verified_against_live_account": false,
+    "details": null,
+    "how_to_verify": "See verification/README.md"
+  },
   "stats": {
     "tables": 164,
     "columns": 945,

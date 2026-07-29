@@ -355,7 +355,8 @@ exploratory `select * limit 1` queries to rediscover the schema each session.**
 1. **Sigma is read-only.** Never emit `INSERT`, `UPDATE`, `DELETE`, or DDL.
 2. **Respect the confidence marks.** A column marked `?` is unverified — it may
    not exist. Prefer unmarked columns; if you must use a `?` column, tell the
-   user it needs verification.
+   user it needs verification. `verification/README.md` explains how to remove
+   every `?` by extracting ground truth from a live Sigma account.
 3. **Never invent a column** by translating a Stripe API field name. Sigma's
    naming diverges from the API in specific ways documented below.
 4. **`columns_complete: false`** on a table means the list here is partial, not

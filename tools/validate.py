@@ -17,7 +17,8 @@ import sys
 from pathlib import Path
 
 VALID_CONFIDENCE = {"documented", "conventional", "community", "verified"}
-VALID_TYPES = {"varchar", "bigint", "double", "boolean", "timestamp", "date", "unknown"}
+VALID_TYPES = {"varchar", "bigint", "double", "boolean", "timestamp", "date", "unknown",
+               "json", "array", "map", "row", "varbinary"}
 VALID_SOURCES = {"api_backed", "derived"}
 
 
