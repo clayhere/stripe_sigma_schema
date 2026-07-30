@@ -1,5 +1,5 @@
 # Stripe Sigma Schema Reference
-Built for context efficient AI reference.  
+Built for context efficient AI reference. Stop burning time and tokens. 
 
 Are you a human? Stroll through the schema here: https://clayhere.github.io/stripe_sigma_schema
 
@@ -96,9 +96,9 @@ That makes the skill available in every project. To scope it to just this projec
 
 ## The problem
 
-There is no machine-readable sigma schema reference. So every AI session that writes Sigma SQL starts blind: it guesses `charge.customer` instead of `charges.customer_id`, invents `charges.captured` when the column is `captured_at`, or burns turns on `select * limit 1` probes to relearn what it knew yesterday.
+There is no current machine-readable sigma schema reference. So every AI session that writes Sigma SQL either starts blind, or incorrectly uses the API docs. It guesses `charge.customer` instead of `charges.customer_id`, invents `charges.captured` when the column is `captured_at`, or burns turns on `select * limit 1` probes to relearn what it knew yesterday.
 
-This repo is that knowledge, frozen into files an agent can load once.
+This repo is that knowledge, frozen into files an agent can load once and stop burning tokens.
 
 ## Files
 
@@ -159,13 +159,15 @@ It exists so an agent can see what values actually look like — `ch_` prefixes,
 
 ## A few things the schema will not tell you but this repo will
 
-1. Use `balance_transactions` for accounting, not `charges` — it's the only table that nets fees consistently across charges, refunds, disputes and payouts.
+1. When a subscription has multiple products(such as add ons), plan_id, price_id, and quantity on the subscription table will be NULL. You will need to join subscription_items to query these reliably. This is especially important for MRR/ARR/LTCV calcs.
+Use `balance_transactions` for accounting, not `charges` — it's the only table that nets fees consistently across charges, refunds, disputes and payouts.
 2. `itemized_fees.amount` is in **major** currency units. Every other amount column is in minor units. Do not divide by 100.
 3. Exclude `refunds.reason = 'partial_capture'` from refund metrics — those are auth-and-capture artifacts, not customer refunds.
 4. Exclude `disputes.status = 'prevented'` from chargeback ratios.
 5. `subscriptions.discounts` is a comma-separated **string**, not an array.
 6. `charges.card_brand` is `Visa`/`MasterCard`, not the API's lowercase.
 7. Stripe's published table list is **not complete** — `tax_codes`, `billing_meters`, `early_fraud_warnings`, `connected_accounts` and others appear in Stripe's own SQL examples but not in its table inventory. They're included here and flagged.
+8. If the subscription has multiple products, the price and quantity field on the subscription table bill be null. You will need to join the subscription_items table to reliably query by these values in environments with multiple products, like add ons. 
 
 Full list in [`AGENTS.md`](AGENTS.md).
 
