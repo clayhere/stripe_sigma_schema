@@ -34,7 +34,7 @@ limit 50;
 -- ---------------------------------------------------------------------
 -- 1C. Same idea, but check whether Stripe ships column descriptions as
 --     comments. If `comment` is populated, we get Stripe's own wording
---     for every column — the hover text from the Dashboard schema browser.
+--     for every column.
 -- ---------------------------------------------------------------------
 select
   table_name,

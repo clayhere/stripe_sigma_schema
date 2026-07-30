@@ -1,8 +1,8 @@
 # Stripe Sigma Schema Reference
 
-Load browsable Schema at: [https://clayhere.github.io/stripe_sigma_schema](https://clayhere.github.io/stripe_sigma_schema){:target="_blank"}
+Load browsable Schema at: https://clayhere.github.io/stripe_sigma_schema
 
-> ### This is the Stripe Sigma schema, NOT the Stripe REST API schema.
+> ### This is the Stripe Sigma schema, NOT the Stripe REST API schema.  
 >
 > Sigma is Stripe's separate SQL data warehouse. Its table and column names
 > **diverge from the REST API's object fields** — e.g. Sigma's
