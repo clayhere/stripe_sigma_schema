@@ -20,6 +20,7 @@ Are you a human? Stroll through the schema here: https://clayhere.github.io/stri
 [![CI](https://github.com/clayhere/stripe_sigma_schema/actions/workflows/ci.yml/badge.svg)](https://github.com/clayhere/stripe_sigma_schema/actions/workflows/ci.yml)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC0](https://img.shields.io/badge/data-CC0--1.0-green.svg)](LICENSE-DATA)
+[![Buy Me A Coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-support-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/clayhere)
 
 > Unofficial and not affiliated with Stripe, Inc. See [NOTICE](NOTICE).
 
