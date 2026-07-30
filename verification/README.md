@@ -66,7 +66,7 @@ Run it, export the CSV, and send it back.
 
 Together those are the four ways a generated Sigma query fails. Semantic choices
 — *which* table answers a question — stay in the curated notes and
-[`docs/RECIPES.md`](../docs/RECIPES.md).
+[`RECIPES.md`](../RECIPES.md).
 
 ---
 

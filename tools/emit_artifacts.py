@@ -369,7 +369,7 @@ exploratory `select * limit 1` queries to rediscover the schema each session.**
 | Realistic example values | `dist/samples/<table>.csv` |
 | DDL for tooling | `dist/sigma_schema.trino.sql` |
 | The join graph as a diagram | `dist/erd.mmd` |
-| Worked query patterns (MRR, fees, disputes, tax) | `docs/RECIPES.md` |
+| Worked query patterns (MRR, fees, disputes, tax) | `RECIPES.md` |
 
 ## Rules for using this reference
 
@@ -438,7 +438,7 @@ subscriptions, MRR SQL.
 ## Human-readable reference
 
 - [dist/SCHEMA.md](dist/SCHEMA.md): Per-table reference grouped by dataset, with full column tables.
-- [docs/RECIPES.md](docs/RECIPES.md): Working Sigma SQL for common questions - net revenue, MRR movement, payout reconciliation, dispute rate, tax liability, metadata pivots, multi-currency conversion.
+- [RECIPES.md](RECIPES.md): Working Sigma SQL for common questions - net revenue, MRR movement, payout reconciliation, dispute rate, tax liability, metadata pivots, multi-currency conversion.
 - [dist/erd.mmd](dist/erd.mmd): Mermaid ER diagram of the core join graph.
 - [README.md](README.md): Project overview, accuracy model and how to contribute.
 
@@ -451,6 +451,7 @@ subscriptions, MRR SQL.
 
 - [CONTRIBUTING.md](CONTRIBUTING.md): How to verify columns against a real account and contribute fixes.
 - [NOTICE](NOTICE): Trademark, accuracy and licensing disclosures.
+- `tools/mcp_server.py`: Run this repo as a local MCP server (stdio, no dependencies) for tool-by-tool lookups instead of loading the whole schema into context. See [README.md](README.md#as-an-mcp-server).
 """
 
 
@@ -921,7 +922,7 @@ def emit_sitemap(repo_url: str) -> str:
     base = pages_url(repo_url)
     paths = [
         "", "AGENTS.md", "llms.txt", "llms-full.txt", "dataset.jsonld",
-        "dist/SCHEMA.md", "dist/sigma_schema.json", "dist/erd.mmd",
+        "RECIPES.md", "dist/SCHEMA.md", "dist/sigma_schema.json", "dist/erd.mmd",
     ]
     urls = "\n".join(f"  <url><loc>{base}{p}</loc></url>" for p in paths)
     return (

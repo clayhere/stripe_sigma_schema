@@ -27,65 +27,82 @@ Also covers the same schema exposed through **Stripe Data Pipeline**.
 
 ---
 
+## Use this with your AI tool
+
+**Claude** — Attach [`AGENTS.md`](AGENTS.md) or [`llms-full.txt`](llms-full.txt) as a Project knowledge file, or paste it into the chat. In Claude Code, drop `AGENTS.md` in your working directory and it's picked up automatically, add the [MCP server](#as-an-mcp-server), or install the [Skill](#as-a-claude-skill) below so Claude fetches the reference automatically whenever you ask it to write Sigma SQL.
+
+**ChatGPT / Codex** — In ChatGPT, upload [`dist/sigma_schema.json`](dist/sigma_schema.json) or [`llms-full.txt`](llms-full.txt) to a Custom GPT's knowledge or a Project's files. The Codex CLI can also use this repo as an [MCP server](#as-an-mcp-server).
+
+**Cursor** — Add [`AGENTS.md`](AGENTS.md) to your workspace so it's picked up as context automatically, `@`-mention [`dist/sigma_schema.json`](dist/sigma_schema.json) in chat, or add the [MCP server](#as-an-mcp-server) below.
+
+**Perplexity** — Upload [`llms-full.txt`](llms-full.txt) or [`dist/sigma_schema.json`](dist/sigma_schema.json) to a Space's files so answers ground on this schema instead of the REST API.
+
+**Anything else** — every entry point below is a plain file. Point your tool at whichever fits: [`AGENTS.md`](AGENTS.md) for a compact context pack, [`llms.txt`](llms.txt) / [`llms-full.txt`](llms-full.txt) for the llms.txt standard, [`dist/sigma_schema.json`](dist/sigma_schema.json) for structured data, or the hosted browser above for humans.
+
+### As an MCP server
+
+For tool-by-tool lookups instead of loading the whole schema into context. Needs a local clone and Python 3.11+; no third-party dependencies. Exposes `search_tables`, `describe_table`, `find_column`, `join_path` and `get_conventions`.
+
+**Claude Code**
+
+```bash
+claude mcp add stripe-sigma-schema -- python3 "$PWD/tools/mcp_server.py"
+```
+
+**Claude Desktop, Cursor, or any MCP client config in JSON** — add to `claude_desktop_config.json` / `.cursor/mcp.json`:
+
+```json
+{"mcpServers": {"stripe-sigma-schema": {
+  "command": "python3", "args": ["/absolute/path/to/tools/mcp_server.py"]}}}
+```
+
+**Codex CLI** — add to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.stripe-sigma-schema]
+command = "python3"
+args = ["/absolute/path/to/tools/mcp_server.py"]
+```
+
+Check your specific client's docs for where its config file lives and whether it needs a restart to pick up new servers — this varies by client and by version. Perplexity does not currently support adding local MCP servers this way; use the file-upload option above instead.
+
+### As a Claude Skill
+
+[`skills/stripe-sigma-queries.skill`](skills/stripe-sigma-queries.skill) packages this reference as a [Claude Skill](https://www.anthropic.com/news/skills) — once installed, Claude fetches the schema reference on its own whenever you ask it to write, fix, or explain Stripe Sigma SQL, without you having to attach a file each time.
+
+**Claude Code** — unzip it straight into your skills directory:
+
+```bash
+mkdir -p ~/.claude/skills
+unzip skills/stripe-sigma-queries.skill -d ~/.claude/skills
+```
+
+That makes the skill available in every project. To scope it to just this project instead, extract into `.claude/skills/` inside the project's directory. The plain-text source is also at [`skills/stripe-sigma-queries/SKILL.md`](skills/stripe-sigma-queries/SKILL.md) if you'd rather copy it in by hand.
+
+**Claude.ai / Claude Desktop** — under Settings → Capabilities → Skills (availability depends on your plan), upload [`skills/stripe-sigma-queries.skill`](skills/stripe-sigma-queries.skill) directly.
+
 ## The problem
 
 There is no machine-readable sigma schema reference. So every AI session that writes Sigma SQL starts blind: it guesses `charge.customer` instead of `charges.customer_id`, invents `charges.captured` when the column is `captured_at`, or burns turns on `select * limit 1` probes to relearn what it knew yesterday.
 
 This repo is that knowledge, frozen into files an agent can load once.
 
-## Quick start
+## Files
 
-**For an AI agent** — point it at one file:
-
-| Use case | File |
+| File | What it's for |
 | --- | --- |
-| Drop the whole schema into context (~6k tokens) | [`AGENTS.md`](AGENTS.md) |
-| Everything inlined, one file | [`llms-full.txt`](llms-full.txt) |
-| Parse it programmatically | [`dist/sigma_schema.json`](dist/sigma_schema.json) |
-| Look up one table at a time | MCP server (below) |
-
-**As an MCP server** — let the agent query only what it needs:
-
-```bash
-claude mcp add stripe-sigma-schema -- python3 "$PWD/tools/mcp_server.py"
-```
-
-Tools: `search_tables`, `describe_table`, `find_column`, `join_path`, `get_conventions`.
-
-```
-> join_path(from_table="disputes", to_table="customers")
-
-Join path disputes -> customers (2 hop(s)):
-  1. disputes.charge_id = charges.id
-  2. charges.customer_id = customers.id
-```
-
-**For a human** — open [`index.html`](index.html) in a browser (searchable, no install), read [`dist/SCHEMA.md`](dist/SCHEMA.md), or try SQL against the synthetic sandbox:
-
-```bash
-sqlite3 dist/sigma_sample.sqlite \
-  "select ch.id, ch.amount, ch.currency, cu.email
-     from charges ch join customers cu on cu.id = ch.customer_id limit 5"
-```
-
-## What's in here
-
-```
-AGENTS.md                    Agent instructions + full context pack   (generated)
-llms.txt / llms-full.txt     llms.txt-standard index and full text    (generated)
-dataset.jsonld               schema.org Dataset metadata              (generated)
-index.html                   Searchable browser UI, no install needed (generated)
-dist/sigma_schema.json       Canonical machine-readable schema        (generated)
-dist/SCHEMA.md               Per-table human reference                (generated)
-dist/sigma_schema.*.sql      CREATE TABLE DDL (Trino and SQLite)      (generated)
-dist/sigma_sample.sqlite     Runnable sandbox, synthetic data         (generated)
-dist/samples/*.csv           Synthetic sample rows, one file/table    (generated)
-dist/erd.mmd                 Mermaid ER diagram of the join graph     (generated)
-sources/                     Hand-maintained source of truth
-tools/                       Build, validate, verify, MCP server
-```
-
-Everything in `dist/` and the root-level AI files is generated. **Edit `sources/`, then run `make`.**
+| [`AGENTS.md`](AGENTS.md) | Full context pack, one file (~6k tokens) |
+| [`llms.txt`](llms.txt) / [`llms-full.txt`](llms-full.txt) | llms.txt-standard index and full text |
+| [`dist/sigma_schema.json`](dist/sigma_schema.json) | Canonical machine-readable schema |
+| [`dist/SCHEMA.md`](dist/SCHEMA.md) | Per-table human-readable reference |
+| [`RECIPES.md`](RECIPES.md) | Worked SQL for common questions — MRR, fees, disputes, tax |
+| [`dist/sigma_schema.trino.sql`](dist/sigma_schema.trino.sql) / [`.sqlite.sql`](dist/sigma_schema.sqlite.sql) | CREATE TABLE DDL |
+| [`dist/sigma_sample.sqlite`](dist/sigma_sample.sqlite) / [`dist/samples/`](dist/samples/) | Synthetic, referentially-valid sample data |
+| [`dist/erd.mmd`](dist/erd.mmd) | Mermaid ER diagram of the join graph |
+| [`index.html`](index.html) | Searchable browser — open directly, or visit it [hosted](https://clayhere.github.io/stripe_sigma_schema) |
+| [`dataset.jsonld`](dataset.jsonld) | schema.org Dataset metadata |
+| [`tools/mcp_server.py`](tools/mcp_server.py) | Run this repo as a local [MCP server](#as-an-mcp-server) |
+| [`skills/stripe-sigma-queries.skill`](skills/stripe-sigma-queries.skill) | Install as a [Claude Skill](#as-a-claude-skill) |
 
 ## Accuracy: how much should you trust this?
 
@@ -117,13 +134,7 @@ Sigma follows API *conventions*, not API *field names*. Those divergence rules a
 
 ### Verify against your own account
 
-```bash
-python3 tools/verify_against_sigma.py --probe-sql > probe.sql
-# run probe.sql in the Sigma query editor, export the result as CSV
-python3 tools/verify_against_sigma.py --results export.csv
-```
-
-This reports columns we're missing and columns that don't exist on your account. It never touches the Stripe API and needs no keys. **Please open a PR with the report** — that's how `community` becomes `verified` for everyone.
+Confirming a `community` column against your own Sigma account turns it into `verified` for everyone. See [CONTRIBUTING.md](CONTRIBUTING.md) for how, and **please open a PR with what you find.**
 
 ## Sample data
 
@@ -144,11 +155,6 @@ It exists so an agent can see what values actually look like — `ch_` prefixes,
 7. Stripe's published table list is **not complete** — `tax_codes`, `billing_meters`, `early_fraud_warnings`, `connected_accounts` and others appear in Stripe's own SQL examples but not in its table inventory. They're included here and flagged.
 
 Full list in [`AGENTS.md`](AGENTS.md).
-
-
-## Hosting
-
-`index.html` at the repo root is a self-contained page — open it directly, or enable **Settings → Pages → Source: GitHub Actions** and the included workflow (`.github/workflows/pages.yml`) publishes the whole repo, with `index.html` as the site's landing page. `robots.txt` and `sitemap.xml` are generated for it automatically.
 
 ## Contributing
 

@@ -33,7 +33,7 @@ subscriptions, MRR SQL.
 ## Human-readable reference
 
 - [dist/SCHEMA.md](dist/SCHEMA.md): Per-table reference grouped by dataset, with full column tables.
-- [docs/RECIPES.md](docs/RECIPES.md): Working Sigma SQL for common questions - net revenue, MRR movement, payout reconciliation, dispute rate, tax liability, metadata pivots, multi-currency conversion.
+- [RECIPES.md](RECIPES.md): Working Sigma SQL for common questions - net revenue, MRR movement, payout reconciliation, dispute rate, tax liability, metadata pivots, multi-currency conversion.
 - [dist/erd.mmd](dist/erd.mmd): Mermaid ER diagram of the core join graph.
 - [README.md](README.md): Project overview, accuracy model and how to contribute.
 
@@ -46,3 +46,4 @@ subscriptions, MRR SQL.
 
 - [CONTRIBUTING.md](CONTRIBUTING.md): How to verify columns against a real account and contribute fixes.
 - [NOTICE](NOTICE): Trademark, accuracy and licensing disclosures.
+- `tools/mcp_server.py`: Run this repo as a local MCP server (stdio, no dependencies) for tool-by-tool lookups instead of loading the whole schema into context. See [README.md](README.md#as-an-mcp-server).

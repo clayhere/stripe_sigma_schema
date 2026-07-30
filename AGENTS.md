@@ -33,7 +33,7 @@ exploratory `select * limit 1` queries to rediscover the schema each session.**
 | Realistic example values | `dist/samples/<table>.csv` |
 | DDL for tooling | `dist/sigma_schema.trino.sql` |
 | The join graph as a diagram | `dist/erd.mmd` |
-| Worked query patterns (MRR, fees, disputes, tax) | `docs/RECIPES.md` |
+| Worked query patterns (MRR, fees, disputes, tax) | `RECIPES.md` |
 
 ## Rules for using this reference
 
