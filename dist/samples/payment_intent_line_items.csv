@@ -1,0 +1,5 @@
+id,payment_intent_id,batch_timestamp,created,discount_amount,livemode,merchant,payment_method_options_klarna_image_url,payment_method_options_klarna_product_url,payment_method_options_paypal_category,payment_method_options_paypal_description,payment_method_options_paypal_sold_by,product_code,product_name,quantity,total_tax_amount,unit_cost
+pili_QyskvVdTzqy6dQ,pi_3gbt7VPoqhhaml,2026-05-03 05:55:03,199.77,59,True,default,primary,standard,default,primary,,primary,primary,11,59,3858
+pili_uwr4pC3as63MLT,pi_qyz26EQKuQNf7k,2026-02-13 11:03:03,245.96,304,True,standard,primary,default,standard,,standard,default,primary,7,87,4095
+pili_BPwVEN9BJ7S7S1,pi_Q9LyGGfuaFzp8m,2026-05-05 02:03:03,221.38,190,True,default,default,standard,,,,default,,12,450,4232
+pili_FxuIJ2ncO2ZLfF,pi_zKBLDHpeAToiou,2026-03-12 13:27:03,89.62,87,False,default,default,primary,standard,,default,,primary,2,304,2146

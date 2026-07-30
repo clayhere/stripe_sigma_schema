@@ -1,5 +1,5 @@
-customer_balance_transaction_id,key,value
-cbt_rMcEUYuw25Y0cO,channel,partner
-cbt_dey8GQ27iV3u4Q,order_id,acme-2026
-cbt_cF52ZI22T0LiIa,channel,partner
-cbt_cF52ZI22T0LiIa,channel,enterprise
+customer_balance_transaction_id,key,batch_timestamp,value
+cbt_rVaH3oKCVxNon1,order_id,2026-05-19 16:46:03,enterprise
+cbt_rVaH3oKCVxNon1,channel,2026-06-02 00:39:03,ORD-4471
+cbt_rVaH3oKCVxNon1,channel,2026-05-15 12:44:03,ORD-4471
+cbt_xvrlIdXaKnsYej,order_id,2026-05-28 13:39:03,enterprise

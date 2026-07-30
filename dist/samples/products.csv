@@ -1,7 +1,7 @@
-id,active,created,description,livemode,name,statement_descriptor,unit_label
-prod_8xpw0VjRviQWX6,False,2026-06-21 23:54:03,Seat overage,False,Enterprise Plan,NORTHWIND,default
-prod_4v9ef23lIzxFl0,False,2026-02-04 10:12:03,Card payment processing,False,Extra Seat,NORTHWIND,default
-prod_FxVQ3ZBq7YBhvi,True,2026-03-27 13:25:03,Onboarding,False,Priority Support,BLUEHARBOR,standard
-prod_ee78uEf9bGLRDl,False,2026-04-28 21:45:03,Onboarding,False,Growth Plan,BLUEHARBOR,default
-prod_hDF2t9mHfG4FsB,True,2026-02-25 20:42:03,Monthly subscription,False,Starter Plan,NORTHWIND,primary
-prod_u0TzzNBuG74Nc1,True,2026-04-15 17:02:03,Card payment processing,True,Starter Plan,ACME ROBOTICS,primary
+id,active,batch_timestamp,caption,created,deactivate_on,description,name,shippable,statement_descriptor,type,unit_label,url
+prod_h5rwrdfPe93bYX,True,2026-02-02 00:00:03,,2026-03-02 15:11:03,standard,Monthly subscription,Priority Support,True,ACME ROBOTICS,default,,https://buy.stripe.com/test_5czlXUJToD
+prod_95cTEe6cozFsRk,True,2026-06-11 15:20:03,standard,2026-01-14 07:55:03,,Card payment processing,Growth Plan,True,BLUEHARBOR,,standard,https://buy.stripe.com/test_yNpn7J2wcp
+prod_pyaULJvUfrOMyd,False,2026-04-08 04:07:03,,2026-06-21 07:56:03,standard,Onboarding,Extra Seat,False,NORTHWIND,,primary,https://buy.stripe.com/test_0GrpB3yOM4
+prod_Vo3oTyoVsnlvPA,True,2026-05-06 20:51:03,,2026-04-11 03:28:03,,Monthly subscription,Onboarding Fee,True,NORTHWIND,primary,standard,https://buy.stripe.com/test_0c1oFe31lD
+prod_SEtCnXgIjJzYDi,True,2026-05-19 12:45:03,,2026-03-29 20:30:03,default,Seat overage,Enterprise Plan,True,NORTHWIND,,default,https://buy.stripe.com/test_eoLgWB5yv0
+prod_fCZt1OVLv0PDYf,True,2026-01-14 02:20:03,standard,2026-05-23 05:58:03,,Seat overage,Onboarding Fee,True,NORTHWIND,primary,primary,https://buy.stripe.com/test_j5mpZ8MJxf

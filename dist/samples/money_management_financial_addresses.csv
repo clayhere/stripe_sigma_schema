@@ -1,0 +1,5 @@
+created,credentials_bank_name,credentials_bic,credentials_clabe,credentials_country,credentials_crypto_address,credentials_crypto_memo,credentials_crypto_network,credentials_institution_number,credentials_last4,credentials_routing_number,credentials_sort_code,credentials_transit_number,credentials_type,currency,financial_account_id,id,settlement_currency,status
+2026-05-30 12:42:03,standard,primary,standard,DE,primary,primary,standard,standard,,primary,default,,standard,jpy,fa_WDHnT3TDuytvBG,,usd,default
+2026-04-11 00:15:03,,standard,default,CA,,standard,,standard,primary,primary,,primary,,jpy,fa_Ijku1xQT77hbuq,primary,jpy,standard
+2026-02-10 11:05:03,,standard,,FR,primary,standard,default,standard,primary,default,primary,standard,default,gbp,fa_HCWH9MavaYobFh,default,usd,primary
+2026-06-03 13:49:03,default,,default,FR,standard,standard,,standard,primary,standard,,primary,primary,usd,fa_oGhKokUnzT6CWE,standard,usd,primary

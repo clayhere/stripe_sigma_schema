@@ -1,0 +1,5 @@
+issuing_transaction_id,batch_timestamp,description,quantity,total,unit_cost
+ipi_YswhTCz0gOMq9z,2026-04-17 07:44:03,Seat overage,4,1999,2846
+ipi_YswhTCz0gOMq9z,2026-03-17 01:39:03,Monthly subscription,9,999,1744
+ipi_WD3coXaMnjYPco,2026-01-22 11:56:03,Card payment processing,9,4200,1954
+ipi_gjXr4ISCaf2939,2026-05-09 18:50:03,Monthly subscription,2,500,2907

@@ -1,5 +1,5 @@
-id,amount,transaction_id
-tte_eGWQMp2vmim44c,500,tt_B9IQnKEUwQqpxg
-tte_duyNdnc5srTjYC,1999,tt_B9IQnKEUwQqpxg
-tte_6rMsA6F8CIjtOr,500,tt_lGAsk78NGsLpL6
-tte_jxudtou2SZgdR5,24900,tt_ZXIcUZ1YK4NVc0
+id,balance_impact_cash,balance_impact_inbound_pending,balance_impact_outbound_pending,batch_timestamp,created,currency,effective_at,financial_account_id,flow_id,flow_type,transaction_id,type
+tte_6C8bwyeHfsEjfw,4673,4932,899,2026-02-04 05:35:03,2026-01-09 02:53:03,gbp,2026-03-26 12:48:03,fa_Wi53GTUdwNANzG,f_HCeUiHlQ0ZGP19,standard,tt_gG3IxupAcTPhjI,default
+tte_BfnFONAVwBfUMw,1043,470,4626,2026-03-05 06:05:03,2026-05-03 20:25:03,usd,2026-01-19 08:47:03,fa_OrFSsaSU9jtaRS,f_Qg5PYyg0rHYAMD,standard,tt_kUf3zzLwG7kw7o,default
+tte_wWJqG90FIS3dvQ,3773,2876,810,2026-06-20 18:17:03,2026-06-19 23:01:03,eur,2026-03-23 16:51:03,fa_yxaQF6hrFjj3wF,f_VgboyzHf2rEYJZ,default,tt_xxcQKTrAWjodN4,standard
+tte_YbEUIOH3jwgze6,2015,1105,2824,2026-05-10 14:41:03,2026-02-14 18:45:03,gbp,2026-04-04 15:38:03,fa_JrnTi5m5mO2852,f_U3ZyjrQR9GmTHv,default,tt_gG3IxupAcTPhjI,primary

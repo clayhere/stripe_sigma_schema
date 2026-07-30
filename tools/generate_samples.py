@@ -145,7 +145,8 @@ class Generator:
             for candidate in (f"{stem}s", stem, f"{stem}es"):
                 if candidate in self.prefixes:
                     return f"{self.prefixes[candidate]}_{self.token()}"
-            return f"{''.join(w[0] for w in stem.split('_'))[:4]}_{self.token()}"
+            initials = "".join(w[0] for w in stem.split("_") if w)[:4] or "ref"
+            return f"{initials}_{self.token()}"
 
         # Name-driven realism beats type-driven defaults for Stripe data.
         if name == "currency" or name.endswith("_currency"):

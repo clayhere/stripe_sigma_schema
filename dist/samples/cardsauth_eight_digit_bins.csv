@@ -1,0 +1,5 @@
+_viewing_compartment,_viewing_merchant,account_funding_source,card_bin,card_brand,country,description,issuer_name,locality_zone
+default,default,primary,default,Visa,CA,Seat overage,,
+,standard,primary,,MasterCard,US,Seat overage,,primary
+default,primary,,,Discover,US,Card payment processing,standard,standard
+primary,standard,standard,standard,American Express,US,Monthly subscription,,standard

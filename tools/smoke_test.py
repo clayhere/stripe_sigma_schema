@@ -35,6 +35,7 @@ def main() -> int:
         "dist/sigma_schema.trino.sql", "dist/sigma_schema.sqlite.sql", "dist/erd.mmd",
         "dist/sigma_sample.sqlite", "AGENTS.md", "llms.txt", "llms-full.txt",
         "dataset.jsonld", "README.md", "LICENSE", "LICENSE-DATA", "NOTICE",
+        "index.html", "robots.txt", "sitemap.xml",
     ]
     for rel in required:
         check((ROOT / rel).exists(), rel)

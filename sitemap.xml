@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://claysones.github.io/stripe-sigma-schema/</loc></url>
+  <url><loc>https://claysones.github.io/stripe-sigma-schema/AGENTS.md</loc></url>
+  <url><loc>https://claysones.github.io/stripe-sigma-schema/llms.txt</loc></url>
+  <url><loc>https://claysones.github.io/stripe-sigma-schema/llms-full.txt</loc></url>
+  <url><loc>https://claysones.github.io/stripe-sigma-schema/dataset.jsonld</loc></url>
+  <url><loc>https://claysones.github.io/stripe-sigma-schema/dist/SCHEMA.md</loc></url>
+  <url><loc>https://claysones.github.io/stripe-sigma-schema/dist/sigma_schema.json</loc></url>
+  <url><loc>https://claysones.github.io/stripe-sigma-schema/dist/erd.mmd</loc></url>
+</urlset>

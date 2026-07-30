@@ -1,10 +1,10 @@
-id,created,price_id,price_product_id,quantity,subscription_id
-si_sqHJi1AnhLA8v2,2026-03-04 10:17:03,price_ptOqVF9hDheIo1,prod_FxVQ3ZBq7YBhvi,7,sub_zEY5ucxtMseGCz
-si_sILe1dxiGRurr0,2026-01-16 16:52:03,price_ptOqVF9hDheIo1,prod_ee78uEf9bGLRDl,9,sub_0znH09FUFlWdLc
-si_Pxssa3BcUw7jhK,2026-02-12 05:25:03,price_Cl5dz5RI1299qA,prod_ee78uEf9bGLRDl,10,sub_jLzH1mJkVN1oA1
-si_6tXiPXJ5P3uyuz,2026-04-09 15:49:03,price_ptOqVF9hDheIo1,prod_ee78uEf9bGLRDl,9,sub_jLzH1mJkVN1oA1
-si_WhegIsYxpv0mQP,2026-04-04 20:51:03,price_W4APGuJrpW2v6q,prod_8xpw0VjRviQWX6,8,sub_zEY5ucxtMseGCz
-si_cTQTbViRs46jAX,2026-02-06 11:05:03,price_gfVllxRsK03ch8,prod_hDF2t9mHfG4FsB,3,sub_rFiHY1mS3l21lR
-si_VF8PJqA7pxWsYp,2026-04-15 09:48:03,price_Cl5dz5RI1299qA,prod_4v9ef23lIzxFl0,2,sub_jLzH1mJkVN1oA1
-si_A6vz9yDQAM2QEl,2026-04-02 09:57:03,price_WIqr4c5F5MepGR,prod_u0TzzNBuG74Nc1,12,sub_sC5MVisVdHYROk
-si_NUauUd5jorMpsK,2026-03-17 05:45:03,price_M7stFQGmzwa5o0,prod_8xpw0VjRviQWX6,9,sub_sC5MVisVdHYROk
+id,subscription_id,batch_timestamp,billing_thresholds_usage_gte,created,discounts,item_current_period_end,item_current_period_start,plan_amount,plan_created,plan_currency,plan_id,plan_interval,plan_interval_count,plan_nickname,plan_product_id,plan_trial_period_days,price_created,price_currency,price_id,price_nickname,price_product_id,price_recurring_interval,price_recurring_interval_count,price_recurring_trial_period_days,price_unit_amount,quantity,subscription
+si_enjXEc1XX7kYQK,sub_9v5CnogLpTtaP9,2026-02-01 13:39:03,3340,995,primary,2026-06-13 12:19:03,2026-01-08 18:52:03,7500,2026-06-13 15:59:03,gbp,plan_9cv4G1uHfLRP53,month,5,default,pp_O6b5g0wFDz1usP,2036,2026-03-31 22:04:03,usd,price_YAVsM3Qism45Vh,standard,prod_SEtCnXgIjJzYDi,day,10,2791,24900,11,
+si_bSPZTddnInrTae,sub_oYnGoYlADuwVcf,2026-04-24 23:16:03,673,2378,default,2026-03-23 04:23:03,2026-05-22 00:43:03,1999,2026-05-21 20:17:03,jpy,plan_UlK2cEIcqDPhq1,day,1,default,pp_yU8jrY4NDpXgWZ,2271,2026-06-09 03:17:03,eur,price_uSmWuWJ0LH39hD,standard,prod_SEtCnXgIjJzYDi,day,1,3937,1500,7,default
+si_UFlX6QWpbSeT4X,sub_9v5CnogLpTtaP9,2026-02-24 02:19:03,4049,3934,standard,2026-02-20 03:06:03,2026-06-12 13:47:03,4200,2026-02-06 14:29:03,usd,plan_O0KgX87AHhn1TA,week,3,primary,pp_1BYUIzzlUm7EYm,3345,2026-05-28 14:54:03,usd,price_DS6rapCD5kPt8Y,,prod_pyaULJvUfrOMyd,week,10,3970,999,9,
+si_JVj9xROyarZwBz,sub_aKSKkliG930fdG,2026-03-28 02:10:03,983,2488,,2026-05-25 03:34:03,2026-06-22 05:23:03,999,2026-01-30 17:54:03,jpy,plan_lCXpo4RFc0wZDT,month,11,standard,pp_nCAy27Y1L1tFt2,2673,2026-04-27 10:37:03,eur,price_RpQKUfMRbbL8Gf,primary,prod_Vo3oTyoVsnlvPA,month,3,3288,999,3,primary
+si_ZHGrFAbU1vCStF,sub_EeKEEeyB9QoaLc,2026-02-08 09:52:03,73,2669,default,2026-05-04 00:26:03,2026-02-19 09:22:03,1999,2026-04-06 07:51:03,gbp,plan_yhsVmCNidBBc3N,year,11,standard,pp_pEF2yqXY6kPLnk,3625,2026-02-19 03:59:03,gbp,price_D9qQ6PlFQBHPIq,default,prod_Vo3oTyoVsnlvPA,month,7,2344,7500,8,default
+si_GTIhA6cqfZ4zlH,sub_oYnGoYlADuwVcf,2026-06-12 06:58:03,890,3890,,2026-03-16 02:06:03,2026-06-22 22:36:03,7500,2026-03-18 06:11:03,usd,plan_k45caEw1xk11iJ,week,4,primary,pp_Vg7WDQ0M5FElC4,3250,2026-02-27 07:06:03,usd,price_4iAFP5rKoBbmM1,,prod_pyaULJvUfrOMyd,day,6,1441,1999,4,default
+si_6srnJvhYXwSMJG,sub_fKHCD3mtAcXEsv,2026-01-29 15:05:03,1622,1671,primary,2026-05-19 10:24:03,2026-06-13 06:05:03,10000,2026-01-30 08:14:03,eur,plan_ggoMV0z8VnEgxl,week,6,primary,pp_kIu3N6G342PCOR,599,2026-01-27 15:35:03,usd,price_DS6rapCD5kPt8Y,standard,prod_Vo3oTyoVsnlvPA,day,2,4802,10000,3,default
+si_7e7slpsL4xM8Dg,sub_gN16CIrxU7ipyx,2026-05-20 19:01:03,604,2263,default,2026-03-02 13:17:03,2026-06-21 12:34:03,500,2026-03-12 23:37:03,usd,plan_w1g0Ni2K2XvVWy,year,5,standard,pp_cnzLUgWvKAFGJ6,3102,2026-04-07 10:39:03,gbp,price_ZYzOpBEtJrcFd4,,prod_pyaULJvUfrOMyd,day,10,4602,2500,1,primary
+si_8wSviuprhWragy,sub_5BGEtQPZhLVsql,2026-05-11 09:42:03,2083,3379,default,2026-05-23 09:25:03,2026-03-10 23:16:03,1500,2026-05-16 09:45:03,jpy,plan_Iinf2pzWxJOSGR,year,10,standard,pp_M4Lmv7LnsqN9o0,3820,2026-05-01 15:06:03,eur,price_D9qQ6PlFQBHPIq,standard,prod_h5rwrdfPe93bYX,month,11,1213,2500,1,primary

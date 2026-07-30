@@ -1,5 +1,5 @@
-id,created,status
-cos_GpvTbcHGlLReGK,2026-06-23 11:50:03,
-cos_ypJGPRvax6PbtJ,2026-05-20 08:29:03,primary
-cos_vqQ6BsWB4Zh98D,2026-01-18 10:02:03,default
-cos_ZBHQJCtBz9WW1k,2026-01-15 15:19:03,standard
+id,batch_timestamp,consumer_permissible_transaction_amount_tier,created,destination_amount,destination_currency,error_reason,kyc_level,network,provided_wallet_address,source_amount,source_currency,state,updated
+cos_doGqY4CQYBsEkY,2026-02-11 03:55:03,4200,2026-04-08 18:32:03,1999,eur,standard,,standard,default,4200,usd,default,2026-04-02 06:24:03
+cos_xRd4BdX1ER8tDf,2026-01-09 09:03:03,24900,2026-02-03 12:10:03,4200,usd,default,default,standard,primary,1500,jpy,default,2026-06-12 19:07:03
+cos_fUVqGKxmUrDoZe,2026-06-07 15:44:03,24900,2026-01-08 22:58:03,24900,usd,,standard,standard,,500,usd,standard,2026-05-30 15:55:03
+cos_f1XOqWmM14EqEF,2026-02-18 06:31:03,4200,2026-06-10 18:56:03,999,usd,,primary,,,4200,gbp,primary,2026-01-18 02:27:03

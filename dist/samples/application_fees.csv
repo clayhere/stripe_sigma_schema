@@ -1,5 +1,5 @@
-id,account_id,amount,balance_transaction_id,charge_id,created,currency,refunded
-af_uFuI92vqu3q8Hn,acct_g8EGLDO8cNGtrI,999,txn_EHbiI9zRhL90Bl,,2026-04-29 23:24:03,jpy,True
-af_iQ4oZxXcfBz9cL,acct_vLawFfqHZKZwtC,1500,txn_EHbiI9zRhL90Bl,,2026-01-15 22:14:03,usd,True
-af_3wzaWSPQorNt3L,acct_SKsiU5gsoi0VNS,4200,txn_BPil3MDq0bEpLR,,2026-02-10 05:27:03,jpy,False
-af_iOfHvOJ9BaExMP,acct_Xdmzm6i6bGOYLg,500,txn_kUATRO3oknIILs,,2026-03-13 19:12:03,usd,False
+id,account_id,amount,amount_refunded,application_id,balance_transaction_id,batch_timestamp,charge_id,created,currency,fee_source_id,fee_source_type,originating_transaction_id,refunded
+af_tI9XgS4HB4DhNP,acct_wHa3DphKoWrfhj,1500,7500,a_2TAWJrOtj3HMbI,,2026-04-13 13:50:03,,2026-02-14 11:31:03,eur,fs_LhuxvLYiETkpIb,,ot_3mbiekl6Qio2wm,True
+af_MH11VMxPyPvyxy,acct_fSkQrqgN6lN9M8,7500,4200,a_nfCwi91JpOQ6aQ,,2026-04-29 22:17:03,,2026-03-06 18:09:03,usd,fs_R2elg6IEXHAFBO,,ot_pBVwEXPQgxQVFw,True
+af_4B9cVHj22PDYOi,acct_krOQu7GGwUWKJ7,999,1999,a_PRUKvtuMUg0nuv,,2026-02-14 21:23:03,,2026-06-11 07:32:03,usd,fs_Tbkd3UPt2KAbAW,standard,ot_bzPlS5h7gwGIl7,False
+af_rSg64JvSxQPAJ6,acct_krOQu7GGwUWKJ7,1999,7500,a_RQ5kKbHBPH09qP,,2026-05-01 21:09:03,,2026-04-12 05:05:03,usd,fs_hTAFcq2hpJkCGy,primary,ot_1ZOEpqfuNVSGZR,False

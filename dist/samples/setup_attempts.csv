@@ -1,5 +1,5 @@
-id,created,setup_intent_id,status
-sa_hi4ekd3xcd0odn,2026-04-19 13:17:03,seti_h3r0JZ0jxF2epr,
-sa_3CgIkv4uK7rv7t,2026-04-26 14:53:03,seti_h3r0JZ0jxF2epr,
-sa_g7a7zL1hz1FAci,2026-04-04 07:33:03,seti_86ityBP1RxJLxS,default
-sa_XlmOQiQpgpdse5,2026-05-04 16:31:03,seti_oHwkHUqx4kvF2B,standard
+id,application_id,batch_timestamp,created,customer_id,flow_directions,on_behalf_of_id,payment_method_id,setup_error_advice_code,setup_error_code,setup_error_decline_code,setup_error_doc_url,setup_error_message,setup_error_network_advice_code,setup_error_network_decline_code,setup_error_param,setup_error_payment_method_id,setup_error_type,setup_intent_id,status,usage
+sa_SBiRgrWXyZv1xo,a_HlLzH0RPkpOd7d,2026-02-07 04:57:03,2026-03-18 12:29:03,cus_U0iLEN32Xh8Tch,standard,obo_J4wUQZNH99NKB3,pm_YOReBNpL38dSuN,primary,standard,default,default,primary,default,default,primary,sepm_V8tVa55ADhnsNt,standard,seti_NAyR2fX6TC1PFI,standard,primary
+sa_RwnCAQKRSRIQVY,a_TsraQdZmp78OEH,2026-03-19 17:51:03,2026-03-13 17:58:03,cus_U0iLEN32Xh8Tch,,obo_vT6wm1mBQEHBNi,pm_YOReBNpL38dSuN,,primary,primary,primary,default,default,standard,default,sepm_bAAR68D0E3U6sF,standard,seti_NAyR2fX6TC1PFI,primary,standard
+sa_9nTineyiov6drB,a_qwGVSwhvncfkxe,2026-05-26 22:16:03,2026-03-29 01:46:03,cus_iM4B95gzSDuxgW,,obo_efUNKO9NCQQvPk,pm_YOReBNpL38dSuN,primary,,primary,primary,standard,primary,default,,sepm_FQke2ClDsP5atq,,seti_cOWJVT9NwW1wDc,primary,standard
+sa_ZaCcib4re1WVRg,a_YC2SBvKkExyC4a,2026-02-16 08:59:03,2026-04-24 22:05:03,cus_B2Pw3IUiT2EGSu,primary,obo_h37iqwM4UhnBwh,pm_MlyQvENZiAalRO,primary,default,primary,primary,default,default,,primary,sepm_OX9tBmk1PqhRDb,,seti_dzTbc3FNgm0WoV,standard,

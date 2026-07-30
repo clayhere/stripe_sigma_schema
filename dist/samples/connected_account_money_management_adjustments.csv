@@ -1,0 +1,5 @@
+account,amount,created,currency,description,financial_account_id,id
+pbdcmBiw7M,1999,2026-04-06 01:47:03,usd,Monthly subscription,fa_C1I2Pv9EtVKT8O,
+DfuiG8gKyF,1999,2026-05-19 20:56:03,usd,Monthly subscription,fa_Pwyxs2jm4G1xJh,primary
+fi4tYkRFpY,500,2026-02-02 15:14:03,usd,Card payment processing,fa_lDvpwx6u4pM2rq,default
+DOoHezpF2F,4200,2026-06-05 05:06:03,jpy,Seat overage,fa_rxIAlvcd8ri2ww,standard

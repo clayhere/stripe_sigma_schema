@@ -1,5 +1,5 @@
 card_3d_secure_support,cvc_check,is_3d_secure_authenticated,risk_score,total_charges_per_card_number_all_time,transaction_id
-,primary,True,43,3767,ch_tnrCugXIQyBj2m
-,standard,True,86,4714,ch_2jDVUeIZV6cCKz
-default,default,False,81,1274,ch_bi8QTapgDXEu34
-,default,False,82,2645,ch_tnrCugXIQyBj2m
+standard,default,False,86,3989,ch_9PvPxAqjBM0IVw
+,standard,True,10,3520,ch_DMY9fid2Ibn2C8
+standard,standard,False,10,2942,ch_oaN9ejDDrNJO67
+standard,primary,True,35,2049,ch_JeQEhkRB9cGT7L

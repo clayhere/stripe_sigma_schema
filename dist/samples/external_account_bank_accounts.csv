@@ -1,0 +1,5 @@
+account_id,id,account_holder_name,account_holder_type,account_type,available_payout_methods,bank_name,batch_timestamp,country,currency,default_for_currency,fingerprint,last4,routing_number,status
+acct_pNpQOGlz0JsXuo,eaba_92LiQvApIuVLlB,standard,standard,default,default,default,2026-04-26 17:22:03,GB,jpy,jpy,default,2641,standard,
+acct_pNpQOGlz0JsXuo,eaba_C0qTDirM0golpU,,primary,default,default,,2026-05-31 22:06:03,CA,jpy,usd,primary,2378,default,
+acct_pNpQOGlz0JsXuo,eaba_7Z6Byjgyiyodm8,,primary,primary,primary,standard,2026-06-06 01:15:03,AU,usd,usd,default,9480,standard,standard
+acct_fSkQrqgN6lN9M8,eaba_daKSBPRZS6GEqN,standard,standard,default,,default,2026-02-08 03:03:03,FR,usd,usd,primary,5908,standard,primary

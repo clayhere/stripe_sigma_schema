@@ -1,0 +1,5 @@
+bank_debit_failure_reason,bank_debit_return_reason,created,effective_at,id,inbound_transfer_id,level,type
+primary,,2026-04-06 10:17:03,2026-04-12 16:47:03,primary,it_NrOK6MDWkQ5Gwq,default,default
+default,default,2026-06-14 22:00:03,2026-04-27 02:46:03,,it_D03iMGRcy5gftA,default,standard
+default,primary,2026-03-13 02:43:03,2026-05-01 12:57:03,standard,it_oXYcJCbcdOxICX,default,standard
+,standard,2026-06-17 23:08:03,2026-05-02 22:08:03,standard,it_s54jgelmIao5ri,default,default

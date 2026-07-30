@@ -1,5 +1,5 @@
-amount,credit_note_id,tax_rate_id
-999,,tr_mBCqHzA6VyBbqo
-4200,,tr_2rBZz3nC9UNa91
-7500,,tr_mBCqHzA6VyBbqo
-500,,tr_SuXPdnWACnfj85
+credit_note_id,id,amount,batch_timestamp,inclusive,tax_rate_id
+,cnta_hPGjT7EADHT5ZC,10000,2026-06-13 11:15:03,True,tr_Ospk2bTMB2at4Q
+,cnta_jUGMVgzzzHh0IX,1999,2026-03-03 01:54:03,False,tr_Ospk2bTMB2at4Q
+,cnta_Pc0Q09eL4mUMTU,10000,2026-03-18 21:14:03,False,tr_Ospk2bTMB2at4Q
+,cnta_k9mvBfd1OZ7Ntg,1500,2026-06-13 20:38:03,False,tr_tUeTj5kbpRGzFX

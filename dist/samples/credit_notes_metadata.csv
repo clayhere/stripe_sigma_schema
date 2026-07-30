@@ -1,5 +1,5 @@
-credit_note_id,key,value
-cn_jbjs2UdBc3Bg9P,channel,enterprise
-cn_SGBRJoWKbx8EaO,channel,acme-2026
-cn_w4K2kt2j7XlTxx,internal_ref,acme-2026
-cn_2DUFweqMLvj8G9,cohort,partner
+credit_note_id,key,batch_timestamp,value
+cn_C1rJAv2d0Z93kN,channel,2026-03-14 08:27:03,enterprise
+cn_J8yuPsw1bzxVEh,internal_ref,2026-01-11 13:50:03,acme-2026
+cn_dAMGq7UtTx5Ewj,channel,2026-03-30 08:36:03,enterprise
+cn_J8yuPsw1bzxVEh,order_id,2026-05-07 06:21:03,partner

@@ -1,5 +1,5 @@
-amount,quantity,terminal_hardware_order_id
-7500,3,tho_jLbSzOr9nbUPf8
-24900,10,tho_lg2pi209Ae2uDV
-999,6,tho_lg2pi209Ae2uDV
-500,5,tho_nGSEOcTyCp86fV
+terminal_hardware_order_id,terminal_hardware_sku_id,amount,batch_timestamp,currency,quantity,terminal_hardware_sku_amount,terminal_hardware_sku_country,terminal_hardware_sku_currency,terminal_hardware_sku_product_id,terminal_hardware_sku_product_type
+tho_pazpJiGHdPO1rY,ths_BZUQWwCH5J3Kkf,7500,2026-05-20 21:14:03,usd,12,24900,CA,jpy,thsp_BlOoBRWJ5Tn3X5,primary
+tho_q7oLgO2jdcICOD,ths_oB2JCtZtoqtLx5,10000,2026-04-13 01:25:03,usd,7,1500,GB,jpy,thsp_7kEy21VhxSEMUf,primary
+tho_q7oLgO2jdcICOD,ths_QWxC9ZysN0cbw9,1999,2026-03-19 03:14:03,usd,1,500,US,jpy,thsp_wXNNsoHumo4TZr,standard
+tho_pazpJiGHdPO1rY,ths_KUh823JLuwonYw,1999,2026-02-06 14:27:03,usd,3,1999,FR,usd,thsp_hdky5pf6wORXfa,default

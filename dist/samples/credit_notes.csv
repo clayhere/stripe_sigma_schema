@@ -1,5 +1,5 @@
-id,amount,created,currency,customer_id,invoice_id,reason,status
-cn_2DUFweqMLvj8G9,4200,2026-06-09 12:59:03,gbp,cus_ha9fMx9KQHy3T4,,product_unsatisfactory,void
-cn_SGBRJoWKbx8EaO,10000,2026-01-12 07:29:03,jpy,cus_KanxdX8kJrtaIS,,fraudulent,issued
-cn_w4K2kt2j7XlTxx,24900,2026-03-17 06:12:03,eur,cus_JDPUPGvFODzRGE,,order_change,void
-cn_jbjs2UdBc3Bg9P,2500,2026-06-10 09:53:03,eur,cus_JDPUPGvFODzRGE,,order_change,void
+id,amount,amount_shipping,batch_timestamp,created,currency,customer_balance_transaction_id,customer_id,effective_at,invoice_id,memo,number,out_of_band_amount,reason,refund_id,shipping_cost_amount_subtotal,shipping_cost_amount_tax,shipping_cost_amount_total,shipping_cost_shipping_rate_id,status,type,voided_at
+cn_C1rJAv2d0Z93kN,7500,999,2026-02-14 14:48:03,2026-01-19 07:32:03,eur,,cus_IHfLyxY5LTvVAO,2026-01-22 06:52:03,,primary,default,999,duplicate,,1999,87,500,scsr_z1oMQBvLjou1UX,void,primary,2026-05-12 00:27:03
+cn_fyVXHhSKVrVMUT,4200,1500,2026-05-01 10:45:03,2026-02-13 17:20:03,gbp,,cus_4p4MC5T7GCiC1u,2026-04-16 11:46:03,,standard,default,1500,fraudulent,,1500,120,1500,scsr_pDnGlimvNiWh8o,void,standard,2026-01-09 05:07:03
+cn_J8yuPsw1bzxVEh,2500,500,2026-06-17 09:15:03,2026-06-21 04:22:03,usd,,cus_IHfLyxY5LTvVAO,2026-06-24 03:08:03,,primary,default,1999,product_unsatisfactory,,1999,87,1500,scsr_7xwM9jT6u2wKuv,issued,standard,2026-05-13 18:25:03
+cn_dAMGq7UtTx5Ewj,10000,500,2026-03-07 04:30:03,2026-03-30 13:22:03,gbp,,cus_gmhPGcRCyAK6G6,2026-02-10 21:28:03,,,primary,24900,duplicate,,10000,0,2500,scsr_s4oy9SM73cofgt,issued,primary,2026-04-24 00:39:03

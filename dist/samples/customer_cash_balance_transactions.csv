@@ -1,5 +1,5 @@
-id,created,currency,customer_id,net_amount
-ccbt_UB9ogjVQ9ZxNMz,2026-01-27 20:27:03,usd,cus_KanxdX8kJrtaIS,500
-ccbt_9EKIxQQPHxIJd5,2026-05-13 17:24:03,usd,cus_3zj3TuUU1qMIE0,10000
-ccbt_Rb4veqa1Add7XF,2026-03-31 05:33:03,gbp,cus_3zj3TuUU1qMIE0,500
-ccbt_CvVN5cylS8TZ9n,2026-06-12 04:53:03,usd,cus_KanxdX8kJrtaIS,1500
+id,amount,amount_currency,applied_to_payment_intent,batch_timestamp,created,customer,ending_balance,ending_balance_currency,funded_reference,linked_model_id,livemode,refund_from,type,unapplied_from_payment_intent
+ccbt_TPbLfYUb4yk2En,999,usd,default,2026-04-27 13:12:03,2026-03-09 07:44:03,,458.62,usd,primary,lm_69jAqFpfeLXB4w,True,,primary,default
+ccbt_X2X02gqmEt1pDk,2500,eur,primary,2026-06-19 16:10:03,2026-05-05 16:49:03,standard,317.26,gbp,,lm_txI1TrdVzhfyfB,False,,default,primary
+ccbt_67R7A8FCsoKTwa,999,gbp,primary,2026-04-25 03:44:03,2026-05-28 19:51:03,default,52.49,jpy,,lm_B5qiAS5NvErxcn,False,standard,default,default
+ccbt_aTWd940OSrhdn2,1999,gbp,,2026-03-31 20:51:03,2026-04-04 11:05:03,,56.04,usd,standard,lm_DkGAH4hKcTGzag,False,primary,standard,

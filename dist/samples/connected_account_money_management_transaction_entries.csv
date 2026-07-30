@@ -1,0 +1,5 @@
+account,available_balance_impact,created,currency,effective_at,id,inbound_pending_balance_impact,outbound_pending_balance_impact,transaction_id
+Z4FW2LweVO,458,2026-04-22 06:47:03,eur,2026-03-23 14:33:03,standard,4059,4721,t_pTelXFuBxqfMIK
+rcShgAvcO9,2271,2026-04-14 18:40:03,gbp,2026-02-21 10:30:03,standard,2449,3904,t_GqedoGHA9zy20Q
+5xeawPXiHV,3026,2026-03-23 21:56:03,usd,2026-01-27 13:52:03,default,3110,631,t_ufN1q3IZ1QEqrb
+kdLHWMtnQ9,1748,2026-04-04 02:12:03,gbp,2026-05-07 21:54:03,standard,3113,1702,t_phOWOvpiukbWwC

@@ -1,5 +1,5 @@
-dispute_id,key,value
-dp_zU54cYqF1ffBkL,channel,partner
-dp_SJfq5iJxJ0oxAZ,channel,enterprise
-dp_zU54cYqF1ffBkL,channel,enterprise
-dp_quwRveep83iTlm,cohort,acme-2026
+dispute_id,key,batch_timestamp,value
+dp_KTnhPpsW1J33Vl,cohort,2026-06-13 00:13:03,partner
+dp_KTnhPpsW1J33Vl,order_id,2026-04-16 10:01:03,ORD-4471
+dp_7y7qR6vEnP7mHh,order_id,2026-05-14 06:52:03,acme-2026
+dp_7y7qR6vEnP7mHh,order_id,2026-02-25 17:28:03,acme-2026

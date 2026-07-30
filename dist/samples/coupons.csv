@@ -1,5 +1,5 @@
-id,amount_off,created,currency,duration,duration_in_months,max_redemptions,name,percent_off,times_redeemed,valid
-c_Gheicz9Wiye5iY,7500,2026-03-11 13:41:03,usd,once,197,489,Blue Harbor Coffee,16.44,2,True
-c_JCM6WoZNkTMIGF,1999,2026-02-28 13:20:03,usd,repeating,1758,3985,Copper Kettle,14.56,2,True
-c_LJAC28bbiHTvVH,1999,2026-05-13 14:46:03,gbp,forever,52,4997,Blue Harbor Coffee,5.21,6,False
-c_H0uR0KVi8FuNHi,1500,2026-06-15 14:50:03,eur,forever,1960,3346,Blue Harbor Coffee,10.7,3,True
+id,amount_off,applies_to_products,batch_timestamp,created,currency,duration,duration_in_months,max_redemptions,name,percent_off,redeem_by,times_redeemed,valid
+c_NO0PDWBf2XFe5d,1500,,2026-03-27 06:01:03,2026-03-01 21:32:03,usd,forever,2438,2839,Ironwood Gear,11.16,2026-05-18 05:36:03,11,True
+c_liowN3joASsvIC,4200,,2026-05-18 10:53:03,2026-01-18 12:27:03,gbp,once,755,1712,Vertex Labs,24.28,2026-03-02 08:35:03,7,True
+c_2EgAQRyDkLrJR4,999,primary,2026-02-05 07:57:03,2026-06-07 04:32:03,usd,forever,800,1090,Vertex Labs,19.12,2026-06-02 04:40:03,3,False
+c_Xge7HyEHbiI9zR,999,,2026-02-18 14:18:03,2026-06-23 07:51:03,gbp,repeating,97,3591,Vertex Labs,18.52,2026-04-15 10:00:03,7,True

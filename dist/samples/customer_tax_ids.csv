@@ -1,5 +1,5 @@
-id,customer_id,type,value
-cti_jPxA7Omd9EHRUH,cus_JDPUPGvFODzRGE,primary,acme-2026
-cti_Fyf2QtlZfG3Mcv,cus_bqstt69lfehGN1,default,acme-2026
-cti_t1jzuQBlBgRaQg,cus_h0AiUDqDAIJZip,standard,acme-2026
-cti_tGWdgHrBRvlhsl,cus_h0AiUDqDAIJZip,primary,acme-2026
+id,batch_timestamp,country,created,customer,owner_account,owner_application,owner_customer,owner_type,type,value,verification_status,verification_verified_address,verification_verified_name
+cti_q3YR2Ya8UL9JED,2026-04-29 10:16:03,AU,2026-01-06 17:48:03,standard,,default,default,standard,,acme-2026,primary,,
+cti_VkRbY0F0jXwHPE,2026-04-30 16:36:03,GB,2026-05-18 10:33:03,primary,,,primary,standard,,ORD-4471,primary,default,
+cti_L7MK4Q62mzAsiS,2026-01-17 05:59:03,US,2026-01-20 16:52:03,primary,primary,primary,default,,primary,partner,standard,standard,standard
+cti_v34Dw7e7kOZw83,2026-05-29 05:35:03,AU,2026-03-01 22:15:03,,standard,,default,primary,default,enterprise,standard,default,

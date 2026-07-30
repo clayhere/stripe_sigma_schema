@@ -2,7 +2,7 @@
 """Assemble the canonical Sigma schema from its sources.
 
 Inputs (all under sources/, plus extractor output under build/):
-  build/table_inventory.json   table list scraped from Stripe's data-freshness page
+  build/table_inventory.json   table list extracted from Stripe's data-freshness page
   build/doc_columns.json       columns seen in official Stripe SQL examples
   sources/supplemental_tables.json  tables Stripe demos but doesn't list
   sources/conventions.json     structural rules (metadata tables, Connect mirrors, ...)
@@ -158,16 +158,37 @@ def merge_doc_columns(table: dict, doc_cols: dict[str, list[str]], all_tables: s
             )
 
 
+def resolve_fk_target(column_name: str, known_tables: set[str]) -> str | None:
+    """Guess the table a `*_id` column references, from Stripe's own naming
+    convention (singular stem + "s"/"es"/"ies"). Not proof of the exact
+    target — callers mark the result `conventional`, not `verified`.
+    """
+    if not column_name.endswith("_id") or column_name == "id":
+        return None
+    stem = column_name[:-3]
+    candidates = [f"{stem}s", stem, f"{stem}es"]
+    if stem.endswith("y"):
+        candidates.append(f"{stem[:-1]}ies")
+    for candidate in candidates:
+        if candidate in known_tables:
+            return candidate
+    return None
+
+
 def apply_verified_overlay(tables: list[dict], verified: dict) -> dict:
     """Replace curated column lists with ground truth from a live Sigma account.
 
-    Verified data wins outright: the column list, order and types come from
-    information_schema. Curated descriptions, enums and key roles are carried
+    Verified data wins outright: the column list, order, types and key roles
+    come from the account itself. Curated descriptions and enums are carried
     over for columns that actually exist, and dropped for ones that don't.
+    Foreign key targets aren't reported by the account directly, so they're
+    inferred from the `*_id` naming convention and marked `conventional`.
     """
     by_name = {t["name"]: t for t in tables}
+    known_tables = set(by_name) | set(verified["tables"])
     stats = {"tables_verified": 0, "columns_verified": 0,
-             "columns_dropped": 0, "columns_gained": 0, "tables_added": 0}
+             "columns_dropped": 0, "columns_gained": 0, "tables_added": 0,
+             "primary_keys_assigned": 0, "foreign_keys_inferred": 0}
 
     for table_name, live_columns in verified["tables"].items():
         table = by_name.get(table_name)
@@ -192,6 +213,8 @@ def apply_verified_overlay(tables: list[dict], verified: dict) -> dict:
         curated = {c["name"]: c for c in table.get("columns", [])}
         previously_known = set(curated)
         rebuilt = []
+        verified_pk: list[str] = []
+        inferred_fks: list[dict] = []
         for live in live_columns:
             col = dict(curated.pop(live["name"], {}))
             col.update({
@@ -207,6 +230,22 @@ def apply_verified_overlay(tables: list[dict], verified: dict) -> dict:
             if live.get("comment"):
                 col["description"] = live["comment"]
             col.setdefault("description", "")
+            # The account's own key role beats a curated guess.
+            if live.get("key") in ("primary", "foreign"):
+                col["key"] = live["key"]
+            if live.get("enum"):
+                col["enum"] = live["enum"]
+
+            if col.get("key") == "primary":
+                verified_pk.append(col["name"])
+            elif col.get("key") == "foreign":
+                target = resolve_fk_target(col["name"], known_tables)
+                if target:
+                    inferred_fks.append({
+                        "columns": [col["name"]],
+                        "references": {"table": target, "columns": ["id"]},
+                        "confidence": "conventional",
+                    })
             rebuilt.append(col)
 
         stats["columns_verified"] += len(rebuilt)
@@ -221,13 +260,24 @@ def apply_verified_overlay(tables: list[dict], verified: dict) -> dict:
         table["columns_complete"] = True
         table["verified_against_account"] = True
 
-        # Drop keys and joins that referenced columns which don't exist.
+        # Drop keys and joins that referenced columns which don't exist, then
+        # layer in whatever the account itself reported.
         live_names = {c["name"] for c in rebuilt}
         table["primary_key"] = [c for c in table["primary_key"] if c in live_names]
         table["foreign_keys"] = [
             fk for fk in table["foreign_keys"]
             if all(c in live_names for c in fk["columns"])
         ]
+        if verified_pk and not table["primary_key"]:
+            table["primary_key"] = verified_pk
+            stats["primary_keys_assigned"] += len(verified_pk)
+        existing_fk_columns = {tuple(fk["columns"]) for fk in table["foreign_keys"]}
+        for fk in inferred_fks:
+            key = tuple(fk["columns"])
+            if key not in existing_fk_columns:
+                table["foreign_keys"].append(fk)
+                existing_fk_columns.add(key)
+                stats["foreign_keys_inferred"] += 1
 
     # A table we listed but the account never reported may still exist for
     # other accounts (product not enabled), so flag rather than delete.

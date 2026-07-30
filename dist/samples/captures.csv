@@ -1,0 +1,5 @@
+id,amount,balance_transaction_id,batch_timestamp,charge_id,created,currency
+c_36xsA9D0Rr40mK,10000,txn_onEHd9T1r6ATMl,2026-03-14 15:58:03,,2026-03-14 21:53:03,usd
+c_PKgj3GE3WgA3p4,1999,txn_1kl9okv71nHASp,2026-04-08 01:32:03,,2026-03-01 06:54:03,usd
+c_RnlmfFN2wDWaoA,1999,txn_9sdkD5mAO50F9S,2026-04-30 10:50:03,,2026-03-27 22:46:03,gbp
+c_rOEH9rlbDCJKj0,1999,txn_1kl9okv71nHASp,2026-02-19 19:47:03,,2026-03-03 06:57:03,usd

@@ -1,5 +1,5 @@
-issuing_authorization_id,key,value
-iauth_9tSeJZOYeXAopr,channel,enterprise
-iauth_YtZmAykqz4Upni,order_id,partner
-iauth_L0OC1K7Q3eSycv,order_id,acme-2026
-iauth_L0OC1K7Q3eSycv,channel,acme-2026
+issuing_authorization_id,key,batch_timestamp,value
+iauth_WLDB2lgDXYQiVK,channel,2026-04-26 05:30:03,acme-2026
+iauth_WLDB2lgDXYQiVK,cohort,2026-03-14 15:26:03,ORD-4471
+iauth_SsGRCOo7q9Yi72,order_id,2026-06-23 05:55:03,enterprise
+iauth_Xg5PFbaT8Haq5M,order_id,2026-01-08 18:15:03,enterprise

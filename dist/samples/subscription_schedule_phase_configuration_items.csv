@@ -1,5 +1,5 @@
-price_id,quantity,subscription_schedule_id
-price_AgFcxGfrnZJQFN,8,sub_sched_Fls7ryS9RD0Ery
-price_V7bpJzJ6POzTwT,1,sub_sched_QVHwK6ydGqQBJ6
-price_1oz2R6ThAEE6CT,5,sub_sched_oZDJU18zdDuT2A
-price_Z4dJ3Sr2Ygmef5,8,sub_sched_zvq2jYO1OIxlYk
+phase_id,price,schedule_id,batch_timestamp,billing_thresholds_usage_gte,quantity,trial_offer_id
+p_Aibc4aQNXIWuzd,primary,s_QQE4YsUqTm66u4,2026-06-23 22:56:03,4358,5,to_tnvzaiHBUOAbg0
+p_YWJ8eOeGjSicYd,default,s_xwI3DDd3AXLKYW,2026-06-05 01:21:03,431,7,to_FII7tA8XUkDv55
+p_ybdf6bHKIQcIFu,primary,s_OKvAHoTm1HcwTJ,2026-02-28 15:54:03,1347,9,to_8wbZ7T3QSL0g9p
+p_8r4e5QoepqBIiA,primary,s_CSMcI5ZmIHwABA,2026-04-13 22:01:03,159,2,to_l7rzkkUOaIxuaa

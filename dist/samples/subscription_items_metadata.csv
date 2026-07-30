@@ -1,5 +1,5 @@
-key,subscription_item_id,value
-channel,si_WhegIsYxpv0mQP,acme-2026
-internal_ref,si_A6vz9yDQAM2QEl,enterprise
-channel,si_sILe1dxiGRurr0,enterprise
-channel,si_A6vz9yDQAM2QEl,ORD-4471
+key,subscription_id,subscription_item_id,batch_timestamp,value
+channel,sub_12Bux9ER0HfxEg,si_7e7slpsL4xM8Dg,2026-01-29 00:21:03,acme-2026
+channel,sub_nwRajlsmVVMBpT,si_JVj9xROyarZwBz,2026-03-29 16:22:03,enterprise
+order_id,sub_Lm9BLtH44NmetZ,si_ZHGrFAbU1vCStF,2026-04-29 03:18:03,ORD-4471
+order_id,sub_GkXuczJhsJY7ip,si_7e7slpsL4xM8Dg,2026-05-04 14:28:03,partner

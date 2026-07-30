@@ -1,5 +1,5 @@
-key,terminal_hardware_order_id,value
-cohort,tho_nGSEOcTyCp86fV,ORD-4471
-cohort,tho_lg2pi209Ae2uDV,acme-2026
-cohort,tho_cJMS6Y5MoC4Ncg,ORD-4471
-channel,tho_cJMS6Y5MoC4Ncg,partner
+key,terminal_hardware_order_id,batch_timestamp,value
+order_id,tho_zE23FN7ZzuT8ya,2026-03-01 09:34:03,enterprise
+internal_ref,tho_Xyw5ZDj3GB6rSr,2026-05-01 15:12:03,ORD-4471
+order_id,tho_pazpJiGHdPO1rY,2026-01-07 23:26:03,acme-2026
+cohort,tho_q7oLgO2jdcICOD,2026-06-07 12:58:03,partner

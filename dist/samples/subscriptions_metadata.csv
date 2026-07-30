@@ -1,5 +1,5 @@
-key,subscription_id,value
-channel,sub_zEY5ucxtMseGCz,ORD-4471
-cohort,sub_0znH09FUFlWdLc,partner
-order_id,sub_0znH09FUFlWdLc,enterprise
-channel,sub_pVgWLW1n8eW9hD,ORD-4471
+key,subscription_id,batch_timestamp,value
+cohort,sub_aKSKkliG930fdG,2026-06-25 01:05:03,enterprise
+channel,sub_aKSKkliG930fdG,2026-01-10 07:37:03,enterprise
+internal_ref,sub_qBeInEfoTg0sQK,2026-05-22 13:31:03,acme-2026
+internal_ref,sub_fKHCD3mtAcXEsv,2026-02-10 02:41:03,acme-2026

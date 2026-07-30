@@ -1,5 +1,5 @@
-id,active,country,created,display_name,inclusive,jurisdiction,percentage
-tr_SuXPdnWACnfj85,True,CA,2026-03-13 07:20:03,Blue Harbor Coffee,False,primary,13.48
-tr_gTvt9oZyC7U0m3,True,FR,2026-04-22 11:08:03,Northwind Supply,False,default,21.22
-tr_2rBZz3nC9UNa91,False,FR,2026-03-06 17:55:03,Lumen Analytics,True,,22.16
-tr_mBCqHzA6VyBbqo,True,US,2026-03-04 06:18:03,Vertex Labs,False,primary,6.09
+id,active,batch_timestamp,country,created,description,display_name,effective_percentage,inclusive,jurisdiction,jurisdiction_level,percentage,state,tax_type
+tr_Ospk2bTMB2at4Q,True,2026-02-13 06:59:03,FR,2026-06-23 13:34:03,Seat overage,Lumen Analytics,166.59,False,,default,12.35,primary,default
+tr_sTzaAbWIjByrMJ,False,2026-05-26 23:33:03,US,2026-02-19 21:10:03,Onboarding,Blue Harbor Coffee,496.51,True,standard,primary,2.8,default,standard
+tr_tUeTj5kbpRGzFX,True,2026-03-13 03:46:03,CA,2026-03-26 01:37:03,Seat overage,Lumen Analytics,3.77,True,default,default,17.79,default,default
+tr_yLg0eAQzcRRkct,True,2026-05-30 18:48:03,GB,2026-04-02 07:35:03,Onboarding,Ironwood Gear,353.8,False,standard,default,15.38,primary,primary

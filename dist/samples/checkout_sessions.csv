@@ -1,5 +1,5 @@
-id,amount_total,created,currency,customer_id,invoice_id,mode,payment_intent_id,payment_link_id,payment_status,status,subscription_id
-cs_rTQ0Aarg2cuPmo,1999,2026-02-18 00:05:03,jpy,cus_JDPUPGvFODzRGE,in_luSy26SxVcG7BN,payment,,plink_Y4OOGOlEOrl5Mf,no_payment_required,complete,sub_2OmaliMH47Lbyo
-cs_fKOfI3gGLtV6yr,999,2026-05-02 03:26:03,eur,cus_bqstt69lfehGN1,in_9upxK5nvh5Ytp6,setup,,plink_J8e3F3y1gYeOvR,paid,expired,sub_wztF9cp5ScBSPQ
-cs_0NfuNydXjIWURu,500,2026-06-08 17:04:03,usd,cus_xMvhB2vCLZMiPG,in_VP3cZirtI72bhH,subscription,,plink_a9s9LmJjFu2j6f,paid,complete,sub_o9aG9J0m7SlCn9
-cs_YscD35Pudfp2sx,7500,2026-02-25 06:28:03,eur,cus_xMvhB2vCLZMiPG,in_VzDagWDlafChaq,payment,,plink_a9s9LmJjFu2j6f,unpaid,expired,sub_Ij1zh2NqKmH1If
+id,batch_timestamp,client_reference_id,consent_promotions,consent_terms_of_service,created,currency,customer_id,invoice_id,managed_payments_enabled,mode,payment_intent_id,payment_link_id,shipping_cost_amount_subtotal,shipping_cost_amount_tax,shipping_cost_amount_total,status,subscription_id
+cs_ugRJVB3T7kEthq,2026-05-31 23:57:03,cr_ixw1sMhY72Ocjl,,default,2026-03-05 00:54:03,eur,cus_tSvGgWJmSAmckl,,True,payment,,plink_KxghcOe9BIoBvs,500,190,999,complete,sub_9v5CnogLpTtaP9
+cs_fGabIoR6hvc9JH,2026-02-03 13:49:03,cr_asEhWTXwIChxrQ,primary,default,2026-03-23 20:11:03,usd,cus_4p4MC5T7GCiC1u,,False,subscription,,plink_qBhdbRHf3JoQZz,24900,87,1999,expired,sub_9v5CnogLpTtaP9
+cs_Q2am2BMMNvLVsr,2026-04-04 14:38:03,cr_tzJlaoTx7SBFrb,,standard,2026-05-25 21:46:03,eur,cus_5NgEDoFXpMzt4w,,False,setup,,plink_bHeyOO2OPJmQQU,500,87,10000,expired,sub_EeKEEeyB9QoaLc
+cs_qYu776dgd9jUkW,2026-01-14 18:51:03,cr_FnnTHETipgy3Ks,,primary,2026-02-03 04:07:03,gbp,cus_iM4B95gzSDuxgW,,True,payment,,plink_KxghcOe9BIoBvs,1999,0,10000,complete,sub_oYnGoYlADuwVcf

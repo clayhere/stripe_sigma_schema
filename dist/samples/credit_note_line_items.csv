@@ -1,5 +1,5 @@
-id,amount,credit_note_id,invoice_line_item_id
-cnli_r70mmWpw8VaDy1,10000,,il_53RgriKX3CI8cR
-cnli_DmWJDYyHXtAZt0,500,,il_yjlxikmRSp028h
-cnli_ycwErsIBKqQL9M,24900,,il_pPU0bi7y2EkhuZ
-cnli_yF6oBkmJ84KYFh,4200,,il_6xPC8FT1IL71Ec
+id,amount,batch_timestamp,credit_note_id,description,discount_amount,invoice_line_item,quantity,type,unit_amount,unit_amount_decimal
+cnli_ESldWTdnjs45CD,500,2026-02-10 15:51:03,,Card payment processing,304,primary,7,standard,1999,1500
+cnli_lLVAOBLi5WbPmB,999,2026-04-02 21:07:03,,Onboarding,59,,1,default,500,1500
+cnli_MscElMNNkjRJaU,24900,2026-03-14 04:26:03,,Seat overage,0,,10,standard,2500,24900
+cnli_ZGoR0gM3tKbero,500,2026-06-22 14:39:03,,Onboarding,450,primary,9,standard,1500,1999

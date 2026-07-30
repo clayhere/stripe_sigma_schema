@@ -1,5 +1,5 @@
-amount,credit_note_line_item_id,tax_rate_id
-999,cnli_EURNTC3DXyx4Gw,tr_pSjosKpW47mnME
-999,cnli_tqZOMcr5O21IcO,tr_gRC4pvJ6rmWZl3
-24900,cnli_tpsBGukrOQu7GG,tr_wUWKJ7qwsMRJKH
-1500,cnli_OkrejC8hF7D9D2,tr_8l2hFrnUpFGfxk
+credit_note_line_item_id,id,amount,batch_timestamp,inclusive,tax_rate_id
+,cnli_fs8z7berYI9Te2,2500,2026-03-25 13:52:03,True,tr_sTzaAbWIjByrMJ
+,cnli_ktkvSqASK7jfM9,2500,2026-06-11 15:22:03,False,tr_Ospk2bTMB2at4Q
+,cnli_NCxYMvxQBHG4hv,24900,2026-04-18 11:20:03,True,tr_tUeTj5kbpRGzFX
+,cnli_HbLA2gJXKfcf0z,2500,2026-02-13 23:28:03,True,tr_yLg0eAQzcRRkct

@@ -1,5 +1,5 @@
-id,address_city,address_country,display_name
-tl_bkkpkFEOupuzIV,primary,DE,Northwind Supply
-tl_0OXPWmYnilGoVa,,GB,Vertex Labs
-tl_D3AyOoMKuKLBhZ,,FR,Copper Kettle
-tl_kra9zoYUFE5a0v,,CA,Acme Robotics
+address_city,address_country,address_kana_city,address_kana_country,address_kana_line1,address_kana_line2,address_kana_postal_code,address_kana_state,address_kana_town,address_kanji_city,address_kanji_country,address_kanji_line1,address_kanji_line2,address_kanji_postal_code,address_kanji_state,address_kanji_town,address_line1,address_line2,address_postal_code,address_state,id,livemode,metadata,name,name_kana,name_kanji,phone,zone_id
+,GB,standard,US,standard,default,default,standard,,,AU,standard,,standard,,,,default,standard,,tl_On7TZnhEadDoq4,False,,Ironwood Gear,primary,,standard,z_42qAgJphZR4YsY
+default,CA,standard,US,standard,,primary,standard,default,,US,standard,,,primary,standard,,primary,,standard,tl_wyFbrobugGMN9f,False,primary,Acme Robotics,,primary,,z_9BinPs2gEs5qE1
+primary,FR,standard,FR,primary,primary,default,primary,default,standard,AU,,primary,standard,,standard,primary,standard,default,,tl_Wld6tt51Ec2DU1,True,,Ironwood Gear,,,,z_NWGLyBQMSvoFOp
+primary,DE,primary,FR,standard,,default,default,,default,AU,standard,,,default,primary,,,default,primary,tl_lPJtB3GKfGlpZ5,False,default,Lumen Analytics,standard,default,default,z_3a6k3PYxx21r3M

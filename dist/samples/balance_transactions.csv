@@ -1,21 +1,21 @@
-id,amount,automatic_transfer_id,available_on,created,currency,description,exchange_rate,fee,net,reporting_category,source_id,type
-txn_8iY6MJNQPvCGpt,999,po_lD8lDrXwvS5fhl,2026-02-03 18:35:03,2026-02-01 05:51:03,usd,Onboarding,380.64,0,999,standard,src_5dTjRJGAuPVnzs,application_fee
-txn_ItwXyyH6PwOali,1999,po_EpV714atQqs0ft,2026-06-13 13:28:03,2026-04-20 07:32:03,usd,Onboarding,174.95,120,1879,standard,src_Nd28gnL1jfZn7C,application_fee
-txn_Uvz6c2EgAQRyDk,2500,po_lD8lDrXwvS5fhl,2026-05-25 01:59:03,2026-04-06 12:59:03,jpy,Card payment processing,110.52,0,2500,,src_VLKNAiKJrXge7H,payment
-txn_EHbiI9zRhL90Bl,1500,po_lD8lDrXwvS5fhl,2026-06-23 07:51:03,2026-06-11 18:14:03,eur,Onboarding,356.1,304,1196,standard,src_UYApnOd3JVukoy,payout
-txn_dRu7blXt2GsppB,24900,po_GvNlINIs5l2Umy,2026-03-30 18:09:03,2026-05-21 12:40:03,usd,Card payment processing,301.46,59,1999,,src_8cMwB86HNHIcFN,refund
-txn_ttxIus1GwWpuXs,-7500,po_PRtFfvUqJTNztB,2026-02-27 22:12:03,2026-06-01 20:51:03,gbp,Onboarding,249.94,59,-7441,default,src_tmWKplAA9QAIbw,refund
-txn_LMTDNP0xuLGd0S,24900,po_EpV714atQqs0ft,2026-04-10 09:05:03,2026-05-05 18:48:03,gbp,Onboarding,372.36,120,24780,default,src_y1rp3yunGW6Kc0,payment
-txn_t0AdQwTW1aCbCB,-24900,po_GvNlINIs5l2Umy,2026-01-30 06:33:03,2026-02-07 03:55:03,usd,Seat overage,152.93,59,-24841,,src_sBEcEhmioWTFuJ,refund
-txn_4mxvua2IIs2EnG,10000,po_lD8lDrXwvS5fhl,2026-04-19 00:22:03,2026-04-07 20:37:03,gbp,Seat overage,472.18,304,9696,,src_S2mW3R5zM5f2kS,adjustment
-txn_RKbdoGqY4CQYBs,10000,po_GvNlINIs5l2Umy,2026-02-11 03:55:03,2026-04-03 21:06:03,usd,Card payment processing,105.14,304,9696,,src_K64Z1hVMkwZYx9,adjustment
-txn_vZ0QkxRd4BdX1E,2500,po_PRtFfvUqJTNztB,2026-01-28 10:00:03,2026-05-26 12:19:03,usd,Card payment processing,124.79,304,2196,primary,src_2244iSTZHiNs1f,network_cost
-txn_VqGKxmUrDoZeM0,-1999,po_PRtFfvUqJTNztB,2026-05-28 09:41:03,2026-05-18 20:48:03,eur,Monthly subscription,1.26,0,-1999,standard,src_KmPf1XOqWmM14E,refund
-txn_EFk1RruNtQejC5,2500,po_PRtFfvUqJTNztB,2026-05-12 03:34:03,2026-05-25 20:12:03,usd,Seat overage,497.82,304,2196,standard,src_YUb4yk2EnhiiCh,application_fee
-txn_3SEB6BnPOs69jA,-2500,po_PRtFfvUqJTNztB,2026-03-07 11:18:03,2026-06-03 23:10:03,usd,Seat overage,212.73,190,-2310,standard,src_qmEt1pDkXZs0Fq,refund
-txn_n45EoJcOOWNBtx,-24900,po_EpV714atQqs0ft,2026-01-18 08:39:03,2026-02-04 11:38:03,usd,Onboarding,428.42,190,-24710,default,src_2Nu67R7A8FCsoK,refund
-txn_waMPgIuBXKEJvL,1500,po_lD8lDrXwvS5fhl,2026-06-22 06:57:03,2026-06-02 09:04:03,eur,Onboarding,449.34,59,1441,primary,src_ErxcnqcY1pmaTW,charge
-txn_940OSrhdn2Nn3J,7500,po_EpV714atQqs0ft,2026-04-09 03:36:03,2026-01-17 06:44:03,usd,Card payment processing,14.03,59,7441,,src_H4hKcTGzagtsQX,charge
-txn_BPil3MDq0bEpLR,4200,po_GvNlINIs5l2Umy,2026-05-19 03:09:03,2026-04-24 01:39:03,usd,Monthly subscription,473.26,59,4141,,src_1DmwuvGvRZO9UB,transfer
-txn_kUATRO3oknIILs,24900,po_EpV714atQqs0ft,2026-06-24 10:02:03,2026-05-17 09:11:03,gbp,Card payment processing,185.3,120,24780,default,src_8SRUZkUJZVAhRa,network_cost
-txn_Uei8e4ja88nLYC,4200,po_lD8lDrXwvS5fhl,2026-01-22 18:09:03,2026-01-07 08:51:03,gbp,Onboarding,233.93,0,4200,standard,src_qIbB1VJJoZJ5k3,charge
+id,amount,automatic_transfer_id,available_on,batch_timestamp,created,currency,description,exchange_rate,fee,net,reporting_category,source_id,status,type
+txn_MJSp4FxE1WlVwR,4200,,2026-01-08 15:45:03,2026-06-10 15:07:03,2026-06-13 00:39:03,usd,Monthly subscription,107.38,450,3750,default,src_w7GxEy6D0GSczn,pending,stripe_fee
+txn_S2n3BU76RDtJtp,1500,,2026-06-06 17:58:03,2026-04-18 23:10:03,2026-01-28 19:28:03,gbp,Onboarding,83.81,0,1500,default,src_YgmSQW5hRuy4On,pending,application_fee_refund
+txn_X2RZ4GNIBU30yI,-10000,,2026-04-12 11:19:03,2026-03-04 13:24:03,2026-02-14 01:09:03,eur,Monthly subscription,352.54,120,-9880,primary,src_NlzP3lx7aG2yD6,pending,refund
+txn_zHXJAnKdqrxxLq,500,,2026-02-27 20:03:03,2026-01-10 14:49:03,2026-03-24 21:31:03,usd,Onboarding,215.48,59,441,default,src_w7GxEy6D0GSczn,pending,payout
+txn_4ZHOu29kQuo4mt,500,,2026-03-30 23:52:03,2026-04-17 20:59:03,2026-03-19 22:02:03,jpy,Card payment processing,298.06,59,441,default,src_w7GxEy6D0GSczn,pending,network_cost
+txn_rJa7ALUKHIFjdi,24900,,2026-05-29 08:38:03,2026-03-27 23:07:03,2026-05-18 01:25:03,usd,Monthly subscription,319.94,190,24710,primary,src_KhR86D1zvgp7Uv,pending,application_fee
+txn_dKGakcVgg0g9mg,999,,2026-03-18 17:15:03,2026-06-24 06:19:03,2026-03-18 09:02:03,gbp,Seat overage,317.68,190,809,standard,src_NlzP3lx7aG2yD6,pending,transfer
+txn_9sdkD5mAO50F9S,-999,,2026-02-25 17:07:03,2026-05-28 14:25:03,2026-03-28 02:37:03,gbp,Monthly subscription,465.5,0,-999,standard,src_NlzP3lx7aG2yD6,pending,refund
+txn_rxj6AMubeQYVyf,-1500,,2026-02-24 06:32:03,2026-01-23 10:00:03,2026-02-28 19:26:03,usd,Onboarding,94.81,450,-1050,default,src_NlzP3lx7aG2yD6,pending,refund
+txn_Ic11a7nylwzjCm,-7500,,2026-02-23 16:29:03,2026-01-08 21:01:03,2026-01-29 10:47:03,usd,Card payment processing,394.63,0,-7500,default,src_YgmSQW5hRuy4On,pending,refund
+txn_YvGQIJu3xVKpnb,24900,,2026-05-17 13:46:03,2026-04-15 12:35:03,2026-06-22 04:20:03,usd,Card payment processing,114.03,120,24780,,src_NlzP3lx7aG2yD6,available,payout_cancel
+txn_BV89DneFpyBdLt,500,,2026-02-09 19:43:03,2026-06-04 10:48:03,2026-06-17 06:45:03,usd,Seat overage,28.75,450,50,standard,src_w7GxEy6D0GSczn,available,payout_failure
+txn_sASu9bNrzagQip,10000,,2026-01-06 08:30:03,2026-02-17 12:03:03,2026-02-03 05:42:03,jpy,Monthly subscription,379.62,304,9696,default,src_YgmSQW5hRuy4On,pending,payout_cancel
+txn_1kl9okv71nHASp,7500,,2026-03-28 08:38:03,2026-06-20 04:28:03,2026-02-09 15:58:03,usd,Seat overage,105.41,450,7050,standard,src_NlzP3lx7aG2yD6,pending,transfer
+txn_onEHd9T1r6ATMl,-10000,,2026-02-18 00:07:03,2026-02-23 15:34:03,2026-04-06 19:25:03,usd,Monthly subscription,400.7,190,-9810,standard,src_w7GxEy6D0GSczn,available,refund
+txn_yKSjfBdQRKijsQ,500,,2026-03-09 05:17:03,2026-03-21 05:55:03,2026-06-14 04:55:03,eur,Seat overage,91.35,59,441,default,src_YgmSQW5hRuy4On,pending,adjustment
+txn_ky5rRQnMqikQU0,10000,,2026-06-12 21:33:03,2026-01-24 19:18:03,2026-05-27 06:16:03,usd,Monthly subscription,92.39,450,9550,primary,src_KhR86D1zvgp7Uv,pending,application_fee_refund
+txn_LO8zTqzY9ra1du,999,,2026-05-24 11:55:03,2026-03-11 20:24:03,2026-01-14 10:28:03,eur,Onboarding,480.52,190,24900,,src_NlzP3lx7aG2yD6,pending,refund
+txn_VBZ2iTg5yTDjB4,4200,,2026-01-25 19:04:03,2026-03-05 01:26:03,2026-05-07 20:00:03,usd,Seat overage,359.55,87,4113,primary,src_NlzP3lx7aG2yD6,pending,application_fee
+txn_U8pmGlNS9ifLnp,4200,,2026-05-12 20:43:03,2026-06-11 13:51:03,2026-04-20 19:59:03,jpy,Monthly subscription,98.92,190,4010,primary,src_NlzP3lx7aG2yD6,available,payout_cancel

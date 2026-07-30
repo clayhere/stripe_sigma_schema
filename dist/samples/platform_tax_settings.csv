@@ -1,0 +1,5 @@
+id,batch_timestamp,created,default_form_type,k_default_calculation_type,livemode,merchant,misc_default_calculation_type,nec_default_calculation_type,reporting_year,year
+pts_zCnaP6yjAZCvCE,2026-06-01 06:49:03,2026-01-06 12:55:03,,standard,False,default,standard,default,1913,3428
+pts_EF9Jiqw7RLU0BW,2026-01-08 16:37:03,2026-01-12 04:01:03,primary,standard,False,,default,standard,3269,574
+pts_SwcsQVhpOe0mEB,2026-04-25 17:16:03,2026-06-17 22:49:03,default,default,True,standard,,,325,124
+pts_n1XIjx0KKCNqUr,2026-04-16 11:39:03,2026-03-30 22:31:03,primary,,True,,standard,standard,4778,1726

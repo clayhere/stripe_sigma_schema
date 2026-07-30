@@ -1,5 +1,5 @@
-key,transfer_reversal_id,value
-internal_ref,trr_zAq2IaoZQ2wJLd,acme-2026
-channel,trr_5ENbH4uoP1B2oD,partner
-cohort,trr_5ENbH4uoP1B2oD,ORD-4471
-internal_ref,trr_zAq2IaoZQ2wJLd,enterprise
+key,transfer_reversal_id,batch_timestamp,value
+internal_ref,trr_penYoMdgRvyfXg,2026-04-24 09:38:03,ORD-4471
+cohort,trr_c5Y6Oh2VfmBb2Z,2026-01-21 19:41:03,acme-2026
+internal_ref,trr_penYoMdgRvyfXg,2026-03-05 06:43:03,ORD-4471
+channel,trr_zvdEiLNEcz68Jg,2026-04-06 06:28:03,acme-2026

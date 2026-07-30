@@ -1,0 +1,5 @@
+id,account_id,batch_timestamp,currency,effective_date_utc,financing_offer,overdue_payment_amount,pending_payment_amount,premium_outstanding_amount,principal_outstanding_amount
+fb_3BcUw7jhKjPlAD,acct_fSkQrqgN6lN9M8,2026-03-25 13:55:03,gbp,2026-06-20 19:38:03,primary,7500,4200,1999,24900
+fb_fF3IaWhegIsYxp,acct_pNpQOGlz0JsXuo,2026-02-25 06:55:03,usd,2026-04-10 03:22:03,standard,10000,2500,500,500
+fb_ViRs46jAX91icZ,acct_krOQu7GGwUWKJ7,2026-02-01 08:45:03,jpy,2026-05-25 17:40:03,default,4200,2500,1999,7500
+fb_bI9FkgaA6vz9yD,acct_wHa3DphKoWrfhj,2026-06-10 06:44:03,usd,2026-04-02 09:57:03,primary,1999,500,4200,500

@@ -1,0 +1,5 @@
+customer_id,event_timestamp,event_type,active_timestamp,currency,local_event_timestamp,mrr_change
+cus_Pil3MDq0bEpLRx,default,,4236,eur,2026-01-26 11:44:03,1117
+cus_By1DmwuvGvRZO9,,primary,1282,jpy,2026-04-21 07:57:03,1871
+cus_knIILsRGqQbWGZ,primary,primary,3199,eur,2026-03-01 07:57:03,1402
+cus_UJZVAhRaUUei8e,default,standard,1773,gbp,2026-04-30 20:15:03,554

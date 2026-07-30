@@ -9,6 +9,10 @@ build/verification.json
 probe.sql
 *.export.csv
 
+# Local-only working files for producing sources/verified_schema.json.
+# Never commit or push this directory.
+.local_verification/
+
 __pycache__/
 *.py[cod]
 .venv/

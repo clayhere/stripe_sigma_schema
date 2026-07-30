@@ -1,5 +1,5 @@
-id,amount_total,checkout_session_id,price_id,quantity
-cli_zIOLFQP8EF1ynk,4200,,price_Cl5dz5RI1299qA,3
-cli_sj0P7W7oftd6SR,24900,,price_gfVllxRsK03ch8,4
-cli_hqb5UiaRwvApv5,24900,,price_Cl5dz5RI1299qA,1
-cli_8Fc9L1ny4CFVEV,999,,price_VALTwnB2Pw3IUi,2
+id,batch_timestamp,checkout_session_id,created,description,price_id,product_id,quantity
+cli_VDD8x4O3G5IkMO,2026-04-21 20:40:03,,2026-01-30 18:07:03,Monthly subscription,price_RpQKUfMRbbL8Gf,prod_h5rwrdfPe93bYX,4
+cli_vWOPR02L1YzxhX,2026-03-26 15:02:03,,2026-01-15 01:22:03,Monthly subscription,price_uSmWuWJ0LH39hD,prod_fCZt1OVLv0PDYf,3
+cli_5tqKKj4VvOoP9n,2026-05-10 08:11:03,,2026-03-22 20:52:03,Seat overage,price_4iAFP5rKoBbmM1,prod_SEtCnXgIjJzYDi,11
+cli_9v3XN0gVhWkcxD,2026-03-20 13:24:03,,2026-04-04 11:19:03,Monthly subscription,price_uSmWuWJ0LH39hD,prod_fCZt1OVLv0PDYf,6

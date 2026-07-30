@@ -1,5 +1,5 @@
-checkout_session_id,key
-,channel
-,channel
-,order_id
-,cohort
+checkout_session_id,id,batch_timestamp,key,optional,type,value
+,ccf_fPhrSa854ksZoK,2026-02-18 02:58:03,cohort,True,,ORD-4471
+,ccf_vLkf7g1TgCbZ0Y,2026-02-24 03:24:03,channel,True,standard,enterprise
+,ccf_rgzuCkCymUk42h,2026-05-09 21:52:03,cohort,True,standard,acme-2026
+,ccf_gnkDMy5W90KRBM,2026-02-05 18:33:03,internal_ref,False,default,acme-2026

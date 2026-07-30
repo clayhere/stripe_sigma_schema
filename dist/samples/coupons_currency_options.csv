@@ -1,5 +1,5 @@
-amount_off,coupon_id,currency
-500,c_Gheicz9Wiye5iY,usd
-24900,c_H0uR0KVi8FuNHi,gbp
-1500,c_Gheicz9Wiye5iY,usd
-999,c_H0uR0KVi8FuNHi,eur
+coupon_id,currency,amount_off,batch_timestamp
+c_liowN3joASsvIC,jpy,500,2026-05-27 08:34:03
+c_liowN3joASsvIC,usd,7500,2026-04-30 10:57:03
+c_2EgAQRyDkLrJR4,usd,1500,2026-03-25 01:32:03
+c_liowN3joASsvIC,usd,7500,2026-05-18 06:57:03

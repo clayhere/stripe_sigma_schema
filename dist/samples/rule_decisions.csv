@@ -1,5 +1,5 @@
-id,action,charge_id,created,payment_intent_id,rule_id,setup_intent_id
-rd_WO8bhE5T8yL735,primary,ch_EHyQUxAwHc5g0G,2026-06-21 05:52:03,pi_avaYobFhppx8Li,rr_9EtVKT8OJCDfui,seti_9y3QScShcWpucC
-rd_2nYB0RycFJ14Dn,,ch_evzCC4XaUeqUMR,2026-01-12 19:47:03,pi_OxICXpazXaOB2D,rr_dcmBiw7MSowGH3,seti_zyv1kzidLvpKsU
-rd_7HhGi5N4HUWpS8,standard,ch_2wwwGQkuDbDdKb,2026-02-22 11:38:03,pi_zFNjFCLYVcABy2,rr_dcmBiw7MSowGH3,seti_vXyHytTFxU4QGk
-rd_qdDg3di55dKfwH,standard,ch_Iyt1i1QCKpVJ52,2026-01-28 22:36:03,pi_kUnzT6CWEhaxsW,rr_dcmBiw7MSowGH3,seti_KzFKt8eEDqAPkw
+id,action,batch_timestamp,charge_id,created,payment_intent_id,rule_id,rule_override_by_allow_rule,setup_intent_id
+rd_lRDmefjZFD24TE,,2026-06-11 10:50:03,ch_T4Mu4JaHB9jQcw,2026-05-07 20:43:03,pi_ZBWHWeNn3nTxOY,r_bPDC5VoCwMK6ld,True,seti_cOWJVT9NwW1wDc
+rd_5UYm0bq66IX6uU,standard,2026-01-06 09:50:03,ch_oaN9ejDDrNJO67,2026-04-16 23:09:03,pi_ECAIXwG7Ygtfzg,r_coY27JLelzNCpZ,True,seti_g9i4OcXl2WN0cS
+rd_2FcF3tinQF3S8T,,2026-01-18 13:01:03,ch_gJCxU0NdxoAj29,2026-05-16 11:42:03,pi_t96HTNONjLekp2,r_coY27JLelzNCpZ,False,seti_g9i4OcXl2WN0cS
+rd_27gulIyDI9QXK7,primary,2026-04-10 00:08:03,ch_baQvO85lBlqcam,2026-02-02 07:17:03,pi_cyenJcUJVpi76U,r_In3UEomXDVCbhj,True,seti_NAyR2fX6TC1PFI

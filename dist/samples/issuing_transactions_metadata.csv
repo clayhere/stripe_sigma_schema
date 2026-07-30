@@ -1,5 +1,5 @@
-issuing_transaction_id,key,value
-ipi_aN9OTgSAk193bz,channel,enterprise
-ipi_ZGxDUTcY0cmD93,order_id,ORD-4471
-ipi_ZGxDUTcY0cmD93,channel,ORD-4471
-ipi_jQuOSqvfyKkamt,cohort,acme-2026
+issuing_transaction_id,key,batch_timestamp,value
+ipi_gjXr4ISCaf2939,cohort,2026-05-16 09:33:03,partner
+ipi_YswhTCz0gOMq9z,internal_ref,2026-06-22 01:55:03,partner
+ipi_YswhTCz0gOMq9z,channel,2026-06-08 14:55:03,ORD-4471
+ipi_gjXr4ISCaf2939,cohort,2026-05-09 06:29:03,partner

@@ -1,5 +1,5 @@
-id,amount,created,reason,status,transaction_id
-id_ypM78Raj6oqGPt,1500,2026-05-30 04:31:03,standard,primary,ipi_ZGxDUTcY0cmD93
-id_7GfTMbKkoMoJW1,7500,2026-01-26 00:49:03,standard,,ipi_6TOTjTLG01oGxO
-id_bORjCBIYAZVEsc,24900,2026-01-12 05:08:03,primary,primary,ipi_aN9OTgSAk193bz
-id_LOlnRbhQv3soV7,2500,2026-03-10 06:36:03,default,standard,ipi_6TOTjTLG01oGxO
+id,amount,batch_timestamp,card,cardholder,created,currency,evidence_additional_documentation,evidence_canceled_at,evidence_cancellation_policy_provided,evidence_cancellation_reason,evidence_card_statement,evidence_cash_receipt,evidence_check_image,evidence_expected_at,evidence_explanation,evidence_original_transaction,evidence_product_description,evidence_product_type,evidence_received_at,evidence_return_description,evidence_return_status,evidence_returned_at,internal_reason,loss_reason,merchant,reason,status,transaction,updated
+id_l4LHtsf8BZlw39,500,2026-06-15 05:34:03,default,primary,452.76,gbp,standard,3577,True,,standard,primary,default,4321,primary,standard,default,primary,3013,standard,primary,3057,,,primary,,default,default,220.9
+id_rIRbhGf8dd5kWM,7500,2026-03-09 22:07:03,standard,primary,34.96,usd,standard,549,True,standard,default,default,default,2644,standard,standard,,standard,984,,default,3734,,primary,primary,standard,default,default,433.23
+id_fr2wJ1OksC7AEz,2500,2026-02-27 09:12:03,standard,,264.61,jpy,,3208,True,standard,default,,default,2001,standard,primary,standard,,798,primary,,2826,default,,,primary,default,standard,443.81
+id_NR5uWQPAVuzKKs,1500,2026-06-25 01:35:03,default,primary,206.91,usd,primary,256,False,primary,default,default,primary,2597,default,,primary,default,2975,primary,default,1972,primary,,default,default,primary,primary,111.3

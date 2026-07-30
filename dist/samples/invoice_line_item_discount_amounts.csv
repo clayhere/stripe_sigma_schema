@@ -1,5 +1,5 @@
-amount,discount_id,invoice_id,invoice_line_item_id
-2500,d_f8BZlw39Td7OOu,,il_nTZINv5mGhB6m0
-7500,d_G1WW98JSSaNrUR,,il_jH2GtQPeprxhYJ
-4200,d_xCAvCpLOkCYrIR,,il_bhGf8dd5kWMypz
-500,d_65ueme3bea3dkO,,il_NQiiuc6SaWE20f
+id,invoice_id,invoice_line_item_id,amount,batch_timestamp,discount
+ilid_AZir4AaCNVduNr,,il_F93Vbxr50GMRn0,24900,2026-01-27 17:20:03,
+ilid_flLq1UpQLE3a2T,,il_aOe7RnYTXo57E4,10000,2026-06-23 17:05:03,
+ilid_kbbylug55yNJxo,,il_w3fyKOzbjimrHj,24900,2026-04-19 09:09:03,
+ilid_9WyFLVR3UiscMo,,il_MbWudgZxjIMYOe,10000,2026-04-11 22:08:03,primary

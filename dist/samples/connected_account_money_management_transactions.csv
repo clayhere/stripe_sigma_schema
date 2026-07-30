@@ -1,0 +1,5 @@
+account,amount,available_balance_impact,category,counterparty_name,created,currency,description,financial_account_id,flow_id,flow_type,id,inbound_pending_balance_impact,outbound_pending_balance_impact,posted_at,status,void_at
+TcL0ZGej3X,4200,1345,primary,primary,2026-04-01 02:09:03,usd,Seat overage,fa_GSlMjcoZSTEpPc,f_924t7DSP9cSRux,default,primary,911,551,2026-03-09 16:28:03,default,2026-04-25 07:04:03
+Sa1kYvOM1x,7500,2283,default,,2026-03-28 07:48:03,eur,Card payment processing,fa_8D9FNqWizm7PyX,f_tjCdjdJ67L3POW,standard,default,4760,4585,2026-02-05 15:31:03,standard,2026-02-12 07:53:03
+4zNAgxS4r9,999,1235,standard,standard,2026-03-19 08:09:03,usd,Card payment processing,fa_2JKaw3fX1mvwU4,f_wwxjrcM7Vc6tVF,,standard,413,3989,2026-05-26 00:50:03,standard,2026-05-26 12:43:03
+JLIeAm0o1M,10000,4958,,primary,2026-05-03 08:20:03,jpy,Onboarding,fa_QenTlz5VgP5HX2,f_12d8mj1dQlmcTy,default,default,3385,3453,2026-05-02 13:02:03,primary,2026-02-28 05:00:03

@@ -1,5 +1,5 @@
-amount,invoice_id,tax_rate_id
-500,in_7yN6NEF6drsKp0,tr_o1QhKrP2axxTxV
-1999,in_Gs4JMsSyGXqb8L,tr_flHvKLwbVziwuB
-500,in_ezwMHfGooKe7li,tr_Q44xOHx0pZiazM
-10000,in_fhSGVaPXCMyCdq,tr_1gF06DXqUC7eCy
+id,invoice_id,amount,batch_timestamp,filing_amount,inclusive,tax_rate,taxable_amount
+isct_KfU8I9xtlHqns8,in_uWharCkPLQFJcB,1500,2026-05-07 16:45:03,10000,False,default,120
+isct_9wNC7zJ1jkJMgJ,in_nZMCeMQmQZMO5b,24900,2026-05-13 03:05:03,1999,False,standard,87
+isct_fKHHREMj2qB9VC,in_x73Ai2mkio8pDd,2500,2026-02-26 17:35:03,999,False,primary,190
+isct_NyZJhCpq4KhvTz,in_bi8QTapgDXEu34,1999,2026-05-03 09:02:03,1999,True,default,0

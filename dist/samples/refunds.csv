@@ -1,6 +1,6 @@
-id,amount,balance_transaction_id,charge_id,created,currency,description,payment_intent_id,reason,status
-re_kLCnHJZCHKeow6,10000,txn_VqGKxmUrDoZeM0,ch_xeNvb6WcOpfyUz,2026-04-29 22:15:03,jpy,Card payment processing,pi_KHtYA0B1wG8Ka1,fraudulent,failed
-re_Fa79eXpgKWmyUs,10000,txn_3SEB6BnPOs69jA,ch_tnrCugXIQyBj2m,2026-02-21 03:46:03,gbp,Seat overage,pi_po6JIaDtf620M9,duplicate,requires_action
-re_lBQ9r0Nqyi3bXi,1999,txn_t0AdQwTW1aCbCB,ch_dQt4PEieQKVvU2,2026-01-31 18:25:03,usd,Card payment processing,pi_ggy8RkgIy7NLVj,partial_capture,succeeded
-re_NBqGvZCmoIL0Vw,1999,txn_ttxIus1GwWpuXs,ch_dQt4PEieQKVvU2,2026-01-20 03:19:03,eur,Onboarding,pi_BHUnnFGzgy3tbZ,requested_by_customer,succeeded
-re_Gk0YIPYUcRY9Ma,24900,txn_n45EoJcOOWNBtx,ch_tnrCugXIQyBj2m,2026-06-02 07:31:03,usd,Monthly subscription,pi_WNRmYrAVhyxpPX,duplicate,pending
+id,amount,balance_transaction_id,batch_timestamp,charge_id,created,currency,failure_balance_transaction_id,failure_reason,reason,receipt_number,refund_description,refund_payment_intent,refund_transfer_reversal_id,source_transfer_reversal_id,status
+re_pyWSmqsIGdKoB2,1999,txn_9sdkD5mAO50F9S,2026-03-02 15:15:03,ch_gJCxU0NdxoAj29,2026-05-15 00:59:03,gbp,fbt_B3nCoA45ik3pGr,,fraudulent,primary,default,primary,rtr_Z72dX8CSalf1jf,str_orbomz6YJdXt2H,pending
+re_2LpnDXh2Gd6caI,1999,txn_Ic11a7nylwzjCm,2026-06-06 01:51:03,ch_T4Mu4JaHB9jQcw,2026-06-03 17:30:03,jpy,fbt_ngpjTU898dIFsR,default,partial_capture,default,standard,primary,rtr_kgZ2Es8kwrIMUH,str_JlHhFgJFRpezX0,failed
+re_RYY9djzWq090TF,1999,txn_X2RZ4GNIBU30yI,2026-04-05 23:11:03,ch_RaH1D6BWIPDhpP,2026-06-22 11:49:03,usd,fbt_ZdZiUHnrM62KM1,standard,fraudulent,primary,standard,,rtr_ADyVtoz4DGZ7Jo,str_dbZgRvMYP6V9at,failed
+re_CIRwEyfjuljixL,7500,txn_onEHd9T1r6ATMl,2026-05-06 08:00:03,ch_JeQEhkRB9cGT7L,2026-04-26 20:07:03,jpy,fbt_6OGgIxvZPgJH2U,primary,requested_by_customer,standard,primary,standard,rtr_Oli7dX0vzFF7GJ,str_zZlF4roUoor8mv,succeeded
+re_sqIifmYzxiq3uM,1500,txn_rxj6AMubeQYVyf,2026-05-10 06:37:03,ch_baQvO85lBlqcam,2026-03-30 04:24:03,usd,fbt_PjABcH0lu018Pd,default,duplicate,standard,standard,default,rtr_nP2GCtgaD5rot7,str_LI3N0FrrLdbYrR,failed

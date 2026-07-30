@@ -1,0 +1,5 @@
+accepted_amount,accepted_amount_in_usd,accepted_count,attributable_optimization,blocked_by_default_high_risk_rule_count,blocked_by_radar_rule_count,blocked_by_stripe_count,card_brand,card_country,card_input_method,card_type,created_day,currency,is_connected_account,outcome_reason,outcome_rule_id,outcome_type,transaction_amount,transaction_amount_in_usd,transaction_count
+1500,10000,8,standard,11,3,10,American Express,CA,,primary,2026-02-02 22:00:03,usd,True,primary,or_pshm7paJ1VUgqs,primary,1500,500,2
+500,2500,9,default,9,11,7,Visa,US,default,,2026-06-03 05:40:03,gbp,True,primary,or_9c6OzPnwkw8OOC,standard,999,10000,7
+4200,4200,6,default,10,1,4,Discover,DE,,primary,2026-06-22 17:20:03,jpy,False,,or_leVwQc1RK9xp1c,default,10000,999,7
+999,1500,8,default,7,3,4,Visa,US,primary,,2026-05-19 21:37:03,usd,True,default,or_kt5tmT8wIjIG8j,default,2500,1500,6

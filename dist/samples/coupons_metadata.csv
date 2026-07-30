@@ -1,5 +1,5 @@
-coupon_id,key,value
-c_JCM6WoZNkTMIGF,cohort,acme-2026
-c_JCM6WoZNkTMIGF,cohort,enterprise
-c_LJAC28bbiHTvVH,internal_ref,ORD-4471
-c_LJAC28bbiHTvVH,cohort,acme-2026
+coupon_id,key,batch_timestamp,value
+c_liowN3joASsvIC,cohort,2026-03-14 02:21:03,partner
+c_NO0PDWBf2XFe5d,cohort,2026-06-08 13:53:03,acme-2026
+c_Xge7HyEHbiI9zR,order_id,2026-06-06 20:41:03,ORD-4471
+c_Xge7HyEHbiI9zR,order_id,2026-03-22 18:37:03,enterprise

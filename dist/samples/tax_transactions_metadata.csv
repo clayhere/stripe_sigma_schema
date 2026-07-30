@@ -1,5 +1,5 @@
 key,tax_transaction_id,value
-channel,tax_SRux7SJ47Mm5r6,acme-2026
-channel,tax_abs8S3it2JKaw3,enterprise
-channel,tax_SnphOWOvpiukbW,partner
-order_id,tax_SRux7SJ47Mm5r6,acme-2026
+channel,tax_PZekeLSFaKDbTg,enterprise
+channel,tax_j1DUBIci25Ovad,ORD-4471
+channel,tax_PZekeLSFaKDbTg,partner
+cohort,tax_j1DUBIci25Ovad,partner

@@ -1,5 +1,5 @@
-id,amount,created,currency,financial_account_id,status
-tt_OiOYo4ejUeK9S1,7500,2026-01-06 10:54:03,usd,fa_k7erB2sJLHwj3M,default
-tt_lGAsk78NGsLpL6,10000,2026-03-04 09:09:03,jpy,fa_P5y0itTOT3WZ7j,default
-tt_ZXIcUZ1YK4NVc0,2500,2026-03-28 08:52:03,usd,fa_P5y0itTOT3WZ7j,standard
-tt_B9IQnKEUwQqpxg,2500,2026-05-23 16:26:03,usd,fa_TQEFMLrOFFziSw,
+id,amount,balance_impact_cash,balance_impact_inbound_pending,balance_impact_outbound_pending,batch_timestamp,created,currency,description,financial_account_id,flow_id,flow_type,status,status_transitions_posted_at,status_transitions_void_at
+tt_gG3IxupAcTPhjI,24900,316,4494,2462,2026-03-29 07:34:03,2026-06-19 05:57:03,jpy,Seat overage,fa_KFVTvgBw00cRfq,f_07uRO1ni7jG03D,,standard,2026-05-07 05:53:03,2026-04-09 12:30:03
+tt_xxcQKTrAWjodN4,2500,4757,3477,3426,2026-02-22 18:52:03,2026-05-31 05:06:03,jpy,Seat overage,fa_ilDjmVCWYmggLH,f_WjE8qQ4o4r2NnJ,default,standard,2026-01-18 12:19:03,2026-04-02 03:13:03
+tt_whSKb3vmHlXawi,4200,4302,2712,197,2026-04-15 13:40:03,2026-02-16 05:37:03,usd,Onboarding,fa_IGTiaOPJSrlBea,f_79yOhRWeQwO4L2,,,2026-06-15 04:19:03,2026-01-25 23:08:03
+tt_kUf3zzLwG7kw7o,2500,3576,378,4572,2026-06-04 20:25:03,2026-01-13 02:34:03,usd,Onboarding,fa_ilDjmVCWYmggLH,f_R5yLikSfYbU4G8,primary,standard,2026-06-07 20:50:03,2026-06-04 06:55:03

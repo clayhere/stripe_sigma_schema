@@ -1,0 +1,5 @@
+issuing_authorization_id,amount,amount_details_atm_fee,amount_details_cashback_amount,approved,authorization_code,batch_timestamp,created,currency,merchant_amount,merchant_currency,network_risk_score,reason,reason_message,requested_at
+iauth_aWRvCz5Z9OrogS,10000,450,4200,True,primary,2026-06-22 11:28:03,2026-03-09 05:26:03,usd,2500,usd,4919,default,standard,2026-03-29 04:13:03
+iauth_aWRvCz5Z9OrogS,24900,87,7500,False,,2026-06-01 05:45:03,2026-03-10 07:50:03,eur,1999,usd,1063,default,default,2026-01-17 00:33:03
+iauth_aWRvCz5Z9OrogS,1999,0,10000,False,,2026-03-24 10:08:03,2026-05-15 03:28:03,usd,4200,usd,943,,default,2026-02-24 22:53:03
+iauth_Xg5PFbaT8Haq5M,999,450,1500,True,default,2026-04-15 11:48:03,2026-04-18 21:35:03,eur,4200,eur,1000,,,2026-02-18 14:02:03

@@ -1,5 +1,5 @@
-id,end_date,start_date,subscription_schedule_id
-ssp_aTLWiGFLTSru2V,2026-02-10 20:00:03,2026-05-20 09:13:03,sub_sched_a5f8pCNirDEI8T
-ssp_ZMQ3sfkbKJcMbe,2026-06-06 10:08:03,2026-01-28 15:36:03,sub_sched_piX4qWdjo1L3kB
-ssp_5AGRqM9GCsR5wn,2026-01-31 05:15:03,2026-02-04 08:39:03,sub_sched_piX4qWdjo1L3kB
-ssp_gEpAPE3NBPSdOf,2026-05-11 02:17:03,2026-04-24 10:05:03,sub_sched_QmmlBcnfx6EDyl
+id,application_fee_percent,automatic_tax_enabled,batch_timestamp,billing_cycle_anchor,billing_thresholds_amount_gte,billing_thresholds_reset_billing_cycle_anchor,collection_method,coupon_id,currency,default_payment_method,description,end_date,invoice_settings_days_until_due,on_behalf_of,proration_behavior,schedule_id,start_date,transfer_data_amount_percent,transfer_data_destination,trial_end
+ssp_7mk0LwZvouvkGP,377.5,True,2026-06-17 15:10:03,default,10000,True,,c_NO0PDWBf2XFe5d,usd,standard,Seat overage,2026-05-18 09:16:03,491.19,primary,default,s_zzmI2vlFyC5uox,2026-01-24 01:17:03,10000,standard,3360
+ssp_ZZ6hl4vnhlwD9v,100.34,True,2026-01-28 18:13:03,primary,999,False,standard,c_liowN3joASsvIC,eur,default,Onboarding,2026-04-12 03:43:03,28.64,standard,primary,s_3ivwCQmz4nXzXe,2026-05-28 03:42:03,1999,primary,2532
+ssp_p71RaBeuDII6bw,351.68,False,2026-05-09 05:30:03,default,1999,False,default,c_Xge7HyEHbiI9zR,usd,primary,Monthly subscription,2026-02-18 22:48:03,83.51,standard,default,s_kwfcD5aQUdtIeS,2026-03-21 10:35:03,4200,standard,2356
+ssp_PyDh42WrLUIJNx,344.94,True,2026-04-08 13:24:03,,7500,True,standard,c_2EgAQRyDkLrJR4,usd,default,Monthly subscription,2026-01-22 19:48:03,65.37,default,standard,s_mnRSUtAIr0BwXb,2026-03-12 13:55:03,2500,,2615

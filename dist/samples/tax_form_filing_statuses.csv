@@ -1,0 +1,5 @@
+tax_form_id,batch_timestamp,effective_at,jurisdiction_country,jurisdiction_level,jurisdiction_state,value
+tf_YEMHkQO33HzNHx,2026-03-23 05:58:03,2026-05-15 15:45:03,CA,default,default,acme-2026
+tf_F8eH2QPR83O7A9,2026-04-29 14:32:03,2026-02-14 07:43:03,US,default,default,partner
+tf_57a0W2zXQQRThX,2026-01-11 13:53:03,2026-02-26 09:31:03,US,standard,default,ORD-4471
+tf_bwl2gaQfphlwPw,2026-04-06 19:21:03,2026-05-18 13:52:03,DE,standard,default,enterprise

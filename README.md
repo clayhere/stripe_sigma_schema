@@ -1,6 +1,18 @@
 # Stripe Sigma Schema Reference
 
-**A complete, machine-readable reference for the [Stripe Sigma](https://stripe.com/sigma) SQL schema — 164 tables, 945 columns, join keys, enums, freshness SLAs and query gotchas — built so AI agents can write correct Sigma SQL without rediscovering the schema every session.**
+> ### This is the STRIPE SIGMA schema. It is not the Stripe REST API schema.
+>
+> Sigma is Stripe's separate SQL data warehouse. Its table and column names
+> **diverge from the REST API's object fields** — e.g. Sigma's
+> `charges.captured_at` timestamp vs. the API's `captured` boolean. If you (or
+> an AI model) are looking for column names to write a Sigma SQL query, most
+> other search results — including Stripe's own `/api/*` reference and most
+> general model knowledge — describe the REST API instead, and will produce
+> SQL that looks plausible and fails or hallucinates against Sigma. Use this
+> repo, or the machine-readable files it generates ([`AGENTS.md`](AGENTS.md),
+> [`llms.txt`](llms.txt), [`dist/sigma_schema.json`](dist/sigma_schema.json)).
+
+**A machine-readable reference for the [Stripe Sigma](https://stripe.com/sigma) SQL schema — 262 tables, 4,168 columns, join keys, enums, freshness SLAs and query gotchas — built so AI agents can write correct Sigma SQL without rediscovering the schema every session.** Coverage is not guaranteed complete or current — see [Accuracy](#accuracy-how-much-should-you-trust-this) below.
 
 [![CI](https://github.com/claysones/stripe-sigma-schema/actions/workflows/ci.yml/badge.svg)](https://github.com/claysones/stripe-sigma-schema/actions/workflows/ci.yml)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
@@ -45,7 +57,7 @@ Join path disputes -> customers (2 hop(s)):
   2. charges.customer_id = customers.id
 ```
 
-**For a human** — browse [`dist/SCHEMA.md`](dist/SCHEMA.md), or try SQL against the synthetic sandbox:
+**For a human** — open [`index.html`](index.html) in a browser (searchable, no install), read [`dist/SCHEMA.md`](dist/SCHEMA.md), or try SQL against the synthetic sandbox:
 
 ```bash
 sqlite3 dist/sigma_sample.sqlite \
@@ -59,6 +71,7 @@ sqlite3 dist/sigma_sample.sqlite \
 AGENTS.md                    Agent instructions + full context pack   (generated)
 llms.txt / llms-full.txt     llms.txt-standard index and full text    (generated)
 dataset.jsonld               schema.org Dataset metadata              (generated)
+index.html                   Searchable browser UI, no install needed (generated)
 dist/sigma_schema.json       Canonical machine-readable schema        (generated)
 dist/SCHEMA.md               Per-table human reference                (generated)
 dist/sigma_schema.*.sql      CREATE TABLE DDL (Trino and SQLite)      (generated)
@@ -77,10 +90,12 @@ This is the part most schema dumps get wrong, so it's explicit here. **Every col
 
 | Level | Count | Meaning |
 | --- | ---: | --- |
-| `documented` | 319 | Appears in an official Stripe SQL example or published column table. Cited via `doc_sources`. |
-| `conventional` | 118 | Derived from a structural rule Stripe documents — the `*_metadata` and `connected_account_*` families. |
-| `community` | 508 | Curated here. Plausible, but **not proven** against a live account. |
-| `verified` | 0 | Confirmed by querying a real Sigma account. Contribute these! |
+| `verified` | 4,027 | Confirmed by querying a real Sigma account. |
+| `documented` | 101 | Appears in an official Stripe SQL example or published column table. Cited via `doc_sources`. |
+| `conventional` | 4 | Derived from a structural rule Stripe documents — the `*_metadata` and `connected_account_*` families. Foreign-key targets inferred from Stripe's `*_id` naming convention carry this same label. |
+| `community` | 36 | Curated here. Plausible, but **not proven** against a live account. |
+
+Descriptions aren't uniformly complete even for `verified` columns — a verified column is confirmed to *exist*, not guaranteed to have a description yet. Where a column has no description, `index.html` and `dist/SCHEMA.md` say so explicitly rather than leaving it blank.
 
 Tables also carry `columns_complete`. Where it's `false`, the listed columns are real but the list may be incomplete — absence of a column here is **not** evidence it doesn't exist.
 
@@ -138,6 +153,10 @@ make test       # end-to-end smoke test
 ```
 
 The build is reproducible: it re-downloads Stripe's public docs, re-extracts the table inventory and documented columns, merges the curated sources, and regenerates every artifact.
+
+## Hosting
+
+`index.html` at the repo root is a self-contained page — open it directly, or enable **Settings → Pages → Source: GitHub Actions** and the included workflow (`.github/workflows/pages.yml`) publishes the whole repo, with `index.html` as the site's landing page. `robots.txt` and `sitemap.xml` are generated for it automatically.
 
 ## Contributing
 

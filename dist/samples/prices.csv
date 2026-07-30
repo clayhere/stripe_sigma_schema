@@ -1,8 +1,8 @@
-id,active,billing_scheme,created,currency,livemode,nickname,product_id,recurring_interval,recurring_interval_count,recurring_usage_type,tiers_mode,type,unit_amount
-price_ptOqVF9hDheIo1,False,tiered,2026-01-29 04:24:03,usd,False,primary,prod_8xpw0VjRviQWX6,year,6,licensed,volume,one_time,500
-price_W4APGuJrpW2v6q,True,per_unit,2026-01-18 11:35:03,usd,True,,prod_8xpw0VjRviQWX6,week,1,metered,volume,one_time,2500
-price_WIqr4c5F5MepGR,True,per_unit,2026-05-20 08:15:03,eur,True,standard,prod_hDF2t9mHfG4FsB,week,6,metered,volume,recurring,500
-price_Cl5dz5RI1299qA,False,per_unit,2026-02-28 08:25:03,jpy,False,,prod_ee78uEf9bGLRDl,day,5,metered,volume,one_time,999
-price_M7stFQGmzwa5o0,False,per_unit,2026-06-15 01:07:03,usd,False,standard,prod_4v9ef23lIzxFl0,year,10,metered,volume,recurring,4200
-price_VALTwnB2Pw3IUi,False,tiered,2026-06-19 18:50:03,usd,False,default,prod_FxVQ3ZBq7YBhvi,day,1,metered,graduated,recurring,4200
-price_gfVllxRsK03ch8,True,per_unit,2026-06-13 09:55:03,usd,False,,prod_u0TzzNBuG74Nc1,month,12,licensed,volume,recurring,10000
+id,active,batch_timestamp,billing_scheme,created,currency,custom_unit_amount_default,custom_unit_amount_maximum,custom_unit_amount_minimum,lookup_key,nickname,product_id,recurring_aggregate_usage,recurring_interval,recurring_interval_count,recurring_meter_id,recurring_trial_period_days,recurring_usage_type,tax_behavior,tiers_mode,transform_quantity_divide_by,transform_quantity_round,type,unit_amount,unit_amount_decimal
+price_D9qQ6PlFQBHPIq,True,2026-02-14 23:59:03,tiered,2026-03-17 13:15:03,gbp,24900,1500,4200,default,standard,prod_fCZt1OVLv0PDYf,default,day,1,rm_d93QLLWEGhtb53,2771,licensed,unspecified,graduated,4036,default,one_time,4200,10000
+price_YAVsM3Qism45Vh,False,2026-01-18 09:28:03,per_unit,2026-06-23 18:19:03,jpy,7500,1500,1500,,standard,prod_h5rwrdfPe93bYX,standard,month,6,rm_n4IZsyvRXXWNE0,2308,licensed,unspecified,volume,2587,default,one_time,999,2500
+price_RpQKUfMRbbL8Gf,False,2026-02-03 11:51:03,per_unit,2026-04-30 13:16:03,usd,4200,1999,24900,,primary,prod_fCZt1OVLv0PDYf,,day,11,rm_XBgMft3qE7JRUB,4894,metered,exclusive,volume,1076,primary,recurring,7500,1999
+price_DS6rapCD5kPt8Y,True,2026-03-09 20:14:03,per_unit,2026-04-12 13:19:03,eur,4200,7500,24900,primary,default,prod_Vo3oTyoVsnlvPA,standard,week,10,rm_DEurfIQeqUAaaH,2457,licensed,unspecified,graduated,3624,,one_time,24900,4200
+price_ZYzOpBEtJrcFd4,True,2026-01-20 03:54:03,tiered,2026-04-02 01:33:03,usd,500,7500,500,,standard,prod_pyaULJvUfrOMyd,default,month,12,rm_gM3jLrNCDUPaI4,3537,licensed,inclusive,graduated,3535,,one_time,2500,999
+price_uSmWuWJ0LH39hD,False,2026-05-17 20:46:03,per_unit,2026-01-22 14:46:03,usd,500,999,1500,standard,standard,prod_h5rwrdfPe93bYX,,year,1,rm_msgkV250BfE8ta,3288,metered,exclusive,graduated,1350,,recurring,7500,1500
+price_4iAFP5rKoBbmM1,False,2026-04-13 04:30:03,tiered,2026-04-25 16:41:03,usd,500,10000,10000,,standard,prod_pyaULJvUfrOMyd,default,year,11,rm_lfMd2nINttWwyp,4180,licensed,exclusive,graduated,1975,standard,recurring,10000,24900

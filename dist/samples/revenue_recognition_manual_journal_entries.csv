@@ -1,0 +1,5 @@
+id,accounting_period_date,created,credit_account,credit_account_gl_name,debit_account,debit_account_gl_name,deleted_at,description,email,livemode,presentment_amount,presentment_currency,settlement_amount,settlement_currency,transaction_id
+rrmj_VHVrzydU54TUhv,2026-01-09 04:43:03,2026-06-23 10:49:03,,standard,standard,primary,2026-06-01 07:13:03,Onboarding,katherine.turing@example.com,False,1500,eur,999,usd,t_mFZPNkIMuVOVNn
+rrmj_UgMlUBPhVegyg3,2026-02-02 03:07:03,2026-04-09 00:53:03,default,standard,primary,default,2026-04-29 05:15:03,Seat overage,tim.hopper@example.com,True,1500,jpy,1500,eur,t_vlylFmR0wIiu68
+rrmj_gWO5Zp2PN32G7L,2026-02-24 10:12:03,2026-05-08 03:50:03,,primary,default,standard,2026-03-01 07:06:03,Monthly subscription,linus.perlman@example.com,True,500,usd,7500,eur,t_nCsROkEtbvBJyI
+rrmj_dgUHwaFRYRXSDO,2026-05-05 03:59:03,2026-03-14 05:21:03,,,default,primary,2026-03-30 15:41:03,Card payment processing,linus.perlman@example.com,True,500,usd,4200,eur,t_ynQDd1OxI6nVVr

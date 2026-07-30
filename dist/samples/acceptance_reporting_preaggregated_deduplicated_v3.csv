@@ -1,0 +1,5 @@
+accepted_amount,accepted_amount_in_usd,accepted_count,attributable_optimization,blocked_by_default_high_risk_rule_count,blocked_by_radar_rule_count,blocked_by_stripe_count,card_brand,card_country,card_input_method,card_type,cof,created_day,currency,is_connected_account,nsf_count,outcome_reason,outcome_rule_id,outcome_type,transaction_amount,transaction_amount_in_usd,transaction_count,used_network_tokens
+1999,24900,11,standard,7,10,10,Visa,US,default,primary,False,2026-05-06 05:29:03,usd,False,6,primary,or_2Ezp55sdq3Tvsu,,24900,1999,6,False
+10000,24900,1,primary,11,6,8,Visa,CA,standard,standard,False,2026-03-20 16:08:03,usd,True,10,default,or_FzHfk8Rsni5108,,1999,10000,8,True
+999,24900,12,standard,4,3,10,American Express,AU,default,,False,2026-05-25 19:46:03,eur,False,10,,or_OxeskUkdXyqoUQ,primary,4200,999,2,False
+1999,1999,10,standard,11,1,12,Visa,GB,primary,,False,2026-06-20 21:08:03,usd,False,12,default,or_OWn3tjaRlUQrQM,,24900,999,10,False

@@ -1,0 +1,5 @@
+amount,created,currency,description,financial_account_id,id
+500,2026-01-06 22:52:03,usd,Seat overage,fa_b4v8Tc8oM6L01M,primary
+7500,2026-06-24 21:39:03,jpy,Seat overage,fa_dUuRYU1uStFHvs,
+1999,2026-05-14 01:00:03,usd,Onboarding,fa_VF6EbAV77plpsW,primary
+10000,2026-06-11 19:46:03,usd,Onboarding,fa_rRrojEdS9E2VkM,

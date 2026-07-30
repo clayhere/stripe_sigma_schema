@@ -1,0 +1,5 @@
+id,amount,batch_timestamp,created,currency,financial_account_id,network,received_credit_id,status,status_transitions_posted_at,transaction_id
+tcr_SxpjXSbNs8m1Nu,500,2026-06-10 07:48:03,2026-05-07 07:30:03,gbp,fa_SWbLYy5qTJM32k,,rc_TP9i4bQitScYpW,primary,2026-05-11 20:06:03,t_HeUKZhiKSaZQeW
+tcr_kkZW3QmAtrlEIg,24900,2026-02-11 14:28:03,2026-05-25 02:26:03,usd,fa_juoQM6BOA1pOom,,rc_ROAQ7VIIBELLuv,,2026-04-16 19:42:03,t_z9BMPsiH5tHN0J
+tcr_IeBCcyDjnL3mwr,2500,2026-02-14 11:51:03,2026-03-07 20:02:03,gbp,fa_ethlBGxiFa5N2B,,rc_qZq5lG5HxLg3Kh,default,2026-04-03 07:09:03,t_1QdILKIg4xlgZW
+tcr_JoAU5w68H0wxCd,500,2026-05-29 15:15:03,2026-03-14 07:52:03,gbp,fa_GlhezdxQssKAil,standard,rc_0kLTMMqfgxEk5q,,2026-03-14 14:06:03,t_gsimTXwDv5EDa4

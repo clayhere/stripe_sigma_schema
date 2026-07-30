@@ -1,0 +1,5 @@
+billable_item_source_id,billing_meter_id,customer_id,start_time,billable_item_type,currency,gross_amount,price_source_id,price_type,segment
+bis_3i0NjXPIyQzkQ3,bm_G4FsBb2855mxCT,cus_gmhPGcRCyAK6G6,standard,standard,usd,1999,ps_nWUByu1PpTcqSV,primary,
+bis_lWmeFP3ER2Hbnc,bm_0K9haZAqfERpn5,cus_5NgEDoFXpMzt4w,primary,,usd,1500,ps_yDVOUzaF3vLVH4,standard,
+bis_kVubP8ReTYmZoP,bm_Tco1c6N29VJyp0,cus_5NgEDoFXpMzt4w,,standard,usd,2500,ps_tGLeRxMKddLJtq,default,
+bis_BxE4JmDCrDcFYX,bm_G4FsBb2855mxCT,cus_IHfLyxY5LTvVAO,,standard,usd,10000,ps_r5MaL2fk8dOLPX,,standard

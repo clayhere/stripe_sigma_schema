@@ -1,0 +1,5 @@
+available_balance_impact,created,currency,effective_at,id,inbound_pending_balance_impact,outbound_pending_balance_impact,transaction_id
+3671,2026-06-18 12:03:03,usd,2026-03-01 09:53:03,primary,4667,1127,t_Jw62gapMCV1rX9
+89,2026-06-08 01:07:03,usd,2026-01-27 16:07:03,standard,4847,2934,t_lPkGthT54PV9Lm
+911,2026-03-11 10:51:03,usd,2026-01-08 08:06:03,primary,3535,4333,t_7m4OZNRZ45sIBE
+1983,2026-01-20 11:27:03,usd,2026-01-19 23:13:03,standard,3280,3948,t_KFe7VYJWY1k8mz

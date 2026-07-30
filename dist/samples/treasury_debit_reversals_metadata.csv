@@ -1,0 +1,5 @@
+debit_reversal_id,key,batch_timestamp,value
+dr_Xb484mlrfXUPER,channel,2026-06-20 15:45:03,enterprise
+dr_KuKmkbeCIjAsHK,internal_ref,2026-05-28 00:09:03,ORD-4471
+dr_gzdEKJS7M8JAeT,channel,2026-05-28 13:39:03,ORD-4471
+dr_16fCYNqUaDxP4F,cohort,2026-01-10 10:46:03,enterprise

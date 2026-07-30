@@ -1,5 +1,5 @@
 currency,customer_id,event_type,local_event_timestamp,mrr_change,price_id,product_id,quantity_change,subscription_id,subscription_item_id
-eur,cus_20glSD92rLnHqV,,2026-03-03 18:59:03,408,price_y8KcnlrVW5YIBt,prod_fNup85Jx1bttcy,3357,sub_Ui4MNOwoB32Gun,si_4jkrCDAGBKN8UR
-usd,cus_HlpdWRtZZmoYaB,standard,2026-03-31 16:55:03,2752,price_im0hlTY5G6vKJC,prod_Ud1a4jxEzkV5Un,563,sub_HrtqSuUkw3Vwjl,si_npr3OBhr6P1DMI
-usd,cus_OQUm0cqJcb5B3e,primary,2026-03-25 06:11:03,572,price_663VHmj0Wa5paX,prod_zy4RQUPgGetbD9,3957,sub_EdH4Ts4CWeefIi,si_rbOTm2duvTg8v1
-usd,cus_0pBZiFnzPDfNPJ,standard,2026-06-06 23:57:03,2814,price_UsZ5l0NtYKJrvu,prod_dfkgOqmaZEU2gW,3239,sub_p90g0qGUZsVGpm,si_5GVSoycvdW9siJ
+usd,cus_TAUBnfmY59z0Qz,standard,2026-05-12 16:10:03,580,price_nU6nhnVZjVYF6W,prod_oDY3fvXslWGFgj,341,sub_cVdwu5eRIJ4kyG,si_pSpeyH9M17cLvR
+usd,cus_ItAeu0iMi34Scf,primary,2026-05-15 03:26:03,4893,price_WTveooGEqzvaRr,prod_UYhfnYHjuBS4X5,629,sub_QXYViFkexp2pkA,si_qhgd4vDchgkbPx
+usd,cus_UXa6tfxHzJGM5R,,2026-03-17 22:04:03,840,price_fSNOI8IzXTxnkX,prod_i58HGj3ys1WD6U,4540,sub_Bc2sBageFnszMG,si_HMdGl6tLyz1DAC
+usd,cus_jfiiHSNUtQWFZu,default,2026-01-18 06:56:03,1920,price_hPmMRGEsWcVLS2,prod_nhHeMa6eCgDetU,2965,sub_dCj8t9MmGHorOn,si_xVdO2urUvEkiM9

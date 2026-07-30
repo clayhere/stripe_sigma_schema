@@ -1,5 +1,5 @@
-id,device_type,label,location_id,status
-tr_9m9B9lNx528rvv,default,,tl_kra9zoYUFE5a0v,default
-tr_mkxmhflbmTmtu9,default,,tl_D3AyOoMKuKLBhZ,
-tr_gdpYanLSBxg9T3,,standard,tl_D3AyOoMKuKLBhZ,primary
-tr_Eu23WNrgYZMrNV,,,tl_bkkpkFEOupuzIV,standard
+device_type,id,label,livemode,location_id,metadata,serial_number
+standard,tr_MG3V0LLH10snvm,standard,False,tl_Wld6tt51Ec2DU1,standard,default
+primary,tr_WJCHz1V2UOnlP7,primary,True,tl_wyFbrobugGMN9f,default,default
+default,tr_SdqDM01nr7zawx,,True,tl_lPJtB3GKfGlpZ5,primary,primary
+default,tr_2mDfRDvzan9Lmw,default,True,tl_lPJtB3GKfGlpZ5,,standard

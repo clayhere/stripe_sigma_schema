@@ -1,5 +1,5 @@
-invoice_id,name,value
-,Vertex Labs,partner
-,Copper Kettle,acme-2026
-,Ironwood Gear,partner
-,Northwind Supply,ORD-4471
+invoice_id,name,batch_timestamp,value
+,Blue Harbor Coffee,2026-06-23 23:58:03,acme-2026
+,Ironwood Gear,2026-06-17 22:14:03,enterprise
+,Ironwood Gear,2026-04-07 15:57:03,acme-2026
+,Vertex Labs,2026-06-14 15:49:03,partner

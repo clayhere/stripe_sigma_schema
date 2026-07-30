@@ -1,0 +1,5 @@
+checkout_session_id,key,batch_timestamp,value
+cs_b96TU1XZ2aJD7b,internal_ref,2026-02-25 18:12:03,acme-2026
+cs_RRAPQFbxkrcf9B,channel,2026-05-22 17:36:03,acme-2026
+cs_MzbBRBKvoEHzl4,channel,2026-03-12 21:18:03,partner
+cs_0QwCtQ5uybeYYa,cohort,2026-05-30 05:23:03,partner

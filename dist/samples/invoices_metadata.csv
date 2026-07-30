@@ -1,5 +1,5 @@
-invoice_id,key,value
-in_vPm8hmaN5cIVgG,order_id,partner
-in_vPm8hmaN5cIVgG,cohort,ORD-4471
-in_vWiylOvxioR6SD,channel,enterprise
-in_1LTKlSTqguzzzc,channel,ORD-4471
+invoice_id,key,batch_timestamp,value
+in_OWFATMkjCy3PzP,cohort,2026-02-02 09:03:03,acme-2026
+in_xM2fVgGX17vAcj,channel,2026-06-03 11:36:03,ORD-4471
+in_OCBD9TQKQGaFqk,cohort,2026-06-11 20:10:03,ORD-4471
+in_OCBD9TQKQGaFqk,channel,2026-04-10 20:48:03,ORD-4471

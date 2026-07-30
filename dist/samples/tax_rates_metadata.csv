@@ -1,5 +1,5 @@
-key,tax_rate_id,value
-channel,tr_mBCqHzA6VyBbqo,acme-2026
-cohort,tr_mBCqHzA6VyBbqo,acme-2026
-channel,tr_gTvt9oZyC7U0m3,ORD-4471
-channel,tr_gTvt9oZyC7U0m3,ORD-4471
+key,tax_rate_id,batch_timestamp,value
+order_id,tr_tUeTj5kbpRGzFX,2026-04-01 18:22:03,ORD-4471
+cohort,tr_sTzaAbWIjByrMJ,2026-02-23 11:58:03,enterprise
+cohort,tr_yLg0eAQzcRRkct,2026-05-18 10:46:03,enterprise
+channel,tr_yLg0eAQzcRRkct,2026-06-18 15:22:03,ORD-4471

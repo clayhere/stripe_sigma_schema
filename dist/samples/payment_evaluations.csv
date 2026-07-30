@@ -1,0 +1,5 @@
+id,amount,batch_timestamp,billing_email,created,currency,customer_email,early_fraud_warning_risk_level,early_fraud_warning_score,fraudulent_dispute_risk_level,fraudulent_dispute_score,fraudulent_payment_risk_level,fraudulent_payment_score,payment_method_id,recommended_action,risk_recommended_action,risk_score
+pe_oppsGiuBdrRyFB,1999,2026-03-27 04:16:03,standard,2026-03-06 10:22:03,usd,standard,standard,22.95,primary,316.0,default,406.24,pm_rRHUv6GOVkRdac,standard,,28
+pe_M5RjBvMfYPzmIB,500,2026-02-17 22:19:03,primary,2026-04-14 06:48:03,jpy,standard,standard,118.54,standard,388.78,,354.78,pm_MlyQvENZiAalRO,default,primary,61
+pe_ZBRo75nzYE60dv,10000,2026-03-15 01:35:03,,2026-05-03 18:56:03,gbp,,default,431.14,,193.84,default,37.04,pm_YOReBNpL38dSuN,standard,default,58
+pe_fcppPeDV9pDtH0,500,2026-01-08 15:56:03,default,2026-02-22 06:36:03,usd,standard,primary,374.36,standard,80.6,primary,385.44,pm_k734gosKrtW2n0,default,standard,15

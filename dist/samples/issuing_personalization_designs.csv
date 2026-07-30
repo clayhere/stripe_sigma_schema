@@ -1,0 +1,5 @@
+id,batch_timestamp,card_logo,carrier_text_footer_body,carrier_text_footer_title,carrier_text_header_body,carrier_text_header_title,created,livemode,lookup_key,name,physical_bundle,preferences_is_default,preferences_is_platform_default,rejection_reasons_card_logo,rejection_reasons_carrier_text,status
+ipd_k9q1vPjlRxn8dF,2026-01-14 22:10:03,primary,primary,standard,primary,standard,2026-03-13 20:15:03,False,standard,Acme Robotics,standard,True,True,,standard,default
+ipd_tnCDRyKaqg0G8P,2026-01-07 17:02:03,primary,,default,,,2026-04-07 18:49:03,False,,Lumen Analytics,default,False,False,default,,primary
+ipd_wImH1qade52fzI,2026-06-14 02:07:03,standard,standard,,primary,,2026-03-21 00:42:03,True,primary,Blue Harbor Coffee,,False,False,standard,default,primary
+ipd_IhAJLEJc7FM6eP,2026-06-04 11:48:03,,,standard,default,default,2026-03-07 12:55:03,True,primary,Ironwood Gear,,False,False,primary,primary,standard

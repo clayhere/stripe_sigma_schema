@@ -1,5 +1,5 @@
-id,amount,created,currency,customer_id,invoice_id,type
-cbt_dey8GQ27iV3u4Q,1999,2026-04-10 10:00:03,usd,cus_3zj3TuUU1qMIE0,in_uPWTSwweUQ2U4I,default
-cbt_cF52ZI22T0LiIa,1500,2026-03-26 14:38:03,usd,cus_JDPUPGvFODzRGE,in_EuLp4W6D3tFDxQ,standard
-cbt_rMcEUYuw25Y0cO,1500,2026-02-16 20:26:03,eur,cus_TMf2xjG0qPQZcO,in_CmdGN8KcQmZUTf,
-cbt_YJYjlxNhUKs8QA,500,2026-03-14 17:09:03,eur,cus_JDPUPGvFODzRGE,in_RFKNU8x3KU9feI,primary
+id,account_id,amount,batch_timestamp,checkout_session_id,created,credit_note_id,currency,customer_id,description,ending_balance,invoice_id,merchant_balance_adjustment_id,previous,source_id,type
+cbt_rrYs6MnXHfVtfV,acct_MKhYLYCuO487he,10000,2026-02-03 11:09:03,cs_ugRJVB3T7kEthq,2026-01-19 15:28:03,cn_C1rJAv2d0Z93kN,usd,cus_B2Pw3IUiT2EGSu,Monthly subscription,1460,,mba_fyBBElnub1R9pr,,src_wORTtf2ShW8Lyl,
+cbt_hcRZEwyMTBczsn,acct_Evph0lp9luxh0y,500,2026-03-08 00:40:03,cs_qYu776dgd9jUkW,2026-03-01 10:24:03,cn_C1rJAv2d0Z93kN,usd,cus_5NgEDoFXpMzt4w,Card payment processing,4037,,mba_Uv9iZFuDIAOEok,primary,src_j95Qg6JGklpZup,
+cbt_xvrlIdXaKnsYej,acct_UdRlIKaOs88R2F,2500,2026-02-20 18:02:03,cs_fGabIoR6hvc9JH,2026-01-11 12:09:03,cn_C1rJAv2d0Z93kN,eur,cus_gmhPGcRCyAK6G6,Seat overage,2141,,mba_NPjFCxVu9C3s8f,default,src_DKA8QFxstTXgCK,primary
+cbt_rVaH3oKCVxNon1,acct_gnlSm0J0hSbyAU,10000,2026-03-14 02:38:03,cs_fGabIoR6hvc9JH,2026-02-15 03:59:03,cn_J8yuPsw1bzxVEh,jpy,cus_iM4B95gzSDuxgW,Onboarding,580,,mba_aT8kdmX0neCz22,primary,src_8rgdcNKirNtL8S,default

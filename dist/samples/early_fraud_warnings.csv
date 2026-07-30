@@ -1,5 +1,5 @@
-id,actionable,charge_id,created,fraud_type,payment_intent_id
-efw_6KY18yICs6aw3T,False,ch_JcBQ9YjE5oFKQ5,2026-06-22 19:27:03,default,pi_QdzjvQrdClYrsB
-efw_a3T1LtG5DIPGMn,False,ch_2jDVUeIZV6cCKz,2026-04-19 09:54:03,standard,pi_HlE4a31F0ESGxC
-efw_GgF6cbsqKxBYyA,True,ch_tnrCugXIQyBj2m,2026-05-25 00:35:03,standard,pi_m0wT6GkVxfcIA6
-efw_cmS0CRQ967kNUL,True,ch_2bqqxaqEKaJPQI,2026-03-02 06:43:03,standard,pi_U9SG11arBYSwX8
+id,actionable,batch_timestamp,charge_id,created,fraud_type
+efw_qqpT28YiRdrA6y,True,2026-03-17 15:11:03,ch_JeQEhkRB9cGT7L,2026-03-25 16:46:03,default
+efw_VlUe9Pm362cgin,True,2026-02-19 17:40:03,ch_czCFU5hQ7mFvkb,2026-02-21 15:23:03,standard
+efw_lIk9vhtjsQnw81,False,2026-02-26 03:44:03,ch_T4Mu4JaHB9jQcw,2026-02-23 12:30:03,standard
+efw_AzteylkSSDWm94,False,2026-01-13 09:09:03,ch_baQvO85lBlqcam,2026-04-19 01:57:03,

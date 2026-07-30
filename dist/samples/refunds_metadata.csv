@@ -1,5 +1,5 @@
-key,refund_id,value
-channel,re_kLCnHJZCHKeow6,acme-2026
-cohort,re_Gk0YIPYUcRY9Ma,enterprise
-internal_ref,re_Fa79eXpgKWmyUs,enterprise
-internal_ref,re_NBqGvZCmoIL0Vw,enterprise
+key,refund_id,batch_timestamp,value
+channel,re_RYY9djzWq090TF,2026-01-10 17:04:03,partner
+cohort,re_sqIifmYzxiq3uM,2026-06-09 09:52:03,enterprise
+cohort,re_CIRwEyfjuljixL,2026-02-03 16:09:03,enterprise
+internal_ref,re_RYY9djzWq090TF,2026-05-26 00:08:03,acme-2026

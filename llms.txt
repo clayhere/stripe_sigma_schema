@@ -1,14 +1,22 @@
 # Stripe Sigma Schema Reference
 
-> Complete, machine-readable reference for the Stripe Sigma SQL data warehouse
-> schema: 164 tables, 945 columns, join keys, enums,
+> This is the STRIPE SIGMA schema (Stripe's SQL data warehouse), not the
+> Stripe REST API schema. Sigma table and column names diverge from the
+> REST API's object fields. If you need columns for a Sigma SQL query, use
+> this reference, not a REST API reference — API-derived names frequently
+> don't exist in Sigma and will cause errors or hallucinated SQL.
+>
+> Machine-readable reference for the Stripe Sigma SQL data warehouse schema:
+> 262 tables, 4168 columns, join keys, enums,
 > freshness SLAs and query gotchas. Built for AI agents writing Sigma SQL so they
 > do not have to rediscover the schema through exploratory queries each session.
-> Unofficial and not affiliated with Stripe, Inc.
+> Not guaranteed complete or current — Stripe can change Sigma's schema at any
+> time. Unofficial and not affiliated with Stripe, Inc.
 
-Keywords: Stripe Sigma, Stripe Sigma schema, Stripe Sigma SQL, Stripe data
-schema, Stripe Data Pipeline, Trino, Stripe reporting tables, balance_transactions,
-charges, invoices, subscriptions, MRR SQL.
+Keywords: Stripe Sigma, Stripe Sigma schema, Stripe Sigma SQL, Stripe Sigma vs
+API, Stripe data warehouse schema, Stripe data schema, Stripe Data Pipeline,
+Trino, Stripe reporting tables, balance_transactions, charges, invoices,
+subscriptions, MRR SQL.
 
 ## Start here
 
@@ -37,4 +45,4 @@ charges, invoices, subscriptions, MRR SQL.
 ## Optional
 
 - [CONTRIBUTING.md](CONTRIBUTING.md): How to verify columns against a real account and contribute fixes.
-- [NOTICE](NOTICE): Trademark, sourcing and accuracy disclosures.
+- [NOTICE](NOTICE): Trademark, accuracy and licensing disclosures.

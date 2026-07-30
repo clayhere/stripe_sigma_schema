@@ -1,138 +1,408 @@
 {
-  "$comment": "Coverage for every remaining table: what it holds, its grain, and how to join it. Columns are deliberately limited to the ones needed to join and identify a row — these tables are wide and listing recalled column names would be guessing. columns_complete is false throughout; run tools/verify_against_sigma.py to fill them in from a real account.",
-
+  "$comment": "Coverage for every remaining table: what it holds, its grain, and how to join it. Columns are deliberately limited to the ones needed to join and identify a row \u2014 these tables are wide and listing recalled column names would be guessing. columns_complete is false throughout; run tools/verify_against_sigma.py to fill them in from a real account.",
   "application_fees": {
-    "api_object": "application_fee",
-    "api_reference": "https://docs.stripe.com/api/application_fees/object",
     "description": "Fees your Connect platform collected from connected accounts.",
     "grain": "One row per application fee.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed fee_."},
-      {"name": "created", "type": "timestamp", "description": "When the fee was created (UTC)."},
-      {"name": "amount", "type": "bigint", "description": "Fee amount in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "charge_id", "type": "varchar", "key": "foreign", "description": "Charge that generated the fee."},
-      {"name": "account_id", "type": "varchar", "key": "foreign", "description": "Connected account the fee was collected from."},
-      {"name": "balance_transaction_id", "type": "varchar", "key": "foreign", "description": "Balance transaction recording the fee."},
-      {"name": "refunded", "type": "boolean", "description": "Whether the fee was fully refunded."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed fee_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the fee was created (UTC)."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Fee amount in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "charge_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Charge that generated the fee."
+      },
+      {
+        "name": "account_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Connected account the fee was collected from."
+      },
+      {
+        "name": "balance_transaction_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Balance transaction recording the fee."
+      },
+      {
+        "name": "refunded",
+        "type": "boolean",
+        "description": "Whether the fee was fully refunded."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["charge_id"], "references": {"table": "charges", "columns": ["id"]}},
-      {"columns": ["balance_transaction_id"], "references": {"table": "balance_transactions", "columns": ["id"]}}
+      {
+        "columns": [
+          "charge_id"
+        ],
+        "references": {
+          "table": "charges",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      {
+        "columns": [
+          "balance_transaction_id"
+        ],
+        "references": {
+          "table": "balance_transactions",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "application_fee_refunds": {
-    "api_object": "fee_refund",
     "description": "Refunds of application fees back to connected accounts.",
     "grain": "One row per application fee refund.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed fr_."},
-      {"name": "created", "type": "timestamp", "description": "When the refund was created (UTC)."},
-      {"name": "amount", "type": "bigint", "description": "Refunded amount in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "fee_id", "type": "varchar", "key": "foreign", "description": "Application fee being refunded."},
-      {"name": "balance_transaction_id", "type": "varchar", "key": "foreign", "description": "Balance transaction recording the refund."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed fr_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the refund was created (UTC)."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Refunded amount in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "fee_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Application fee being refunded."
+      },
+      {
+        "name": "balance_transaction_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Balance transaction recording the refund."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["fee_id"], "references": {"table": "application_fees", "columns": ["id"]}}
+      {
+        "columns": [
+          "fee_id"
+        ],
+        "references": {
+          "table": "application_fees",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
-
   "payment_methods": {
-    "api_object": "payment_method",
-    "api_reference": "https://docs.stripe.com/api/payment_methods/object",
     "description": "Saved payment instruments attached to customers.",
     "grain": "One row per payment method.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed pm_."},
-      {"name": "created", "type": "timestamp", "description": "When the payment method was created (UTC)."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer the method is attached to."},
-      {"name": "type", "type": "varchar", "description": "Payment method family, e.g. card, us_bank_account, sepa_debit."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed pm_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the payment method was created (UTC)."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer the method is attached to."
+      },
+      {
+        "name": "type",
+        "type": "varchar",
+        "description": "Payment method family, e.g. card, us_bank_account, sepa_debit."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}}
+      {
+        "columns": [
+          "customer_id"
+        ],
+        "references": {
+          "table": "customers",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "setup_intents": {
-    "api_object": "setup_intent",
-    "api_reference": "https://docs.stripe.com/api/setup_intents/object",
     "description": "Attempts to save a payment method for future use without charging it immediately.",
     "grain": "One row per SetupIntent.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed seti_."},
-      {"name": "created", "type": "timestamp", "description": "When the intent was created (UTC)."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer the method is being saved for."},
-      {"name": "payment_method_id", "type": "varchar", "key": "foreign", "description": "Payment method being set up."},
-      {"name": "status", "type": "varchar", "description": "Intent status.", "enum": ["requires_payment_method", "requires_confirmation", "requires_action", "processing", "canceled", "succeeded"]}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed seti_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the intent was created (UTC)."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer the method is being saved for."
+      },
+      {
+        "name": "payment_method_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Payment method being set up."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Intent status.",
+        "enum": [
+          "requires_payment_method",
+          "requires_confirmation",
+          "requires_action",
+          "processing",
+          "canceled",
+          "succeeded"
+        ]
+      }
     ],
     "foreign_keys": [
-      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}}
+      {
+        "columns": [
+          "customer_id"
+        ],
+        "references": {
+          "table": "customers",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "setup_attempts": {
-    "api_object": "setup_attempt",
     "description": "Individual attempts to confirm a SetupIntent, including failures.",
     "grain": "One row per setup attempt. A SetupIntent can have several.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the attempt."},
-      {"name": "created", "type": "timestamp", "description": "When the attempt occurred (UTC)."},
-      {"name": "setup_intent_id", "type": "varchar", "key": "foreign", "description": "SetupIntent being confirmed."},
-      {"name": "status", "type": "varchar", "description": "Outcome of the attempt."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the attempt."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the attempt occurred (UTC)."
+      },
+      {
+        "name": "setup_intent_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "SetupIntent being confirmed."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Outcome of the attempt."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["setup_intent_id"], "references": {"table": "setup_intents", "columns": ["id"]}}
+      {
+        "columns": [
+          "setup_intent_id"
+        ],
+        "references": {
+          "table": "setup_intents",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "sources": {
-    "api_object": "source",
     "description": "Legacy payment sources, superseded by payment_methods. Present for older integrations.",
     "grain": "One row per source.",
-    "primary_key": ["id"],
-    "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed src_ (or card_ for legacy cards)."},
-      {"name": "created", "type": "timestamp", "description": "When the source was created (UTC)."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer the source belongs to."},
-      {"name": "type", "type": "varchar", "description": "Source type."}
+    "primary_key": [
+      "id"
     ],
-    "notes": ["Prefer payment_methods for anything built after the Sources API was deprecated."]
+    "columns": [
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed src_ (or card_ for legacy cards)."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the source was created (UTC)."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer the source belongs to."
+      },
+      {
+        "name": "type",
+        "type": "varchar",
+        "description": "Source type."
+      }
+    ],
+    "notes": [
+      "Prefer payment_methods for anything built after the Sources API was deprecated."
+    ]
   },
   "payment_reviews": {
-    "api_object": "review",
     "description": "Payments flagged by Radar for manual review, and how they were resolved.",
     "grain": "One row per review.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed prv_."},
-      {"name": "created", "type": "timestamp", "description": "When the review was opened (UTC)."},
-      {"name": "charge_id", "type": "varchar", "key": "foreign", "description": "Charge under review."},
-      {"name": "payment_intent_id", "type": "varchar", "key": "foreign", "description": "PaymentIntent under review."},
-      {"name": "reason", "type": "varchar", "description": "Why the payment was flagged."},
-      {"name": "closed_reason", "type": "varchar", "description": "How the review was resolved, e.g. approved, refunded, disputed."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed prv_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the review was opened (UTC)."
+      },
+      {
+        "name": "charge_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Charge under review."
+      },
+      {
+        "name": "payment_intent_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "PaymentIntent under review."
+      },
+      {
+        "name": "reason",
+        "type": "varchar",
+        "description": "Why the payment was flagged."
+      },
+      {
+        "name": "closed_reason",
+        "type": "varchar",
+        "description": "How the review was resolved, e.g. approved, refunded, disputed."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["charge_id"], "references": {"table": "charges", "columns": ["id"]}}
+      {
+        "columns": [
+          "charge_id"
+        ],
+        "references": {
+          "table": "charges",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "payment_records": {
     "description": "Unified payment records spanning Stripe and externally processed payments.",
     "grain": "One row per payment record.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the payment record."},
-      {"name": "created", "type": "timestamp", "description": "When the record was created (UTC)."},
-      {"name": "amount", "type": "bigint", "description": "Amount in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the payment record."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the record was created (UTC)."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Amount in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      }
     ]
   },
   "connected_account_payment_records": {
     "description": "Connect platform view of payment_records for connected accounts.",
     "grain": "One row per payment record, per connected account.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "mirror_of": "payment_records"
   },
   "disputes_enhanced_eligibility": {
@@ -140,10 +410,25 @@
     "grain": "One row per dispute.",
     "primary_key": [],
     "columns": [
-      {"name": "dispute_id", "type": "varchar", "key": "foreign", "description": "Dispute this eligibility record describes."}
+      {
+        "name": "dispute_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Dispute this eligibility record describes."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["dispute_id"], "references": {"table": "disputes", "columns": ["id"]}}
+      {
+        "columns": [
+          "dispute_id"
+        ],
+        "references": {
+          "table": "disputes",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "card_testing": {
@@ -156,48 +441,193 @@
     "grain": "One row per submitted data point.",
     "primary_key": []
   },
-
   "checkout_sessions": {
-    "api_object": "checkout.session",
-    "api_reference": "https://docs.stripe.com/api/checkout/sessions/object",
     "description": "Stripe Checkout sessions, including abandoned ones. The table to use for hosted-checkout conversion analysis.",
     "grain": "One row per Checkout session.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed cs_."},
-      {"name": "created", "type": "timestamp", "description": "When the session was created (UTC)."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer associated with the session."},
-      {"name": "payment_intent_id", "type": "varchar", "key": "foreign", "description": "PaymentIntent created by the session."},
-      {"name": "subscription_id", "type": "varchar", "key": "foreign", "description": "Subscription created by the session."},
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice created by the session."},
-      {"name": "payment_link_id", "type": "varchar", "key": "foreign", "description": "Payment link that opened the session."},
-      {"name": "status", "type": "varchar", "description": "Session status.", "enum": ["open", "complete", "expired"]},
-      {"name": "payment_status", "type": "varchar", "description": "Payment state.", "enum": ["paid", "unpaid", "no_payment_required"]},
-      {"name": "mode", "type": "varchar", "description": "What the session was for.", "enum": ["payment", "setup", "subscription"]},
-      {"name": "amount_total", "type": "bigint", "description": "Total amount in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed cs_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the session was created (UTC)."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer associated with the session."
+      },
+      {
+        "name": "payment_intent_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "PaymentIntent created by the session."
+      },
+      {
+        "name": "subscription_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Subscription created by the session."
+      },
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice created by the session."
+      },
+      {
+        "name": "payment_link_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Payment link that opened the session."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Session status.",
+        "enum": [
+          "open",
+          "complete",
+          "expired"
+        ]
+      },
+      {
+        "name": "payment_status",
+        "type": "varchar",
+        "description": "Payment state.",
+        "enum": [
+          "paid",
+          "unpaid",
+          "no_payment_required"
+        ]
+      },
+      {
+        "name": "mode",
+        "type": "varchar",
+        "description": "What the session was for.",
+        "enum": [
+          "payment",
+          "setup",
+          "subscription"
+        ]
+      },
+      {
+        "name": "amount_total",
+        "type": "bigint",
+        "description": "Total amount in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}},
-      {"columns": ["payment_intent_id"], "references": {"table": "payment_intents", "columns": ["id"]}},
-      {"columns": ["payment_link_id"], "references": {"table": "payment_links", "columns": ["id"]}}
+      {
+        "columns": [
+          "customer_id"
+        ],
+        "references": {
+          "table": "customers",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      {
+        "columns": [
+          "payment_intent_id"
+        ],
+        "references": {
+          "table": "payment_intents",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      {
+        "columns": [
+          "payment_link_id"
+        ],
+        "references": {
+          "table": "payment_links",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ],
-    "notes": ["status = 'expired' identifies abandoned checkouts — the denominator for conversion rate."]
+    "notes": [
+      "status = 'expired' identifies abandoned checkouts \u2014 the denominator for conversion rate."
+    ]
   },
   "checkout_line_items": {
     "description": "Line items on a Checkout session.",
     "grain": "One row per line item on a session.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the line item."},
-      {"name": "checkout_session_id", "type": "varchar", "key": "foreign", "description": "Parent Checkout session."},
-      {"name": "price_id", "type": "varchar", "key": "foreign", "description": "Price on the line item."},
-      {"name": "quantity", "type": "bigint", "description": "Quantity purchased."},
-      {"name": "amount_total", "type": "bigint", "description": "Line total in minor currency units."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the line item."
+      },
+      {
+        "name": "checkout_session_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent Checkout session."
+      },
+      {
+        "name": "price_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Price on the line item."
+      },
+      {
+        "name": "quantity",
+        "type": "bigint",
+        "description": "Quantity purchased."
+      },
+      {
+        "name": "amount_total",
+        "type": "bigint",
+        "description": "Line total in minor currency units."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["checkout_session_id"], "references": {"table": "checkout_sessions", "columns": ["id"]}},
-      {"columns": ["price_id"], "references": {"table": "prices", "columns": ["id"]}}
+      {
+        "columns": [
+          "checkout_session_id"
+        ],
+        "references": {
+          "table": "checkout_sessions",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      {
+        "columns": [
+          "price_id"
+        ],
+        "references": {
+          "table": "prices",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "checkout_custom_fields": {
@@ -205,60 +635,191 @@
     "grain": "One row per (session, custom field).",
     "primary_key": [],
     "columns": [
-      {"name": "checkout_session_id", "type": "varchar", "key": "foreign", "description": "Session the field belongs to."},
-      {"name": "key", "type": "varchar", "description": "Custom field key."}
+      {
+        "name": "checkout_session_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Session the field belongs to."
+      },
+      {
+        "name": "key",
+        "type": "varchar",
+        "description": "Custom field key."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["checkout_session_id"], "references": {"table": "checkout_sessions", "columns": ["id"]}}
+      {
+        "columns": [
+          "checkout_session_id"
+        ],
+        "references": {
+          "table": "checkout_sessions",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "payment_links": {
-    "api_object": "payment_link",
-    "api_reference": "https://docs.stripe.com/api/payment-link/object",
     "description": "Reusable shareable links that open a Checkout session.",
     "grain": "One row per payment link.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed plink_."},
-      {"name": "created", "type": "timestamp", "description": "When the link was created (UTC)."},
-      {"name": "active", "type": "boolean", "description": "Whether the link still accepts payments."},
-      {"name": "url", "type": "varchar", "description": "Public URL of the payment link."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed plink_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the link was created (UTC)."
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "description": "Whether the link still accepts payments."
+      },
+      {
+        "name": "url",
+        "type": "varchar",
+        "description": "Public URL of the payment link."
+      }
     ]
   },
-
   "credit_notes": {
-    "api_object": "credit_note",
-    "api_reference": "https://docs.stripe.com/api/credit_notes/object",
-    "description": "Post-issuance adjustments to invoices — the correct way to represent refunds and write-offs against a finalized invoice.",
+    "description": "Post-issuance adjustments to invoices \u2014 the correct way to represent refunds and write-offs against a finalized invoice.",
     "grain": "One row per credit note.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed cn_."},
-      {"name": "created", "type": "timestamp", "description": "When the credit note was issued (UTC)."},
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice being credited."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer receiving the credit."},
-      {"name": "amount", "type": "bigint", "description": "Credited amount in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "status", "type": "varchar", "description": "Credit note status.", "enum": ["issued", "void"]},
-      {"name": "reason", "type": "varchar", "description": "Why the credit note was issued.", "enum": ["duplicate", "fraudulent", "order_change", "product_unsatisfactory"]}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed cn_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the credit note was issued (UTC)."
+      },
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice being credited."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer receiving the credit."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Credited amount in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Credit note status.",
+        "enum": [
+          "issued",
+          "void"
+        ]
+      },
+      {
+        "name": "reason",
+        "type": "varchar",
+        "description": "Why the credit note was issued.",
+        "enum": [
+          "duplicate",
+          "fraudulent",
+          "order_change",
+          "product_unsatisfactory"
+        ]
+      }
     ],
     "foreign_keys": [
-      {"columns": ["invoice_id"], "references": {"table": "invoices", "columns": ["id"]}},
-      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}}
+      {
+        "columns": [
+          "invoice_id"
+        ],
+        "references": {
+          "table": "invoices",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      {
+        "columns": [
+          "customer_id"
+        ],
+        "references": {
+          "table": "customers",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "credit_note_line_items": {
     "description": "Line items on a credit note.",
     "grain": "One row per credit note line item.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the line item."},
-      {"name": "credit_note_id", "type": "varchar", "key": "foreign", "description": "Parent credit note."},
-      {"name": "amount", "type": "bigint", "description": "Line amount in minor currency units."},
-      {"name": "invoice_line_item_id", "type": "varchar", "key": "foreign", "description": "Invoice line item being credited."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the line item."
+      },
+      {
+        "name": "credit_note_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent credit note."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Line amount in minor currency units."
+      },
+      {
+        "name": "invoice_line_item_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice line item being credited."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["credit_note_id"], "references": {"table": "credit_notes", "columns": ["id"]}}
+      {
+        "columns": [
+          "credit_note_id"
+        ],
+        "references": {
+          "table": "credit_notes",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "credit_note_tax_amounts": {
@@ -266,13 +827,47 @@
     "grain": "One row per (credit note, tax rate).",
     "primary_key": [],
     "columns": [
-      {"name": "credit_note_id", "type": "varchar", "key": "foreign", "description": "Parent credit note."},
-      {"name": "amount", "type": "bigint", "description": "Tax amount in minor currency units."},
-      {"name": "tax_rate_id", "type": "varchar", "key": "foreign", "description": "Tax rate applied."}
+      {
+        "name": "credit_note_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent credit note."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Tax amount in minor currency units."
+      },
+      {
+        "name": "tax_rate_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Tax rate applied."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["credit_note_id"], "references": {"table": "credit_notes", "columns": ["id"]}},
-      {"columns": ["tax_rate_id"], "references": {"table": "tax_rates", "columns": ["id"]}}
+      {
+        "columns": [
+          "credit_note_id"
+        ],
+        "references": {
+          "table": "credit_notes",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      {
+        "columns": [
+          "tax_rate_id"
+        ],
+        "references": {
+          "table": "tax_rates",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "credit_note_line_item_tax_amounts": {
@@ -280,9 +875,23 @@
     "grain": "One row per (credit note line item, tax rate).",
     "primary_key": [],
     "columns": [
-      {"name": "credit_note_line_item_id", "type": "varchar", "key": "foreign", "description": "Credit note line item taxed."},
-      {"name": "amount", "type": "bigint", "description": "Tax amount in minor currency units."},
-      {"name": "tax_rate_id", "type": "varchar", "key": "foreign", "description": "Tax rate applied."}
+      {
+        "name": "credit_note_line_item_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Credit note line item taxed."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Tax amount in minor currency units."
+      },
+      {
+        "name": "tax_rate_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Tax rate applied."
+      }
     ]
   },
   "credit_note_discount_amounts": {
@@ -290,12 +899,36 @@
     "grain": "One row per (credit note, discount).",
     "primary_key": [],
     "columns": [
-      {"name": "credit_note_id", "type": "varchar", "key": "foreign", "description": "Parent credit note."},
-      {"name": "amount", "type": "bigint", "description": "Discount amount in minor currency units."},
-      {"name": "discount_id", "type": "varchar", "key": "foreign", "description": "Discount applied."}
+      {
+        "name": "credit_note_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent credit note."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Discount amount in minor currency units."
+      },
+      {
+        "name": "discount_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Discount applied."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["credit_note_id"], "references": {"table": "credit_notes", "columns": ["id"]}}
+      {
+        "columns": [
+          "credit_note_id"
+        ],
+        "references": {
+          "table": "credit_notes",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "credit_note_line_item_discount_amounts": {
@@ -303,31 +936,99 @@
     "grain": "One row per (credit note line item, discount).",
     "primary_key": [],
     "columns": [
-      {"name": "credit_note_line_item_id", "type": "varchar", "key": "foreign", "description": "Credit note line item discounted."},
-      {"name": "amount", "type": "bigint", "description": "Discount amount in minor currency units."}
+      {
+        "name": "credit_note_line_item_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Credit note line item discounted."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Discount amount in minor currency units."
+      }
     ]
   },
-
   "invoice_items": {
-    "api_object": "invoiceitem",
-    "api_reference": "https://docs.stripe.com/api/invoiceitems/object",
     "description": "One-off charges or credits queued onto a customer's next invoice.",
     "grain": "One row per invoice item.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed ii_."},
-      {"name": "created", "type": "timestamp", "description": "When the item was created (UTC)."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer the item will be billed to."},
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice the item landed on, once invoiced."},
-      {"name": "subscription_id", "type": "varchar", "key": "foreign", "description": "Subscription the item relates to, if any."},
-      {"name": "amount", "type": "bigint", "description": "Amount in minor currency units. Negative for credits."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "proration", "type": "boolean", "description": "Whether the item is a proration adjustment."},
-      {"name": "description", "type": "varchar", "description": "Customer-facing description."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed ii_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the item was created (UTC)."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer the item will be billed to."
+      },
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice the item landed on, once invoiced."
+      },
+      {
+        "name": "subscription_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Subscription the item relates to, if any."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Amount in minor currency units. Negative for credits."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "proration",
+        "type": "boolean",
+        "description": "Whether the item is a proration adjustment."
+      },
+      {
+        "name": "description",
+        "type": "varchar",
+        "description": "Customer-facing description."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}},
-      {"columns": ["invoice_id"], "references": {"table": "invoices", "columns": ["id"]}}
+      {
+        "columns": [
+          "customer_id"
+        ],
+        "references": {
+          "table": "customers",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      {
+        "columns": [
+          "invoice_id"
+        ],
+        "references": {
+          "table": "invoices",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "invoice_payments": {
@@ -335,26 +1036,80 @@
     "grain": "One row per payment applied to an invoice.",
     "primary_key": [],
     "columns": [
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice being paid."},
-      {"name": "charge_id", "type": "varchar", "key": "foreign", "description": "Charge that paid it."},
-      {"name": "payment_intent_id", "type": "varchar", "key": "foreign", "description": "PaymentIntent that paid it."},
-      {"name": "amount_paid", "type": "bigint", "description": "Amount applied, in minor currency units."},
-      {"name": "status", "type": "varchar", "description": "Payment status."}
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice being paid."
+      },
+      {
+        "name": "charge_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Charge that paid it."
+      },
+      {
+        "name": "payment_intent_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "PaymentIntent that paid it."
+      },
+      {
+        "name": "amount_paid",
+        "type": "bigint",
+        "description": "Amount applied, in minor currency units."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Payment status."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["invoice_id"], "references": {"table": "invoices", "columns": ["id"]}}
+      {
+        "columns": [
+          "invoice_id"
+        ],
+        "references": {
+          "table": "invoices",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ],
-    "notes": ["Use this rather than invoices.charge_id when an invoice can be settled by multiple payments."]
+    "notes": [
+      "Use this rather than invoices.charge_id when an invoice can be settled by multiple payments."
+    ]
   },
   "invoice_line_item_tax_amounts": {
     "description": "Tax amounts applied to individual invoice line items.",
     "grain": "One row per (invoice line item, tax rate).",
     "primary_key": [],
     "columns": [
-      {"name": "invoice_line_item_id", "type": "varchar", "key": "foreign", "description": "Invoice line item taxed."},
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Parent invoice."},
-      {"name": "amount", "type": "bigint", "description": "Tax amount in minor currency units."},
-      {"name": "tax_rate_id", "type": "varchar", "key": "foreign", "description": "Tax rate applied."}
+      {
+        "name": "invoice_line_item_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice line item taxed."
+      },
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent invoice."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Tax amount in minor currency units."
+      },
+      {
+        "name": "tax_rate_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Tax rate applied."
+      }
     ]
   },
   "invoice_line_item_discount_amounts": {
@@ -362,27 +1117,84 @@
     "grain": "One row per (invoice line item, discount).",
     "primary_key": [],
     "columns": [
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Parent invoice.", "confidence": "documented"},
-      {"name": "invoice_line_item_id", "type": "varchar", "key": "foreign", "description": "Invoice line item discounted."},
-      {"name": "amount", "type": "bigint", "description": "Discount amount in minor currency units.", "confidence": "documented"},
-      {"name": "discount_id", "type": "varchar", "key": "foreign", "description": "Discount applied."}
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent invoice.",
+        "confidence": "documented"
+      },
+      {
+        "name": "invoice_line_item_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice line item discounted."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Discount amount in minor currency units.",
+        "confidence": "documented"
+      },
+      {
+        "name": "discount_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Discount applied."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["invoice_id"], "references": {"table": "invoices", "columns": ["id"]}, "confidence": "documented"}
+      {
+        "columns": [
+          "invoice_id"
+        ],
+        "references": {
+          "table": "invoices",
+          "columns": [
+            "id"
+          ]
+        },
+        "confidence": "documented"
+      }
     ],
-    "notes": ["Sum amount grouped by invoice_id to get total discount per invoice."]
+    "notes": [
+      "Sum amount grouped by invoice_id to get total discount per invoice."
+    ]
   },
   "invoice_custom_fields": {
     "description": "Custom key/value fields rendered on an invoice.",
     "grain": "One row per (invoice, custom field).",
     "primary_key": [],
     "columns": [
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice the field appears on."},
-      {"name": "name", "type": "varchar", "description": "Field label."},
-      {"name": "value", "type": "varchar", "description": "Field value."}
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice the field appears on."
+      },
+      {
+        "name": "name",
+        "type": "varchar",
+        "description": "Field label."
+      },
+      {
+        "name": "value",
+        "type": "varchar",
+        "description": "Field value."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["invoice_id"], "references": {"table": "invoices", "columns": ["id"]}}
+      {
+        "columns": [
+          "invoice_id"
+        ],
+        "references": {
+          "table": "invoices",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "invoice_customer_tax_ids": {
@@ -390,9 +1202,22 @@
     "grain": "One row per (invoice, tax id).",
     "primary_key": [],
     "columns": [
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice the tax id appears on."},
-      {"name": "type", "type": "varchar", "description": "Tax id type, e.g. eu_vat, us_ein."},
-      {"name": "value", "type": "varchar", "description": "The tax identifier itself."}
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice the tax id appears on."
+      },
+      {
+        "name": "type",
+        "type": "varchar",
+        "description": "Tax id type, e.g. eu_vat, us_ein."
+      },
+      {
+        "name": "value",
+        "type": "varchar",
+        "description": "The tax identifier itself."
+      }
     ]
   },
   "invoice_shipping_cost_taxes": {
@@ -400,55 +1225,164 @@
     "grain": "One row per (invoice, shipping tax rate).",
     "primary_key": [],
     "columns": [
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Parent invoice."},
-      {"name": "amount", "type": "bigint", "description": "Tax amount in minor currency units."},
-      {"name": "tax_rate_id", "type": "varchar", "key": "foreign", "description": "Tax rate applied."}
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent invoice."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Tax amount in minor currency units."
+      },
+      {
+        "name": "tax_rate_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Tax rate applied."
+      }
     ]
   },
   "tax_rates": {
-    "api_object": "tax_rate",
-    "api_reference": "https://docs.stripe.com/api/tax_rates/object",
     "description": "Manually defined tax rates used on invoices and subscriptions. Distinct from Stripe Tax's automatic calculations.",
     "grain": "One row per tax rate.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed txr_."},
-      {"name": "created", "type": "timestamp", "description": "When the rate was created (UTC)."},
-      {"name": "display_name", "type": "varchar", "description": "Name shown to customers, e.g. VAT."},
-      {"name": "percentage", "type": "double", "description": "Rate as a percentage."},
-      {"name": "inclusive", "type": "boolean", "description": "Whether the rate is included in the price."},
-      {"name": "active", "type": "boolean", "description": "Whether the rate can still be applied."},
-      {"name": "country", "type": "varchar", "description": "Two-letter ISO country the rate applies to."},
-      {"name": "jurisdiction", "type": "varchar", "description": "Jurisdiction label for the rate."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed txr_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the rate was created (UTC)."
+      },
+      {
+        "name": "display_name",
+        "type": "varchar",
+        "description": "Name shown to customers, e.g. VAT."
+      },
+      {
+        "name": "percentage",
+        "type": "double",
+        "description": "Rate as a percentage."
+      },
+      {
+        "name": "inclusive",
+        "type": "boolean",
+        "description": "Whether the rate is included in the price."
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "description": "Whether the rate can still be applied."
+      },
+      {
+        "name": "country",
+        "type": "varchar",
+        "description": "Two-letter ISO country the rate applies to."
+      },
+      {
+        "name": "jurisdiction",
+        "type": "varchar",
+        "description": "Jurisdiction label for the rate."
+      }
     ]
   },
   "plans": {
-    "api_object": "plan",
     "description": "Legacy recurring pricing objects, superseded by prices. Retained for older integrations.",
     "grain": "One row per plan.",
-    "primary_key": ["id"],
-    "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed plan_."},
-      {"name": "created", "type": "timestamp", "description": "When the plan was created (UTC)."},
-      {"name": "product_id", "type": "varchar", "key": "foreign", "description": "Product the plan bills for."},
-      {"name": "amount", "type": "bigint", "description": "Amount per interval in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "interval", "type": "varchar", "description": "Billing interval. `interval` is a reserved word in Trino — quote it as \"interval\".", "enum": ["day", "week", "month", "year"]},
-      {"name": "active", "type": "boolean", "description": "Whether the plan is still usable."}
+    "primary_key": [
+      "id"
     ],
-    "notes": ["Prefer prices for new work. `interval` must be quoted in Trino."]
+    "columns": [
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed plan_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the plan was created (UTC)."
+      },
+      {
+        "name": "product_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Product the plan bills for."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Amount per interval in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "interval",
+        "type": "varchar",
+        "description": "Billing interval. `interval` is a reserved word in Trino \u2014 quote it as \"interval\".",
+        "enum": [
+          "day",
+          "week",
+          "month",
+          "year"
+        ]
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "description": "Whether the plan is still usable."
+      }
+    ],
+    "notes": [
+      "Prefer prices for new work. `interval` must be quoted in Trino."
+    ]
   },
   "prices_currency_options": {
     "description": "Per-currency overrides for multi-currency prices.",
     "grain": "One row per (price, currency).",
     "primary_key": [],
     "columns": [
-      {"name": "price_id", "type": "varchar", "key": "foreign", "description": "Price being overridden."},
-      {"name": "currency", "type": "varchar", "description": "Currency this option applies to."},
-      {"name": "unit_amount", "type": "bigint", "description": "Amount in that currency's minor units."}
+      {
+        "name": "price_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Price being overridden."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Currency this option applies to."
+      },
+      {
+        "name": "unit_amount",
+        "type": "bigint",
+        "description": "Amount in that currency's minor units."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["price_id"], "references": {"table": "prices", "columns": ["id"]}}
+      {
+        "columns": [
+          "price_id"
+        ],
+        "references": {
+          "table": "prices",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "coupons_currency_options": {
@@ -456,62 +1390,203 @@
     "grain": "One row per (coupon, currency).",
     "primary_key": [],
     "columns": [
-      {"name": "coupon_id", "type": "varchar", "key": "foreign", "description": "Coupon being overridden."},
-      {"name": "currency", "type": "varchar", "description": "Currency this option applies to."},
-      {"name": "amount_off", "type": "bigint", "description": "Fixed discount in that currency's minor units."}
+      {
+        "name": "coupon_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Coupon being overridden."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Currency this option applies to."
+      },
+      {
+        "name": "amount_off",
+        "type": "bigint",
+        "description": "Fixed discount in that currency's minor units."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["coupon_id"], "references": {"table": "coupons", "columns": ["id"]}}
+      {
+        "columns": [
+          "coupon_id"
+        ],
+        "references": {
+          "table": "coupons",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "quotes": {
-    "api_object": "quote",
-    "api_reference": "https://docs.stripe.com/api/quotes/object",
     "description": "Sales quotes that can be accepted to create an invoice or subscription.",
     "grain": "One row per quote.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed qt_."},
-      {"name": "created", "type": "timestamp", "description": "When the quote was created (UTC)."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer the quote is for."},
-      {"name": "subscription_id", "type": "varchar", "key": "foreign", "description": "Subscription created on acceptance."},
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice created on acceptance."},
-      {"name": "status", "type": "varchar", "description": "Quote status.", "enum": ["draft", "open", "accepted", "canceled"]},
-      {"name": "amount_total", "type": "bigint", "description": "Quote total in minor currency units."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed qt_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the quote was created (UTC)."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer the quote is for."
+      },
+      {
+        "name": "subscription_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Subscription created on acceptance."
+      },
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice created on acceptance."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Quote status.",
+        "enum": [
+          "draft",
+          "open",
+          "accepted",
+          "canceled"
+        ]
+      },
+      {
+        "name": "amount_total",
+        "type": "bigint",
+        "description": "Quote total in minor currency units."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}}
+      {
+        "columns": [
+          "customer_id"
+        ],
+        "references": {
+          "table": "customers",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "subscription_schedules": {
-    "api_object": "subscription_schedule",
-    "api_reference": "https://docs.stripe.com/api/subscription_schedules/object",
     "description": "Planned sequences of subscription phases, used for scheduled price or term changes.",
     "grain": "One row per schedule.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed sub_sched_."},
-      {"name": "created", "type": "timestamp", "description": "When the schedule was created (UTC)."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer the schedule belongs to."},
-      {"name": "subscription_id", "type": "varchar", "key": "foreign", "description": "Subscription driven by the schedule."},
-      {"name": "status", "type": "varchar", "description": "Schedule status.", "enum": ["not_started", "active", "completed", "released", "canceled"]}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed sub_sched_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the schedule was created (UTC)."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer the schedule belongs to."
+      },
+      {
+        "name": "subscription_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Subscription driven by the schedule."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Schedule status.",
+        "enum": [
+          "not_started",
+          "active",
+          "completed",
+          "released",
+          "canceled"
+        ]
+      }
     ],
     "foreign_keys": [
-      {"columns": ["subscription_id"], "references": {"table": "subscriptions", "columns": ["id"]}}
+      {
+        "columns": [
+          "subscription_id"
+        ],
+        "references": {
+          "table": "subscriptions",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "subscription_schedule_phases": {
     "description": "Individual phases of a subscription schedule.",
     "grain": "One row per phase.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the phase."},
-      {"name": "subscription_schedule_id", "type": "varchar", "key": "foreign", "description": "Parent schedule."},
-      {"name": "start_date", "type": "timestamp", "description": "When the phase begins."},
-      {"name": "end_date", "type": "timestamp", "description": "When the phase ends."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the phase."
+      },
+      {
+        "name": "subscription_schedule_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent schedule."
+      },
+      {
+        "name": "start_date",
+        "type": "timestamp",
+        "description": "When the phase begins."
+      },
+      {
+        "name": "end_date",
+        "type": "timestamp",
+        "description": "When the phase ends."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["subscription_schedule_id"], "references": {"table": "subscription_schedules", "columns": ["id"]}}
+      {
+        "columns": [
+          "subscription_schedule_id"
+        ],
+        "references": {
+          "table": "subscription_schedules",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "subscription_schedule_phase_configuration_items": {
@@ -519,9 +1594,23 @@
     "grain": "One row per item in a phase.",
     "primary_key": [],
     "columns": [
-      {"name": "subscription_schedule_id", "type": "varchar", "key": "foreign", "description": "Parent schedule."},
-      {"name": "price_id", "type": "varchar", "key": "foreign", "description": "Price configured for the phase."},
-      {"name": "quantity", "type": "bigint", "description": "Quantity configured for the phase."}
+      {
+        "name": "subscription_schedule_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent schedule."
+      },
+      {
+        "name": "price_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Price configured for the phase."
+      },
+      {
+        "name": "quantity",
+        "type": "bigint",
+        "description": "Quantity configured for the phase."
+      }
     ]
   },
   "subscription_schedule_phase_add_invoice_items": {
@@ -529,8 +1618,18 @@
     "grain": "One row per add-invoice-item in a phase.",
     "primary_key": [],
     "columns": [
-      {"name": "subscription_schedule_id", "type": "varchar", "key": "foreign", "description": "Parent schedule."},
-      {"name": "price_id", "type": "varchar", "key": "foreign", "description": "Price of the one-off item."}
+      {
+        "name": "subscription_schedule_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent schedule."
+      },
+      {
+        "name": "price_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Price of the one-off item."
+      }
     ]
   },
   "subscription_item_change_events_v2_beta": {
@@ -538,7 +1637,9 @@
     "grain": "One row per MRR-moving change to a subscription item.",
     "primary_key": [],
     "same_columns_as": "subscription_item_change_events",
-    "notes": ["Preview table — Stripe may change it. Prefer subscription_item_change_events unless you need the fresher data."]
+    "notes": [
+      "Preview table \u2014 Stripe may change it. Prefer subscription_item_change_events unless you need the fresher data."
+    ]
   },
   "subscription_item_change_events_testmode": {
     "description": "Sandbox/test-mode equivalent of subscription_item_change_events.",
@@ -551,244 +1652,712 @@
     "grain": "One row per usage report.",
     "primary_key": [],
     "columns": [
-      {"name": "subscription_item_id", "type": "varchar", "key": "foreign", "description": "Metered subscription item the usage applies to."},
-      {"name": "quantity", "type": "bigint", "description": "Reported usage quantity."},
-      {"name": "timestamp", "type": "timestamp", "description": "When the usage occurred."}
+      {
+        "name": "subscription_item_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Metered subscription item the usage applies to."
+      },
+      {
+        "name": "quantity",
+        "type": "bigint",
+        "description": "Reported usage quantity."
+      },
+      {
+        "name": "timestamp",
+        "type": "timestamp",
+        "description": "When the usage occurred."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["subscription_item_id"], "references": {"table": "subscription_items", "columns": ["id"]}}
+      {
+        "columns": [
+          "subscription_item_id"
+        ],
+        "references": {
+          "table": "subscription_items",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "recoveries": {
-    "description": "Smart Retries and dunning outcomes — revenue recovered after a failed subscription payment.",
+    "description": "Smart Retries and dunning outcomes \u2014 revenue recovered after a failed subscription payment.",
     "grain": "One row per recovery attempt or recovered invoice.",
     "primary_key": [],
     "columns": [
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice that was recovered."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer whose payment was recovered."}
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice that was recovered."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer whose payment was recovered."
+      }
     ],
-    "notes": ["The table to use for involuntary churn and dunning effectiveness reporting."]
+    "notes": [
+      "The table to use for involuntary churn and dunning effectiveness reporting."
+    ]
   },
-
   "customer_balance_transactions": {
-    "api_object": "customer_balance_transaction",
     "description": "Changes to a customer's account credit balance.",
     "grain": "One row per customer balance transaction.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed cbtxn_."},
-      {"name": "created", "type": "timestamp", "description": "When the transaction occurred (UTC)."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer whose balance changed."},
-      {"name": "amount", "type": "bigint", "description": "Signed change in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "type", "type": "varchar", "description": "Kind of balance change."},
-      {"name": "invoice_id", "type": "varchar", "key": "foreign", "description": "Invoice the change relates to, if any."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed cbtxn_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the transaction occurred (UTC)."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer whose balance changed."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Signed change in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "type",
+        "type": "varchar",
+        "description": "Kind of balance change."
+      },
+      {
+        "name": "invoice_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Invoice the change relates to, if any."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}}
+      {
+        "columns": [
+          "customer_id"
+        ],
+        "references": {
+          "table": "customers",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "customer_cash_balance_transactions": {
     "description": "Changes to a customer's cash balance held at Stripe, used for bank-transfer funding.",
     "grain": "One row per cash balance transaction.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the transaction."},
-      {"name": "created", "type": "timestamp", "description": "When the transaction occurred (UTC)."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer whose cash balance changed."},
-      {"name": "net_amount", "type": "bigint", "description": "Signed change in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the transaction."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the transaction occurred (UTC)."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer whose cash balance changed."
+      },
+      {
+        "name": "net_amount",
+        "type": "bigint",
+        "description": "Signed change in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}}
+      {
+        "columns": [
+          "customer_id"
+        ],
+        "references": {
+          "table": "customers",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "customer_tax_ids": {
     "description": "Tax identifiers stored against a customer.",
     "grain": "One row per (customer, tax id).",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed txi_."},
-      {"name": "customer_id", "type": "varchar", "key": "foreign", "description": "Customer the tax id belongs to."},
-      {"name": "type", "type": "varchar", "description": "Tax id type, e.g. eu_vat, us_ein."},
-      {"name": "value", "type": "varchar", "description": "The tax identifier itself."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed txi_."
+      },
+      {
+        "name": "customer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Customer the tax id belongs to."
+      },
+      {
+        "name": "type",
+        "type": "varchar",
+        "description": "Tax id type, e.g. eu_vat, us_ein."
+      },
+      {
+        "name": "value",
+        "type": "varchar",
+        "description": "The tax identifier itself."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["customer_id"], "references": {"table": "customers", "columns": ["id"]}}
+      {
+        "columns": [
+          "customer_id"
+        ],
+        "references": {
+          "table": "customers",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
-
   "issuing_disputes": {
-    "api_object": "issuing.dispute",
     "description": "Disputes you filed on behalf of cardholders against merchants.",
     "grain": "One row per issuing dispute.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed idp_."},
-      {"name": "created", "type": "timestamp", "description": "When the dispute was created (UTC)."},
-      {"name": "transaction_id", "type": "varchar", "key": "foreign", "description": "Issuing transaction being disputed."},
-      {"name": "amount", "type": "bigint", "description": "Disputed amount in minor currency units."},
-      {"name": "status", "type": "varchar", "description": "Dispute status."},
-      {"name": "reason", "type": "varchar", "description": "Reason for the dispute."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed idp_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the dispute was created (UTC)."
+      },
+      {
+        "name": "transaction_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Issuing transaction being disputed."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Disputed amount in minor currency units."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Dispute status."
+      },
+      {
+        "name": "reason",
+        "type": "varchar",
+        "description": "Reason for the dispute."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["transaction_id"], "references": {"table": "issuing_transactions", "columns": ["id"]}}
+      {
+        "columns": [
+          "transaction_id"
+        ],
+        "references": {
+          "table": "issuing_transactions",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "issuing_network_tokens": {
     "description": "Network tokens provisioned for issued cards, such as those created when a card is added to a mobile wallet.",
     "grain": "One row per network token.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the token."},
-      {"name": "created", "type": "timestamp", "description": "When the token was provisioned (UTC)."},
-      {"name": "card_id", "type": "varchar", "key": "foreign", "description": "Card the token represents."},
-      {"name": "status", "type": "varchar", "description": "Token status."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the token."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the token was provisioned (UTC)."
+      },
+      {
+        "name": "card_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Card the token represents."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Token status."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["card_id"], "references": {"table": "issuing_cards", "columns": ["id"]}}
+      {
+        "columns": [
+          "card_id"
+        ],
+        "references": {
+          "table": "issuing_cards",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
-
   "transfer_reversals": {
-    "api_object": "transfer_reversal",
-    "api_reference": "https://docs.stripe.com/api/transfer_reversals/object",
     "description": "Reversals of manually created transfers or payouts. Automatic payouts cannot be reversed.",
     "grain": "One row per reversal.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed trr_."},
-      {"name": "created", "type": "timestamp", "description": "When the reversal was created (UTC)."},
-      {"name": "transfer_id", "type": "varchar", "key": "foreign", "description": "Transfer being reversed."},
-      {"name": "amount", "type": "bigint", "description": "Reversed amount in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "balance_transaction_id", "type": "varchar", "key": "foreign", "description": "Balance transaction recording the reversal."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed trr_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the reversal was created (UTC)."
+      },
+      {
+        "name": "transfer_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Transfer being reversed."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Reversed amount in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "balance_transaction_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Balance transaction recording the reversal."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["transfer_id"], "references": {"table": "transfers", "columns": ["id"]}}
+      {
+        "columns": [
+          "transfer_id"
+        ],
+        "references": {
+          "table": "transfers",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
-
   "treasury_financial_accounts": {
-    "api_object": "treasury.financial_account",
     "description": "Treasury financial accounts that store funds for your platform's users.",
     "grain": "One row per financial account.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed fa_."},
-      {"name": "created", "type": "timestamp", "description": "When the account was created (UTC)."},
-      {"name": "status", "type": "varchar", "description": "Account status.", "enum": ["open", "closed"]},
-      {"name": "country", "type": "varchar", "description": "Two-letter ISO country of the account."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed fa_."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the account was created (UTC)."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Account status.",
+        "enum": [
+          "open",
+          "closed"
+        ]
+      },
+      {
+        "name": "country",
+        "type": "varchar",
+        "description": "Two-letter ISO country of the account."
+      }
     ]
   },
   "treasury_transactions": {
-    "api_object": "treasury.transaction",
     "description": "Ledger of all money movement on Treasury financial accounts.",
     "grain": "One row per Treasury transaction.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the transaction."},
-      {"name": "created", "type": "timestamp", "description": "When the transaction occurred (UTC)."},
-      {"name": "financial_account_id", "type": "varchar", "key": "foreign", "description": "Financial account affected."},
-      {"name": "amount", "type": "bigint", "description": "Signed amount in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "status", "type": "varchar", "description": "Transaction status."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the transaction."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the transaction occurred (UTC)."
+      },
+      {
+        "name": "financial_account_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Financial account affected."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Signed amount in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Transaction status."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["financial_account_id"], "references": {"table": "treasury_financial_accounts", "columns": ["id"]}}
+      {
+        "columns": [
+          "financial_account_id"
+        ],
+        "references": {
+          "table": "treasury_financial_accounts",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "treasury_transaction_entries": {
     "description": "Individual ledger entries making up a Treasury transaction.",
     "grain": "One row per entry.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the entry."},
-      {"name": "transaction_id", "type": "varchar", "key": "foreign", "description": "Parent Treasury transaction."},
-      {"name": "amount", "type": "bigint", "description": "Signed amount in minor currency units."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the entry."
+      },
+      {
+        "name": "transaction_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent Treasury transaction."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Signed amount in minor currency units."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["transaction_id"], "references": {"table": "treasury_transactions", "columns": ["id"]}}
+      {
+        "columns": [
+          "transaction_id"
+        ],
+        "references": {
+          "table": "treasury_transactions",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "treasury_inbound_transfers": {
-    "api_object": "treasury.inbound_transfer",
     "description": "Money pulled into a Treasury financial account from an external bank account.",
     "grain": "One row per inbound transfer.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the transfer."},
-      {"name": "created", "type": "timestamp", "description": "When the transfer was created (UTC)."},
-      {"name": "financial_account_id", "type": "varchar", "key": "foreign", "description": "Destination financial account."},
-      {"name": "amount", "type": "bigint", "description": "Amount in minor currency units."},
-      {"name": "status", "type": "varchar", "description": "Transfer status."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the transfer."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the transfer was created (UTC)."
+      },
+      {
+        "name": "financial_account_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Destination financial account."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Amount in minor currency units."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Transfer status."
+      }
     ]
   },
   "treasury_outbound_transfers": {
-    "api_object": "treasury.outbound_transfer",
     "description": "Money sent from a Treasury financial account to an external bank account you own.",
     "grain": "One row per outbound transfer.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the transfer."},
-      {"name": "created", "type": "timestamp", "description": "When the transfer was created (UTC)."},
-      {"name": "financial_account_id", "type": "varchar", "key": "foreign", "description": "Source financial account."},
-      {"name": "amount", "type": "bigint", "description": "Amount in minor currency units."},
-      {"name": "status", "type": "varchar", "description": "Transfer status."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the transfer."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the transfer was created (UTC)."
+      },
+      {
+        "name": "financial_account_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Source financial account."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Amount in minor currency units."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Transfer status."
+      }
     ]
   },
   "treasury_outbound_payments": {
-    "api_object": "treasury.outbound_payment",
     "description": "Money sent from a Treasury financial account to a third party.",
     "grain": "One row per outbound payment.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the payment."},
-      {"name": "created", "type": "timestamp", "description": "When the payment was created (UTC)."},
-      {"name": "financial_account_id", "type": "varchar", "key": "foreign", "description": "Source financial account."},
-      {"name": "amount", "type": "bigint", "description": "Amount in minor currency units."},
-      {"name": "status", "type": "varchar", "description": "Payment status."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the payment."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the payment was created (UTC)."
+      },
+      {
+        "name": "financial_account_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Source financial account."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Amount in minor currency units."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Payment status."
+      }
     ]
   },
-
   "terminal_locations": {
-    "api_object": "terminal.location",
     "description": "Physical locations where you operate Terminal card readers.",
     "grain": "One row per location.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed tml_."},
-      {"name": "display_name", "type": "varchar", "description": "Location name."},
-      {"name": "address_country", "type": "varchar", "description": "Two-letter ISO country of the location."},
-      {"name": "address_city", "type": "varchar", "description": "City of the location."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed tml_."
+      },
+      {
+        "name": "display_name",
+        "type": "varchar",
+        "description": "Location name."
+      },
+      {
+        "name": "address_country",
+        "type": "varchar",
+        "description": "Two-letter ISO country of the location."
+      },
+      {
+        "name": "address_city",
+        "type": "varchar",
+        "description": "City of the location."
+      }
     ]
   },
   "terminal_readers": {
-    "api_object": "terminal.reader",
     "description": "Terminal card reader devices registered to your account.",
     "grain": "One row per reader.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier, prefixed tmr_."},
-      {"name": "label", "type": "varchar", "description": "Reader label."},
-      {"name": "location_id", "type": "varchar", "key": "foreign", "description": "Location the reader is assigned to."},
-      {"name": "device_type", "type": "varchar", "description": "Reader hardware model."},
-      {"name": "status", "type": "varchar", "description": "Whether the reader is online or offline."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier, prefixed tmr_."
+      },
+      {
+        "name": "label",
+        "type": "varchar",
+        "description": "Reader label."
+      },
+      {
+        "name": "location_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Location the reader is assigned to."
+      },
+      {
+        "name": "device_type",
+        "type": "varchar",
+        "description": "Reader hardware model."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Whether the reader is online or offline."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["location_id"], "references": {"table": "terminal_locations", "columns": ["id"]}}
+      {
+        "columns": [
+          "location_id"
+        ],
+        "references": {
+          "table": "terminal_locations",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "terminal_hardware_orders": {
     "description": "Orders you placed for Terminal reader hardware.",
     "grain": "One row per hardware order.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the order."},
-      {"name": "created", "type": "timestamp", "description": "When the order was placed (UTC)."},
-      {"name": "amount", "type": "bigint", "description": "Order total in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "status", "type": "varchar", "description": "Order status."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the order."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the order was placed (UTC)."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Order total in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Order status."
+      }
     ]
   },
   "terminal_hardware_order_items": {
@@ -796,12 +2365,35 @@
     "grain": "One row per item on an order.",
     "primary_key": [],
     "columns": [
-      {"name": "terminal_hardware_order_id", "type": "varchar", "key": "foreign", "description": "Parent hardware order."},
-      {"name": "quantity", "type": "bigint", "description": "Quantity ordered."},
-      {"name": "amount", "type": "bigint", "description": "Line amount in minor currency units."}
+      {
+        "name": "terminal_hardware_order_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent hardware order."
+      },
+      {
+        "name": "quantity",
+        "type": "bigint",
+        "description": "Quantity ordered."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Line amount in minor currency units."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["terminal_hardware_order_id"], "references": {"table": "terminal_hardware_orders", "columns": ["id"]}}
+      {
+        "columns": [
+          "terminal_hardware_order_id"
+        ],
+        "references": {
+          "table": "terminal_hardware_orders",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "terminal_hardware_order_tax_amounts": {
@@ -809,8 +2401,17 @@
     "grain": "One row per (order, tax component).",
     "primary_key": [],
     "columns": [
-      {"name": "terminal_hardware_order_id", "type": "varchar", "key": "foreign", "description": "Parent hardware order."},
-      {"name": "amount", "type": "bigint", "description": "Tax amount in minor currency units."}
+      {
+        "name": "terminal_hardware_order_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent hardware order."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Tax amount in minor currency units."
+      }
     ]
   },
   "terminal_hardware_order_shipment_tracking": {
@@ -818,22 +2419,53 @@
     "grain": "One row per shipment tracking record.",
     "primary_key": [],
     "columns": [
-      {"name": "terminal_hardware_order_id", "type": "varchar", "key": "foreign", "description": "Parent hardware order."},
-      {"name": "tracking_number", "type": "varchar", "description": "Carrier tracking number."},
-      {"name": "carrier", "type": "varchar", "description": "Shipping carrier."}
+      {
+        "name": "terminal_hardware_order_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Parent hardware order."
+      },
+      {
+        "name": "tracking_number",
+        "type": "varchar",
+        "description": "Carrier tracking number."
+      },
+      {
+        "name": "carrier",
+        "type": "varchar",
+        "description": "Shipping carrier."
+      }
     ]
   },
-
   "financing_offers": {
-    "api_object": "capital.financing_offer",
     "description": "Stripe Capital financing offers extended to you or your connected accounts.",
     "grain": "One row per financing offer.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the offer."},
-      {"name": "created", "type": "timestamp", "description": "When the offer was created (UTC)."},
-      {"name": "account_id", "type": "varchar", "key": "foreign", "description": "Account the offer was made to."},
-      {"name": "status", "type": "varchar", "description": "Offer status."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the offer."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the offer was created (UTC)."
+      },
+      {
+        "name": "account_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Account the offer was made to."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Offer status."
+      }
     ]
   },
   "financing_balances": {
@@ -844,21 +2476,45 @@
   "financing_transactions": {
     "description": "Repayments and drawdowns against Stripe Capital financing.",
     "grain": "One row per financing transaction.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the transaction."},
-      {"name": "created", "type": "timestamp", "description": "When the transaction occurred (UTC)."},
-      {"name": "amount", "type": "bigint", "description": "Signed amount in minor currency units."},
-      {"name": "currency", "type": "varchar", "description": "Three-letter ISO currency code, lowercase."},
-      {"name": "type", "type": "varchar", "description": "Whether this is a drawdown or a repayment."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the transaction."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the transaction occurred (UTC)."
+      },
+      {
+        "name": "amount",
+        "type": "bigint",
+        "description": "Signed amount in minor currency units."
+      },
+      {
+        "name": "currency",
+        "type": "varchar",
+        "description": "Three-letter ISO currency code, lowercase."
+      },
+      {
+        "name": "type",
+        "type": "varchar",
+        "description": "Whether this is a drawdown or a repayment."
+      }
     ]
   },
-
   "summarized_balance_transactions": {
     "description": "Pre-aggregated balance transaction totals, grouped by period and reporting category. Much cheaper than aggregating balance_transactions yourself.",
     "grain": "One row per (period, currency, reporting category).",
     "primary_key": [],
-    "notes": ["Use this for high-level financial summaries; drop to balance_transactions only when you need row-level detail."]
+    "notes": [
+      "Use this for high-level financial summaries; drop to balance_transactions only when you need row-level detail."
+    ]
   },
   "connected_account_summarized_balance_transactions": {
     "description": "Connect platform view of summarized_balance_transactions, per connected account.",
@@ -871,7 +2527,9 @@
     "grain": "One row per fee, per connected account.",
     "primary_key": [],
     "mirror_of": "itemized_fees",
-    "notes": ["amount and tax are in MAJOR currency units, same as itemized_fees."]
+    "notes": [
+      "amount and tax are in MAJOR currency units, same as itemized_fees."
+    ]
   },
   "connected_account_itemized_fees_beta": {
     "description": "Preview version of connected_account_itemized_fees.",
@@ -889,7 +2547,9 @@
     "description": "Itemized activity report backing Stripe's Dashboard reporting, one row per balance-affecting event with reporting classifications.",
     "grain": "One row per reportable activity item.",
     "primary_key": [],
-    "notes": ["Aligns with Stripe's Reporting exports rather than the raw API objects."]
+    "notes": [
+      "Aligns with Stripe's Reporting exports rather than the raw API objects."
+    ]
   },
   "connected_account_activity_report_itemized": {
     "description": "Connect platform view of activity_report_itemized, per connected account.",
@@ -917,10 +2577,25 @@
     "grain": "One row per charge that had an optimization applied.",
     "primary_key": [],
     "columns": [
-      {"name": "charge_id", "type": "varchar", "key": "foreign", "description": "Charge the optimization applied to."}
+      {
+        "name": "charge_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Charge the optimization applied to."
+      }
     ],
     "foreign_keys": [
-      {"columns": ["charge_id"], "references": {"table": "charges", "columns": ["id"]}}
+      {
+        "columns": [
+          "charge_id"
+        ],
+        "references": {
+          "table": "charges",
+          "columns": [
+            "id"
+          ]
+        }
+      }
     ]
   },
   "charge_groups": {
@@ -942,26 +2617,59 @@
     "description": "Double-entry debits and credits produced by Stripe Revenue Recognition, for building deferred revenue and recognized revenue schedules.",
     "grain": "One row per accounting entry.",
     "primary_key": [],
-    "notes": ["Pairs with Stripe's Revenue Recognition reports; see docs.stripe.com/revenue-recognition/reports/sigma-and-sdp."]
+    "notes": [
+      "Pairs with Stripe's Revenue Recognition reports; see docs.stripe.com/revenue-recognition/reports/sigma-and-sdp."
+    ]
   },
   "tax_forms": {
     "description": "Tax forms (such as 1099s) generated for your connected accounts.",
     "grain": "One row per tax form.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the form."},
-      {"name": "account_id", "type": "varchar", "key": "foreign", "description": "Connected account the form was issued for."},
-      {"name": "type", "type": "varchar", "description": "Form type, e.g. 1099-K, 1099-MISC."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the form."
+      },
+      {
+        "name": "account_id",
+        "type": "varchar",
+        "key": "foreign",
+        "description": "Connected account the form was issued for."
+      },
+      {
+        "name": "type",
+        "type": "varchar",
+        "description": "Form type, e.g. 1099-K, 1099-MISC."
+      }
     ]
   },
   "crypto_onramp_sessions": {
     "description": "Stripe crypto onramp sessions where users bought crypto with fiat.",
     "grain": "One row per onramp session.",
-    "primary_key": ["id"],
+    "primary_key": [
+      "id"
+    ],
     "columns": [
-      {"name": "id", "type": "varchar", "key": "primary", "description": "Unique identifier for the session."},
-      {"name": "created", "type": "timestamp", "description": "When the session was created (UTC)."},
-      {"name": "status", "type": "varchar", "description": "Session status."}
+      {
+        "name": "id",
+        "type": "varchar",
+        "key": "primary",
+        "description": "Unique identifier for the session."
+      },
+      {
+        "name": "created",
+        "type": "timestamp",
+        "description": "When the session was created (UTC)."
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "description": "Session status."
+      }
     ]
   }
 }

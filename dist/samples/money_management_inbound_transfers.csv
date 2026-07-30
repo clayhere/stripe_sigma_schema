@@ -1,0 +1,5 @@
+created,credited_amount,credited_currency,debited_amount,debited_currency,description,from_payment_method_id,from_payment_method_type,id,status,to_financial_account_id
+2026-03-18 17:35:03,10000,usd,1500,usd,Seat overage,fpm_HHtgWEocINU5Uc,standard,primary,standard,tfa_NeNH1W5xBj5D2C
+2026-03-13 12:42:03,2500,usd,24900,usd,Onboarding,fpm_MPEr4FxW6EwgM3,primary,,,tfa_iKO6MkyiZsv1w7
+2026-02-23 04:14:03,7500,usd,1500,usd,Card payment processing,fpm_EOJLniLAPdC2ZM,standard,,,tfa_KXV3G8otuoQ2S5
+2026-02-24 14:37:03,10000,jpy,4200,usd,Card payment processing,fpm_SEkddgWzeDCoOa,primary,default,standard,tfa_hEkwnu6FuNdaWV

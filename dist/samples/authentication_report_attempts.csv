@@ -1,5 +1,5 @@
-charge_outcome,created,intent_id,is_final_attempt,threeds_outcome_result
-default,2026-01-07 22:22:03,,True,
-primary,2026-03-02 04:31:03,,True,standard
-standard,2026-06-01 19:02:03,,True,primary
-standard,2026-04-05 19:08:03,,True,
+attempt_id,amount,authentication_flow,card_bin_country,charge_id,charge_outcome,charge_outcome_reason,created,currency,device_type,final_attempt_id,intent_id,intent_type,is_authenticated_by_digital_wallet,is_final_attempt,is_in_sca_scope,is_threeds_triggered,merchant_country,protocol_version,sca_exemption_mechanism,sca_exemption_requested,sca_exemption_status,threeds_outcome_result,threeds_outcome_result_reason,threeds_reason
+a_aZNPLMFUH4aK2s,1500,default,DE,,default,default,2026-03-10 13:32:03,eur,default,fa_zZJluavtk0khnj,,primary,False,False,False,False,DE,primary,standard,primary,,default,standard,default
+a_V3kJoJ2VCszFxR,1999,default,FR,,,default,2026-03-07 00:23:03,usd,,fa_Wo0CW2uGpzKs96,,default,True,False,True,True,DE,,default,standard,,standard,,primary
+a_edDN3cmicNtUGR,500,standard,FR,,primary,standard,2026-04-21 21:18:03,usd,,fa_ycUBn1dGCrrvs3,,primary,False,True,False,False,GB,,standard,,default,primary,standard,default
+a_aFLwbsFDeAfOyO,1999,default,AU,,primary,primary,2026-06-07 07:53:03,jpy,primary,fa_pZmRuyGjMXOZaf,,,True,True,True,True,DE,standard,default,,primary,primary,standard,

@@ -1,5 +1,5 @@
-key,price_id,value
-channel,price_M7stFQGmzwa5o0,partner
-internal_ref,price_WIqr4c5F5MepGR,acme-2026
-internal_ref,price_W4APGuJrpW2v6q,enterprise
-internal_ref,price_Cl5dz5RI1299qA,ORD-4471
+key,price_id,batch_timestamp,value
+order_id,price_uSmWuWJ0LH39hD,2026-03-04 16:15:03,enterprise
+internal_ref,price_RpQKUfMRbbL8Gf,2026-06-05 13:07:03,partner
+order_id,price_D9qQ6PlFQBHPIq,2026-02-02 00:54:03,ORD-4471
+internal_ref,price_DS6rapCD5kPt8Y,2026-02-06 13:43:03,ORD-4471

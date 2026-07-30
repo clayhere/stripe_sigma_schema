@@ -1,5 +1,5 @@
-key,subscription_schedule_phas_id,value
-cohort,ssp_5AGRqM9GCsR5wn,ORD-4471
-channel,ssp_aTLWiGFLTSru2V,ORD-4471
-internal_ref,ssp_aTLWiGFLTSru2V,enterprise
-order_id,ssp_gEpAPE3NBPSdOf,acme-2026
+key,phase_id,schedule_id,batch_timestamp,value
+cohort,p_GDFDoUiOY5ySa1,s_huevfYkA2o7frK,2026-04-29 20:25:03,ORD-4471
+internal_ref,p_Lt8UcBf0Pp4wm9,s_eMzGCXpAThQ53H,2026-01-07 03:49:03,ORD-4471
+cohort,p_01kNZvxK76f5dX,s_NBmIeKyrrBrl90,2026-05-22 14:26:03,partner
+order_id,p_FBbJAhshlm1sVY,s_GAuQWMcIX5mGw6,2026-03-11 18:26:03,enterprise

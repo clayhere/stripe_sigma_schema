@@ -1,5 +1,5 @@
-key,product_id,value
-order_id,prod_ee78uEf9bGLRDl,acme-2026
-internal_ref,prod_4v9ef23lIzxFl0,partner
-internal_ref,prod_8xpw0VjRviQWX6,ORD-4471
-channel,prod_ee78uEf9bGLRDl,acme-2026
+key,product_id,batch_timestamp,value
+order_id,prod_pyaULJvUfrOMyd,2026-04-02 04:06:03,enterprise
+cohort,prod_SEtCnXgIjJzYDi,2026-06-11 10:07:03,acme-2026
+cohort,prod_h5rwrdfPe93bYX,2026-02-20 04:25:03,ORD-4471
+internal_ref,prod_Vo3oTyoVsnlvPA,2026-04-18 14:20:03,acme-2026

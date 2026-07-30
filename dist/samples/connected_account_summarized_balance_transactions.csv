@@ -1,5 +1,5 @@
-account
-acct_WwvvS1mKdpGEF5
-acct_WwvvS1mKdpGEF5
-acct_4j9ECg1O2jL8QD
-acct_WwvvS1mKdpGEF5
+activity_at_time_bucket,auto_payout_id,bt_count,bt_effective_at_interval_start,currency,gross,net,payout_is_auto,reporting_category,account,auto_payout_effective_at_interval_start,fee
+primary,ap_56V5ynHb9oEBTH,12,standard,jpy,default,7500,,primary,acct_fSkQrqgN6lN9M8,2026-05-20 17:25:03,87
+standard,ap_h2fhj0yrg5IDkh,1,standard,usd,default,7500,,default,acct_pNpQOGlz0JsXuo,2026-02-08 23:57:03,304
+primary,ap_csnrXum7wo5Drp,3,primary,usd,default,10000,standard,primary,acct_fSkQrqgN6lN9M8,2026-04-03 07:59:03,190
+standard,ap_1hsqfn0QlCtJ9S,6,,eur,primary,500,,standard,acct_wHa3DphKoWrfhj,2026-04-25 15:40:03,190

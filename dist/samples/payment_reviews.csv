@@ -1,5 +1,5 @@
-id,charge_id,closed_reason,created,payment_intent_id,reason
-pr_OAGQGWd9NIFuFr,ch_Chsp6CFaVRh6GD,primary,2026-04-15 17:46:03,pi_GuuHQxX0Ac18nc,default
-pr_FDTyEEQjGaODAW,ch_2jDVUeIZV6cCKz,primary,2026-01-19 08:33:03,pi_u5DAQ4NPLanyJ7,default
-pr_ahdqhmOxG9FfJs,ch_Q2vgCEQ5paoGVf,,2026-02-17 23:35:03,pi_9ltp0SPVzoXKeW,
-pr_lxJZsCnev3iYU4,ch_ygpFHesYfr7r1c,primary,2026-05-15 03:28:03,pi_QtsFUIdPJmhHq3,default
+id,batch_timestamp,charge_id,created,early_fraud_warning_id,open,payment_intent_id,reason,recommended_refund_confidence_level,recommended_refund_created_at
+pr_S1e37FAoi772SL,2026-02-20 08:05:03,ch_Nur52TK4zDOsEp,2026-02-09 18:51:03,efw_AzteylkSSDWm94,True,pi_ZBWHWeNn3nTxOY,standard,primary,2026-04-17 15:16:03
+pr_a2i8u0OGkFpT9i,2026-04-28 14:17:03,ch_czCFU5hQ7mFvkb,2026-06-17 00:57:03,efw_qqpT28YiRdrA6y,False,pi_t96HTNONjLekp2,,primary,2026-02-26 22:15:03
+pr_tJdP6ZNDUkPCBP,2026-03-26 21:49:03,ch_DMY9fid2Ibn2C8,2026-03-04 00:10:03,efw_AzteylkSSDWm94,True,pi_W6MOKLcmwLz3ez,standard,standard,2026-06-17 15:55:03
+pr_gsMMN8i0z8gYtP,2026-04-16 14:28:03,ch_arMF8iE5lRdoP3,2026-06-22 14:26:03,efw_lIk9vhtjsQnw81,False,pi_RgI9WL5zsCN73R,default,primary,2026-01-11 06:51:03

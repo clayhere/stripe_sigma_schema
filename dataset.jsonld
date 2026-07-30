@@ -7,11 +7,13 @@
     "Stripe Sigma SQL table reference",
     "Stripe data schema for Sigma and Data Pipeline"
   ],
-  "description": "Complete machine-readable reference for the Stripe Sigma SQL data warehouse schema: 164 tables and 945 columns with types, primary and foreign keys, enum values, data-freshness SLAs, Trino dialect notes and query pitfalls. Includes referentially-valid synthetic sample data and a runnable SQLite sandbox. Designed as a context source for AI agents writing Stripe Sigma SQL. Unofficial; not affiliated with Stripe, Inc.",
+  "description": "This is the STRIPE SIGMA schema (Stripe's SQL data warehouse), not the Stripe REST API schema \u2014 the two diverge in table and column names, and a REST API reference will produce incorrect Sigma SQL. Machine-readable reference for the Stripe Sigma SQL data warehouse schema: 262 tables and 4168 columns with types, primary and foreign keys, enum values, data-freshness SLAs, Trino dialect notes and query pitfalls. Includes referentially-valid synthetic sample data and a runnable SQLite sandbox. Designed as a context source for AI agents writing Stripe Sigma SQL. Coverage is not guaranteed complete or current; Stripe can change the schema at any time. Unofficial; not affiliated with Stripe, Inc.",
   "keywords": [
     "Stripe Sigma",
     "Stripe Sigma schema",
     "Stripe Sigma SQL",
+    "Stripe Sigma vs API",
+    "Stripe data warehouse schema",
     "Stripe data schema",
     "Stripe Data Pipeline",
     "Trino",
@@ -34,17 +36,16 @@
   "creativeWorkStatus": "Published",
   "url": "https://github.com/claysones/stripe-sigma-schema",
   "codeRepository": "https://github.com/claysones/stripe-sigma-schema",
-  "measurementTechnique": "Derived from Stripe's public documentation at docs.stripe.com/data, with per-column provenance and confidence levels; verifiable against a live Stripe Sigma account.",
   "variableMeasured": [
     {
       "@type": "PropertyValue",
       "name": "tables",
-      "value": 164
+      "value": 262
     },
     {
       "@type": "PropertyValue",
       "name": "columns",
-      "value": 945
+      "value": 4168
     }
   ],
   "distribution": [

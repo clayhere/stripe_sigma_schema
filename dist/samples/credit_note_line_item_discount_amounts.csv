@@ -1,5 +1,5 @@
-amount,credit_note_line_item_id
-7500,cnli_LvtYkzrqY07y4f
-4200,cnli_ex8nRu8Ya3w24H
-10000,cnli_3jBnZSj0UANgLj
-2500,cnli_v8924d9bb4z7hL
+credit_note_id,credit_note_line_item_id,id,amount,batch_timestamp,discount
+cn_s1GwWpuXsyQU5V,cnli_Bn3Xy6KxLJVHzF,cnli_UnJotmWKplAA9Q,7500,2026-05-21 09:36:03,standard
+cn_LMTDNP0xuLGd0S,cnli_GqxVZEXsIHAVPF,cnli_7RPBpy1rp3yunG,500,2026-04-24 19:06:03,
+cn_dQwTW1aCbCBHU8,cnli_6lgQtiKPnktlpx,cnli_zsBEcEhmioWTFu,24900,2026-05-15 15:37:03,primary
+cn_ua2IIs2EnGDhz4,cnli_ZEixxxMj89QHUZ,cnli_TyS2mW3R5zM5f2,1500,2026-02-22 06:50:03,standard

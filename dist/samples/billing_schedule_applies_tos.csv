@@ -1,0 +1,5 @@
+billing_schedule_key,parent_id,batch_timestamp,price_id,type
+standard,p_FZ1xXO22ZWobhl,2026-03-09 05:12:03,price_4iAFP5rKoBbmM1,standard
+default,p_jR9TwsUrwEBBgd,2026-05-14 10:59:03,price_uSmWuWJ0LH39hD,primary
+primary,p_4Tk60wpUIW6C7w,2026-06-04 19:13:03,price_RpQKUfMRbbL8Gf,standard
+default,p_BWPNmGXjpFGkZl,2026-02-09 05:39:03,price_D9qQ6PlFQBHPIq,primary

@@ -1,5 +1,5 @@
 key,payment_record_id,value
-order_id,pr_YNEazk23RnDenJ,enterprise
-channel,pr_3rtEIuo5naZQbe,ORD-4471
-order_id,pr_YNEazk23RnDenJ,partner
-channel,pr_YNEazk23RnDenJ,partner
+cohort,pr_SP8crBr12Q1RvO,ORD-4471
+channel,pr_2hOfuqe1aAq28Q,enterprise
+internal_ref,pr_CKcaQ9cW1pj67M,acme-2026
+internal_ref,pr_H4a5ZxWPzicOi4,acme-2026

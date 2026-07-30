@@ -1,5 +1,5 @@
-key,setup_intent_id,value
-cohort,seti_oHwkHUqx4kvF2B,partner
-internal_ref,seti_h3r0JZ0jxF2epr,partner
-order_id,seti_86ityBP1RxJLxS,ORD-4471
-cohort,seti_h3r0JZ0jxF2epr,ORD-4471
+key,setup_intent_id,batch_timestamp,value
+channel,seti_g9i4OcXl2WN0cS,2026-03-16 04:38:03,partner
+internal_ref,seti_g9i4OcXl2WN0cS,2026-04-28 01:03:03,acme-2026
+internal_ref,seti_cOWJVT9NwW1wDc,2026-06-03 12:39:03,enterprise
+internal_ref,seti_dzTbc3FNgm0WoV,2026-04-23 07:26:03,ORD-4471

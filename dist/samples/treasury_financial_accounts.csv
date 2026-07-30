@@ -1,5 +1,5 @@
-id,country,created,status
-fa_P5y0itTOT3WZ7j,AU,2026-01-18 12:39:03,open
-fa_BG6PT2idkl012b,AU,2026-06-07 02:57:03,closed
-fa_k7erB2sJLHwj3M,DE,2026-03-27 19:11:03,open
-fa_TQEFMLrOFFziSw,US,2026-04-13 04:00:03,open
+id,batch_timestamp,country,created,status,status_details_closed_reasons
+fa_IGTiaOPJSrlBea,2026-03-26 07:16:03,US,2026-04-05 16:39:03,open,
+fa_KFVTvgBw00cRfq,2026-03-04 00:24:03,US,2026-04-30 14:50:03,open,default
+fa_oEwBTwLz7cvvpe,2026-01-13 20:28:03,FR,2026-04-25 02:06:03,open,standard
+fa_ilDjmVCWYmggLH,2026-06-19 06:43:03,DE,2026-01-20 03:14:03,open,default

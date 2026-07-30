@@ -1,5 +1,5 @@
-account,connected_account_payment_record_id,key,value
-acct_shm7paJ1VUgqsv,capr_2u8SCT81nOWn3t,internal_ref,enterprise
-acct_shm7paJ1VUgqsv,capr_REH3yRkA6Fcw9H,channel,enterprise
-acct_shm7paJ1VUgqsv,capr_REH3yRkA6Fcw9H,order_id,partner
-acct_shm7paJ1VUgqsv,capr_QM4KKKYBGfLSNy,order_id,partner
+key,payment_record_id,account,value
+channel,pr_H4a5ZxWPzicOi4,acct_krOQu7GGwUWKJ7,enterprise
+channel,pr_2hOfuqe1aAq28Q,acct_pNpQOGlz0JsXuo,ORD-4471
+cohort,pr_CKcaQ9cW1pj67M,acct_fSkQrqgN6lN9M8,acme-2026
+internal_ref,pr_SP8crBr12Q1RvO,acct_krOQu7GGwUWKJ7,acme-2026

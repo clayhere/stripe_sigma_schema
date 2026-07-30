@@ -1,5 +1,5 @@
-key,treasury_outbound_payment_id,value
-cohort,top_3dgkpAVHMDRY8U,partner
-channel,top_3dgkpAVHMDRY8U,ORD-4471
-channel,top_MhOz2Fy5bI8UsH,partner
-channel,top_113Uiz5CI8xdZ4,partner
+key,outbound_payment_id,batch_timestamp,value
+channel,op_CwXmjIBqtPQZ5A,2026-05-06 12:29:03,enterprise
+cohort,op_PCAszihUZsdEEi,2026-01-07 13:04:03,acme-2026
+channel,op_7ZFaLE1ux69Pwu,2026-06-10 23:09:03,ORD-4471
+order_id,op_TOWYMQZG5eIn8o,2026-04-27 09:57:03,partner

@@ -1,5 +1,5 @@
-key,treasury_financial_account_id,value
-order_id,fa_BG6PT2idkl012b,acme-2026
-order_id,fa_k7erB2sJLHwj3M,acme-2026
-channel,fa_TQEFMLrOFFziSw,acme-2026
-cohort,fa_P5y0itTOT3WZ7j,ORD-4471
+financial_account_id,key,batch_timestamp,value
+fa_ZWmC9fPRFx53FD,order_id,2026-04-18 15:27:03,partner
+fa_vd5zYNTygXO23P,internal_ref,2026-05-28 13:11:03,ORD-4471
+fa_IznPp7om3Hg3pG,channel,2026-06-12 10:07:03,enterprise
+fa_D8myvSo9fuo1vp,channel,2026-02-28 05:46:03,acme-2026

@@ -1,5 +1,5 @@
-id,amount_non_taxable,amount_tax,amount_taxable,currency,filing_amount_non_taxable,filing_amount_tax,filing_amount_taxable,filing_currency,jurisdiction_country,jurisdiction_level,jurisdiction_name,jurisdiction_state,tax_rate_percentage,tax_transaction_id,tax_transaction_item_id,tax_transaction_item_type,tax_type,taxability,taxability_reason
-primary,190,59,120,usd,450,304,304,gbp,FR,city,default,,11.2,tax_TMOQCPTMTgOUIj,tti_N0DqZxBSTwYim1,,primary,standard,default
-primary,0,190,450,jpy,0,304,304,usd,FR,city,default,,23.33,tax_dOcmZ4FW2LweVO,tti_N0dA5RHCtktOUd,,default,standard,default
-,87,120,87,usd,0,190,190,gbp,GB,country,standard,standard,11.78,tax_cO9WrysAJlcqXg,tti_tVEGqedoGHA9zy,primary,standard,standard,primary
-default,190,304,87,usd,120,304,0,usd,US,district,default,,4.23,tax_fN1q3IZ1QEqrbk,tti_dLHWMtnQ9ZPnwG,,,standard,
+tax_transaction_id,tax_transaction_item_id,amount_non_taxable,amount_tax,amount_taxable,currency,filing_amount_non_taxable,filing_amount_tax,filing_amount_taxable,filing_currency,filing_exchange_rate,jurisdiction_country,jurisdiction_id,jurisdiction_level,jurisdiction_name,jurisdiction_state,tax_rate_percentage,tax_transaction_item_type,tax_type,tax_type_display_name,taxability,taxability_reason
+tax_PZekeLSFaKDbTg,tti_a0vSF5rYQza5gs,120,59,59,eur,59,450,304,gbp,474.83,CA,j_UmMqZojsVCPcHG,county,default,primary,23.4,standard,,,standard,standard
+tax_SgTgoNrYjyRe7K,tti_K5JxIRh7uHmFiS,59,450,120,jpy,190,87,87,usd,409.16,DE,j_X4JNk1LOIUSvOb,district,primary,primary,24.49,standard,default,primary,primary,
+tax_j1DUBIci25Ovad,tti_NtOd3eHGD1fuo8,450,87,120,eur,304,190,190,usd,37.77,US,j_wRTjR1iLcgER9S,district,standard,default,3.05,,,,default,
+tax_PZekeLSFaKDbTg,tti_ovD2bAa379lQbg,0,87,304,jpy,120,59,59,jpy,430.61,DE,j_JuHwZkAJ3KKsKt,district,standard,,9.47,primary,primary,primary,,primary

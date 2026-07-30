@@ -1,0 +1,5 @@
+accepted_amount,accepted_amount_in_usd,accepted_count,attributable_optimization,blocked_by_default_high_risk_rule_count,blocked_by_radar_rule_count,blocked_by_stripe_count,card_brand,card_country,card_input_method,card_type,cof,created_day,currency,is_connected_account,nsf_count,outcome_reason,outcome_rule_id,outcome_type,transaction_amount,transaction_amount_in_usd,transaction_count,used_network_tokens
+24900,10000,4,standard,4,3,5,MasterCard,AU,,,True,2026-02-25 16:53:03,jpy,False,3,,or_9I1OjwkCEPc7XK,,10000,10000,3,False
+1500,500,7,primary,5,2,6,MasterCard,CA,default,primary,False,2026-03-27 16:13:03,usd,True,10,,or_tP9H8GyIQqQPCZ,,2500,24900,8,True
+10000,1500,6,standard,4,1,7,Visa,US,primary,primary,False,2026-01-30 19:36:03,usd,False,8,,or_tF0B5UKQI9KtgE,,10000,10000,1,False
+1999,999,10,standard,2,1,2,Visa,AU,default,default,True,2026-01-12 00:19:03,jpy,False,7,standard,or_TeQOj6OX25FJru,default,7500,1999,6,False

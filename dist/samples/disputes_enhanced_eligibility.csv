@@ -1,5 +1,5 @@
-dispute_id
-dp_zU54cYqF1ffBkL
-dp_SJfq5iJxJ0oxAZ
-dp_quwRveep83iTlm
-dp_zU54cYqF1ffBkL
+id,batch_timestamp,created,mastercard_compliance_status,visa_compelling_evidence_3_required_actions,visa_compelling_evidence_3_status,visa_compliance_status
+dee_H9VXP8mHfaiQU5,2026-05-14 00:13:03,99.64,standard,standard,primary,primary
+dee_rFiHY1mS3l21lR,2026-04-23 03:44:03,340.92,standard,default,standard,standard
+dee_OVFlOfgJ5OHbyU,2026-01-10 06:55:03,48.41,primary,,primary,primary
+dee_W2XEicU8C73Xck,2026-05-03 00:47:03,146.29,,standard,default,

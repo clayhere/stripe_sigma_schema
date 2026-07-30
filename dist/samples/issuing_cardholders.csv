@@ -1,5 +1,5 @@
-id,created,email,name,phone_number,status,type
-ich_Bx3BBqC0ir702U,2026-03-15 19:07:03,linus.johnson@example.com,Blue Harbor Coffee,primary,active,individual
-ich_My3HZMeMZz7He3,2026-04-16 02:13:03,ada.torvalds@example.com,Northwind Supply,primary,active,company
-ich_rwmRl3gMluZqot,2026-04-13 19:41:03,radia.turing@example.com,Ironwood Gear,primary,active,company
-ich_cEglqqOhm5Mbe2,2026-06-03 21:45:03,grace.hopper@example.com,Blue Harbor Coffee,primary,active,company
+id,batch_timestamp,billing_address_city,billing_address_country,billing_address_line1,billing_address_line2,billing_address_postal_code,billing_address_state,company_tax_id_provided,created,email,individual_dob_day,individual_dob_month,individual_dob_year,individual_first_name,individual_last_name,individual_verification_document_back_id,individual_verification_document_front_id,name,phone_number,requirements_disabled_reason,requirements_past_due,status,type
+ich_0RgAAZfq1KvL3u,2026-04-19 07:09:03,,GB,primary,standard,default,primary,False,2026-01-26 04:22:03,grace.liskov@example.com,11,3781,103,standard,,ivdb_EA8ahVZhDtXxS5,ivdf_fypMuCXvhafKvg,Acme Robotics,,,individual.verification.document,inactive,company
+ich_ygpFHesYfr7r1c,2026-05-15 08:04:03,default,AU,standard,primary,,default,True,2026-02-11 12:18:03,katherine.lovelace@example.com,2634,2085,4629,,primary,ivdb_AEn8tRX1hGzukr,ivdf_buYem0VSClQBvk,Northwind Supply,primary,,,active,individual
+ich_F9REy8616dzWHu,2026-02-24 21:23:03,standard,US,default,primary,default,,True,2026-05-23 09:12:03,ada.johnson@example.com,4623,3214,1115,primary,standard,ivdb_CnfzsB5esTYre7,ivdf_989GrkdilUEQBc,Copper Kettle,standard,,,active,company
+ich_g6ebcFgVBS1yvC,2026-05-10 01:22:03,,US,default,standard,default,,True,2026-02-20 01:26:03,alan.turing@example.com,1964,3815,3980,default,standard,ivdb_SmI4iO1nXmm5RI,ivdf_XccChsp6CFaVRh,Copper Kettle,,individual.verification.document,,active,individual

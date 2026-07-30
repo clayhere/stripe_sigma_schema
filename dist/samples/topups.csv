@@ -1,0 +1,5 @@
+id,amount,balance_transaction,batch_timestamp,created,currency,description,failure_code,failure_message,initiated_by,statement_descriptor,status,transfer_group
+t_Pxpg45ZTN1iTbw,1500,,2026-05-02 17:20:03,2026-01-19 14:22:03,eur,Monthly subscription,default,,default,NORTHWIND,,
+t_COwS6dLkqUmPS8,1999,standard,2026-04-27 18:35:03,2026-05-23 12:15:03,eur,Seat overage,default,primary,primary,NORTHWIND,primary,default
+t_Mbh3PZHZELNo52,1500,default,2026-06-12 19:24:03,2026-04-13 18:59:03,eur,Seat overage,primary,default,standard,ACME ROBOTICS,default,standard
+t_8B6nYJLFcEkn1c,500,default,2026-05-06 10:48:03,2026-06-06 22:30:03,jpy,Card payment processing,standard,default,primary,ACME ROBOTICS,default,default

@@ -1,5 +1,5 @@
-carrier,terminal_hardware_order_id,tracking_number
-,tho_5VgP5HX212d8mj,standard
-default,tho_mcTykl7SAADgWu,default
-standard,tho_ILrnNBh49WjMh3,default
-primary,tho_iPmhqCptsSuQXJ,
+carrier,terminal_hardware_order_id,tracking_number,batch_timestamp
+primary,tho_Rbj8PKhOTtnQIr,standard,2026-06-05 16:13:03
+standard,tho_R96K2oQ4AWDNca,default,2026-04-02 18:39:03
+default,tho_2345UCHa2UESPG,primary,2026-03-18 22:42:03
+standard,tho_mRSgKcjSrTlEj0,primary,2026-01-23 06:20:03

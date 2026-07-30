@@ -192,8 +192,6 @@ def main() -> int:
     parser.add_argument("--schema", type=Path, default=Path("dist/sigma_schema.json"))
     parser.add_argument("--emit-enum-sql", action="store_true",
                         help="also write verification/03_enums.sql")
-    parser.add_argument("--account-label", default="",
-                        help="optional note recording whose account this came from")
     args = parser.parse_args()
 
     verified = load_export(args.csv)
@@ -202,17 +200,7 @@ def main() -> int:
 
     report = diff_against_current(verified, args.schema)
 
-    payload = {
-        "$comment": (
-            "Ground truth captured from a live Stripe Sigma account via "
-            "information_schema. build_schema.py treats these column lists as "
-            "authoritative and marks them `verified`. Regenerate with "
-            "tools/ingest_verification.py."
-        ),
-        "source_file": args.csv.name,
-        "account_label": args.account_label or None,
-        "tables": verified,
-    }
+    payload = {"tables": verified}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 

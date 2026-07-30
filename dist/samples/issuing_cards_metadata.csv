@@ -1,5 +1,5 @@
-issuing_card_id,key,value
-ic_lq8F5t2cW2I1Pl,internal_ref,acme-2026
-ic_lq8F5t2cW2I1Pl,order_id,enterprise
-ic_VnSiAfD38zkIhD,cohort,enterprise
-ic_VnSiAfD38zkIhD,order_id,acme-2026
+issuing_card_id,key,batch_timestamp,value
+ic_IpZO9fSthKAmDk,channel,2026-04-08 08:16:03,partner
+ic_Y1OfloJmU6Kcr7,channel,2026-06-05 20:08:03,acme-2026
+ic_qGjI4G3k4vUV66,internal_ref,2026-02-07 04:47:03,ORD-4471
+ic_W1cztkeAl7hhuV,internal_ref,2026-01-28 03:54:03,ORD-4471

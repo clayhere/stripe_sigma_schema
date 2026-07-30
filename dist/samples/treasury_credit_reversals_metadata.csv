@@ -1,0 +1,5 @@
+credit_reversal_id,key,batch_timestamp,value
+cr_WCPcDUbXgqrRTT,internal_ref,2026-01-09 12:25:03,partner
+cr_XQe0LGbwJgUlb8,channel,2026-04-08 01:47:03,ORD-4471
+cr_bR8KdKXTEvunX1,internal_ref,2026-01-28 16:56:03,enterprise
+cr_FDDogXJg8m58ld,internal_ref,2026-05-20 11:56:03,enterprise

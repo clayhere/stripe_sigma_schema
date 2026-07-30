@@ -1,5 +1,5 @@
-id,default_aggregation_formula,display_name,event_name,livemode,status
-bm_3n2xiLL7pFzHfk,primary,Acme Robotics,default,False,ACTIVE
-bm_6EF3ffIS7gmkNS,,Ironwood Gear,default,False,INACTIVE
-bm_JvGBFNCOxeskUk,standard,Ironwood Gear,,False,ACTIVE
-bm_UQuw37US96ghHt,default,Acme Robotics,standard,True,ACTIVE
+id,created,customer_mapping_event_payload_key,customer_mapping_type,deactivated,default_aggregation_formula,display_name,event_name,event_time_window,livemode,status,updated,value_settings_event_payload_key
+bm_G4FsBb2855mxCT,2026-01-09 00:15:03,standard,primary,2026-03-29 07:39:03,,Copper Kettle,,primary,True,ACTIVE,2026-04-15 17:02:03,primary
+bm_0K9haZAqfERpn5,2026-02-07 01:42:03,default,standard,2026-06-01 04:00:03,standard,Lumen Analytics,,,True,ACTIVE,2026-02-01 05:13:03,standard
+bm_3FHg6Xf7nCIpzJ,2026-02-03 18:30:03,default,primary,2026-05-27 01:55:03,,Blue Harbor Coffee,primary,default,False,INACTIVE,2026-05-04 19:59:03,
+bm_Tco1c6N29VJyp0,2026-05-02 22:33:03,primary,default,2026-04-03 11:52:03,primary,Copper Kettle,,primary,True,ACTIVE,2026-05-31 11:03:03,default

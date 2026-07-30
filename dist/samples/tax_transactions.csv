@@ -1,5 +1,5 @@
-id,currency,customer_id,livemode,posted_at,source_id,source_type,tax_date,type
-tax_SnphOWOvpiukbW,usd,cus_CTcL0ZGej3Xukv,False,2026-04-01 02:09:03,src_ajGSlMjcoZSTEp,standard,2026-03-23 23:58:03,transaction
-tax_SRux7SJ47Mm5r6,jpy,cus_hep1polBQYSa1k,False,2026-06-16 05:07:03,src_xZAr2p5zuT8Iz2,primary,2026-05-05 00:53:03,reversal
-tax_Wizm7PyXtjCdjd,gbp,cus_67L3POWVeSiLJh,True,2026-03-16 05:56:03,src_JXa6jSN4zNAgxS,primary,2026-06-17 12:53:03,transaction
-tax_abs8S3it2JKaw3,usd,cus_X1mvwU4wwxjrcM,True,2026-03-25 08:45:03,src_Z5HFgdF9J8EK7b,standard,2026-05-05 02:51:03,transaction
+id,created,customer_details_address_city,customer_details_address_country,customer_details_address_line1,customer_details_address_line2,customer_details_address_postal_code,customer_details_address_source,customer_details_address_state,customer_details_ip_address,customer_details_taxability_override,customer_id,posted_at,provider,reference,reversal_original_tax_transaction_id,source_id,source_type,tax_date,type
+tax_SgTgoNrYjyRe7K,2026-03-28 23:51:03,primary,AU,standard,standard,,shipping,primary,standard,customer_exempt,cus_iM4B95gzSDuxgW,2026-04-25 17:41:03,default,default,rott_BbXagST3nLPthI,src_NlzP3lx7aG2yD6,external,2026-01-26 09:58:03,transaction
+tax_PZekeLSFaKDbTg,2026-04-15 01:31:03,primary,DE,,primary,standard,billing,standard,standard,customer_exempt,cus_IHfLyxY5LTvVAO,2026-04-25 12:13:03,primary,default,rott_QypVkvq9vZA8jG,src_YgmSQW5hRuy4On,credit_note,2026-04-10 19:55:03,reversal
+tax_j1DUBIci25Ovad,2026-02-16 21:42:03,standard,GB,default,standard,,shipping,,,reverse_charge,cus_5NgEDoFXpMzt4w,2026-02-18 17:31:03,,default,rott_B5663RQqDPVlg9,src_KhR86D1zvgp7Uv,credit_note,2026-06-13 17:05:03,transaction
+tax_PADsOSbi9m5W5x,2026-04-28 14:54:03,default,US,standard,primary,,billing,default,,customer_exempt,cus_5NgEDoFXpMzt4w,2026-05-03 15:19:03,,,rott_Kv9xfrQ45A3Odx,src_KhR86D1zvgp7Uv,invoice,2026-02-21 15:59:03,transaction

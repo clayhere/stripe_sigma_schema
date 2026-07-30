@@ -1,5 +1,5 @@
-amount,terminal_hardware_order_id
-7500,tho_KrnglaNftY08Ba
-1500,tho_BA5z3G6S8M1G8h
-2500,tho_Sy3MdDkXU11JRM
-24900,tho_GoiH7xqW76iMgZ
+rate_display_name,rate_jurisdiction,terminal_hardware_order_id,amount,batch_timestamp,inclusive,rate_percentage
+primary,standard,tho_j4Mx2CoTs1wOI2,500,2026-03-22 16:33:03,False,253.58
+default,primary,tho_xWQgWXGonq2DMd,4200,2026-04-28 21:13:03,True,384.4
+default,,tho_uz2xymZOUIjpCi,999,2026-02-13 12:38:03,False,15.38
+standard,primary,tho_MQZLkLqjjPEmQd,500,2026-05-09 07:23:03,True,187.98

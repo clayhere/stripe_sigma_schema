@@ -1,0 +1,5 @@
+id,amount_type,applicability_config_scope_price_type,category,created,custom_pricing_unit_id,custom_pricing_unit_value,customer_id,effective_at,expires_at,monetary_amount_currency,monetary_amount_value,name,service_action_id,updated,voided_at
+bcg_8A8DAM8d8pNjWH,10000,,,2026-06-02 10:49:03,cpu_8e3F3y1gYeOvR7,default,cus_9tHkQwRZP0OA5G,2026-04-04 14:57:03,2026-04-04 07:15:03,gbp,24900,Northwind Supply,sa_Z1pmwzxSuriYaQ,2026-02-05 09:14:03,2026-03-21 03:26:03
+bcg_JjFu2j6fOVUtRf,7500,standard,primary,2026-03-10 16:34:03,cpu_X7hY4OOGOlEOrl,standard,cus_h1y9RReee6mTyc,2026-06-17 12:43:03,2026-01-20 07:34:03,eur,2500,Acme Robotics,sa_cgHc1mrKmsem65,2026-01-08 16:52:03,2026-01-07 11:01:03
+bcg_1SfzX6QAnwZCCg,24900,standard,default,2026-05-09 00:36:03,cpu_pRoTGsThmbiyyb,primary,cus_Q459FWKFon4Afk,2026-04-10 19:16:03,2026-06-14 08:54:03,gbp,10000,Lumen Analytics,sa_KDGdT3GPyloNv7,2026-03-04 02:48:03,2026-01-13 04:29:03
+bcg_FF2Pj7i4WHQHIT,4200,,primary,2026-04-11 09:34:03,cpu_DOFoDIFem7dYNE,standard,cus_zk23RnDenJBSxo,2026-03-09 15:09:03,2026-03-16 18:44:03,gbp,4200,Acme Robotics,sa_5naZQbeSwIjEsJ,2026-06-11 12:52:03,2026-05-19 20:32:03

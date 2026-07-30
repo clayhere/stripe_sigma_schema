@@ -1,5 +1,5 @@
-issuing_cardholder_id,key,value
-ich_cEglqqOhm5Mbe2,order_id,acme-2026
-ich_Bx3BBqC0ir702U,order_id,ORD-4471
-ich_rwmRl3gMluZqot,internal_ref,partner
-ich_rwmRl3gMluZqot,order_id,ORD-4471
+issuing_cardholder_id,key,batch_timestamp,value
+ich_g6ebcFgVBS1yvC,internal_ref,2026-02-08 19:29:03,acme-2026
+ich_0RgAAZfq1KvL3u,cohort,2026-02-14 10:14:03,partner
+ich_F9REy8616dzWHu,cohort,2026-05-01 23:24:03,enterprise
+ich_F9REy8616dzWHu,channel,2026-02-11 17:50:03,ORD-4471

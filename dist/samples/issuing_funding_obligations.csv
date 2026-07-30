@@ -1,0 +1,5 @@
+id,amount_outstanding,amount_paid,amount_paid_from_reserve,amount_total,balance_type,batch_timestamp,created,credit_period_ends_at,credit_period_starts_at,currency,due_at,finalized_at,grace_period_ends_at,livemode,merchant,owed_to,paid_at,status,transaction_period_ends_at,transaction_period_starts_at
+ifo_2908tH0i7DISXN,1999,10000,24900,1999,,2026-01-07 20:51:03,223.57,2174,2468,jpy,3679,2789,3016,True,standard,primary,4049,primary,4585,1393
+ifo_Sk3ta7yEkXUeb2,10000,24900,4200,24900,,2026-04-27 23:57:03,118.83,2329,4353,usd,2736,2609,3822,True,standard,standard,200,default,3894,4598
+ifo_VXniiPzEpjJsTP,10000,24900,1999,24900,default,2026-02-28 17:40:03,99.65,2538,1594,jpy,4595,3156,21,False,,,4242,standard,3031,243
+ifo_oMIP8JeGLQckGt,1500,500,10000,500,,2026-03-11 09:16:03,367.26,1684,4836,eur,3913,1964,235,False,default,primary,2732,,257,1554

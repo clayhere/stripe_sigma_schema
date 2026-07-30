@@ -1,5 +1,5 @@
-currency,price_id,unit_amount
-gbp,price_WIqr4c5F5MepGR,24900
-jpy,price_WIqr4c5F5MepGR,7500
-eur,price_ptOqVF9hDheIo1,2500
-eur,price_Cl5dz5RI1299qA,7500
+currency,price_id,batch_timestamp,unit_amount,unit_amount_decimal
+usd,price_RpQKUfMRbbL8Gf,2026-01-28 15:13:03,500,500
+jpy,price_DS6rapCD5kPt8Y,2026-01-28 07:29:03,4200,1999
+eur,price_DS6rapCD5kPt8Y,2026-03-18 14:32:03,999,1500
+jpy,price_ZYzOpBEtJrcFd4,2026-04-29 13:42:03,1999,7500

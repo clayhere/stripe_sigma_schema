@@ -1,21 +1,21 @@
-amount,balance_transaction_id,currency,description,type
-29,txn_waMPgIuBXKEJvL,eur,Onboarding,stripe_fee
-120,txn_LMTDNP0xuLGd0S,gbp,Monthly subscription,stripe_fee
-304,txn_4mxvua2IIs2EnG,gbp,Card payment processing,stripe_fee
-190,txn_3SEB6BnPOs69jA,usd,Onboarding,stripe_fee
-29,txn_940OSrhdn2Nn3J,usd,Monthly subscription,tax
-152,txn_RKbdoGqY4CQYBs,usd,Monthly subscription,application_fee
-0,txn_Uei8e4ja88nLYC,gbp,Onboarding,application_fee
-152,txn_RKbdoGqY4CQYBs,usd,Monthly subscription,application_fee
-152,txn_vZ0QkxRd4BdX1E,usd,Card payment processing,application_fee
-0,txn_Uei8e4ja88nLYC,gbp,Monthly subscription,stripe_fee
-0,txn_8iY6MJNQPvCGpt,usd,Monthly subscription,application_fee
-30,txn_940OSrhdn2Nn3J,usd,Onboarding,application_fee
-120,txn_ItwXyyH6PwOali,usd,Card payment processing,application_fee
-30,txn_waMPgIuBXKEJvL,eur,Monthly subscription,application_fee
-29,txn_BPil3MDq0bEpLR,usd,Monthly subscription,stripe_fee
-95,txn_n45EoJcOOWNBtx,usd,Monthly subscription,application_fee
-59,txn_t0AdQwTW1aCbCB,usd,Onboarding,tax
-30,txn_BPil3MDq0bEpLR,usd,Card payment processing,stripe_fee
-152,txn_vZ0QkxRd4BdX1E,usd,Card payment processing,application_fee
-95,txn_n45EoJcOOWNBtx,usd,Onboarding,stripe_fee
+balance_transaction_id,id,amount,application,batch_timestamp,currency,description,type
+,btfd_Y1wSyQz4UDzLLk,10000,default,2026-06-02 15:43:03,usd,Monthly subscription,payment_method_passthrough_fee
+,btfd_YTl7gLvhwlGpOk,2500,,2026-05-03 23:38:03,usd,Monthly subscription,tax
+,btfd_Y0oziUA8wAFLe3,1500,default,2026-05-27 14:03:03,jpy,Card payment processing,stripe_fee
+,btfd_aZez8bK5XzxT94,999,primary,2026-01-14 13:04:03,jpy,Card payment processing,withheld_tax
+,btfd_MEibgCS1xmmNga,4200,standard,2026-01-11 01:49:03,usd,Card payment processing,tax
+,btfd_qTSVwX86tPjrO7,2500,default,2026-05-28 12:15:03,jpy,Seat overage,application_fee
+,btfd_cEZtXNBGBj5s1E,999,,2026-01-15 09:18:03,jpy,Seat overage,tax
+,btfd_0AonGvlSVdwZbf,1500,primary,2026-03-16 22:37:03,jpy,Card payment processing,application_fee
+,btfd_apkwv088fa9r2i,24900,standard,2026-02-09 00:03:03,jpy,Monthly subscription,stripe_fee
+,btfd_I2g2vm1wFpNUkO,1500,primary,2026-02-24 02:48:03,gbp,Seat overage,payment_method_passthrough_fee
+,btfd_vhFww2RgGJHA2n,10000,primary,2026-03-21 06:12:03,usd,Seat overage,application_fee
+,btfd_CVdg49wrmYixno,500,standard,2026-05-11 05:52:03,gbp,Monthly subscription,application_fee
+,btfd_kxDoIso4Psf67M,24900,,2026-05-12 00:11:03,eur,Onboarding,withheld_tax
+,btfd_zD2U04ZXR15KAr,4200,standard,2026-06-14 07:11:03,gbp,Monthly subscription,tax
+,btfd_PggrTsjKXLysRz,1999,primary,2026-04-10 23:03:03,gbp,Seat overage,withheld_tax
+,btfd_6ReL6tHU6AhZag,4200,standard,2026-02-11 14:48:03,jpy,Onboarding,stripe_fee
+,btfd_Q6SLIcD8dbssPY,999,,2026-03-25 10:54:03,usd,Onboarding,application_fee
+,btfd_W4gSwd23VGbTm3,10000,,2026-01-07 09:22:03,gbp,Monthly subscription,stripe_fee
+,btfd_hN2fFfsXLAvJw6,999,standard,2026-05-18 14:08:03,usd,Monthly subscription,application_fee
+,btfd_gfzKg2oykimQ6p,10000,standard,2026-01-14 20:36:03,gbp,Onboarding,stripe_fee

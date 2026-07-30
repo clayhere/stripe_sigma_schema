@@ -1,0 +1,5 @@
+account,created,credited_amount,credited_currency,debited_amount,debited_currency,description,from_payment_method_id,from_payment_method_type,id,status,to_financial_account_id
+aRNTHm8EdC,2026-02-14 07:13:03,7500,usd,4200,usd,Monthly subscription,fpm_ypvEkIZDA7gjsa,default,primary,default,tfa_SmsXnM5Fniv8eS
+rD1Va6nLNm,2026-06-21 11:49:03,500,gbp,24900,gbp,Onboarding,fpm_BmSl40nSE4d73x,primary,default,primary,tfa_ENWcWdFFuuWOKs
+8GEYIrJz34,2026-01-20 20:40:03,7500,jpy,2500,usd,Onboarding,fpm_fhndgZVgL1oQoN,,primary,default,tfa_cfoOzqLjLadalh
+oX8Mzmvo41,2026-01-19 00:24:03,24900,usd,7500,usd,Seat overage,fpm_Fpa3GekbMtDif5,,primary,standard,tfa_9xWrfVm4NuksXu

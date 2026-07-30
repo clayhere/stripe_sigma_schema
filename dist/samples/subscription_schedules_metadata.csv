@@ -1,5 +1,5 @@
-key,subscription_schedule_id,value
-internal_ref,sub_sched_0f8JAe6xnSVMiJ,partner
-channel,sub_sched_0f8JAe6xnSVMiJ,partner
-internal_ref,sub_sched_QmmlBcnfx6EDyl,partner
-channel,sub_sched_0f8JAe6xnSVMiJ,enterprise
+key,schedule_id,batch_timestamp,value
+cohort,s_Mw0Vf4c5ZxYcOT,2026-04-22 03:03:03,ORD-4471
+cohort,s_Y8xbVtOvz9cn29,2026-04-11 08:58:03,acme-2026
+cohort,s_4Cd1MIrbOvnnOp,2026-03-07 14:47:03,enterprise
+cohort,s_5NuJ3myKEJ7Dl5,2026-04-09 03:59:03,enterprise

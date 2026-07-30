@@ -1,0 +1,5 @@
+id,amount,batch_timestamp,created,currency,financial_account_id,linked_flows_issuing_dispute_id,network,received_debit_id,status,status_transitions_completed_at,transaction_id
+tdr_6GcoqN0wcqGm3X,500,2026-01-12 08:43:03,2026-04-13 05:57:03,usd,fa_06LpD4aoH1CqSN,lfid_lTJF9XMLyA47n5,,rd_SC9oTNbHpw5eMG,default,2026-05-16 19:40:03,t_KXe10BVOxJ162f
+tdr_iX8GCmpR3kbPbA,1500,2026-03-14 01:34:03,2026-02-11 17:30:03,eur,fa_eNhdBGVRK3x8Zl,lfid_uJimMNFj1dOffg,default,rd_JBc3wzifYpvNb6,,2026-02-09 01:37:03,t_jcGKCOOixaIW7n
+tdr_bmW3BGMcyIc8d2,2500,2026-05-17 07:03:03,2026-05-04 05:56:03,usd,fa_uy88srq3oTvZBa,lfid_outEqgagRPmm0U,standard,rd_EtYmMkZSoy67ws,standard,2026-06-19 02:17:03,t_2QT8V6GoJqHZbL
+tdr_fbQ00fgZ6zHMq6,500,2026-02-27 08:26:03,2026-05-24 01:22:03,jpy,fa_ksRgzJrlmGUkzE,lfid_mvG6dclzYkG62o,primary,rd_IH5fbsVY1dWoUc,default,2026-06-24 15:51:03,t_4oedhWA5wi2sKD

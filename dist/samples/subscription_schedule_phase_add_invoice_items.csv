@@ -1,5 +1,5 @@
-price_id,subscription_schedule_id
-price_oY1Fvkh5xeNjpu,sub_sched_xtyT8IpMDj4sJK
-price_iruCDLgQE7HvnV,sub_sched_MRc4l7UL2O1OTQ
-price_IAoEfrdIYaEbhW,sub_sched_rSI7bQWjtwmdgd
-price_iUChuZfvWNowhS,sub_sched_AuoahCocctHVZE
+phase_id,price,schedule_id,batch_timestamp,currency,period_end_timestamp,period_end_type,period_start_timestamp,period_start_type,quantity
+p_0dyWVkfmBWiLjn,,s_GmnHrbf3x8yBub,2026-03-17 02:38:03,eur,549,primary,4866,primary,1
+p_VfekPaik87zOJ0,primary,s_VrZhHHoXxVP4rB,2026-06-18 14:25:03,usd,2192,primary,2103,primary,12
+p_N0TXENJcCG81aN,default,s_OPOfomoKgv3FHT,2026-04-28 15:05:03,usd,1054,primary,4641,default,3
+p_Ba1kuNkrJXSsxy,primary,s_8hX1DMAKHdn3GA,2026-03-23 20:27:03,eur,1715,standard,1523,,3

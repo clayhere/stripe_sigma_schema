@@ -1,5 +1,5 @@
 event_id,key,value
-bmie_XvoIQdyMNW1kmp,cohort,partner
-bmie_C7nA7ipRXYjbu2,cohort,enterprise
-bmie_lv3wv2Ezp55sdq,order_id,ORD-4471
-bmie_C7nA7ipRXYjbu2,channel,enterprise
+bmie_VQ3ZBq7YBhviTc,channel,partner
+bmie_VQ3ZBq7YBhviTc,internal_ref,acme-2026
+bmie_nft1csOAUCMk8x,channel,partner
+bmie_OlXJ4KT2rxZnm4,internal_ref,ORD-4471

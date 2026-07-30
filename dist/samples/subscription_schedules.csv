@@ -1,5 +1,5 @@
-id,created,customer_id,status,subscription_id
-sub_sched_a5f8pCNirDEI8T,2026-03-13 11:28:03,cus_iw7nLu0JzHUq6S,completed,sub_pVgWLW1n8eW9hD
-sub_sched_piX4qWdjo1L3kB,2026-05-17 02:21:03,cus_NiJ4caxs3iON1i,completed,sub_jLzH1mJkVN1oA1
-sub_sched_0f8JAe6xnSVMiJ,2026-05-21 21:07:03,cus_QjBwPxPg5m9t5Z,active,sub_0znH09FUFlWdLc
-sub_sched_QmmlBcnfx6EDyl,2026-02-09 03:09:03,cus_GJvFVh67HHzaRE,active,sub_0znH09FUFlWdLc
+id,application_id,batch_timestamp,billing_mode_type,canceled_at,completed_at,created,customer,default_settings_application_fee_percent,default_settings_automatic_tax_enabled,default_settings_billing_cycle_anchor,default_settings_collection_method,default_settings_default_payment_method,default_settings_default_source,default_settings_description,default_settings_invoice_settings_days_until_due,default_settings_on_behalf_of,default_settings_transfer_data_amount_percent,default_settings_transfer_data_destination,end_behavior,proration_discounts,released_at,released_subscription,renewal_interval,renewal_interval_length,subscription
+sub_sched_Hym8uY6EUnEfMm,a_wawmhXqHczpoyk,2026-01-22 03:22:03,standard,2026-01-08 13:36:03,2026-02-19 17:54:03,2026-01-19 14:57:03,primary,439.29,False,standard,primary,default,default,standard,148.2,primary,7500,,primary,primary,2026-04-06 07:26:03,standard,standard,2285,default
+sub_sched_KR9UPjRICijLcq,a_tdScAunXMfmhr7,2026-05-25 07:33:03,,2026-05-27 11:22:03,2026-03-07 06:51:03,2026-03-04 19:13:03,default,50.4,False,default,standard,default,primary,default,222.95,primary,1500,standard,primary,primary,2026-02-20 14:34:03,,standard,965,
+sub_sched_yG3SCPLDf9aVIC,a_ySFBugmsOMGisa,2026-05-10 10:27:03,,2026-02-27 18:31:03,2026-05-30 15:09:03,2026-01-22 15:44:03,default,474.12,True,primary,standard,,default,default,30.12,,1999,standard,default,primary,2026-03-29 22:24:03,default,,2771,standard
+sub_sched_F2zhAQKbY4fjP9,a_alXx9PUmq5mJ6z,2026-01-21 19:02:03,standard,2026-06-18 19:26:03,2026-06-18 22:49:03,2026-02-06 12:58:03,standard,215.34,True,standard,default,default,primary,default,140.06,,999,standard,default,standard,2026-02-01 21:52:03,,default,1906,

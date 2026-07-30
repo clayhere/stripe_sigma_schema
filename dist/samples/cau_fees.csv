@@ -1,0 +1,5 @@
+balance_transaction_id,billing_amount,card_id,balance_transaction_created_at,billing_currency,customer_id,event_type,fixed_per_item_amount,fixed_per_item_count,fx_rate,incurred_at,previous_card_id,subtotal_amount,tax_amount,tax_rate,total_amount
+txn_U8pmGlNS9ifLnp,2500,c_uXz4MUBMxTsn9N,2026-04-03 17:26:03,usd,cus_tSvGgWJmSAmckl,standard,24900,4,114.42,2026-02-25 01:01:03,pc_BNbwKklO2gsfp4,1500,120,413.24,4200
+txn_LO8zTqzY9ra1du,1999,c_u2BWWSFOinI9El,2026-06-10 14:50:03,jpy,cus_B2Pw3IUiT2EGSu,,24900,5,197.32,2026-03-13 19:47:03,pc_hZWLY3jnjxmFKY,1999,87,222.58,500
+txn_VBZ2iTg5yTDjB4,500,c_xx6rJmBjpXQVYl,2026-02-27 13:11:03,jpy,cus_tSvGgWJmSAmckl,,999,5,416.66,2026-03-12 07:19:03,pc_UWoNTt0gFOw9VB,1500,190,321.0,1999
+txn_onEHd9T1r6ATMl,1500,c_3Q8g5EtssRBu9j,2026-04-24 08:49:03,usd,cus_iM4B95gzSDuxgW,,10000,12,51.72,2026-02-22 13:35:03,pc_jfCz6iPUhTbafM,10000,190,88.95,2500

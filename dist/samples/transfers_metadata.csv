@@ -1,5 +1,5 @@
-key,transfer_id,value
-order_id,po_EpV714atQqs0ft,ORD-4471
-order_id,po_lD8lDrXwvS5fhl,acme-2026
-internal_ref,po_PRtFfvUqJTNztB,enterprise
-channel,po_PRtFfvUqJTNztB,acme-2026
+key,transfer_id,batch_timestamp,value
+internal_ref,po_7kbbQthCbOtgA1,2026-06-12 12:14:03,ORD-4471
+internal_ref,po_4ECUh58RR1gMCx,2026-03-27 02:54:03,enterprise
+order_id,po_iz7JzUixbfqCbk,2026-06-21 01:46:03,enterprise
+internal_ref,po_7kbbQthCbOtgA1,2026-03-12 06:29:03,acme-2026

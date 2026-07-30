@@ -1,5 +1,5 @@
-id,amount,balance_transaction_id,created,currency,fee_id
-afr_HZ4MneCHMZIowv,4200,txn_OfEhXmiRYp1V1e,2026-06-02 09:00:03,jpy,
-afr_MNx1M23uHDd8jY,1999,txn_RQNqQ4KWYEeFxu,2026-05-16 17:52:03,usd,
-afr_w262dVN5Cxnd1L,10000,txn_UGyYTfjp1Lk7CB,2026-02-17 02:03:03,gbp,
-afr_4YMdwZ5GCTExis,10000,txn_XgLokistYExjHU,2026-01-19 18:38:03,gbp,
+id,amount,balance_transaction_id,batch_timestamp,created,currency,fee_id
+afr_Vexsz2Su77bSeV,4200,,2026-05-04 00:19:03,2026-03-08 13:43:03,jpy,
+afr_vg6cgQXumsVcSb,24900,,2026-01-27 09:38:03,2026-03-09 17:08:03,usd,
+afr_uCQKvQ8DmBbV7b,10000,,2026-05-03 11:26:03,2026-04-02 05:20:03,usd,
+afr_OdmBHi7wtzjB6D,1999,,2026-04-14 21:44:03,2026-01-06 19:51:03,jpy,

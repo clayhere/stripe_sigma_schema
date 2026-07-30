@@ -1,0 +1,5 @@
+tax_transaction_id,type,country,value
+tax_PZekeLSFaKDbTg,primary,DE,ORD-4471
+tax_j1DUBIci25Ovad,standard,AU,partner
+tax_PZekeLSFaKDbTg,,AU,partner
+tax_PADsOSbi9m5W5x,default,DE,ORD-4471

@@ -1,5 +1,5 @@
-id,card_id,created,status
-int_rQgT6xh0gkcK3b,ic_W83RNsRStze26O,2026-01-22 13:57:03,standard
-int_qJThCU37Rodu1F,ic_W83RNsRStze26O,2026-03-26 17:46:03,primary
-int_NqLrjCLc78q1P7,ic_lq8F5t2cW2I1Pl,2026-06-24 16:06:03,standard
-int_8A8DAM8d8pNjWH,ic_VnSiAfD38zkIhD,2026-04-19 02:43:03,standard
+id,batch_timestamp,card,created,device_fingerprint,last4,merchant,network,network_updated_at,status,wallet_provider
+int_TTrxgcwXspQeMZ,2026-03-10 17:56:03,primary,132.79,default,4291,primary,primary,142.27,,primary
+int_W7FxPp1b7hWydK,2026-02-11 07:21:03,primary,435.79,standard,1861,default,,213.59,primary,
+int_1uS5lyHyYlmNMu,2026-06-22 15:40:03,default,470.74,standard,6950,standard,default,379.42,primary,standard
+int_6TR4PoO9Pvc5XC,2026-05-16 04:56:03,standard,219.05,,3719,default,standard,1.76,,primary

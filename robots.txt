@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://claysones.github.io/stripe-sigma-schema/sitemap.xml

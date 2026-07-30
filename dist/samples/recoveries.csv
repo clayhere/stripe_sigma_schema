@@ -1,5 +1,5 @@
-customer_id,invoice_id
-cus_fi4tYkRFpY4chn,in_aqslDvpwx6u4pM
-cus_2rq5pDOoHezpF2,in_Fx9L7M0PUorxIA
-cus_lvcd8ri2ww85Hc,in_SfcK8yalCAxQIF
-cus_GsroWVLtbdfNYi,in_ndOZpgWs5dpOHA
+id,amount_due,amount_paid,attempt_count,initial_failed_amount,initial_payment_decline_reason,initial_payment_failed_at,next_payment_attempt,on_behalf_of_id,paid_at,recovered_amount,recovered_at,recovery_method,reporting_currency,retries_exhausted,retry_attempt_count,source_id,source_type
+r_PGD6mTYoaC39Yc,24900,999,9,2500,default,2026-05-04 20:57:03,2026-04-14 21:00:03,obo_lk4qf5M24FCAZ8,2026-03-27 15:35:03,500,2026-04-16 05:20:03,primary,usd,False,7,src_s4FuzzqS4Fbyre,default
+r_ejYdMMmI3CtlCX,2500,500,10,24900,,2026-03-31 02:31:03,2026-04-25 16:28:03,obo_VKMbpDH45QWqoA,2026-04-28 07:23:03,999,2026-06-09 06:50:03,default,gbp,True,11,src_h5vMeVXoMMFFew,standard
+r_5CMEwEUEYb13zL,1500,999,10,10000,,2026-03-17 12:49:03,2026-01-20 17:55:03,obo_GpEhMkiOfMzwgX,2026-02-06 05:00:03,2500,2026-06-12 10:14:03,,gbp,False,2,src_uZ2R6SdcZyhnba,default
+r_wXP2imHdu2SfqO,1999,7500,3,4200,standard,2026-02-17 09:45:03,2026-06-08 10:20:03,obo_WGHISYTuuBNhx5,2026-02-26 05:49:03,1999,2026-02-10 16:31:03,primary,gbp,False,10,src_HDRuY7PtN3wF2q,primary

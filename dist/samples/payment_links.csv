@@ -1,5 +1,5 @@
-id,active,created,url
-plink_J8e3F3y1gYeOvR,True,2026-03-25 01:24:03,https://buy.stripe.com/test_QwRZP0OA5G
-plink_TwlRwSbZ0NIgZ1,True,2026-02-22 20:39:03,https://buy.stripe.com/test_xSuriYaQhb
-plink_a9s9LmJjFu2j6f,False,2026-01-26 22:13:03,https://buy.stripe.com/test_STdtqpuX7h
-plink_Y4OOGOlEOrl5Mf,True,2026-04-15 06:57:03,https://buy.stripe.com/test_eee6mTycOh
+id,active,batch_timestamp,created
+plink_qBhdbRHf3JoQZz,False,2026-03-11 17:22:03,2026-04-07 02:26:03
+plink_bHeyOO2OPJmQQU,True,2026-01-09 11:40:03,2026-04-30 21:58:03
+plink_E6mFAur2QtDJB7,True,2026-03-31 14:26:03,2026-02-17 19:06:03
+plink_KxghcOe9BIoBvs,True,2026-03-22 15:40:03,2026-03-06 13:21:03

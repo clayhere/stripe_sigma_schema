@@ -1,5 +1,5 @@
-key,treasury_outbound_transfer_id,value
-internal_ref,tot_7GF1mYrka3Ngkp,ORD-4471
-order_id,tot_y9IkMR5m5516qD,partner
-cohort,tot_y9IkMR5m5516qD,enterprise
-internal_ref,tot_mWOkiy3HHpDK7C,enterprise
+key,outbound_transfer_id,batch_timestamp,value
+internal_ref,ot_I250r1oZVbxGl3,2026-06-15 17:50:03,ORD-4471
+internal_ref,ot_znIkqP9BZbdYGa,2026-04-23 19:57:03,acme-2026
+cohort,ot_jdIP9yJzsIXOKt,2026-06-14 18:16:03,partner
+order_id,ot_V3ThI2jAO2RjKE,2026-05-31 14:12:03,ORD-4471

@@ -1,5 +1,5 @@
-id,amount,created,financial_account_id,status
-tit_4LyzYrmgAmUaEz,2500,2026-04-21 11:35:03,fa_v1HSC0Ub2ZpWNP,default
-tit_8NyrLpRtY4HDit,999,2026-01-14 14:55:03,fa_03E2YHWa7W971Z,
-tit_odlSNJT6rGGS1L,1999,2026-02-09 17:25:03,fa_jaq2W0znHm4cid,standard
-tit_6UmmrQOl9RiIIZ,999,2026-03-16 13:00:03,fa_jUvLVEUZUkSbNO,default
+id,amount,batch_timestamp,cancelable,created,currency,description,failure_details_code,financial_account_id,linked_flows_received_debit_id,origin_payment_method_details_us_bank_account_network,origin_payment_method_id,returned,statement_descriptor,status,status_transitions_canceled_at,status_transitions_failed_at,status_transitions_succeeded_at,transaction_id
+tit_XmBCCKYdiJLfle,2500,2026-05-23 05:41:03,False,2026-01-12 07:44:03,jpy,Card payment processing,,fa_NmHXp422CL7g53,lfrd_1vu6biA0BnxkAp,standard,opm_OIkTMrKmem3Hx8,False,NORTHWIND,primary,2026-01-07 23:57:03,2026-01-05 20:59:03,2026-02-23 11:37:03,t_BwZMtUoh030gUh
+tit_nrThvl9DFYv1LP,2500,2026-05-02 21:51:03,True,2026-04-27 22:20:03,eur,Seat overage,standard,fa_CVziLxZj1eeKdR,lfrd_zNLkeSDYuec1mW,standard,opm_X0tZffo7EwCels,False,BLUEHARBOR,,2026-03-15 15:32:03,2026-03-28 00:22:03,2026-02-23 14:43:03,t_plj1InDpTL4wpF
+tit_8pu9IrHmowcwQu,999,2026-06-11 23:54:03,True,2026-05-11 22:00:03,usd,Card payment processing,default,fa_QYU3OFclnbYYhW,lfrd_p6E3vLp9auJkki,,opm_ogGX70o9yqld3M,False,BLUEHARBOR,default,2026-04-19 19:10:03,2026-04-12 01:09:03,2026-02-27 19:56:03,t_ETrVyUboPb7ED7
+tit_O1Q5n0svUBsCdp,500,2026-02-19 15:23:03,False,2026-01-29 20:23:03,gbp,Onboarding,standard,fa_AQ5xBr4uvwEPoo,lfrd_1VEtqWrYTnvNtN,standard,opm_5eljh07BpUKcy0,False,ACME ROBOTICS,default,2026-05-26 05:48:03,2026-05-31 10:45:03,2026-03-02 23:39:03,t_xnlxBGrHbIzqEj

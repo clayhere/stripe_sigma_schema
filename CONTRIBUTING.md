@@ -6,8 +6,9 @@ else is secondary.
 ## Why verification matters most
 
 Stripe publishes the complete Sigma column list only inside the Dashboard schema
-browser. There's no machine-readable export. So 508 of the columns here are
-marked `community`: curated, plausible, and unproven.
+browser. There's no machine-readable export. Most of this schema is `verified`,
+but a `community` column is still curated, plausible, and unproven — and even a
+`verified` column may not have a description yet.
 
 You have something this project cannot get on its own — a real Sigma account.
 Ten minutes of your time converts guesses into facts for everyone.

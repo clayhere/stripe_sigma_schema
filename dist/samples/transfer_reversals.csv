@@ -1,5 +1,5 @@
-id,amount,balance_transaction_id,created,currency,transfer_id
-trr_5ENbH4uoP1B2oD,1999,txn_4bzfrSHIfZ3Ajv,2026-01-13 20:48:03,usd,po_GvNlINIs5l2Umy
-trr_mHc9dCkIJ5EglV,4200,txn_2rsGWkw42WLkGw,2026-06-09 14:46:03,gbp,po_lD8lDrXwvS5fhl
-trr_zAq2IaoZQ2wJLd,1999,txn_sTmWQAwqaQ1Zyj,2026-04-15 04:53:03,usd,po_lD8lDrXwvS5fhl
-trr_Zl0gKFoXTVF23D,500,txn_ymbHiHFfyRFlUg,2026-05-29 11:52:03,usd,po_lD8lDrXwvS5fhl
+id,amount,balance_transaction_id,batch_timestamp,created,currency,destination_payment_refund_id,source_refund_id,transfer_id
+trr_zvdEiLNEcz68Jg,2500,txn_S2n3BU76RDtJtp,2026-01-23 04:19:03,2026-03-16 00:55:03,usd,dpr_phhz1u0ckOCLjl,sr_C6RcYyxrXDsjaK,
+trr_8QfQKTRqJQ3Mcq,10000,txn_ky5rRQnMqikQU0,2026-04-25 18:28:03,2026-05-30 23:32:03,gbp,dpr_egFBlXp2JqXm91,sr_qj1SxVrZe6ejOL,
+trr_penYoMdgRvyfXg,2500,txn_yKSjfBdQRKijsQ,2026-02-24 06:04:03,2026-02-16 14:58:03,usd,dpr_euqMCc4g7AA27X,sr_Dpofc2pEEAjPJn,
+trr_c5Y6Oh2VfmBb2Z,2500,txn_rJa7ALUKHIFjdi,2026-03-14 21:51:03,2026-01-15 09:05:03,gbp,dpr_kwyEHuaANASAGg,sr_nQva0YFRKdr2PS,

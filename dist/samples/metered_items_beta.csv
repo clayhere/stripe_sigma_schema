@@ -1,0 +1,5 @@
+id,created_at,display_name,invoice_presentation_dimensions,locality_zone,lookup_key,metadata,meter,object,tax_details_tax_code,unit_label
+mib_Pm8hmaN5cIVgGJ,4638,Ironwood Gear,primary,default,default,standard,standard,standard,,
+mib_mEj1CLOS6YFxAq,3752,Ironwood Gear,standard,,default,standard,primary,,default,
+mib_Xovg1IzJscO2wu,4765,Copper Kettle,standard,standard,,primary,default,,,primary
+mib_pTzdEzSYJdZTlO,3250,Northwind Supply,default,primary,,,default,default,,default

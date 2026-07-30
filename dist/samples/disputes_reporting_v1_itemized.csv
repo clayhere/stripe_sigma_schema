@@ -1,0 +1,5 @@
+id,amount,amount_in_usd,card_brand,card_country,card_input_method,card_type,charge_id,currency,dispute_amount,dispute_amount_in_usd,dispute_created_day,dispute_id,dispute_type,gateway_country,has_early_fraud_warning,is_connected_account,payment_created_day,representment_product,responded,status,user_facing_reason
+drvi_Uhh4Soxd3pfU6U,24900,7500,MasterCard,AU,default,,ch_YwydAEDiQlIjqX,usd,1500,500,2026-05-21 02:42:03,dp_swRVGgyEOHCdoR,primary,DE,True,True,2026-01-23 00:42:03,primary,False,standard,primary
+drvi_oHmsC5MVisVdHY,1500,1999,Visa,US,default,primary,ch_tAoc2wONmQqHmx,usd,24900,7500,2026-05-11 13:05:03,dp_6r4QvqpMoQUKyo,default,CA,False,False,2026-03-09 13:36:03,,True,standard,standard
+drvi_vzEY5ucxtMseGC,7500,2500,Discover,DE,default,,ch_vhKOyh8IUi8esc,eur,7500,4200,2026-03-18 14:52:03,dp_YhDokzdvQiqKJr,,US,True,True,2026-06-01 11:32:03,primary,False,,standard
+drvi_Ji2ZOU5LRW0znH,10000,10000,Visa,AU,standard,standard,ch_uKT1H7HYDhKJE4,jpy,4200,999,2026-06-06 11:17:03,dp_6iPUB8xyRK0O4t,,AU,True,False,2026-06-22 04:52:03,standard,True,,default

@@ -1,5 +1,5 @@
-id,active,amount,created,currency,interval,product_id
-plan_MhhD78qMZ6J77k,False,2500,2026-04-25 21:49:03,jpy,month,prod_8MHshmzkAje5fj
-plan_W99pslO8wIop0B,True,7500,2026-04-17 09:15:03,usd,week,prod_jWlhDdqVHa8khE
-plan_cjRoK2njUUe2cr,True,1500,2026-01-27 15:04:03,usd,day,prod_Uredro2XIYVknf
-plan_t1csOAUCMk8xhD,True,999,2026-02-11 00:28:03,gbp,week,prod_XsaT4fJU6x1VJ4
+id,aggregate_usage,amount,batch_timestamp,billing_scheme,created,currency,interval,interval_count,nickname,product_id,tiers_mode,transform_usage_divide_by,transform_usage_round,trial_period_days,unit_amount_decimal,usage_type
+plan_c7yshtz7rvyfqQ,standard,1999,2026-04-02 01:31:03,primary,2026-02-25 23:30:03,jpy,year,9,default,prod_fCZt1OVLv0PDYf,default,3004,standard,4556,10000,default
+plan_gaH1AyiMRlXSqW,default,24900,2026-03-18 01:18:03,standard,2026-04-05 07:57:03,eur,day,4,standard,prod_SEtCnXgIjJzYDi,primary,621,,1682,999,standard
+plan_006ISRBFtSh6kp,standard,2500,2026-01-15 07:44:03,primary,2026-03-07 01:09:03,jpy,month,2,default,prod_pyaULJvUfrOMyd,default,3794,default,3098,24900,standard
+plan_sZYOc2qrXLVSNw,default,7500,2026-06-04 12:40:03,,2026-03-02 23:56:03,gbp,day,8,,prod_fCZt1OVLv0PDYf,,874,default,4192,10000,standard

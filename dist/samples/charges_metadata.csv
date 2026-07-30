@@ -1,5 +1,5 @@
-charge_id,key,value
-ch_wvYEO1UF4qFVrw,internal_ref,enterprise
-ch_Chsp6CFaVRh6GD,order_id,acme-2026
-ch_JcBQ9YjE5oFKQ5,cohort,partner
-ch_5m88NmKZpzaN1H,internal_ref,ORD-4471
+charge_id,key,batch_timestamp,value
+ch_RaH1D6BWIPDhpP,internal_ref,2026-03-16 14:33:03,partner
+ch_DMY9fid2Ibn2C8,channel,2026-02-07 03:01:03,partner
+ch_arMF8iE5lRdoP3,internal_ref,2026-01-23 09:25:03,ORD-4471
+ch_T4Mu4JaHB9jQcw,cohort,2026-06-17 04:47:03,enterprise

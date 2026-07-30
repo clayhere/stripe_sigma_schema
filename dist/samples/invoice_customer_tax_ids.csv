@@ -1,5 +1,5 @@
-invoice_id,type,value
-in_x4HUMerOFd6jrW,,partner
-in_UhtTkG0B5uqnGJ,standard,enterprise
-in_4H0ZcARkJuUXq9,standard,partner
-in_15VmlcJQHxX3wy,primary,ORD-4471
+invoice_id,value,batch_timestamp,type
+in_QY3iGXzE6HZan6,acme-2026,2026-04-06 22:51:03,default
+in_jTFBNhZare9b6N,acme-2026,2026-02-11 21:39:03,
+in_8G8zEHm5LC6sD4,acme-2026,2026-06-03 19:32:03,default
+in_ORwnhleFQ2vgCE,acme-2026,2026-01-08 16:46:03,standard

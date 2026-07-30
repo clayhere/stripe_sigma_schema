@@ -1,5 +1,5 @@
-key,payment_method_id,value
-channel,pm_9DUdSu0zOqpcgH,acme-2026
-cohort,pm_wZCCg54Ig41lEF,ORD-4471
-channel,pm_sThmbiyybMYqQ4,ORD-4471
-channel,pm_em650SaoM9acV1,acme-2026
+key,payment_method_id,batch_timestamp,value
+cohort,pm_MlyQvENZiAalRO,2026-06-01 02:50:03,ORD-4471
+cohort,pm_rRHUv6GOVkRdac,2026-03-24 01:04:03,ORD-4471
+internal_ref,pm_k734gosKrtW2n0,2026-06-09 12:43:03,acme-2026
+order_id,pm_k734gosKrtW2n0,2026-03-05 17:53:03,enterprise

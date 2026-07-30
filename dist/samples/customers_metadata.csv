@@ -1,5 +1,5 @@
-customer_id,key,value
-cus_TMf2xjG0qPQZcO,order_id,partner
-cus_h0AiUDqDAIJZip,cohort,ORD-4471
-cus_bqstt69lfehGN1,channel,partner
-cus_h0AiUDqDAIJZip,channel,partner
+customer_id,key,batch_timestamp,value
+cus_iM4B95gzSDuxgW,internal_ref,2026-05-11 21:13:03,acme-2026
+cus_IHfLyxY5LTvVAO,order_id,2026-01-20 11:11:03,partner
+cus_5NgEDoFXpMzt4w,cohort,2026-05-11 11:20:03,ORD-4471
+cus_IHfLyxY5LTvVAO,channel,2026-06-13 15:30:03,ORD-4471
