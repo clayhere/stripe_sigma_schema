@@ -1,6 +1,7 @@
 # Stripe Sigma Schema Reference
 
-Load browsable Schema at: https://clayhere.github.io/stripe_sigma_schema/
+Load browsable Schema at: <a href="https://clayhere.github.io/stripe_sigma_schema/" target="_blank" rel="noopener noreferrer">https://clayhere.github.io/stripe_sigma_schema/</a>
+
 
 > ### This is the Stripe Sigma schema, NOT the Stripe REST API schema.
 >
