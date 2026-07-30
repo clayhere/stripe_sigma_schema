@@ -1,6 +1,8 @@
 # Stripe Sigma Schema Reference
 
-> ### This is the STRIPE SIGMA schema. It is not the Stripe REST API schema.
+Load browsable Schema at: https://clayhere.github.io/stripe_sigma_schema/
+
+> ### This is the Stripe Sigma schema, NOT the Stripe REST API schema.
 >
 > Sigma is Stripe's separate SQL data warehouse. Its table and column names
 > **diverge from the REST API's object fields** — e.g. Sigma's
@@ -26,7 +28,7 @@ Also covers the same schema exposed through **Stripe Data Pipeline**.
 
 ## The problem
 
-Stripe publishes the full Sigma column list only inside the Dashboard schema browser. There is no machine-readable export. So every AI session that writes Sigma SQL starts blind: it guesses `charge.customer` instead of `charges.customer_id`, invents `charges.captured` when the column is `captured_at`, or burns turns on `select * limit 1` probes to relearn what it knew yesterday.
+There is no machine-readable sigma schema reference. So every AI session that writes Sigma SQL starts blind: it guesses `charge.customer` instead of `charges.customer_id`, invents `charges.captured` when the column is `captured_at`, or burns turns on `select * limit 1` probes to relearn what it knew yesterday.
 
 This repo is that knowledge, frozen into files an agent can load once.
 
@@ -90,10 +92,10 @@ This is the part most schema dumps get wrong, so it's explicit here. **Every col
 
 | Level | Count | Meaning |
 | --- | ---: | --- |
-| `verified` | 4,027 | Confirmed by querying a real Sigma account. |
+| `verified` | 4,027 | Confirmed within Sigma. |
 | `documented` | 101 | Appears in an official Stripe SQL example or published column table. Cited via `doc_sources`. |
 | `conventional` | 4 | Derived from a structural rule Stripe documents — the `*_metadata` and `connected_account_*` families. Foreign-key targets inferred from Stripe's `*_id` naming convention carry this same label. |
-| `community` | 36 | Curated here. Plausible, but **not proven** against a live account. |
+| `community` | 36 | Curated here. Plausible, but **not yet directly reproduced** within Sigma. |
 
 Descriptions aren't uniformly complete even for `verified` columns — a verified column is confirmed to *exist*, not guaranteed to have a description yet. Where a column has no description, `index.html` and `dist/SCHEMA.md` say so explicitly rather than leaving it blank.
 
@@ -142,17 +144,6 @@ It exists so an agent can see what values actually look like — `ch_` prefixes,
 
 Full list in [`AGENTS.md`](AGENTS.md).
 
-## Build it yourself
-
-Zero dependencies — Python 3.11+ standard library only.
-
-```bash
-make            # refresh docs, extract, build, validate, emit everything
-make validate   # integrity checks only
-make test       # end-to-end smoke test
-```
-
-The build is reproducible: it re-downloads Stripe's public docs, re-extracts the table inventory and documented columns, merges the curated sources, and regenerates every artifact.
 
 ## Hosting
 
