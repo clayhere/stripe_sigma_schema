@@ -2,12 +2,12 @@
   "schema_version": "1.0.0",
   "generated_by": "tools/build_schema.py",
   "product": "Stripe Sigma",
-  "warning": "Column lists are complete only where columns_complete is true. Stripe publishes the full column list only inside the Dashboard schema browser; run tools/verify_against_sigma.py against a real account to confirm and extend this file.",
+  "warning": "Column lists are complete only where columns_complete is true, and coverage is not guaranteed current \u2014 Stripe can change the Sigma schema at any time. Run tools/verify_against_sigma.py to confirm and extend this file.",
   "confidence_levels": {
     "documented": "Appears in an official Stripe SQL example or published column table.",
     "conventional": "Synthesized from a structural rule Stripe documents (metadata tables, Connect mirrors).",
-    "community": "Curated from experience. Plausible, but not proven against a live account.",
-    "verified": "Confirmed to exist by querying a real Sigma account."
+    "community": "Curated from experience. Plausible, but not yet directly reproduced within Sigma.",
+    "verified": "Confirmed within Sigma."
   },
   "conventions": {
     "$comment": "Structural rules Stripe documents about the Sigma schema. build_schema.py applies these to synthesize whole table families (metadata, Connect mirrors) so they don't have to be hand-listed. Each rule cites the doc page that states it.",

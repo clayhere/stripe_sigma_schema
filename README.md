@@ -1,6 +1,7 @@
 # Stripe Sigma Schema Reference
+Built for context efficient AI reference.  
 
-Load browsable Schema at: https://clayhere.github.io/stripe_sigma_schema
+Are you a human? Stroll through the schema here: https://clayhere.github.io/stripe_sigma_schema
 
 > ### This is the Stripe Sigma schema, NOT the Stripe REST API schema.  
 >
@@ -16,7 +17,7 @@ Load browsable Schema at: https://clayhere.github.io/stripe_sigma_schema
 
 **A machine-readable reference for the [Stripe Sigma](https://stripe.com/sigma) SQL schema — 262 tables, 4,168 columns, join keys, enums, freshness SLAs and query gotchas — built so AI agents can write correct Sigma SQL without rediscovering the schema every session.** Coverage is not guaranteed complete or current — see [Accuracy](#accuracy-how-much-should-you-trust-this) below.
 
-[![CI](https://github.com/claysones/stripe-sigma-schema/actions/workflows/ci.yml/badge.svg)](https://github.com/claysones/stripe-sigma-schema/actions/workflows/ci.yml)
+[![CI](https://github.com/clayhere/stripe_sigma_schema/actions/workflows/ci.yml/badge.svg)](https://github.com/clayhere/stripe_sigma_schema/actions/workflows/ci.yml)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC0](https://img.shields.io/badge/data-CC0--1.0-green.svg)](LICENSE-DATA)
 

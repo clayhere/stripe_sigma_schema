@@ -8,17 +8,16 @@
 >
 > **Read this first.** Column lists are complete only where noted, and this
 > reference is not guaranteed complete or current — Stripe can change the
-> Sigma schema at any time. Stripe publishes the authoritative column list
-> solely inside the Dashboard schema browser, so this file combines what
-> Stripe documents publicly with curated and independently verified detail.
-> Each column carries a confidence level:
+> Sigma schema at any time. This file combines what Stripe documents
+> publicly with curated and independently verified detail. Each column
+> carries a confidence level:
 
 | Confidence | Meaning |
 | --- | --- |
 | `documented` | Appears in an official Stripe SQL example or published column table. |
 | `conventional` | Synthesized from a structural rule Stripe documents (metadata tables, Connect mirrors). |
-| `community` | Curated from experience. Plausible, but not proven against a live account. |
-| `verified` | Confirmed to exist by querying a real Sigma account. |
+| `community` | Curated from experience. Plausible, but not yet directly reproduced within Sigma. |
+| `verified` | Confirmed within Sigma. |
 
 ---
 

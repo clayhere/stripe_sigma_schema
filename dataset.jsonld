@@ -34,8 +34,8 @@
   "version": "1.0.0",
   "isAccessibleForFree": true,
   "creativeWorkStatus": "Published",
-  "url": "https://github.com/claysones/stripe-sigma-schema",
-  "codeRepository": "https://github.com/claysones/stripe-sigma-schema",
+  "url": "https://github.com/clayhere/stripe_sigma_schema",
+  "codeRepository": "https://github.com/clayhere/stripe_sigma_schema",
   "variableMeasured": [
     {
       "@type": "PropertyValue",
@@ -53,25 +53,25 @@
       "@type": "DataDownload",
       "name": "Canonical schema (JSON)",
       "encodingFormat": "application/json",
-      "contentUrl": "https://github.com/claysones/stripe-sigma-schema/blob/main/dist/sigma_schema.json"
+      "contentUrl": "https://github.com/clayhere/stripe_sigma_schema/blob/main/dist/sigma_schema.json"
     },
     {
       "@type": "DataDownload",
       "name": "Agent context pack (Markdown)",
       "encodingFormat": "text/markdown",
-      "contentUrl": "https://github.com/claysones/stripe-sigma-schema/blob/main/AGENTS.md"
+      "contentUrl": "https://github.com/clayhere/stripe_sigma_schema/blob/main/AGENTS.md"
     },
     {
       "@type": "DataDownload",
       "name": "Trino DDL",
       "encodingFormat": "application/sql",
-      "contentUrl": "https://github.com/claysones/stripe-sigma-schema/blob/main/dist/sigma_schema.trino.sql"
+      "contentUrl": "https://github.com/clayhere/stripe_sigma_schema/blob/main/dist/sigma_schema.trino.sql"
     },
     {
       "@type": "DataDownload",
       "name": "Synthetic sample database (SQLite)",
       "encodingFormat": "application/vnd.sqlite3",
-      "contentUrl": "https://github.com/claysones/stripe-sigma-schema/blob/main/dist/sigma_sample.sqlite"
+      "contentUrl": "https://github.com/clayhere/stripe_sigma_schema/blob/main/dist/sigma_sample.sqlite"
     }
   ],
   "about": {

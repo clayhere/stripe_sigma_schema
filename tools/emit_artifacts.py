@@ -980,7 +980,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--schema", type=Path, default=Path("dist/sigma_schema.json"))
     parser.add_argument("--repo-url",
-                        default="https://github.com/claysones/stripe-sigma-schema")
+                        default="https://github.com/clayhere/stripe_sigma_schema")
     parser.add_argument("--out", type=Path, default=Path("dist"))
     parser.add_argument("--root", type=Path, default=Path("."),
                         help="where the AI entry-point files go")

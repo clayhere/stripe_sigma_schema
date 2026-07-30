@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://claysones.github.io/stripe-sigma-schema/sitemap.xml
+Sitemap: https://clayhere.github.io/stripe_sigma_schema/sitemap.xml
