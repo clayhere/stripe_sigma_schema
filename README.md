@@ -30,15 +30,27 @@ Also covers the same schema exposed through **Stripe Data Pipeline**.
 
 ## Use this with your AI tool
 
-**Claude** — Attach [`AGENTS.md`](AGENTS.md) or [`llms-full.txt`](llms-full.txt) as a Project knowledge file, or paste it into the chat. In Claude Code, drop `AGENTS.md` in your working directory and it's picked up automatically, add the [MCP server](#as-an-mcp-server), or install the [Skill](#as-a-claude-skill) below so Claude fetches the reference automatically whenever you ask it to write Sigma SQL.
+### Claude
 
-**ChatGPT / Codex** — In ChatGPT, upload [`dist/sigma_schema.json`](dist/sigma_schema.json) or [`llms-full.txt`](llms-full.txt) to a Custom GPT's knowledge or a Project's files. The Codex CLI can also use this repo as an [MCP server](#as-an-mcp-server).
+Attach [`AGENTS.md`](AGENTS.md) to a Project, or paste it into the chat.
 
-**Cursor** — Add [`AGENTS.md`](AGENTS.md) to your workspace so it's picked up as context automatically, `@`-mention [`dist/sigma_schema.json`](dist/sigma_schema.json) in chat, or add the [MCP server](#as-an-mcp-server) below.
+For it to happen automatically, install the [Skill](#as-a-claude-skill) or the [MCP server](#as-an-mcp-server) instead.
 
-**Perplexity** — Upload [`llms-full.txt`](llms-full.txt) or [`dist/sigma_schema.json`](dist/sigma_schema.json) to a Space's files so answers ground on this schema instead of the REST API.
+### ChatGPT / Codex
 
-**Anything else** — every entry point below is a plain file. Point your tool at whichever fits: [`AGENTS.md`](AGENTS.md) for a compact context pack, [`llms.txt`](llms.txt) / [`llms-full.txt`](llms-full.txt) for the llms.txt standard, [`dist/sigma_schema.json`](dist/sigma_schema.json) for structured data, or the hosted browser above for humans.
+Upload [`dist/sigma_schema.json`](dist/sigma_schema.json) to a Custom GPT or a Project's knowledge. The Codex CLI can also use this repo as an [MCP server](#as-an-mcp-server).
+
+### Cursor
+
+Add [`AGENTS.md`](AGENTS.md) to your workspace — it's picked up as context automatically. An [MCP server](#as-an-mcp-server) is also available.
+
+### Perplexity
+
+Upload [`llms-full.txt`](llms-full.txt) to a Space's files.
+
+### Anything else
+
+Every file above works standalone: [`AGENTS.md`](AGENTS.md) (compact context pack), [`llms.txt`](llms.txt) / [`llms-full.txt`](llms-full.txt) (llms.txt standard), or [`dist/sigma_schema.json`](dist/sigma_schema.json) (structured data).
 
 ### As an MCP server
 
