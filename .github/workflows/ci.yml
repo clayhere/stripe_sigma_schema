@@ -31,9 +31,15 @@ jobs:
       - name: Smoke test
         run: make test
 
+      # dist/sigma_sample.sqlite is excluded because it can never satisfy a
+      # byte-equality check across machines: SQLite stamps the writing library's
+      # version number into the file header (offset 96), so the same seeded rows
+      # produce a file of identical size but different bytes on a runner whose
+      # SQLite differs from whoever last ran `make`. Its contents are covered by
+      # `make test`, which opens the database and asserts table/row counts.
       - name: Check committed artifacts are up to date
         run: |
-          if ! git diff --exit-code --stat; then
+          if ! git diff --exit-code --stat -- . ':(exclude)dist/sigma_sample.sqlite'; then
             echo "::error::Generated artifacts are stale. Run 'make' and commit the result."
             exit 1
           fi
