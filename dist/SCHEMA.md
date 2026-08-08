@@ -1444,7 +1444,7 @@ Pre-computed MRR movement events. Stripe's recommended basis for MRR, churn and 
 | Column | Type | Key | Confidence | Description |
 | --- | --- | --- | --- | --- |
 | `event_timestamp` | varchar | primary | verified | Time at which the subscription item change event occurred in UTC. |
-| `event_type` | varchar | primary | verified | The type of event that caused the change. |
+| `event_type` | varchar | primary | verified | The type of event that caused the change. Values: `ACTIVE_START`, `ACTIVE_END`, `ACTIVE_UPGRADE`, `ACTIVE_DOWNGRADE`, `ACTIVE_QUANTITY_INCREASE`, `ACTIVE_QUANTITY_DECREASE`. |
 | `subscription_item_id` | varchar | foreign | verified | Subscription item related to this subscription item change event. |
 | `currency` | varchar |  | verified | Three-letter ISO currency code, in lowercase. Must be a supported currency. |
 | `customer_id` | varchar | foreign | verified | Customer related to this subscription item change event. |
@@ -1464,6 +1464,10 @@ Pre-computed MRR movement events. Stripe's recommended basis for MRR, churn and 
 - `subscription_item_change_events.price_id` → `prices.id`
 - `subscription_item_change_events.product_id` → `products.id`
 - `subscription_item_change_events.subscription_id` → `subscriptions.id`
+
+> event_type's enum values were confirmed by `SELECT event_type, COUNT(*) FROM subscription_item_change_events GROUP BY event_type` against a live Sigma account — aggregate value/count only, no customer data, ids or amounts.
+
+> event_type's observed values follow an ACTIVE_<VERB> pattern (start, end, upgrade, downgrade, quantity increase/decrease). Other subscription lifecycle states (e.g. trialing, canceled) may use analogous TRIAL_*/CANCELED_* prefixes not yet seen in any verified account — unconfirmed, flagged for further verification rather than assumed.
 
 > Cumulatively sum mrr_change per customer ordered by local_event_timestamp to reconstruct MRR at any point in time.
 
@@ -1485,7 +1489,7 @@ Sandbox/test-mode equivalent of subscription_item_change_events.
 | --- | --- | --- | --- | --- |
 | `currency` | varchar |  | documented | Currency of mrr_change. |
 | `customer_id` | varchar | foreign | documented | Customer whose MRR changed. |
-| `event_type` | varchar |  | documented | Kind of change that occurred. |
+| `event_type` | varchar |  | verified | Kind of change that occurred. Values: `ACTIVE_START`, `ACTIVE_END`, `ACTIVE_UPGRADE`, `ACTIVE_DOWNGRADE`, `ACTIVE_QUANTITY_INCREASE`, `ACTIVE_QUANTITY_DECREASE`. |
 | `local_event_timestamp` | timestamp |  | documented | When the change took effect, in your account's local time. |
 | `mrr_change` | bigint |  | documented | Signed change in monthly recurring revenue, in minor currency units. |
 | `price_id` | varchar | foreign | documented | Price on the changed item. |
@@ -1510,7 +1514,7 @@ Public preview rebuild of subscription_item_change_events with 3-hour freshness 
 | Column | Type | Key | Confidence | Description |
 | --- | --- | --- | --- | --- |
 | `event_timestamp` | varchar | primary | verified |  |
-| `event_type` | varchar | primary | verified | Kind of change that occurred. |
+| `event_type` | varchar | primary | verified | Kind of change that occurred. Values: `ACTIVE_START`, `ACTIVE_END`, `ACTIVE_UPGRADE`, `ACTIVE_DOWNGRADE`, `ACTIVE_QUANTITY_INCREASE`, `ACTIVE_QUANTITY_DECREASE`. |
 | `subscription_item_id` | varchar | foreign | verified | Subscription item that changed. |
 | `currency` | varchar |  | verified | Currency of mrr_change. |
 | `customer_id` | varchar | foreign | verified | Customer whose MRR changed. |

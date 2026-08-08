@@ -1,13 +1,13 @@
 event_timestamp,event_type,subscription_item_id,currency,customer_id,local_event_timestamp,mrr_change,price_id,product_id,quantity_change,subscription_id
-primary,standard,si_8wSviuprhWragy,usd,cus_U0iLEN32Xh8Tch,2026-03-03 03:19:03,4141,price_uSmWuWJ0LH39hD,prod_fCZt1OVLv0PDYf,580,sub_EeKEEeyB9QoaLc
-primary,default,si_7e7slpsL4xM8Dg,usd,cus_5NgEDoFXpMzt4w,2026-01-15 05:14:03,4216,price_uSmWuWJ0LH39hD,prod_Vo3oTyoVsnlvPA,3249,sub_qBeInEfoTg0sQK
-standard,primary,si_bSPZTddnInrTae,jpy,cus_5NgEDoFXpMzt4w,2026-05-10 15:30:03,2880,price_ZYzOpBEtJrcFd4,prod_95cTEe6cozFsRk,1075,sub_gN16CIrxU7ipyx
-default,primary,si_GTIhA6cqfZ4zlH,usd,cus_4p4MC5T7GCiC1u,2026-02-13 09:54:03,4880,price_YAVsM3Qism45Vh,prod_fCZt1OVLv0PDYf,2838,sub_aKSKkliG930fdG
-,standard,si_ZHGrFAbU1vCStF,usd,cus_U0iLEN32Xh8Tch,2026-02-24 18:54:03,1920,price_D9qQ6PlFQBHPIq,prod_95cTEe6cozFsRk,3451,sub_aKSKkliG930fdG
-,standard,si_8wSviuprhWragy,usd,cus_IHfLyxY5LTvVAO,2026-03-07 04:41:03,2649,price_D9qQ6PlFQBHPIq,prod_Vo3oTyoVsnlvPA,1526,sub_EeKEEeyB9QoaLc
-,standard,si_GTIhA6cqfZ4zlH,jpy,cus_IHfLyxY5LTvVAO,2026-05-10 17:30:03,3147,price_RpQKUfMRbbL8Gf,prod_h5rwrdfPe93bYX,322,sub_qBeInEfoTg0sQK
-,standard,si_7e7slpsL4xM8Dg,eur,cus_iM4B95gzSDuxgW,2026-06-02 15:14:03,1022,price_uSmWuWJ0LH39hD,prod_Vo3oTyoVsnlvPA,4296,sub_oYnGoYlADuwVcf
-,,si_JVj9xROyarZwBz,usd,cus_tSvGgWJmSAmckl,2026-02-22 18:32:03,735,price_DS6rapCD5kPt8Y,prod_Vo3oTyoVsnlvPA,3571,sub_qBeInEfoTg0sQK
-default,standard,si_bSPZTddnInrTae,jpy,cus_gmhPGcRCyAK6G6,2026-06-21 10:02:03,3282,price_ZYzOpBEtJrcFd4,prod_pyaULJvUfrOMyd,568,sub_oYnGoYlADuwVcf
-default,,si_GTIhA6cqfZ4zlH,usd,cus_U0iLEN32Xh8Tch,2026-02-04 21:07:03,2690,price_uSmWuWJ0LH39hD,prod_95cTEe6cozFsRk,1104,sub_aKSKkliG930fdG
-default,primary,si_8wSviuprhWragy,usd,cus_iM4B95gzSDuxgW,2026-06-16 15:46:03,2568,price_uSmWuWJ0LH39hD,prod_95cTEe6cozFsRk,670,sub_gN16CIrxU7ipyx
+primary,ACTIVE_START,si_8wSviuprhWragy,usd,cus_U0iLEN32Xh8Tch,2026-03-03 03:19:03,4141,price_uSmWuWJ0LH39hD,prod_fCZt1OVLv0PDYf,580,sub_EeKEEeyB9QoaLc
+primary,ACTIVE_END,si_7e7slpsL4xM8Dg,usd,cus_5NgEDoFXpMzt4w,2026-01-15 05:14:03,4216,price_uSmWuWJ0LH39hD,prod_Vo3oTyoVsnlvPA,3249,sub_qBeInEfoTg0sQK
+standard,ACTIVE_UPGRADE,si_bSPZTddnInrTae,jpy,cus_5NgEDoFXpMzt4w,2026-05-10 15:30:03,2880,price_ZYzOpBEtJrcFd4,prod_95cTEe6cozFsRk,1075,sub_gN16CIrxU7ipyx
+default,ACTIVE_UPGRADE,si_GTIhA6cqfZ4zlH,usd,cus_4p4MC5T7GCiC1u,2026-02-13 09:54:03,4880,price_YAVsM3Qism45Vh,prod_fCZt1OVLv0PDYf,2838,sub_aKSKkliG930fdG
+,ACTIVE_START,si_ZHGrFAbU1vCStF,usd,cus_U0iLEN32Xh8Tch,2026-02-24 18:54:03,1920,price_D9qQ6PlFQBHPIq,prod_95cTEe6cozFsRk,3451,sub_aKSKkliG930fdG
+,ACTIVE_START,si_8wSviuprhWragy,usd,cus_IHfLyxY5LTvVAO,2026-03-07 04:41:03,2649,price_D9qQ6PlFQBHPIq,prod_Vo3oTyoVsnlvPA,1526,sub_EeKEEeyB9QoaLc
+,ACTIVE_START,si_GTIhA6cqfZ4zlH,jpy,cus_IHfLyxY5LTvVAO,2026-05-10 17:30:03,3147,price_RpQKUfMRbbL8Gf,prod_h5rwrdfPe93bYX,322,sub_qBeInEfoTg0sQK
+,ACTIVE_START,si_7e7slpsL4xM8Dg,eur,cus_iM4B95gzSDuxgW,2026-06-02 15:14:03,1022,price_uSmWuWJ0LH39hD,prod_Vo3oTyoVsnlvPA,4296,sub_oYnGoYlADuwVcf
+,ACTIVE_DOWNGRADE,si_JVj9xROyarZwBz,usd,cus_tSvGgWJmSAmckl,2026-02-22 18:32:03,735,price_DS6rapCD5kPt8Y,prod_Vo3oTyoVsnlvPA,3571,sub_qBeInEfoTg0sQK
+default,ACTIVE_START,si_bSPZTddnInrTae,jpy,cus_gmhPGcRCyAK6G6,2026-06-21 10:02:03,3282,price_ZYzOpBEtJrcFd4,prod_pyaULJvUfrOMyd,568,sub_oYnGoYlADuwVcf
+default,ACTIVE_DOWNGRADE,si_GTIhA6cqfZ4zlH,usd,cus_U0iLEN32Xh8Tch,2026-02-04 21:07:03,2690,price_uSmWuWJ0LH39hD,prod_95cTEe6cozFsRk,1104,sub_aKSKkliG930fdG
+default,ACTIVE_UPGRADE,si_8wSviuprhWragy,usd,cus_iM4B95gzSDuxgW,2026-06-16 15:46:03,2568,price_uSmWuWJ0LH39hD,prod_95cTEe6cozFsRk,670,sub_gN16CIrxU7ipyx

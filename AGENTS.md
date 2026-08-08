@@ -231,10 +231,12 @@ Joins: product_id → products.id
 ### subscription_item_change_events
 _One row per change to a subscription item that moves MRR._
 
-`event_timestamp:varchar`, `event_type:varchar`, `subscription_item_id:varchar`, `currency:varchar`, `customer_id:varchar`, `local_event_timestamp:timestamp`, `mrr_change:bigint`, `price_id:varchar`, `product_id:varchar`, `quantity_change:bigint`, `subscription_id:varchar`
+`event_timestamp:varchar`, `event_type:varchar [ACTIVE_START|ACTIVE_END|ACTIVE_UPGRADE|ACTIVE_DOWNGRADE|ACTIVE_QUANTITY_INCREASE|ACTIVE_QUANTITY_DECREASE]`, `subscription_item_id:varchar`, `currency:varchar`, `customer_id:varchar`, `local_event_timestamp:timestamp`, `mrr_change:bigint`, `price_id:varchar`, `product_id:varchar`, `quantity_change:bigint`, `subscription_id:varchar`
 
 Joins: subscription_item_id → subscription_items.id; customer_id → customers.id; price_id → prices.id; product_id → products.id; subscription_id → subscriptions.id
 
+- ⚠ event_type's enum values were confirmed by `SELECT event_type, COUNT(*) FROM subscription_item_change_events GROUP BY event_type` against a live Sigma account — aggregate value/count only, no customer data, ids or amounts.
+- ⚠ event_type's observed values follow an ACTIVE_<VERB> pattern (start, end, upgrade, downgrade, quantity increase/decrease). Other subscription lifecycle states (e.g. trialing, canceled) may use analogous TRIAL_*/CANCELED_* prefixes not yet seen in any verified account — unconfirmed, flagged for further verification rather than assumed.
 - ⚠ Cumulatively sum mrr_change per customer ordered by local_event_timestamp to reconstruct MRR at any point in time.
 - ⚠ subscription_item_change_events_v2_beta has the same columns with 3-hour freshness instead of 24-hour.
 - ⚠ Values are per-currency. Convert with exchange_rates_from_usd before summing across currencies.
