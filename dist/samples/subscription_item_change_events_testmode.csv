@@ -1,5 +1,5 @@
 currency,customer_id,event_type,local_event_timestamp,mrr_change,price_id,product_id,quantity_change,subscription_id,subscription_item_id
-usd,cus_TAUBnfmY59z0Qz,standard,2026-05-12 16:10:03,580,price_nU6nhnVZjVYF6W,prod_oDY3fvXslWGFgj,341,sub_cVdwu5eRIJ4kyG,si_pSpeyH9M17cLvR
-usd,cus_ItAeu0iMi34Scf,primary,2026-05-15 03:26:03,4893,price_WTveooGEqzvaRr,prod_UYhfnYHjuBS4X5,629,sub_QXYViFkexp2pkA,si_qhgd4vDchgkbPx
-usd,cus_UXa6tfxHzJGM5R,,2026-03-17 22:04:03,840,price_fSNOI8IzXTxnkX,prod_i58HGj3ys1WD6U,4540,sub_Bc2sBageFnszMG,si_HMdGl6tLyz1DAC
-usd,cus_jfiiHSNUtQWFZu,default,2026-01-18 06:56:03,1920,price_hPmMRGEsWcVLS2,prod_nhHeMa6eCgDetU,2965,sub_dCj8t9MmGHorOn,si_xVdO2urUvEkiM9
+usd,cus_TAUBnfmY59z0Qz,ACTIVE_QUANTITY_INCREASE,2026-06-11 08:20:03,4093,price_Wn4SenU6nhnVZj,prod_VYF6WoDY3fvXsl,4119,sub_FgjccVdwu5eRIJ,si_4kyGpSpeyH9M17
+usd,cus_LvRdItAeu0iMi3,ACTIVE_QUANTITY_DECREASE,2026-01-14 11:30:03,4146,price_XLmMWTveooGEqz,prod_vaRrUYhfnYHjuB,629,sub_QXYViFkexp2pkA,si_qhgd4vDchgkbPx
+usd,cus_UXa6tfxHzJGM5R,ACTIVE_DOWNGRADE,2026-03-17 22:04:03,840,price_fSNOI8IzXTxnkX,prod_i58HGj3ys1WD6U,4540,sub_Bc2sBageFnszMG,si_HMdGl6tLyz1DAC
+usd,cus_jfiiHSNUtQWFZu,ACTIVE_QUANTITY_INCREASE,2026-02-15 11:12:03,1920,price_hPmMRGEsWcVLS2,prod_nhHeMa6eCgDetU,2965,sub_dCj8t9MmGHorOn,si_xVdO2urUvEkiM9
